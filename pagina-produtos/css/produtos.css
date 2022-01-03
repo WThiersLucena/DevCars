@@ -1,0 +1,42 @@
+/* html{
+    font-family: roboto,sans-serif;
+} */
+
+body{
+    background-color: #E0E0E0;
+}
+
+.filtro-de-busca{
+    background-color: #f0f0f0;
+}
+
+.filtro-de-busca select{
+    border: 1px solid #858585;
+    
+}
+
+.botao-buscar{
+    background-color: #EBB753;
+    border: 1px solid #858585;
+    border-radius: 5px;
+}
+
+.card { 
+    transition: 0.5s; 
+    border-radius: 2px;
+    background-color: #E0E0E0;
+    border: 1px solid #9e9e9e;
+}
+
+.card:hover { 
+    transform: scale(1.1); 
+}
+
+.card-title, .card-text{
+    color: #000000;
+}
+
+.btn-warning{
+    background-color: #EBB753;
+    border-radius: 5px;
+}
