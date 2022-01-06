@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal adicionar endereço</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/endereco.css">
+</head>
+
+
+<body>
+
+  <!-- botão padrão que abre o modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-endereco">
+    Launch demo modal
+  </button>
+  <!-- fim do botão que abre o modal -->
+
+
+
+  <!-- Início modal adicionar endereço-->
+  <div class="modal fade" id="modal-endereco" tabindex="-1" aria-labelledby="inicioModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+
+        <!-- header do modal -->
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="inicioModal">ENDEREÇO</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- fim da header do modal -->
+
+
+        <!-- corpo do modal -->
+        <div class="modal-body">
+          <form class="formulario-cadastro container">
+
+            <div class="row alinha-campos d-flex justify-content-start gy-2">
+              <div class="cep col-sm-4">
+                <label label for="cep" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="cep">
+              </div>
+
+              <div class="rua col-sm-8">
+                <label for="rua" class="form-label">RUA</label>
+                <input type="text" class="form-control" id="rua">
+              </div>
+            </div>
+
+
+            <div class="row alinha-campos d-flex justify-content-start gy-2">
+              <div class="numero col-sm-3">
+                <label label for="numero" class="form-label">NUMERO</label>
+                <input type="number" class="form-control" id="numero">
+              </div>
+
+
+              <div class="bairro col-sm-9">
+                <label for="bairro" class="form-label">BAIRRO</label>
+                <input type="text" class="form-control" id="bairro">
+              </div>
+            </div>
+
+
+            <div class="row alinha-campos d-flex justify-content-start gy-2">
+              <div class="uf col-sm-3">
+                <label for="uf" class="form-label">UF</label>
+                <select name="uf" id="UF" class="form-control">
+                  <option value="estado" selected disabled>- UF -</option>
+                  <option value="ac">AC</option>
+                  <option value="al">AL</option>
+                  <option value="am">AM</option>
+                  <option value="ap">AP</option>
+                  <option value="ba">BA</option>
+                  <option value="ce">CE</option>
+                  <option value="df">DF</option>
+                  <option value="es">ES</option>
+                  <option value="go">GO</option>
+                  <option value="ma">MA</option>
+                  <option value="mt">MT</option>
+                  <option value="ms">MS</option>
+                  <option value="mg">MG</option>
+                  <option value="pa">PA</option>
+                  <option value="pb">PB</option>
+                  <option value="pr">PR</option>
+                  <option value="pe">PE</option>
+                  <option value="pi">PI</option>
+                  <option value="rj">RJ</option>
+                  <option value="rn">RN</option>
+                  <option value="ro">RO</option>
+                  <option value="rs">RS</option>
+                  <option value="rr">RR</option>
+                  <option value="sc">SC</option>
+                  <option value="se">SE</option>
+                  <option value="sp">SP</option>
+                  <option value="to">TO</option>
+                </select>
+              </div>
+
+              <div class="cidade col-sm-9">
+                <label for="cidade" class="form-label">CIDADE</label>
+                <input type="text" name="" id="cidade" class="form-control input-cidade">
+              </div>
+            </div>
+
+            <div class="complemento">
+              <label for="complemento" class="form-label">COMPLEMENTO</label>
+              <input type="text" class="form-control" id="complemento">
+            </div>
+
+            <div class="row justify-content-center">
+              <button type="submit" class="botao-salvar btn mt-4 col-sm-4">GRAVAR</button>
+            </div>
+
+          </form>
+        </div>
+        <!-- fim do corpo do modal -->
+
+      </div>
+    </div>
+  </div>
+  <!-- fim do modal adicionar endereço -->
+
+
+
+
+  <!-- import javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
