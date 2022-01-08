@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo da Compra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/resumo-compra.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+
+<body>
+    <!-- BEGIN HEADER -->
+    <header class="style-header mb-5">
+
+        <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
+        <div class="icons-header">
+            <div class="icon-menu">
+                <a class="btn btn-black" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <img src="./img-header/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
+                </a>
+
+                <div class="offcanvas offcanvas-start background-menu d-flex flex-column flex-shrink-0 p-3 text-black bg-dark"
+                    tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
+
+                    <hr>
+
+                    <ul class="nav nav-pills flex-column mb-auto">
+
+                        <li>
+                            <a href="#" class="text-black" aria-current="page">
+
+                                <!-- Início do Chevron (icone >) ao lado da opção do menu -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <!-- Fim do Chevron (icone >) ao lado da opção do menu -->
+
+                                <span class="font-menu">HOME</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">SOBRE NÓS</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">ESTOQUE</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">CONTATO</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <hr>
+
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong><span class="font-menu">USUÁRIO</span></strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="./carrinho.html"><span
+                                        class="font-menu">Carrinho</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="b-example-divider"></div>
+
+            </div>
+        </div>
+        <!-- FIM DO ICONE MENU HAMBURGUER-->
+
+
+        <!-- INÍCIO DO ICONE DA LOGO -->
+        <div class="icons-header">
+            <div class="icon-logo">
+                <a href="#"><img src="./img-header/logo-rev01.jpeg" width="120" /></a>
+            </div>
+        </div>
+        <!-- FIM DO ICONE DA LOGO -->
+
+        <!-- INÍCIO DOS ÍCONES DO LADO DIREITO -->
+        <div class="icons-header right-icons-header">
+
+            <!-- INÍCIO DO ÍCONE DE PESQUISA -->
+            <div class="icons-position-header search-icon">
+                <a href="#"><img src="./img-header/search.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE PESQUISA -->
+
+            <!-- INÍCIO DO ÍCONE DE FAVORITOS -->
+            <div class="icons-position-header favorite-icon">
+                <a href="#"><img src="./img-header/favorite.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE FAVORITOS -->
+
+            <!-- INÍCIO DO ÍCONE DE LOGIN -->
+            <div class="icons-position-header user-icon">
+                <a href="#"><img src="./img-header/user.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE LOGIN -->
+
+            <!-- INÍCIO DO ÍCONE DE CARRINHO -->
+            <div class="icons-position-header garage-icon">
+                <a href="./carrinho.html"><img src="./img-header/garage-car.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE CARRINHO -->
+
+        </div>
+        <!-- FIM DOS ÍCONES DO LADO DIREITO -->
+
+    </header>
+    <!-- END HEADER -->
+
+
+
+
+
+    <div class="container">
+
+        <div class="resumo-compra mb-5">
+            <h1 class="ps-5 pb-2 pt-2 resumo">RESUMO DA COMPRA</h1>
+        </div>
+
+
+        <!-- inicio do menu lateral -->
+        <div class="row flex-row justify-content-center align-items-start">
+            <div class="col-3 column me-5">
+
+                <!--Navbar-->
+                <nav class="navbar navbar-light border-bottom-menu titulo-menu mb-3 mt-0 pt-0 pb-2">
+                    <div class="container-fluid d-block text-center">
+                        <span>MENU</span>
+                    </div>
+                </nav>
+
+                <ul style="color: #F0F0F0;" class="list-group list-group-flush text-center">
+                    <li class="list-group-item">MEUS DADOS</li>
+                    <li class="list-group-item">MEUS PEDIDOS</li>
+                    <li class="list-group-item">CARRINHO</li>
+                    <li class="list-group-item">LISTA DE DESEJOS</li>
+                    <li class="list-group-item">ENDEREÇOS</li>
+                    <li class="list-group-item">PAGAMENTOS</li>
+                    <li class="list-group-item">RESUMO DAS COMPRAS</li>
+                    <li class="list-group-item">SAIR</li>
+                </ul>
+
+            </div>
+
+
+            <!-- fim do menu lateral -->
+
+
+            <!-- inicio da confirmação do pedido -->
+            <div class="col-8">
+                <div class="d-flex pedido-concluido justify-content-center flex-column mb-4">
+
+                    <h2 class="titulo-pricipal text-center pb-2 mb-3">STATUS DO PEDIDO</h2>
+
+
+                    <img src="img-resumo-compra/certificado-de-garantia.png" class="img-certificado" alt="compra concluida">
+
+                    <div class="sucesso d-flex justify-content-center align-items-center m-3">
+                        <h2 class="text-center titulo-sucesso-compra mb-0 me-1">COMPRA REALIZADA COM SUCESSO!</h2>
+                        <img src="img-resumo-compra/checked.png" alt="sucesso" class="img-sucess">
+                    </div>
+
+                    <p class="text-center numero-pedido">NÚMERO DO PEDIDO: XXXXXXX </p>
+                </div>
+
+                <div class="detalhes-pedido">
+                    <div class="detalhes-pedido d-flex justify-content-center align-items-center mb-3">
+                        <h2 class="titulo-detalhes-pedido me-2 mb-0">DETALHES DO PEDIDO</h2>
+                        <a href="#"><img src="img-resumo-compra/printer.png" alt="imprimir resumo do pedido" class="print"></a>
+                    </div>
+
+                    <div class="row resumo-produto mb-3">
+                        <h3 class="col-12 mb-2 pt-2">PRODUTO</h3>
+                        <div class="produtos d-flex justify-content-around">
+                            <div class="produto col-7">
+                                <p class="nome-produto1">PORSCHE 911 CARRERA 2021</p>
+                                <p class="nome-produto2"> AUDI A5 SPORTBACK S-LINE 2019</p>
+
+                            </div>
+
+                            <div class="qtd col-5">
+                                <p class="qtd-produto1 border-start-1">QUANTIDADE: 03</p>
+                                <p class="qtd-produto2 border-start-1">QUANTIDADE: 01</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row resumo-pgmt mb-3">
+                        <h3 class="mb-2 pt-2">FORMA DE PAGAMENTO</h3>
+                        <div class="d-flex justify-content-between">
+                            <p class="forma-pmgt me-5">CARTÃO DE CRÉDITO </p>
+                            <p class="num-cartao me-5">************5030</p>
+                            <p class="parcelamento me-5">3X DE R$ 133.383,33</p>
+                        </div>
+                    </div>
+
+                    <div class="row resumo-endereco mb-3">
+                        <h3 class="mb-2 pt-2">ENDEREÇO DE ENTREGA</h3>
+                        <p> RUA PRAÇA ROBERTO PEDRO GOMES Nº 101 MORUMBI SÃO PAULO/SP CEP: 12332-032</p>
+                    </div>
+
+                    <div class="row data-compra mb-3">
+                        <h3 class="col-6 pt-2">DATA DA COMPRA</h3>
+                        <p class="col-6 text-center pt-2">DD/mm/yyyy</p>
+                    </div>
+
+                    <div class="row valor-total mb-5">
+                        <h3 class="col-6 pt-2">VALOR TOTAL</h3>
+                        <p class="col-6 text-center pt-2">R$400.150,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fim da confirmação do pedido -->
+
+    </div>
+
+
+
+    <!-- import javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/fontawsome/all.min.js"></script>
+</body>
+
+</html>
