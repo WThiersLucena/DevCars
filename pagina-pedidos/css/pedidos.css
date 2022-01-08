@@ -28,16 +28,33 @@ body{
 /* fim da estilização do menu lateral */
 
 
+
+
 .titulo-menu{
     border-bottom: #9B9B9B 1px solid;
-}
-
-.img-pedido{
-    width: 110px;
-    box-shadow: 2px 2px 5px #777777;
 }
 
 .figura-status{
     width: 14px;
     height: 14px;
+}
+
+.img-pedido{
+    width: 150px;
+    box-shadow: 2px 2px 5px #777777;
+}
+
+.titulo-descricao{
+    font-size: 11px;
+    border-bottom: #9B9B9B 1px solid;
+    margin-bottom: 10px;
+}
+
+.descricao, .descricao-data, .descricao-endereco, .data-pgmt, .descricao-pgmt{
+    font-size: 13px;
+}
+
+.titulo-descricao-endereco, .titulo-descricao-data, .titulo-data-pgmt, .titulo-descricao-pgmt{
+    font-size: 11px;
+    margin-bottom: 10px;
 }
