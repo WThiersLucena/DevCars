@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Orbitron&family=Questrial&family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+    margin: 0;
+}
+
+
+/* -- BEGIN HEADER -- */
+
+    header {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+
+        background-color: #000;
+        
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-bottom: 1%;
+        padding-right: 2%;
+        
+    }
+
+    .icons-header .icon-menu {
+        padding-top: 70%;
+    }
+
+
+    .icon-logo {
+        padding-left: 50%;
+    }
+
+    .right-icons-header {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+
+        padding-right: 7%;
+        
+    }
+
+    .icons-position-header {
+
+        padding-top: 40%;
+        margin-left: 10%; 
+
+    }
+
+
+    .teste {
+        margin: 20px;
+    }
+
+    /*
+    button {
+        background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
+
+        font-family: font-family: 'Questrial', sans-serif;
+        
+        border-radius: 4px;
+        border: none;
+        padding: 10px;
+        
+    }
+
+    button:hover {
+        background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
+    }
+    */
+
+
+   .background-menu {
+        background-image: url('../imagens/bg-menu.png');
+        background-repeat: no-repeat;
+        background-position: center;
+   }
+
+   .font-menu {
+    font-family: 'Orbitron', sans-serif;
+        font-weight: bold;
+   }
+
+
+/* -- END HEADER -- */
+
+
+
+
+/* -- RESPONSIVE - BEGIN HEADER -- */
+
+    @media (max-width: 1000px) {
+            
+        header {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;
+
+            background-color: #000;
+            
+            padding-top: 1%;
+            padding-left: 4%;
+            padding-bottom: 1%;
+            padding-right: 2%;  
+
+        }  
+        
+    }
+
+    @media (max-width: 800px) {
+            
+        header {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;
+
+            background-color: #000;
+            
+            padding-top: 1%;
+            padding-left: 3%;
+            padding-bottom: 1%;
+            padding-right: 2%;  
+
+        }  
+        
+    }
+
+    /* -- FOR IPAD -- */
+    @media (max-width: 640px) {
+            
+        header {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;
+
+            background-color: #000;
+            
+            padding-top: 1%;
+            padding-left: 2%;
+            padding-bottom: 1%;
+            padding-right: 2%;  
+
+        }  
+        
+    }
+
+    /* -- FOR IPHONE 6/7/8 -- */
+    @media (max-width: 500px) {
+        
+        header {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;
+    
+            background-color: #000;
+            
+            padding-top: 1%;
+            padding-left: 5%;
+            padding-bottom: 1%;
+            padding-right: 2%;  
+    
+        } 
+
+        .icon-logo {
+            padding: 0;
+        }
+
+        .search-icon {
+            display: none;
+        }
+
+        .favorite-icon {
+            display: none;
+        }
+
+        .garage-icon {
+            display: none;
+        }
+
+        .user-icon {
+            padding-top: 150%;
+        }
+        
+
+    }
+
+
+/* -- RESPONSIVE - END HEADER -- */
