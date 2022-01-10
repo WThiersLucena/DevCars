@@ -58,3 +58,8 @@ body{
     font-size: 11px;
     margin-bottom: 10px;
 }
+
+.imprimir-nf a{
+    border: #9B9B9B 1px solid;
+    
+}
