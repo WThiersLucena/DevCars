@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
 /* html{
-    font-family: roboto,sans-serif;
+    font-family: 'Roboto', sans-serif;
 } */
 
 body{
@@ -34,6 +36,14 @@ body{
 
 .card-title, .card-text{
     color: #000000;
+}
+
+.favoritar{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .btn-warning{

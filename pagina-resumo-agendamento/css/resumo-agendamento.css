@@ -6,13 +6,6 @@ body{
     font-family: 'Questrial', sans-serif;
 }
 
-.resumo{
-    background-color: #000;
-    color: #fff;
-    font-size: 24px;
-}
-
-
 /* estilização do menu lateral */
 .list-group-item:hover{
     background-color: #E0E0E0;
@@ -26,12 +19,19 @@ body{
 
 
 /* inicio da finalização do pedido */
+.resumo{
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+}
+
+
 .titulo-pricipal, .titulo-menu{
     border-bottom: 1px solid #b6b6b6;
 }
 
 .titulo-sucesso-agendamento{
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .numero-pedido{

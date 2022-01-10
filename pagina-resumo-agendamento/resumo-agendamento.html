@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <!-- BEGIN HEADER -->
     <header class="style-header mb-5">
 
@@ -123,7 +124,32 @@
 
             <!-- INÍCIO DO ÍCONE DE PESQUISA -->
             <div class="icons-position-header search-icon">
-                <a href="#"><img src="./img-header/search.png" width="30" /></a>
+                <!-- imagem que abre o modal de pesquisa-->
+                <img src="img-header/search.png" class="icons-header" data-bs-toggle="modal" data-bs-target="#modalPesquisa" width="30"
+                    role="button">
+                <!-- fim da imagem que abre o modal-->
+
+                <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content p-5">
+                            <img src="img-header/close.png" type="button" class="icon-close btn-close align-self-end"
+                                data-bs-dismiss="modal" aria-label="Close">
+                            <div class="modal-header">
+                                <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="caixa-busca" class="col-form-label"></label>
+                                        <input type="search" class="form-control" id="caixa-busca">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- FIM DO ÍCONE DE PESQUISA -->
 
@@ -152,52 +178,67 @@
     <!-- END HEADER -->
 
 
-
-
-
     <div class="container">
 
-        <div class="resumo-agendamento mb-5">
-            <h1 class="resumo pb-3 pt-3 ps-5">RESUMO DO AGENDAMENTO</h1>
+        <div class="row resumo-agendamento mb-5">
+            <h1 class="resumo ps-5 pb-2 pt-2">RESUMO DO AGENDAMENTO</h1>
         </div>
 
+        <div class="row">
+            <!-- inicio do menu lateral -->
+            <div
+                class="col-3 flex-row justify-content-center align-items-start d-lg-block d-xl-block d-xxl-block d-none">
+                <div class="column me-5">
 
-        <!-- inicio do menu lateral -->
-        <div class="row gy-5 flex-row justify-content-center align-items-start">
-            <div class="col-md-3 column me-5">
+                    <!--Navbar-->
+                    <nav class="navbar navbar-light border-bottom-menu titulo-menu mb-3 mt-0 pt-0 pb-2">
+                        <div class="container-fluid d-block text-center">
+                            <span>MENU</span>
+                        </div>
+                    </nav>
 
-                <!--Navbar-->
-                <nav class="navbar navbar-light border-bottom-menu titulo-menu mb-3 mt-0 pt-0 pb-2">
-                    <div class="container-fluid d-block text-center">
-                        <span>MENU</span>
-                    </div>
-                </nav>
+                    <ul style="color: #F0F0F0;" class="list-group list-group-flush text-center">
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">MEUS DADOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">MEUS PEDIDOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">CARRINHO</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">LISTA DE DESEJOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">ENDEREÇOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">PAGAMENTOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">SAIR</li>
+                        </a>
+                    </ul>
 
-                <ul style="color: #F0F0F0;" class="list-group list-group-flush text-center">
-                    <li class="list-group-item">MEUS DADOS</li>
-                    <li class="list-group-item">MEUS PEDIDOS</li>
-                    <li class="list-group-item">CARRINHO</li>
-                    <li class="list-group-item">LISTA DE DESEJOS</li>
-                    <li class="list-group-item">ENDEREÇOS</li>
-                    <li class="list-group-item">PAGAMENTOS</li>
-                    <li class="list-group-item">SAIR</li>
-                </ul>
-
+                </div>
             </div>
             <!-- fim do menu lateral -->
 
 
             <!-- inicio da confirmação do pedido -->
-            <div class="col-md-8">
+            <div class="col-md">
                 <div class="d-flex pedido-concluido justify-content-center flex-column mb-4">
 
                     <span class="titulo-pricipal text-center pb-2 mb-3">AGENDAMENTO</span>
 
 
-                    <img src="img-resumo-agendamento/certificado-de-garantia.png" class="img-certificado" alt="agendamento concluido">
+                    <img src="img-resumo-agendamento/certificado-de-garantia.png" class="img-certificado"
+                        alt="agendamento concluido">
 
                     <div class="sucesso d-flex justify-content-center align-items-center m-3">
-                        <h2 class="text-center titulo-sucesso-agendamento mb-0 me-1">AGENDAMENTO REALIZADO COM SUCESSO!</h2>
+                        <h2 class="text-center titulo-sucesso-agendamento mb-0 me-1">AGENDAMENTO REALIZADO COM SUCESSO!
+                        </h2>
                         <img src="img-resumo-agendamento/checked.png" alt="sucesso" class="img-sucess">
                     </div>
 
@@ -207,7 +248,8 @@
                 <div class="detalhes-pedido">
                     <div class="detalhes-pedido d-flex justify-content-center align-items-center mb-3">
                         <h2 class="titulo-detalhes-pedido me-2 mb-0">DETALHES DO AGENDAMENTO</h2>
-                        <a href="#"><img src="img-resumo-agendamento/printer.png" alt="imprimir resumo do pedido" class="print"></a>
+                        <a href="#"><img src="img-resumo-agendamento/printer.png" alt="imprimir resumo do pedido"
+                                class="print"></a>
                     </div>
 
                     <div class="row resumo-produto mb-3">
@@ -236,6 +278,7 @@
             </div>
         </div>
     </div>
+    
     <!-- fim da confirmação do pedido -->
 
     </div>

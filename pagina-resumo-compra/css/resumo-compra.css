@@ -9,7 +9,7 @@ body{
 .resumo{
     background-color: #000;
     color: #fff;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 
@@ -20,6 +20,7 @@ body{
 
 .border-bottom-menu{
     border-bottom: #9B9B9B 1px solid;
+    font-size: 11px;
 }
 /* fim da estilização do menu lateral */
 

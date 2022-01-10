@@ -74,7 +74,7 @@
 
 
    .background-menu {
-        background-image: url('../img-header/bg-menu.png');
+        background-image: url('/img-header/bg-menu.png');
         background-repeat: no-repeat;
         background-position: center;
    }
@@ -87,7 +87,7 @@
    .icons-header li {
        padding-top: 3%;
        padding-bottom:3%;
-       /*border: 2px solid red;*/
+       /border: 2px solid red;/
        margin: 2%; 
    }
 
@@ -98,6 +98,29 @@
    .icons-header li:hover {
         background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
    }
+
+
+
+   /* -- MODAL PESQUISAR -- */
+
+    .icon-close{
+        width: 25px;
+        height: 25px;
+    }
+
+    .modal-content{
+        background-color: #000000;
+    }
+
+    .modal-header{
+        border-bottom: none;
+    }
+
+    .background-modal-search {
+        background-color: #000000;
+    }
+
+  /* -- FIM MODAL PESQUISAR -- */
 
 
 /* -- END HEADER -- */
@@ -209,6 +232,3 @@
         
 
     }
-
-
-/* -- RESPONSIVE - BEGIN HEADER -- */
