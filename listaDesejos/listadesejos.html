@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./listadesejos.css">
+    <link rel="stylesheet" href="../PI-Footer (1)/footer.css">
+    <link rel="stylesheet" href="fontawesome/all.min.css">
+    </link>
+    <title>ListaDesejos</title>
+</head>
+
+<body>
+<!-- BEGIN HEADER -->
+<header class="style-header">
+
+    <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
+    <div class="icons-header">
+        <div class="icon-menu">
+            <a class="btn btn-black" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <img src="../imagens/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
+            </a>
+
+            <div class="offcanvas offcanvas-start background-menu d-flex flex-column flex-shrink-0 p-3 text-black bg-dark"
+                tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
+
+                <hr>
+
+                <ul class="nav nav-pills flex-column mb-auto">
+
+                    <li>
+                        <a href="#" class="text-black" aria-current="page">
+
+                            <!-- Início do Chevron (icone >) ao lado da opção do menu -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                            </svg>
+                            <!-- Fim do Chevron (icone >) ao lado da opção do menu -->
+
+                            <span class="font-menu">HOME</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                            </svg>
+                            <span class="font-menu">SOBRE NÓS</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                            </svg>
+                            <span class="font-menu">ESTOQUE</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-black">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                            </svg>
+                            <span class="font-menu">CONTATO</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <hr>
+
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                            class="rounded-circle me-2">
+                        <strong><span class="font-menu">USUÁRIO</span></strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="./carrinho.html"><span
+                                    class="font-menu">Carrinho</span></a></li>
+                        <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
+                        <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="b-example-divider"></div>
+
+        </div>
+    </div>
+    <!-- FIM DO ICONE MENU HAMBURGUER-->
+
+
+    <!-- INÍCIO DO ICONE DA LOGO -->
+    <div class="icons-header">
+        <div class="icon-logo">
+            <a href="#"><img src="../imagens/logo-rev01.jpeg" width="120" /></a>
+        </div>
+    </div>
+    <!-- FIM DO ICONE DA LOGO -->
+
+    <!-- INÍCIO DOS ÍCONES DO LADO DIREITO -->
+    <div class="icons-header right-icons-header">
+
+        <!-- INÍCIO DO ÍCONE DE PESQUISA -->
+        <div class="icons-position-header search-icon">
+            <img src="../imagens/search.png" class="icons-header" data-bs-toggle="modal" width="30"
+                data-bs-target="#modalPesquisa" role="button">
+        </div>
+        <!-- FIM DO ÍCONE DE PESQUISA -->
+
+        <!-- INÍCIO DO ÍCONE DE FAVORITOS -->
+        <div class="icons-position-header favorite-icon">
+            <a href="#"><img src="../imagens/favorite.png" width="30" /></a>
+        </div>
+        <!-- FIM DO ÍCONE DE FAVORITOS -->
+
+        <!-- INÍCIO DO ÍCONE DE LOGIN -->
+        <div class="icons-position-header user-icon">
+            <a href="#"><img src="../imagens/user.png" width="30" /></a>
+        </div>
+        <!-- FIM DO ÍCONE DE LOGIN -->
+
+        <!-- INÍCIO DO ÍCONE DE CARRINHO -->
+        <div class="icons-position-header garage-icon">
+            <a href="./carrinho.html"><img src="../imagens/garage-car.png" width="30" /></a>
+        </div>
+        <!-- FIM DO ÍCONE DE CARRINHO -->
+
+    </div>
+    <!-- FIM DOS ÍCONES DO LADO DIREITO -->
+
+</header>
+
+<!-- INICIO DO MODAL PESQUISAR -->
+
+<div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content p-5">
+            <img src="../imagens/close.jpeg" type="button" class="icon-close btn-close align-self-end"
+                data-bs-dismiss="modal" aria-label="Close">
+            <div class="modal-header">
+                <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="caixa-busca" class="col-form-label"></label>
+                        <input type="search" class="form-control" id="caixa-busca">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FIM DO MODAL DE PESQUISAR -->
+
+<!-- END HEADER -->
+
+
+
+
+    <section>
+
+
+        <article class="page-content">
+            <!-- coluna Menu -->
+            <div class="row">
+                <div class="col-3 d-md-block d-none"><!--responsividade menu -->
+                    <div class="column ms-4">
+
+
+                        <!--Navbar-->
+                        <nav class="navbar navbar-light border-bottom-menu">
+                            <div class="container-fluid d-block text-center">
+                                <span class=" mb-0 ">MENU</span>
+
+
+
+                            </div>
+                        </nav>
+
+                        <ul style="color: #F0F0F0;" class="list-group list-group-flush text-center">
+                            <li class="list-group-item">MEUS DADOS</li>
+                            <li class="list-group-item">MEUS PEDIDOS</li>
+                            <li class="list-group-item">CARRINHO DE COMPRA</li>
+                            <li class="list-group-item">MEUS FAVORITOS</li>
+                            <li class="list-group-item">CHECKOUT</li>
+                            <li class="list-group-item">SAIR</li>
+                        </ul>
+
+
+
+
+
+
+                    </div>
+                </div>
+                <!-- coluna lista desejos-->
+                <div class="col-9">
+                    <div class="">
+                        <div class="">
+                            <div class=" text-center title col-12 ">
+                                <span>LISTA DE DESEJOS</span>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="">
+                            <div class="listadesejos">
+
+                                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                                    <!-- card 1 -->
+                                    <div class="col text-center">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card h-100 mb-5">
+                                                <img src="../img/Chrysler_pacifica_Hybrida_2019_prata_01-768x576.jpg"
+                                                    class="card-img" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">CHRYSLER PACIFICA XS 2019 </h5>
+                                                    <p class="card-text">R$579.000,00</p>
+                                                    <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
+                                                    <i class="fas fa-car fa-2x"></i> </a>
+                                                    <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>  
+                                                </div>
+                                            </div>
+
+                                        </a>
+                                    </div>
+                                    <!-- fim do card 1 -->
+
+
+
+                                    <!-- card 2 -->
+                                    <div class="col text-center">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card h-100 mb-5">
+                                                <img src="../img/Jaguar_EPace_P250_STD_2018_branco_01-768x576.jpg"
+                                                    class="card-img" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">JAGUAR E-PACE P-250 2018</h5>
+                                                    <p class="card-text">R$209.000,00</p>
+                                                    <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
+                                                        <i class="fas fa-car fa-2x"></i> </a>
+                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- fim do card 2 -->
+
+
+
+                                    <!-- card 3 -->
+                                    <div class="col text-center">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card h-100 mb-5">
+                                                <img src="../img/Land_Rover_Evoque_HSE_Dynamic_Preta_2020_01-768x576.jpg"
+                                                    class="card-img" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">LAND ROVER EVOQUE 2020</h5>
+                                                    <p class="card-text">R$399.000,00</p>
+                                                    <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
+                                                        <i class="fas fa-car fa-2x"></i> </a>
+                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- fim do card 3 -->
+
+                                    <!-- card 4 -->
+                                    <div class="col text-center">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card h-100 mb-5">
+                                                <img src="../img/Mustang_GT_Cinza_2019_01-184x130.jpg" class="card-img"
+                                                    alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">FORD MUSTANG GT 2020</h5>
+                                                    <p class="card-text">R$425.000,00</p>
+                                                    <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
+                                                        <i class="fas fa-car fa-2x"></i> </a>
+                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- fim do card 4 -->
+
+
+                                    <!-- card 5 -->
+                                    <div class="col text-center">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card h-100 mb-5">
+                                                <img src="../img/Porsche_911_Carrera_2021_giz_01-184x130.jpg"
+                                                    class="card-img" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">PORSCHE 911 CARRERA 2021</h5>
+                                                    <p class="card-text">R$1.030.000,00</p>
+                                                    <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
+                                                        <i class="fas fa-car fa-2x"></i> </a>
+                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- fim do card 5 -->
+
+
+                                    <!-- card 6 -->
+                                    <div class="col text-center">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card h-100 mb-5">
+                                                <img src="../img/Audi_A5_Sportback_Sline_2019_cinza_01-768x576.jpg"
+                                                    class="card-img" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">AUDI A5 SPORTBACK 2019</h5>
+                                                    <p class="card-text">R$249.000,00</p>
+                                                    <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
+                                                        <i class="fas fa-car fa-2x"></i> </a>
+                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- fim do card 6 -->
+
+
+                                    <!-- card 7 -->
+                                    <div class="col-4 mb-3 text-center">
+                                        <a href="#" class="text-decoration-none">
+                                            <div class="card h-100 mb-5">
+                                                <img src="../img/MercedesBenz_AMG_GT_63_S_2020_branco_01-768x576.jpg"
+                                                    class="card-img" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">MERCEDES-BENZ AMG GLE 63 2018</h5>
+                                                    <p class="card-text">R$659.000,00</p>
+                                                    <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
+                                                        <i class="fas fa-car fa-2x"></i> </a>
+                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- fim do card 7 -->
+
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+        </article>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+  
+    <footer> <!--Começo Footer-->
+        <div class="container mb-5 pt-3 "> <!--Começo Redes Sociais-->
+        
+                <div class="row justify-content-center responsive-social-media">
+                    <div class="col-md-1"> <!--Icon Facebook-->
+                        <a href="#" target="_blank">
+                            <img src="../images-footer/facebook.png" width="30" height="30">
+                        </a>
+                    </div>
+                    <div class="col-md-1"> <!--Icon Twitter-->
+                        <a href="#" target="_blank">
+                            <img src="../images-footer/twitter.png" width="30" height="30">
+                        </a>
+                    </div>
+                    <div class="col-md-1"> <!--Icon Instagram-->
+                        <a href="#" target="_blank">
+                            <img src="../images-footer/instagram.png" width="30" height="30">
+                        </a>
+                    </div>
+                    <div class="col-md-1"> <!--Icon Linkedin-->
+                        <a href="#" target="_blank">
+                            <img src="../images-footer/linkedin.png" width="30" height="30">
+                        </a>
+                    </div>
+                    <div class="col-md-1"> <!--Icon YouTube-->
+                        <a href="#" target="_blank">
+                            <img src="../images-footer/youtube.png" width="30" height="30">
+                        </a>
+                    </div>
+                </div>
+            
+        </div> <!--Fim Redes Sociais-->
+
+        <div class="container"> <!--Começo Container Texto-->
+            <div class="row gy-5 text-start d-flex justify-content-center ms-3 responsive-footer">
+            <!-- row-cols-4 py-4 my-5 -->
+                <div class="col-md-3"> <!--Começo Institucional-->
+                    <h5>INSTITUCIONAL</h5>
+                    <br>
+                    <ul class="nav flex-column text-start">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">SOBRE NÓS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TRABALHE CONOSCO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">INVESTIDORES</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE PRIVACIDADE</a>
+                        </li>
+                    </ul>
+                </div> <!--Fim Institucional-->
+
+                <div class="col-md-3"> <!--Começo Contato-->
+                    <h5>CONTATO</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11) 5555-5555</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9 5555-5555</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555 5555</a>
+                        </li>
+                    </ul>
+                </div> <!--Fim Contato-->
+
+                <div class="col-md-3"> <!--Começo Atendimento-->
+                    <h5>ATENDIMENTO</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE VISITAS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE ATENDIMENTO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">COMO COMPRAR NO SITE</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">PRAZOS DE ENTREGA</a>
+                        </li>
+                    </ul>
+                </div> <!--Fim Atendimento-->
+
+                <div class="col-md-3"> <!--Começo Minha Conta-->
+                    <h5>MINHA CONTA</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS PESSOAIS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">EDITAR ENDEREÇOS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ACOMPANHAR UM PEDIDO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CRIAR UM CADASTRO</a>
+                        </li>
+                    </ul>
+                </div> <!--Fim Minha Conta-->
+            </div>
+        </div>
+        <div class="formas-pagamento text-center"> <!--Começo Gaveta Formas de Pagamento-->
+            <details>
+                <summary>
+                    formas de pagamento
+                </summary>
+                <ul>
+                    <li>
+                        <img src="../images-footer/logotipo-visa.png" alt="Visa" width="60" height="50"> <!--Icon Visa-->
+                    </li>
+                    <li>
+                        <img src="../images-footer/mastercard.png" alt="MasterCard"> <!--Icon Mastercard-->
+                    </li>
+                    <li>
+                        <img src="../images-footer/hipercard.png" alt="HiperCard"> <!--Icon Hipercard-->
+                    </li>
+                    <li>
+                        <img src="../images-footer/elo.png" alt="Elo"> <!--Icon Elo-->
+                    </li>
+                    <li>
+                        <img src="../images-footer/apple-pay (1).png" alt="Maestro" width="60" height="50"> <!--Icon Maestro-->
+                    </li>
+                    <li>
+                        <img src="../images-footer/codigo-de-barras.png" alt="boleto" width="50"> <!--Icon Boleto-->
+                    </li>
+                </ul>
+            </details>
+        </div> <!--Fim Gaveta Formas de Pagamento-->
+        <div class="text-center p-2"> <!--Começo Copyright-->
+            © 2021 DEV CARS AUTOMOBILES.
+        </div> <!--Fim Copyright-->
+    </footer>
+
+
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/fontawsome/all.min.js"></script>
+</body>
+
+</html>
