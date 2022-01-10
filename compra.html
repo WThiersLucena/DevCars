@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevCars - Checkout</title>
+
+    <!-- <link rel="stylesheet" href="./css/header.css" />  INSERÇÃO DO CSS CRIADO POR MIM -->
+    <link rel="stylesheet" href="./css/checkout.css" />
+    <link rel="stylesheet" href="./css/cartao.css" />
+    <link rel="stylesheet" href="./css/endereco.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- INSERÇÃO DO CSS CRIADO PELO BOOTSTRAP-->
+
+    <link rel="stylesheet" href="./css/header.css" />
+
+</head>
+
+<body>
+
+    <!-- BEGIN HEADER -->
+    <header class="style-header">
+
+        <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
+        <div class="icons-header">
+            <div class="icon-menu">
+                <a class="btn btn-black" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <img src="./imagens/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
+                </a>
+
+                <div class="offcanvas offcanvas-start background-menu d-flex flex-column flex-shrink-0 p-3 text-black bg-dark"
+                    tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
+
+                    <hr>
+
+                    <ul class="nav nav-pills flex-column mb-auto">
+
+                        <li>
+                            <a href="#" class="text-black" aria-current="page">
+
+                                <!-- Início do Chevron (icone >) ao lado da opção do menu -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <!-- Fim do Chevron (icone >) ao lado da opção do menu -->
+
+                                <span class="font-menu">HOME</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">SOBRE NÓS</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">ESTOQUE</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">CONTATO</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <hr>
+
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong><span class="font-menu">USUÁRIO</span></strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="./carrinho.html"><span
+                                        class="font-menu">Carrinho</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="b-example-divider"></div>
+
+            </div>
+        </div>
+        <!-- FIM DO ICONE MENU HAMBURGUER-->
+
+
+        <!-- INÍCIO DO ICONE DA LOGO -->
+        <div class="icons-header">
+            <div class="icon-logo">
+                <a href="#"><img src="./imagens/logo-rev01.jpeg" width="120" /></a>
+            </div>
+        </div>
+        <!-- FIM DO ICONE DA LOGO -->
+
+        <!-- INÍCIO DOS ÍCONES DO LADO DIREITO -->
+        <div class="icons-header right-icons-header">
+
+            <!-- INÍCIO DO ÍCONE DE PESQUISA -->
+            <div class="icons-position-header search-icon">
+                <img src="./imagens/search.png" class="icons-header" data-bs-toggle="modal" width="30"
+                    data-bs-target="#modalPesquisa" role="button">
+            </div>
+            <!-- FIM DO ÍCONE DE PESQUISA -->
+
+            <!-- INÍCIO DO ÍCONE DE FAVORITOS -->
+            <div class="icons-position-header favorite-icon">
+                <a href="#"><img src="./imagens/favorite.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE FAVORITOS -->
+
+            <!-- INÍCIO DO ÍCONE DE LOGIN -->
+            <div class="icons-position-header user-icon">
+                <a href="#"><img src="./imagens/user.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE LOGIN -->
+
+            <!-- INÍCIO DO ÍCONE DE CARRINHO -->
+            <div class="icons-position-header garage-icon">
+                <a href="./carrinho.html"><img src="./imagens/garage-car.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE CARRINHO -->
+
+        </div>
+        <!-- FIM DOS ÍCONES DO LADO DIREITO -->
+
+    </header>
+
+    <!-- INICIO DO MODAL PESQUISAR -->
+
+    <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content p-5">
+                <img src="./imagens/close.png" type="button" class="icon-close btn-close align-self-end"
+                    data-bs-dismiss="modal" aria-label="Close">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="caixa-busca" class="col-form-label"></label>
+                            <input type="search" class="form-control" id="caixa-busca">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIM DO MODAL DE PESQUISAR -->
+
+    <!-- END HEADER -->
+
+
+
+    <!-- BEGIN SECTION -->
+
+    <!-- INÍCIO DO TÍTULO DA PÁGINA -->
+    <div class="title-page background font-text-bold">
+        <h3>Confira e finalize seu pedido</h3>
+        <hr>
+    </div>
+
+    <!-- FIM DO TÍTULO DA PÁGINA -->
+
+    <div class="row background d-flex justify-content-center">
+
+        <!-- INÍCIO DO CARD ENDERECO -->
+        <div class="col-md-5 col-lg-5 row d-flex justify-content-center background">
+            <h4 class="mb-3 font-text" style="max-width: 30rem;">Endereço de Entrega</h4>
+            <div class="card text-black bg-white mb-3 px-0" style="max-width: 30rem;">
+
+                <!-- Início Endereço 01 -->
+                <div class=" col-md-12 card-header">
+
+                    <div class="form-check font-text d-flex justify-content-between">
+
+                        <div class="d-grid d-flex justify-content-start">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault1"
+                                id="flexRadioDefault1" />
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                <span class="space-input">
+                                    Endereço 01
+                                </span>
+                            </label>
+                        </div>
+                        <div class="d-grid d-md-flex justify-content-end">
+                            <img class="btn " src="./imagens/edit.png" width="45" />
+                            <img class="btn " src="./imagens/trash.png" width="45" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body">
+                    <h5 class="card-title font-text">Secondary card title</h5>
+                    <p class="card-text font-text">
+                        BA 099 km 08 Gleba 32C.<br>
+                        Bairro: Catu de Abrantes.<br>
+                        Cidade: Camaçari<br>
+                        UF: BA<br>
+                        CEP: 42.841-000<br>
+                        Complemento: Condomínio Busca Vida
+                    </p>
+                </div>
+                <!-- Fim Endereço 01 -->
+
+                <!-- Início Endereço 02 -->
+                <div class=" col-md-12 card-header">
+
+                    <div class="form-check font-text d-flex justify-content-between">
+
+                        <div class="d-grid d-flex justify-content-start">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault1"
+                                id="flexRadioDefault1" />
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                <span class="space-input">
+                                    Endereço 02
+                                </span>
+                            </label>
+                        </div>
+                        <div class="d-grid d-md-flex justify-content-end">
+                            <img class="btn " src="./imagens/edit.png" width="45" />
+                            <img class="btn " src="./imagens/trash.png" width="45" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body font-text">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">
+                        Av. 7 de Setembro, nº 111.<br>
+                        Bairro: Vitória.<br>
+                        Cidade: Salvador<br>
+                        UF: BA<br>
+                        CEP: 00.000-000
+                    </p>
+                </div>
+                <!-- Fim Endereço 02 -->
+            </div>
+
+            <!-- INÍCIO DO BOTÃO DE ADICIONAR ENDEREÇO -->
+            <div class="card-white font-text" style="max-width: 30rem;">
+                <h6>Ou adicione um novo endereço de entrega</h6>
+                <!-- Início botão padrão que abre o modal Endereco -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-endereco">
+                    <img src="./imagens/plus.png" width="30" />
+                </button>
+                <!-- Início botão padrão que abre o modal Endereco -->
+            </div>
+            <!-- INÍCIO DO BOTÃO DE ADICIONAR ENDEREÇO -->
+            <!-- FIM DO CARD ENDERECO -->
+
+
+
+
+            <!-- Início modal adicionar endereço-->
+            <div class="modal fade" id="modal-endereco" tabindex="-1" aria-labelledby="inicioModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+
+                        <!-- header do modal -->
+                        <div class="modal-header">
+                            <h5 class="modal-title text-center" id="inicioModal">ENDEREÇO</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- fim da header do modal -->
+
+
+                        <!-- corpo do modal Endereço -->
+                        <div class="modal-body">
+                            <form class="formulario-cadastro container">
+
+                                <div class="row alinha-campos d-flex justify-content-start gy-2">
+                                    <div class="cep col-sm-4">
+                                        <label label for="cep" class="form-label">CEP</label>
+                                        <input type="text" class="form-control" id="cep">
+                                    </div>
+
+                                    <div class="rua col-sm-8">
+                                        <label for="rua" class="form-label">LOGRADOURO</label>
+                                        <input type="text" class="form-control" id="rua">
+                                    </div>
+                                </div>
+
+
+                                <div class="row alinha-campos d-flex justify-content-start gy-2">
+                                    <div class="numero col-sm-3">
+                                        <label label for="numero" class="form-label">NUMERO</label>
+                                        <input type="number" class="form-control" id="numero">
+                                    </div>
+
+
+                                    <div class="bairro col-sm-9">
+                                        <label for="bairro" class="form-label">BAIRRO</label>
+                                        <input type="text" class="form-control" id="bairro">
+                                    </div>
+                                </div>
+
+
+                                <div class="row alinha-campos d-flex justify-content-start gy-2">
+                                    <div class="uf col-sm-3">
+                                        <label for="uf" class="form-label">UF</label>
+                                        <select name="uf" id="UF" class="form-control">
+                                            <option value="estado" selected disabled>- UF -</option>
+                                            <option value="ac">AC</option>
+                                            <option value="al">AL</option>
+                                            <option value="am">AM</option>
+                                            <option value="ap">AP</option>
+                                            <option value="ba">BA</option>
+                                            <option value="ce">CE</option>
+                                            <option value="df">DF</option>
+                                            <option value="es">ES</option>
+                                            <option value="go">GO</option>
+                                            <option value="ma">MA</option>
+                                            <option value="mt">MT</option>
+                                            <option value="ms">MS</option>
+                                            <option value="mg">MG</option>
+                                            <option value="pa">PA</option>
+                                            <option value="pb">PB</option>
+                                            <option value="pr">PR</option>
+                                            <option value="pe">PE</option>
+                                            <option value="pi">PI</option>
+                                            <option value="rj">RJ</option>
+                                            <option value="rn">RN</option>
+                                            <option value="ro">RO</option>
+                                            <option value="rs">RS</option>
+                                            <option value="rr">RR</option>
+                                            <option value="sc">SC</option>
+                                            <option value="se">SE</option>
+                                            <option value="sp">SP</option>
+                                            <option value="to">TO</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="cidade col-sm-9">
+                                        <label for="cidade" class="form-label">CIDADE</label>
+                                        <input type="text" name="" id="cidade" class="form-control input-cidade">
+                                    </div>
+                                </div>
+
+                                <div class="complemento">
+                                    <label for="complemento" class="form-label">COMPLEMENTO</label>
+                                    <input type="text" class="form-control" id="complemento">
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <button type="submit" class="botao-salvar button btn mt-4 col-sm-4">GRAVAR</button>
+                                </div>
+
+                            </form>
+                        </div>
+                        <!-- fim do corpo do modal Endereço -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim do modal adicionar endereço -->
+
+            <hr>
+
+            <h4 class="mb-3 font-text" style="max-width: 30rem;">Formas de Pagamento</h4>
+            <div class="card text-black bg-white mb-3 px-0" style="max-width: 30rem;">
+
+                <!-- Início Cartão 01 -->
+                <div class=" col-md-12 card-header">
+
+                    <div class="form-check font-text d-flex justify-content-between">
+
+                        <div class="d-grid d-flex justify-content-start">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2"
+                                id="flexRadioDefault2" />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                <span class="space-input">
+                                    (Crédito) Mastercard
+                                </span>
+                            </label>
+                        </div>
+                        <div class="d-grid d-md-flex justify-content-end">
+                            <img class="btn " src="./imagens/edit.png" width="45" />
+                            <img class="btn " src="./imagens/trash.png" width="45" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body font-text">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                        of the
+                        card's content.</p>
+                </div>
+                <!-- Fim Cartão 01 -->
+
+                <!-- Início Cartão 02 -->
+                <div class=" col-md-12 card-header">
+
+                    <div class="form-check font-text d-flex justify-content-between">
+
+                        <div class="d-grid d-flex justify-content-start">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2"
+                                id="flexRadioDefault2" />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                <span class="space-input">
+                                    (Débito) Visa
+                                </span>
+                            </label>
+                        </div>
+                        <div class="d-grid d-md-flex justify-content-end">
+                            <img class="btn " src="./imagens/edit.png" width="45" />
+                            <img class="btn " src="./imagens/trash.png" width="45" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body font-text margin-card">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                        of the
+                        card's content.</p>
+                </div>
+                <!-- Fim Cartão 02 -->
+
+                <!-- Início Cartão 03 -->
+                <div class=" col-md-12 card-header">
+
+                    <div class="form-check font-text d-flex justify-content-between">
+
+                        <div class="d-grid d-flex justify-content-start">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2"
+                                id="flexRadioDefault2" />
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                <span class="space-input">
+                                    Paypal
+                                </span>
+                            </label>
+                        </div>
+                        <div class="d-grid d-md-flex justify-content-end">
+                            <img class="btn " src="./imagens/edit.png" width="45" />
+                            <img class="btn " src="./imagens/trash.png" width="45" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card-body font-text">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                        of the
+                        card's content.</p>
+                </div>
+                <!-- Fim Cartão 03 -->
+
+            </div>
+
+            <!-- INÍCIO DO BOTÃO DE ADICIONAR FORMA DE PAGAMENTO -->
+            <div class="card-white font-text" style="max-width: 30rem;">
+                <h6>Ou adicione um novo cartão</h6>
+                <!-- botão padrão que abre o modal Cartão -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modal-cartao">
+                    <img src="./imagens/plus.png" width="30" />
+                </button>
+                <!-- fim do botão que abre o modal Cartão  -->
+            </div>
+            <!-- FIM DO BOTÃO DE ADICIONAR FORMA DE PAGAMENTO -->
+
+
+
+
+            <!-- Início modal adicionar cartão-->
+            <div class="modal fade" id="modal-cartao" tabindex="-1" aria-labelledby="inicioModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+
+                        <!-- header do modal -->
+                        <div class="modal-header">
+                            <h5 class="modal-title text-center" id="inicioModal">ADICIONE UM NOVO CARTÃO</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- fim da header do modal -->
+
+
+                        <!-- corpo do modal -->
+                        <div class="modal-body">
+                            <form class="formulario-cadastro container">
+                                <div class="alinha-itens d-flex flex-column justify-content-center align-items-center">
+                                    <div class="row numero col-sm-8">
+                                        <label label for="numero" class="form-label">NUMERO DO CARTÃO</label>
+                                        <input type="text" class="form-control text-center" id="numero"
+                                            placeholder="XXXX - XXXX - XXXX - XXXX">
+                                    </div>
+
+                                    <div class="row rua col-sm-8">
+                                        <label for="nome" class="form-label">NOME IMPRESSO NO CARTÃO</label>
+                                        <input type="text" class="form-control text-center" id="nome"
+                                            placeholder="NOME">
+                                    </div>
+
+
+                                    <div class="row alinha-campos gy-4 justify-content-center">
+                                        <div class="cvv col-sm-4">
+                                            <label for="cvv" class="form-label">CVV</label>
+                                            <input type="text" name="" id="cvv" class="form-control text-center"
+                                                placeholder="XXX">
+                                        </div>
+
+                                        <div class="complemento col-sm-4">
+                                            <label for="complemento" class="form-label">DATA DE VALIDADE</label>
+                                            <input type="text" class="form-control text-center" id="complemento"
+                                                placeholder="MM / AA">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <button type="submit"
+                                            class="botao-salvar button btn mt-4 col-sm-12">GRAVAR</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- fim do corpo do modal -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- fim do modal adicionar endereço -->
+
+
+
+
+            <hr>
+
+            <div class="card text-black bg-white mb-3 font-text px-0" style="max-width: 30rem;">
+
+                <!-- Início do Card do Pix -->
+                <div class="card-header">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefaul2">
+                            <span class="icon-payment">
+                                Pix
+                                <img src="./imagens/pix.png" width="30" />
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Secondary card title</h5> -->
+                    <p class="card-text">
+                        Vencimento em 30 minutos. Após o pagamento seu pedido será processado.
+                    </p>
+                </div>
+                <!-- Fim do Card do Pix -->
+
+                <!-- Início do Card do Boleto -->
+                <div class="card-header">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefaul2">
+                            <span class="icon-payment">
+                                Boleto
+                                <img src="./imagens/barcode.png" width="30" />
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Secondary card title</h5> -->
+                    <p class="card-text">
+                        Vencimento em 1 dia útil. A data de entrega será alterada devido ao tempo de
+                        processamento do
+                        Boleto.
+                    </p>
+                </div>
+                <!-- Fim do Card do Boleto -->
+
+            </div>
+
+        </div>
+
+
+        <!-- INICIO DO CARD DO RESUMO  -->
+        <div class="col-md-6 col-lg-5 order-md-last">
+
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-black font-text">Resumo do Pedido</span>
+                <span class="badge bg-primary rounded-pill">3</span>
+            </h4>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                        <h6 class="my-0 font-text">Nome do 1º Carro</h6>
+                        <small class="text-mutedfont-text">Descrição do 1º Carro</small>
+                    </div>
+                    <span class="text-muted font-text">R$ 2.500.000,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                        <h6 class="my-0 font-text">Nome do 2º Carro</h6>
+                        <small class="text-muted font-text">Descrição do 2º Carro</small>
+                    </div>
+                    <span class="text-muted font-text">R$ 1.250.500,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                        <h6 class="my-0 font-text">Nome do 3º Carro</h6>
+                        <small class="text-muted font-text">Descrição do 3º Carro</small>
+                    </div>
+                    <span class="text-muted font-text">R$ 948.600,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-light">
+                    <div class="text-success">
+                        <h6 class="my-0 font-text">Preço do Frete</h6>
+                        <small class="font-text">Cep</small>
+                    </div>
+                    <span class="text-success font-text">R$ 65.500,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-light">
+                    <div class="text-success">
+                        <h6 class="my-0 font-text">Desconto</h6>
+                        <small class="font-text">Número do Código</small>
+                    </div>
+                    <span class="text-success font-text">−R$ 8.500,00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <span class="font-text-bold">Total (R$)</span>
+                    <strong class="font-text-bold">R$ 4.756.100,00</strong>
+                </li>
+            </ul>
+
+
+            <form class="card p-2">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Código de Desconto">
+                    <button type="submit" class="btn button btn-secondary">Aplicar</button>
+                </div>
+            </form>
+
+
+            <div class="d-grid gap-2 pt-3">
+                <a href="./carrinho.html"><button class="btn button font-text" type="button">Voltar para o
+                        Carrinho</button></a>
+                <a><button class="btn button font-text" type="button">Finalizar Compra</button></a>
+            </div>
+        </div>
+        <!-- FIM DO CARD DO RESUMO  -->
+
+    </div>
+
+    <!-- END SECTION -->
+
+    <!-- BEGIN FOOTER -->
+
+    <footer>
+        <!--Começo Footer-->
+        <div class="container mb-5 pt-3 ">
+            <!--Começo Redes Sociais-->
+
+            <div class="row justify-content-center responsive-social-media">
+                <div class="col-md-1">
+                    <!--Icon Facebook-->
+                    <a href="#" target="_blank">
+                        <img src="./imagens/facebook.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-md-1">
+                    <!--Icon Twitter-->
+                    <a href="#" target="_blank">
+                        <img src="./imagens/twitter.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-md-1">
+                    <!--Icon Instagram-->
+                    <a href="#" target="_blank">
+                        <img src="./imagens/instagram.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-md-1">
+                    <!--Icon Linkedin-->
+                    <a href="#" target="_blank">
+                        <img src="./imagens/linkedin.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-md-1">
+                    <!--Icon YouTube-->
+                    <a href="#" target="_blank">
+                        <img src="./imagens/youtube.png" width="30" height="30">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!--Fim Redes Sociais-->
+
+        <div class="container">
+            <!--Começo Container Texto-->
+            <div class="row gy-5 text-start d-flex justify-content-center ms-3 responsive-footer">
+                <!-- row-cols-4 py-4 my-5 -->
+                <div class="col-md-3">
+                    <!--Começo Institucional-->
+                    <h5>INSTITUCIONAL</h5>
+                    <br>
+                    <ul class="nav flex-column text-start">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">SOBRE NÓS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TRABALHE CONOSCO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">INVESTIDORES</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE
+                                PRIVACIDADE</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Institucional-->
+
+                <div class="col-md-3">
+                    <!--Começo Contato-->
+                    <h5>CONTATO</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11)
+                                5555-5555</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9
+                                5555-5555</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555
+                                5555</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Contato-->
+
+                <div class="col-md-3">
+                    <!--Começo Atendimento-->
+                    <h5>ATENDIMENTO</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE
+                                VISITAS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE
+                                ATENDIMENTO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">COMO COMPRAR NO SITE</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">PRAZOS DE ENTREGA</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Atendimento-->
+
+                <div class="col-md-3">
+                    <!--Começo Minha Conta-->
+                    <h5>MINHA CONTA</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS
+                                PESSOAIS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">EDITAR ENDEREÇOS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ACOMPANHAR UM PEDIDO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CRIAR UM CADASTRO</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Minha Conta-->
+            </div>
+        </div>
+        <div class="formas-pagamento text-center">
+            <!--Começo Gaveta Formas de Pagamento-->
+            <details>
+                <summary>
+                    formas de pagamento
+                </summary>
+                <ul>
+                    <li>
+                        <img src="./imagens/logotipo-visa.png" alt="Visa" width="60" height="50">
+                        <!--Icon Visa-->
+                    </li>
+                    <li>
+                        <img src="./imagens/mastercard.png" alt="MasterCard">
+                        <!--Icon Mastercard-->
+                    </li>
+                    <li>
+                        <img src="./imagens/hipercard.png" alt="HiperCard">
+                        <!--Icon Hipercard-->
+                    </li>
+                    <li>
+                        <img src="./imagens/" alt="Elo">
+                        <!--Icon Elo-->
+                    </li>
+                    <li>
+                        <img src="./imagens/apple-pay (1).png" alt="Maestro" width="60" height="50">
+                        <!--Icon Maestro-->
+                    </li>
+                    <li>
+                        <img src="./imagens/codigo-de-barras.png" alt="boleto" width="50">
+                        <!--Icon Boleto-->
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <!--Fim Gaveta Formas de Pagamento-->
+        <div class="text-center p-2">
+            <!--Começo Copyright-->
+            © 2021 DEV CARS AUTOMOBILES.
+        </div>
+        <!--Fim Copyright-->
+    </footer>
+
+    <!-- END FOOTER -->
+
+    <!-- END FOOTER -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script> <!-- JS DO BOOTSTRAP -->
+</body>
+
+</html>

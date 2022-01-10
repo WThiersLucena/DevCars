@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Orbitron&family=Questrial&family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+    background-color: #E0E0E0;
+}
+
+.titulo-pagina{
+    background-color: #000000;
+    color: #FFF;
+    font-size: 24px;;
+}
+
+.background-main {
+    background-color: #e0e0e0;
+}
+
+/*
+
+.borda {
+    border: 5px solid red;
+}
+
+.borda1 {
+    border: 5px solid green; 
+}
+
+.borda2 {
+    border: 5px solid blue;
+}
+
+*/
+
+.sidebar-font {
+    font-family: 'Questrial', sans-serif;
+}
+
+.background-grey {
+    background-color: #E0E0E0;
+}
+
+.background-container-subject {
+    background-color: #fffefe;
+}
+
+.background-card-carrinho {
+   background-color: rgba(var(--bs-body-bg-rgb),var(--bs-bg-opacity))!important;
+}
+
+.border-button-sidebar-menu {
+    border: 3px solid black;
+    border-radius: 3px;
+}
+
+
+.button-menu-lateral:hover {
+    background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
+}
+
+.button-continuar {
+    background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
+}
+
+.button-continuar:hover {
+    background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
+}
+
+.text-shopping-cart {
+    color: black;
+    font-family: 'Questrial', sans-serif;
+    font-size: .8em;
+}
+
+
+.link-solution {
+    text-decoration: none;
+    color:black;
+}
+
+.link-solution:link {
+    color:#000;
+}
+
+.link-solution:visited {
+    color:#000;
+}
+
+
+
+
+
+/* -- RESPONSIVE -- */
+
+@media (max-width: 766px) {
+            
+    .container-sidebar-menu {
+        display: none;
+    }
+    
+}
+
