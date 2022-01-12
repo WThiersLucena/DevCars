@@ -1,0 +1,19 @@
+.button {
+    background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
+}
+
+.button:hover {
+    background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
+}
+
+.margin-label {
+    margin-bottom: -1em;
+}
+
+.texto-alinhado {
+    text-align: justify;
+}
+
+/*
+Inserir a fonte de todos os textos para Questrial 
+*/

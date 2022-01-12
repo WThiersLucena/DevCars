@@ -1,38 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto+Condensed:wght@300&display=swap');
+
+* {
+
+    margin: 0;
+}
 body{
     background-color: #E0E0E0;
-}
-
-.linha_sobre_nos{
-    color:white;
-    background: #000;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    text-align: center;
-    font-size: large;
-}
-
-.linha_sobre_nos1{
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.sobre_nos .sobre_nos1{
-    margin-top: 10px;
+    width: 100%;
     
 }
 
-.sobre_nos1{
-    box-sizing: border-box;
+.pesquisar{
+    background-color: #E0E0E0;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    
 }
 
+.pesquisar-encontre{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.pesq_categoria{
+    margin-top: 5%;
+}
+
+.btn_pesquisa{
+    margin-bottom: 5px;
+    
+    margin-right: 50px;
+   
+}
+
+.btn_pesquisa:hover{
+    color: black;
+    font-weight: bold;
+}
+
+.btn_buscar{
+    background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
+    margin-bottom: 10px;
+    margin-left: 10%;
+    justify-items: flex-start;
+}
+
+.btn_buscar:hover{
+    background: linear-gradient(191deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
+   border-radius: 4px;
+   font-weight: bold;
+}
+
+
+.carosel_01{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-top: 5px;
+    
+}
+
+.frt{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-left: 50px;
+}
+.logo_marcas{
+    padding-top: 20px;    
+    width: 100%;
+}
+
+.boxt{
+    display: inline-block;
+    width: 10%;
+    height: 10%;
+}
+
+.slider{
+    max-width: 1150px;
+    display: flex;
+}
+
+.slider .card{
+    flex: 1;
+    margin: 0 5px;
+}
+
+.slider .card .img img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
 
 .social{
-    margin-bottom: 45px;
+    background: rgb(214, 212, 212);
+    margin-top: 95px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+.texto_midia{
+    margin-top: 10%;
+}
+
+.logo-centralizado{
+    margin-left: 9%;
+}
+.logo-centralizado2{
+    margin-left: 10%;
+    
+}
+
+.fundo-filtro{
+    background-color: #E0E0E0;
+    margin-bottom: 2%;
 }
 
 
+/* -- BEGIN HEADER -- */
 
+    header {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+
+        background-color: #000;
+        
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-bottom: 1%;
+        padding-right: 2%;
+        
+    }
+
+    .icons-header .icon-menu {
+        padding-top: 70%;
+    }
+
+
+    .icon-logo {
+        padding-left: 50%;
+    }
+
+    .right-icons-header {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+
+        padding-right: 7%;
+        
+    }
+
+    .icons-position-header {
+
+        padding-top: 40%;
+        margin-left: 10%; 
+
+    }
+
+    .linhaDestaque{
+        font-weight: bold;
+        margin-top: 50px;
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+
+    .teste {
+        margin: 20px;
+    }
+
+    /* button {
+        background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
+
+        font-family: font-family: 'Questrial', sans-serif;
+        
+        border-radius: 4px;
+        border: none;
+        padding: 10px;        
+    }
+    
+
+    button:hover {
+        background: linear-gradient(191deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
+    }
+*/
+
+
+/* -- END HEADER -- */
 
 
 
@@ -91,8 +253,23 @@ body{
         padding-right: 2%;
         height: 100%;
         width: 100%; 
+        }
 
-    }
+
+        .modal-mobily{
+            width: 100%;
+        }
+        .modal-mobily2{
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .modal-mobily3{
+            width: 75%;
+            margin-left: 10%;
+        }
+
+        
     }
 
     @media (max-width: 800px) {
@@ -158,6 +335,19 @@ body{
             width: 100%; 
 
         }
+
+        .modal-mobily{
+            width: 100%;
+        }
+        .modal-mobily2{
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .modal-mobily3{
+            width: 75%;
+            margin-left: 10%;
+        }
     }
 
     @media (max-width: 640px) {
@@ -178,7 +368,18 @@ body{
 
         }  
 
-        
+        .modal-mobily{
+            width: 100%;
+        }
+        .modal-mobily2{
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .modal-mobily3{
+            width: 75%;
+            margin-left: 10%;
+        }
         
     }
 
@@ -242,6 +443,19 @@ body{
             width: 100%; 
 
         }
+
+        .modal-mobily{
+            width: 100%;
+        }
+        .modal-mobily2{
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .modal-mobily3{
+            width: 75%;
+            margin-left: 10%;
+        }
        
 
         .search-icon {
@@ -269,130 +483,34 @@ body{
 
 /* -- RESPONSIVE - BEGIN HEADER -- */
 
-@media (max-width: 1000px) {
-            
-    header {
 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-items: center;
-        background-color: #000;        
-        padding-top: 1%;
-        padding-left: 4%;
-        padding-bottom: 1%;
-        padding-right: 2%;  
-
-    }  
-          
-  
+.icons-header{
+    width: 30px;
 }
 
-@media (max-width: 800px) {
-        
-    header {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-items: center;
-
-        background-color: #000;
-        
-        padding-top: 1%;
-        padding-left: 3%;
-        padding-bottom: 1%;
-        padding-right: 2%;  
-
-    }  
-
-    
-    .sobre_nos{
-        width: 100%;
-    }
-    .sobre_nos1_img{
-        width: 100%;
-        margin-top: 2%;
-    }
+.icon-close{
+    width: 25px;
+    height: 25px;
 }
 
-@media (max-width: 640px) {
-        
-    header {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-items: center;
-
-        background-color: #000;
-        
-        padding-top: 1%;
-        padding-left: 2%;
-        padding-bottom: 1%;
-        padding-right: 2%;  
-
-    }  
-
-    
-    .sobre_nos{
-        width: 100%;
-    }
-    .sobre_nos1_img{
-        width: 100%;
-        margin-top: 2%;
-    }
-    
+.modal-content{
+    background-color: #000;
 }
 
-/* -- FOR IPHONE 6/7/8 -- */
-@media (max-width: 500px) {
-    
-    header  {
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-items: center;
-
-        background-color: #000;
-        
-        padding-top: 1%;
-        padding-left: 5%;
-        padding-bottom: 1%;
-        padding-right: 2%;  
-
-    } 
-    
-    .sobre_nos{
-        width: 100%;
-    }
-    .sobre_nos1_img{
-        width: 100%;
-        margin-top: 2%;
-    }
-    .search-icon {
-        display: none;
-    }
-
-    .favorite-icon {
-        display: none;
-    }
-
-    .garage-icon {
-        display: none;
-    }
-
-    .user-icon {
-        padding-top: 150%;
-    }
-    
-    .icon-logo {
-        padding-left: 9%;
-    }
-
+.modal-header{
+    border-bottom: none;
 }
 
 
-/* -- RESPONSIVE - BEGIN HEADER -- */
+.carousel-hipercarros{
+    margin-top: 1px;
+}
 
+.carousel-tamanho{
+    width: 120%;
+    height: 98%;
+}
+
+.icons-marcas{
+    margin-left: 20px;
+}

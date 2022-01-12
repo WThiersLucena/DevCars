@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Orbitron&family=Questrial&family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+    background: #E5E5E5;
+}
+
+h2 {
+    background: black;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    font-family: 'Questrial', sans-serif;
+
+}
+
+.container {
+    padding: 10px;
+    width: 50%;
+    height: 50%;
+}
+
+.form-control,.form-select {
+    margin: 5px;
+    margin-right: 10px;
+    font-family: 'Questrial', sans-serif;
+    background: #EEEEEE;
+    border: 1px solid #9F9F9F;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+}
+.form-control:hover {
+    border: 2px solid yellow;
+    background: white;
+}
+
+.dados-pessoais{
+    background: #F0F0F0;
+    border: 1px solid #C0C0C0;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.endereco{
+    background: #F0F0F0;
+    border: 1px solid #C0C0C0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.senha{
+    background: #F0F0F0;
+    border: 1px solid #C0C0C0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.titulo-pagina{
+    background: black;
+    color:white;
+    font-family: 'Questrial', sans-serif;
+    height: 60px;
+    margin-bottom: 20px;
+
+}
+
+.titulo-dados{
+    width: 200px;
+    text-align: center;
+}
+
+.titulo-endereco,.titulo-senha{
+    text-align: center;
+    width: 20%;
+}
+
+
+
+
+
+
+
+
+
+
