@@ -125,16 +125,16 @@
             <!-- INÍCIO DO ÍCONE DE PESQUISA -->
             <div class="icons-position-header search-icon">
                 <!-- imagem que abre o modal de pesquisa-->
-                <img src="img/img-header/search.png" class="icons-header" data-bs-toggle="modal" data-bs-target="#modalPesquisa" width="30"
-                    role="button">
+                <img src="img/img-header/search.png" class="icons-header" data-bs-toggle="modal"
+                    data-bs-target="#modalPesquisa" width="30" role="button">
                 <!-- fim da imagem que abre o modal-->
 
                 <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content p-5">
-                            <img src="img/img-header/close.png" type="button" class="icon-close btn-close align-self-end"
-                                data-bs-dismiss="modal" aria-label="Close">
+                            <img src="img/img-header/close.png" type="button"
+                                class="icon-close btn-close align-self-end" data-bs-dismiss="modal" aria-label="Close">
                             <div class="modal-header">
                                 <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO
                                 </h5>
@@ -181,17 +181,16 @@
 
 
     <div class="container">
-        <div class="row mb-5">
+        <div class="row mb-3">
             <!-- <img src="img-pedidos/pedidos.png" class="img-pedidos" alt="pedidos"> -->
             <h1 class="titulo-pagina pb-3 pt-3 ps-5">PÁGINA DE PEDIDOS</h1>
         </div>
 
 
-        <div class="row">
+        <div class="row justify-content-center gy-5">
             <!-- inicio do menu lateral -->
-            <div
-                class="col-3 flex-row justify-content-center align-items-start d-lg-block d-xl-block d-xxl-block d-none">
-                <div class="column me-5">
+            <div class="col-12 col-sm-4 flex-row justify-content-center">
+                <div class="column">
 
                     <!--Navbar-->
                     <nav class="navbar navbar-light border-bottom-menu titulo-menu mb-3 mt-0 pt-0 pb-2">
@@ -230,10 +229,10 @@
 
 
             <!-- inicio dos cards de pedidos -->
-            <div class="titulos-detalhes col">
+            <div class="titulos-detalhes col col-sm-8">
 
                 <nav class="row titulo-menu mb-3 mt-0 pt-0 pb-2">
-                    <div class="col-4 text-center">
+                    <div class="col-3 text-center">
                         <span>PEDIDO</span>
                     </div>
 
@@ -245,7 +244,7 @@
                         <span>DATA</span>
                     </div>
 
-                    <div class="col text-center">
+                    <div class="col text-center d-none d-md-none d-xl-block d-xxl-block">
                         <span>TOTAL</span>
                     </div>
                 </nav>
@@ -259,20 +258,21 @@
                                 data-bs-target="#flush-collapseOne" aria-expanded="false"
                                 aria-controls="flush-collapseOne">
 
-                                <div class="col-4">
-                                    <span class="ms-3">#PEDIDO 73475</span>
+                                <div class="col-3">
+                                    <span class="ms-3">#73475</span>
                                 </div>
 
-                                <div class="col status-pedido d-flex align-items-center justify-content-center">
-                                    <img src="img/img-pedidos/status-cancelado.png" alt="cancelado" class="figura-status">
+                                <div class="col status-pedido d-flex align-items-center justify-content-center ms-1">
+                                    <img src="img/img-pedidos/status-cancelado.png" alt="cancelado"
+                                        class="figura-status">
                                     <span class="ms-1">CANCELADO</span>
                                 </div>
 
-                                <div class="col dt-pedido text-end">
-                                    <span class="">25/12/2021</span>
+                                <div class="col dt-pedido text-sm-center">
+                                    <span class="ps-5">25/12/2021</span>
                                 </div>
 
-                                <div class="col valor-pedido text-end">
+                                <div class="col valor-pedido text-end d-none d-md-none d-xl-block d-xxl-block">
                                     <span class="">R$ 600.000,00</span>
                                 </div>
                             </button>
@@ -283,39 +283,50 @@
                             <div class="accordion-body">
 
                                 <!-- item 1 do pedido 1 -->
-                                <div class="row">
-                                    <div class="col-md-3">
+                                <div class="row g-4">
+                                    <div class="col-12 col-sm-12 col-lg-3">
                                         <img src="img/img-pedidos/MercedesBenz_AMG_GT_63_S_2020_branco_01.jpg"
                                             alt="MercedesBenz AMG GT63 2020 Branco" class="img-pedido">
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-sm-4">
                                         <div class="d-flex flex-column">
-                                            <span class="titulo-descricao text-center">DESCRIÇÃO ITENS</span>
-                                            <span class="descricao">MERCEDES BENSZ AMG GT63 2020 BRANCO</span>
+                                            <span class="titulo-descricao text-sm-center ">DESCRIÇÃO ITENS</span>
+                                            <span class="descricao text-sm-center">MERCEDES BENSZ AMG GT63 2020
+                                                BRANCO</span>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-2">
-                                        <div class="d-flex flex-column text-center">
-                                            <span class="titulo-descricao text-center">COD PRODUTO</span>
-                                            <span class="descricao text-center">234</span>
+                                    <div class="col-sm-2">
+                                        <div class="d-flex flex-column text-sm-center">
+                                            <span class="titulo-descricao text-sm-center">COD PRODUTO</span>
+                                            <span class="descricao text-sm-center">234</span>
                                         </div>
                                     </div>
 
-                                    <div class="col-md">
-                                        <div class="d-flex flex-column text-center">
+                                    <div class="col-sm">
+                                        <div class="d-flex flex-column text-sm-center">
                                             <span class="titulo-descricao">QTD</span>
                                             <span class="descricao">1</span>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-2">
-                                        <div class="d-flex flex-column text-center">
+                                    <div class="col-sm-2 ">
+                                        <div class="d-flex flex-column text-sm-center ">
                                             <span class="titulo-descricao">VALOR UNIT (R$)</span>
                                             <span class="descricao">600.000,00</span>
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- total do pedido que só aparecerá em tela de celular -->
+                                <div class="row mt-5 d-block d-md-block d-xl-none d-xxl-none">
+                                    <div class="d-flex text-sm-center justify-content-between">
+                                        <span class="titulo-data-pgmt">TOTAL</span>
+                                        <span class="data-pgmt">R$ 1.200.090,00</span>
+                                    </div>
+                                </div>
+                                <!--fim do total do pedido que só aparecerá em tela de celular -->
+
                                 <!-- fim do item 1 do pedido 1 -->
 
                             </div>
@@ -332,8 +343,8 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
 
-                            <div class="col-4">
-                                <span class="ms-3">#PEDIDO 73475</span>
+                            <div class="col-3">
+                                <span class="ms-3">#43775</span>
                             </div>
 
                             <div class="col status-pedido d-flex align-items-center justify-content-center">
@@ -341,11 +352,11 @@
                                 <span class="ms-1">ENTREGUE</span>
                             </div>
 
-                            <div class="col dt-pedido text-end">
-                                <span class="">25/12/2021</span>
+                            <div class="col dt-pedido text-sm-center">
+                                <span class="ps-5">15/11/2021</span>
                             </div>
 
-                            <div class="col valor-pedido text-end">
+                            <div class="col valor-pedido text-end d-none d-md-none d-xl-block d-xxl-block">
                                 <span class="">R$ 600.000,00</span>
                             </div>
 
@@ -355,34 +366,34 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <!-- item 1 do pedido 2 -->
-                            <div class="row">
-                                <div class="col-md-3">
+                            <div class="row g-4">
+                                <div class="col-12 col-sm-12 col-lg-3">
                                     <img src="img/img-pedidos/resized_IMG_1399-768x576.jpg"
                                         alt="MercedesBenz AMG GT63 2020 Branco" class="img-pedido">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-sm-4">
                                     <div class="d-flex flex-column">
-                                        <span class="titulo-descricao text-center">DESCRIÇÃO ITENS</span>
+                                        <span class="titulo-descricao text-sm-center">DESCRIÇÃO ITENS</span>
                                         <span class="descricao">AUDI RS Q8 2021 AZUL</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md-2">
-                                    <div class="d-flex flex-column text-center">
-                                        <span class="titulo-descricao text-center">COD PRODUTO</span>
-                                        <span class="descricao text-center">234</span>
+                                <div class="col-sm-2">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao text-sm-center">COD PRODUTO</span>
+                                        <span class="descricao text-sm-center">234</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md">
-                                    <div class="d-flex flex-column text-center">
+                                <div class="col-sm">
+                                    <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-descricao">QTD</span>
                                         <span class="descricao">1</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md-2">
-                                    <div class="d-flex flex-column text-center">
+                                <div class="col-sm-2">
+                                    <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-descricao">VALOR UNIT (R$)</span>
                                         <span class="descricao">1.230.000,00</span>
                                     </div>
@@ -392,34 +403,34 @@
 
 
                             <!-- item 2 do pedido 2 -->
-                            <div class="row mt-3">
-                                <div class="col-md-3">
+                            <div class="row mt-3 g-4">
+                                <div class="col-12 col-sm-12 col-lg-3">
                                     <img src="img/img-pedidos/BMW_X7_m50i_2021_preto_01-768x576.jpg"
                                         alt="MercedesBenz AMG GT63 2020 Branco" class="img-pedido">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-sm-4">
                                     <div class="d-flex flex-column">
-                                        <span class="titulo-descricao text-center">DESCRIÇÃO ITENS</span>
+                                        <span class="titulo-descricao text-sm-center">DESCRIÇÃO ITENS</span>
                                         <span class="descricao">BMW X7 M50I 2021 PRETA</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md-2">
-                                    <div class="d-flex flex-column text-center">
-                                        <span class="titulo-descricao text-center">COD PRODUTO</span>
-                                        <span class="descricao text-center">784</span>
+                                <div class="col-sm-2">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao text-sm-center">COD PRODUTO</span>
+                                        <span class="descricao text-sm-center">784</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md">
-                                    <div class="d-flex flex-column text-center">
+                                <div class="col-sm">
+                                    <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-descricao">QTD</span>
                                         <span class="descricao">1</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md-2">
-                                    <div class="d-flex flex-column text-center">
+                                <div class="col-sm-2">
+                                    <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-descricao">VALOR UNIT (R$)</span>
                                         <span class="descricao">1.139.000,00</span>
                                     </div>
@@ -429,7 +440,7 @@
 
                             <!-- detalhes de entrega -->
                             <div class="row entrega mt-5">
-                                <div class="col-md-10">
+                                <div class="col-sm-10">
                                     <div class="d-flex flex-column">
                                         <span class="titulo-descricao-endereco">ENDEREÇO DE ENTREGA</span>
                                         <span class="descricao-endereco ps-4">CEP: 12332-032<br>RUA PRAÇA ROBERTO PEDRO
@@ -438,8 +449,8 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md">
-                                    <div class="d-flex flex-column text-center">
+                                <div class="col-sm">
+                                    <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-descricao-data">DATA DE ENTREGA</span>
                                         <span class="descricao-data">25/12/2021</span>
                                     </div>
@@ -450,21 +461,31 @@
 
                             <!-- detalhes de pagamento -->
                             <div class="row pagamento mt-5">
-                                <div class="col-md-10">
+                                <div class="col-sm-10">
                                     <div class="d-flex flex-column">
                                         <span class="titulo-descricao-pgmt">FORMA DE PAGAMENTO</span>
                                         <span class="descricao-pgmt ps-4">TRANSFERÊNCIA BANCÁRIA</span>
                                     </div>
                                 </div>
 
-                                <div class="col-md">
-                                    <div class="d-flex flex-column text-center">
+                                <div class="col-sm">
+                                    <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-data-pgmt">DATA DO PAGAMENTO</span>
                                         <span class="data-pgmt">29/11/2021</span>
                                     </div>
                                 </div>
                                 <!-- fim dos detalhes de pagamento -->
                             </div>
+
+
+                            <!-- total do pedido que só aparecerá em tela de celular -->
+                            <div class="row mt-5 d-block d-md-block d-xl-none d-xxl-none">
+                                <div class="d-flex text-sm-center justify-content-between">
+                                    <span class="titulo-data-pgmt">TOTAL</span>
+                                    <span class="data-pgmt">R$ 1.200.090,00</span>
+                                </div>
+                            </div>
+                            <!--fim do total do pedido que só aparecerá em tela de celular -->
 
 
                             <!-- imprimir nf -->
