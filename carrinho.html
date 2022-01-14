@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DevCars - Carrinho de Compras</title>
 
-    <link rel="stylesheet" href="./css/sidebar-menulateral.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- INSERÇÃO DO CSS CRIADO PELO BOOTSTRAP-->
 
+
+    <link rel="stylesheet" href="./css/sidebar-menulateral.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/carrinho.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
 
 </head>
 
 <body>
 
-       <!-- BEGIN HEADER -->
-       <header class="style-header">
+    <!-- BEGIN HEADER -->
+    <header class="style-header">
 
         <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
         <div class="icons-header">
@@ -90,27 +93,42 @@
 
                     <hr>
 
-                    <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
-                                class="rounded-circle me-2">
-                            <strong><span class="font-menu">USUÁRIO</span></strong>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="./carrinho.html"><span
-                                        class="font-menu">Carrinho</span></a></li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
-                        </ul>
+                    <!-- Início da div USUÁRIO -->
+                    <div class="background-user">
+
+                        <div class="dropdown">
+
+                            <a href="#"
+                                class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2">
+                                <strong><span class="font-menu">USUÁRIO</span></strong>
+
+
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow"
+                                aria-labelledby="dropdownUser1">
+                                <li><a class="dropdown-item" href="./carrinho.html"><span
+                                            class="font-menu">Carrinho</span></a></li>
+                                <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
+                                <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
+                            </ul>
+                        </div>
+
                     </div>
+                    <!-- Fim da div USUÁRIO -->
+
+
                 </div>
 
-                <div class="b-example-divider"></div>
+                <!-- <div class="b-example-divider"></div> -->
 
             </div>
         </div>
@@ -190,7 +208,7 @@
     <main class="background-grey mt-0 mb-0">
         <div
             class="col-10 col-md-10 col-lg-10 col-xl-10 d-flex justify-content-center pt-2 borda container mb-2 background-main">
-            <div class="col-0 col-md-3 borda1 container-sidebar-menu me-3 background-grey">
+            <div class="col-0 col-md-2 borda1 container-sidebar-menu me-3 background-grey">
 
                 <!-- INICIO DO CONTAINER LADO ESQUERDO -->
                 <div class="bd-example d-flex justify-content-center flex-column background-grey mb-3">
@@ -205,25 +223,25 @@
                         aria-label="Vertical button group">
                         <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
                                 class="link-solution" href="#">MEUS DADOS</a></button>
-                        <button type="button" class="btn button-menu-lateral sidebar-font"><a class="link-solution"
-                                href="#">MEUS PEDIDOS</a></button>
-                        <button type="button" class="btn button-menu-lateral sidebar-font"><a class="link-solution"
-                                href="./carrinho.html">CARRINHO DE COMPRA</a></button>
-                        <button type="button" class="btn button-menu-lateral sidebar-font"><a class="link-solution"
-                                href="#">MEUS FAVORITOS</a></button>
-                        <button type="button" class="btn button-menu-lateral sidebar-font"><a class="link-solution"
-                                href="./compra.html">CHECKOUT</a></button>
-                        <button type="button" class="btn button-menu-lateral sidebar-font"><a class="link-solution"
-                                href="#">SAIR</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="#">MEUS PEDIDOS</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="./carrinho.html">CARRINHO DE COMPRA</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="#">MEUS FAVORITOS</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="./compra.html">CHECKOUT</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="#">SAIR</a></button>
                     </div>
                 </div>
                 <!-- FIM DO CONTAINER LADO ESQUERDO -->
             </div>
 
             <!-- INICIO DO CONTAINER LADO DIREITO -->
-            <div class=" col-12 col-md-9 borda2 mb-2">
+            <div class=" col-12 col-md-10 borda2 mb-2">
                 <div>
-                    <h4 class="fw-normal mb-0 text-black sidebar-font">Carrinho de compra</h4>
+                    <h4 class="fw-normal mb-0 text-black sidebar-font title-right-side">Carrinho de compra</h4>
                     <hr>
                 </div>
 
@@ -285,32 +303,32 @@
                                 <img src="./imagens/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
                             </div>
                             <div class="col-md-3 col-lg-3 col-xl-3 texto-alinhado">
-                                <p class="lead fw-normal mb-2 text-shopping-cart">NOME DO CARRO 01</p>
-                                <p>
+                                <p class="lead fw-normal mb-2 text-shopping-cart">CARRO #01</p>
+                                <p class="resume-shopping-cart">
                                     Resumo do produto 01
                                 </p>
                             </div>
-                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex">
                                 <button class="btn btn-link px-2"
                                     onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                    <i class="fas fa-minus"></i>
+                                    <i class="bi bi-dash-square size-icons-input"></i>
                                 </button>
 
                                 <input id="form1" min="0" name="quantity" value="2" type="number"
-                                    class="form-control form-control-sm" />
+                                    class="form-control form-control-sm input-center" />
 
                                 <button class="btn btn-link px-2"
                                     onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <i class="fas fa-plus"></i>
+                                    <i class="bi bi-plus-square size-icons-input"></i>
                                 </button>
                             </div>
                             <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                <h5 class="mb-0 text-shopping-cart">R$ 2.500.000,00</h5>
+                                <h5 class="mb-0 text-shopping-cart"><span class="price-car">R$ 12.500.000,00</span></h5>
                             </div>
-                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <div class="col-md-1 col-lg-1 col-xl-1 text-end trash-position">
                                 <a href="#!" class="text-danger">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                        class="bi bi-trash" viewBox="0 0 16 16">
+                                        class="bi bi-trash trash-position" viewBox="0 0 16 16">
                                         <path
                                             d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
                                         <path fill-rule="evenodd"
@@ -331,32 +349,32 @@
                                 <img src="./imagens/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
                             </div>
                             <div class="col-md-3 col-lg-3 col-xl-3 texto-alinhado">
-                                <p class="lead fw-normal mb-2 text-shopping-cart">NOME DO CARRO 02</p>
-                                <p>
+                                <p class="lead fw-normal mb-2 text-shopping-cart">CARRO #02</p>
+                                <p class="resume-shopping-cart">
                                     Resumo do produto 02
                                 </p>
                             </div>
-                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex">
                                 <button class="btn btn-link px-2"
                                     onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                    <i class="fas fa-minus"></i>
+                                    <i class="bi bi-dash-square size-icons-input"></i>
                                 </button>
 
                                 <input id="form1" min="0" name="quantity" value="2" type="number"
-                                    class="form-control form-control-sm" />
+                                    class="form-control form-control-sm input-center" />
 
                                 <button class="btn btn-link px-2"
                                     onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <i class="fas fa-plus"></i>
+                                    <i class="bi bi-plus-square size-icons-input"></i>
                                 </button>
                             </div>
                             <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                <h5 class="mb-0 text-shopping-cart">R$ 2.500.000,00</h5>
+                                <h5 class="mb-0 text-shopping-cart"><span class="price-car">R$ 12.500.000,00</span></h5>
                             </div>
-                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <div class="col-md-1 col-lg-1 col-xl-1 text-end trash-position">
                                 <a href="#!" class="text-danger">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                        class="bi bi-trash" viewBox="0 0 16 16">
+                                        class="bi bi-trash trash-position" viewBox="0 0 16 16">
                                         <path
                                             d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
                                         <path fill-rule="evenodd"
@@ -377,32 +395,32 @@
                                 <img src="./imagens/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
                             </div>
                             <div class="col-md-3 col-lg-3 col-xl-3 texto-alinhado">
-                                <p class="lead fw-normal mb-2 text-shopping-cart">NOME DO CARRO 03</p>
-                                <p>
+                                <p class="lead fw-normal mb-2 text-shopping-cart">CARRO #03</p>
+                                <p class="resume-shopping-cart">
                                     Resumo do produto 03
                                 </p>
                             </div>
-                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                            <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex">
                                 <button class="btn btn-link px-2"
                                     onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                    <i class="fas fa-minus"></i>
+                                    <i class="bi bi-dash-square size-icons-input"></i>
                                 </button>
 
                                 <input id="form1" min="0" name="quantity" value="2" type="number"
-                                    class="form-control form-control-sm" />
+                                    class="form-control form-control-sm input-center" />
 
                                 <button class="btn btn-link px-2"
                                     onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                    <i class="fas fa-plus"></i>
+                                    <i class="bi bi-plus-square size-icons-input"></i>
                                 </button>
                             </div>
                             <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                <h5 class="mb-0 text-shopping-cart">R$ 2.500.000,00</h5>
+                                <h5 class="mb-0 text-shopping-cart"><span class="price-car">R$ 12.500.000,00</span></h5>
                             </div>
-                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                            <div class="col-md-1 col-lg-1 col-xl-1 text-end trash-position">
                                 <a href="#!" class="text-danger">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                        class="bi bi-trash" viewBox="0 0 16 16">
+                                        class="bi bi-trash trash-position" viewBox="0 0 16 16">
                                         <path
                                             d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
                                         <path fill-rule="evenodd"
@@ -416,12 +434,22 @@
                 <!-- Fim do Card 03 -->
 
                 <!-- Início do card Código de Continuar -->
+
+                <div class="card-body d-md-flex justify-content-md-end px-0">
+                    <a href="./compra.html"><button type="button"
+                            class="btn button-continuar btn-block btn-lg btn-continue">Continue</button></a>
+                </div>
+
+                <!-- 
                 <div class="card">
                     <div class="card-body d-md-flex justify-content-md-center">
                         <a href="./compra.html"><button type="button"
                                 class="btn button-continuar btn-block btn-lg">Continue</button></a>
                     </div>
                 </div>
+                -->
+
+
                 <!-- Início do card Código de Continuar -->
 
                 <!-- FIM DO CONTEUDO DO CONTAINER LADO DIREITO -->
@@ -440,32 +468,32 @@
         <div class="container mb-5 pt-3 ">
             <!--Começo Redes Sociais-->
 
-            <div class="row justify-content-center responsive-social-media">
-                <div class="col-md-1">
+            <div class="row justify-content-center responsive-social-media pt-3">
+                <div class="col-2 col-md-1">
                     <!--Icon Facebook-->
                     <a href="#" target="_blank">
                         <img src="./imagens/facebook.png" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-2 col-md-1">
                     <!--Icon Twitter-->
                     <a href="#" target="_blank">
                         <img src="./imagens/twitter.png" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-2 col-md-1">
                     <!--Icon Instagram-->
                     <a href="#" target="_blank">
                         <img src="./imagens/instagram.png" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-2 col-md-1">
                     <!--Icon Linkedin-->
                     <a href="#" target="_blank">
                         <img src="./imagens/linkedin.png" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-2 col-md-1">
                     <!--Icon YouTube-->
                     <a href="#" target="_blank">
                         <img src="./imagens/youtube.png" width="30" height="30">

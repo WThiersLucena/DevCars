@@ -47,21 +47,24 @@ body {
 }
 
 .border-button-sidebar-menu {
-    border: 3px solid black;
+    border-top: 1px solid rgb(187, 187, 187);
+    border-bottom: .5px solid rgb(187, 187, 187);
+    border-left: 1px solid rgb(187, 187, 187);
+    border-right: 1px solid rgb(187, 187, 187);
     border-radius: 3px;
 }
 
 
 .button-menu-lateral:hover {
-    background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
 }
 
 .button-continuar {
-    background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
 }
 
 .button-continuar:hover {
-    background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
 }
 
 .text-shopping-cart {
@@ -84,11 +87,21 @@ body {
     color:#000;
 }
 
-
-
+.btn-continue {
+    width: 100%;
+}
 
 
 /* -- RESPONSIVE -- */
+
+@media (min-width: 766px) {
+            
+    .btn-continue {
+        width: 100%;
+    }
+    
+}
+
 
 @media (max-width: 766px) {
             

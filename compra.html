@@ -8,24 +8,20 @@
 
     <title>DevCars - Checkout</title>
 
-    <!-- <link rel="stylesheet" href="./css/header.css" />  INSERÇÃO DO CSS CRIADO POR MIM -->
-    <link rel="stylesheet" href="./css/checkout.css" />
-    <link rel="stylesheet" href="./css/cartao.css" />
-    <link rel="stylesheet" href="./css/endereco.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- INSERÇÃO DO CSS CRIADO PELO BOOTSTRAP-->
 
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/checkout.css" />
+    <link rel="stylesheet" href="./css/cartao.css" />
+    <link rel="stylesheet" href="./css/endereco.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
 
 </head>
 
 <body>
-
-    <!-- ALTERACAO -->
-    <p>ALTERACAO</p>
 
     <!-- BEGIN HEADER -->
     <header class="style-header">
@@ -97,27 +93,42 @@
 
                     <hr>
 
-                    <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
-                                class="rounded-circle me-2">
-                            <strong><span class="font-menu">USUÁRIO</span></strong>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="./carrinho.html"><span
-                                        class="font-menu">Carrinho</span></a></li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
-                        </ul>
+                    <!-- Início da div USUÁRIO -->
+                    <div class="background-user">
+
+                        <div class="dropdown">
+
+                            <a href="#"
+                                class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2">
+                                <strong><span class="font-menu">USUÁRIO</span></strong>
+
+
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow"
+                                aria-labelledby="dropdownUser1">
+                                <li><a class="dropdown-item" href="./carrinho.html"><span
+                                            class="font-menu">Carrinho</span></a></li>
+                                <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
+                                <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
+                            </ul>
+                        </div>
+
                     </div>
+                    <!-- Fim da div USUÁRIO -->
+
+
                 </div>
 
-                <div class="b-example-divider"></div>
+                <!-- <div class="b-example-divider"></div> -->
 
             </div>
         </div>
@@ -192,8 +203,9 @@
     <!-- END HEADER -->
 
 
+    <!-- BEGIN MAIN -->
 
-    <!-- BEGIN SECTION -->
+        <!-- BEGIN SECTION -->
 
     <!-- INÍCIO DO TÍTULO DA PÁGINA -->
     <div class="title-page background font-text-bold">
@@ -317,12 +329,12 @@
 
                                 <div class="row alinha-campos d-flex justify-content-start gy-2">
                                     <div class="cep col-sm-4">
-                                        <label label for="cep" class="form-label">CEP</label>
+                                        <label label for="cep" class="form-label"><span class="text-color-modal">CEP</span></label>
                                         <input type="text" class="form-control" id="cep">
                                     </div>
 
                                     <div class="rua col-sm-8">
-                                        <label for="rua" class="form-label">LOGRADOURO</label>
+                                        <label for="rua" class="form-label"><span class="text-color-modal">LOGRADOURO</span></label>
                                         <input type="text" class="form-control" id="rua">
                                     </div>
                                 </div>
@@ -330,13 +342,13 @@
 
                                 <div class="row alinha-campos d-flex justify-content-start gy-2">
                                     <div class="numero col-sm-3">
-                                        <label label for="numero" class="form-label">NUMERO</label>
+                                        <label label for="numero" class="form-label"><span class="text-color-modal">NÚMERO</span></label>
                                         <input type="number" class="form-control" id="numero">
                                     </div>
 
 
                                     <div class="bairro col-sm-9">
-                                        <label for="bairro" class="form-label">BAIRRO</label>
+                                        <label for="bairro" class="form-label"><span class="text-color-modal">BAIRRO</span></label>
                                         <input type="text" class="form-control" id="bairro">
                                     </div>
                                 </div>
@@ -344,7 +356,7 @@
 
                                 <div class="row alinha-campos d-flex justify-content-start gy-2">
                                     <div class="uf col-sm-3">
-                                        <label for="uf" class="form-label">UF</label>
+                                        <label for="uf" class="form-label"><span class="text-color-modal">UF</span></label>
                                         <select name="uf" id="UF" class="form-control">
                                             <option value="estado" selected disabled>- UF -</option>
                                             <option value="ac">AC</option>
@@ -378,13 +390,13 @@
                                     </div>
 
                                     <div class="cidade col-sm-9">
-                                        <label for="cidade" class="form-label">CIDADE</label>
+                                        <label for="cidade" class="form-label"><span class="text-color-modal">CIDADE</span></label>
                                         <input type="text" name="" id="cidade" class="form-control input-cidade">
                                     </div>
                                 </div>
 
                                 <div class="complemento">
-                                    <label for="complemento" class="form-label">COMPLEMENTO</label>
+                                    <label for="complemento" class="form-label"><span class="text-color-modal">COMPLEMENTO</span></label>
                                     <input type="text" class="form-control" id="complemento">
                                 </div>
 
@@ -534,13 +546,13 @@
                             <form class="formulario-cadastro container">
                                 <div class="alinha-itens d-flex flex-column justify-content-center align-items-center">
                                     <div class="row numero col-sm-8">
-                                        <label label for="numero" class="form-label">NUMERO DO CARTÃO</label>
+                                        <label label for="numero" class="form-label"><span class="text-color-modal">NÚMERO DO CARTÃO</span></label>
                                         <input type="text" class="form-control text-center" id="numero"
                                             placeholder="XXXX - XXXX - XXXX - XXXX">
                                     </div>
 
                                     <div class="row rua col-sm-8">
-                                        <label for="nome" class="form-label">NOME IMPRESSO NO CARTÃO</label>
+                                        <label for="nome" class="form-label"><span class="text-color-modal">NOME IMPRESSO NO CARTÃO</span></label>
                                         <input type="text" class="form-control text-center" id="nome"
                                             placeholder="NOME">
                                     </div>
@@ -548,13 +560,13 @@
 
                                     <div class="row alinha-campos gy-4 justify-content-center">
                                         <div class="cvv col-sm-4">
-                                            <label for="cvv" class="form-label">CVV</label>
+                                            <label for="cvv" class="form-label"><span class="text-color-modal">CVV</span></label>
                                             <input type="text" name="" id="cvv" class="form-control text-center"
                                                 placeholder="XXX">
                                         </div>
 
                                         <div class="complemento col-sm-4">
-                                            <label for="complemento" class="form-label">DATA DE VALIDADE</label>
+                                            <label for="complemento" class="form-label"><span class="text-color-modal">DATA DE VALIDADE</span></label>
                                             <input type="text" class="form-control text-center" id="complemento"
                                                 placeholder="MM / AA">
                                         </div>
@@ -685,12 +697,23 @@
                 </div>
             </form>
 
-
-            <div class="d-grid gap-2 pt-3">
-                <a href="./carrinho.html"><button class="btn button font-text" type="button">Voltar para o
-                        Carrinho</button></a>
-                <a><button class="btn button font-text" type="button">Finalizar Compra</button></a>
+            
+            <div class="d-grid gap-2 d-md-block pt-2">
+                <a href="./carrinho.html"><button class="btn mb-1 button-out-flow" type="button">Voltar para carrinho</button></a>
+                <a href="#"><button class="btn button-checkout mb-3" type="button">Finalizar compra</button></a>
             </div>
+            
+
+            <!-- 
+            <div class="row d-grid gap-2 pt-3">
+            
+                <a href="./carrinho.html"><button class="btn button font-text" type="button">Voltar para o Carrinho</button></a>
+                  
+                <a><button class="btn button font-text" type="button">Finalizar Compra</button></a>
+                 
+            </div>
+            -->
+
         </div>
         <!-- FIM DO CARD DO RESUMO  -->
 
@@ -698,39 +721,42 @@
 
     <!-- END SECTION -->
 
-    <!-- BEGIN FOOTER -->
+    <!-- END MAIN -->
+   
 
-    <footer>
+      <!-- BEGIN FOOTER -->
+
+      <footer>
         <!--Começo Footer-->
         <div class="container mb-5 pt-3 ">
             <!--Começo Redes Sociais-->
 
-            <div class="row justify-content-center responsive-social-media">
-                <div class="col-md-1">
+            <div class="row justify-content-center responsive-social-media pt-3">
+                <div class="col-2 col-md-1">
                     <!--Icon Facebook-->
                     <a href="#" target="_blank">
                         <img src="./imagens/facebook.png" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-2 col-md-1">
                     <!--Icon Twitter-->
                     <a href="#" target="_blank">
                         <img src="./imagens/twitter.png" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-2 col-md-1">
                     <!--Icon Instagram-->
                     <a href="#" target="_blank">
                         <img src="./imagens/instagram.png" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-2 col-md-1">
                     <!--Icon Linkedin-->
                     <a href="#" target="_blank">
                         <img src="./imagens/linkedin.png" width="30" height="30">
                     </a>
                 </div>
-                <div class="col-md-1">
+                <div class="col-2 col-md-1">
                     <!--Icon YouTube-->
                     <a href="#" target="_blank">
                         <img src="./imagens/youtube.png" width="30" height="30">
@@ -760,8 +786,7 @@
                             <a href="#" class="nav-link p-0 text-muted" target="_blank">INVESTIDORES</a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE
-                                PRIVACIDADE</a>
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE PRIVACIDADE</a>
                         </li>
                     </ul>
                 </div>
@@ -773,16 +798,13 @@
                     <br>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11)
-                                5555-5555</a>
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11) 5555-5555</a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9
-                                5555-5555</a>
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9 5555-5555</a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555
-                                5555</a>
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555 5555</a>
                         </li>
                     </ul>
                 </div>
@@ -794,12 +816,10 @@
                     <br>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE
-                                VISITAS</a>
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE VISITAS</a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE
-                                ATENDIMENTO</a>
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE ATENDIMENTO</a>
                         </li>
                         <li class="nav-item mb-2">
                             <a href="#" class="nav-link p-0 text-muted" target="_blank">COMO COMPRAR NO SITE</a>
@@ -817,8 +837,7 @@
                     <br>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS
-                                PESSOAIS</a>
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS PESSOAIS</a>
                         </li>
                         <li class="nav-item mb-2">
                             <a href="#" class="nav-link p-0 text-muted" target="_blank">EDITAR ENDEREÇOS</a>
@@ -875,8 +894,6 @@
         </div>
         <!--Fim Copyright-->
     </footer>
-
-    <!-- END FOOTER -->
 
     <!-- END FOOTER -->
 

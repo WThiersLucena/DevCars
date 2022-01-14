@@ -100,6 +100,13 @@
    }
 
 
+   .background-user {
+       background-color: #E0E0E0;
+       border-radius: 3px;
+       padding-top: 1%;
+       padding-bottom: 1%;
+       padding-left: 1%;
+   }
 
    /* -- MODAL PESQUISAR -- */
 
@@ -228,6 +235,11 @@
 
         .user-icon {
             padding-top: 150%;
+        }
+
+        .product-price {
+            padding-top: 5%;
+            font-size: 2em;
         }
         
 
