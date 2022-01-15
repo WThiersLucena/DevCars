@@ -17,9 +17,8 @@
     <title>ListaDesejos</title>
 </head>
 
-<body>
-<!-- BEGIN HEADER -->
-<header class="style-header">
+   <!-- BEGIN HEADER -->
+   <header class="style-header">
 
     <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
     <div class="icons-header">
@@ -88,13 +87,21 @@
 
                 <hr>
 
+               <!-- Início da div USUÁRIO -->
+               <div class="background-user">
+    
                 <div class="dropdown">
+                    
                     <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
                         id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        
                         <img src="https://github.com/mdo.png" alt="" width="32" height="32"
                             class="rounded-circle me-2">
                         <strong><span class="font-menu">USUÁRIO</span></strong>
+                        
+
                     </a>
+                    
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                         <li><a class="dropdown-item" href="./carrinho.html"><span
                                     class="font-menu">Carrinho</span></a></li>
@@ -106,6 +113,10 @@
                         <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
                     </ul>
                 </div>
+
+            </div>
+            <!-- Fim da div USUÁRIO -->
+
             </div>
 
             <div class="b-example-divider"></div>
@@ -155,6 +166,33 @@
     <!-- FIM DOS ÍCONES DO LADO DIREITO -->
 
 </header>
+ 
+
+<!-- INICIO DO MODAL PESQUISAR -->
+
+<div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content p-5">
+            <img src="../imagens/close.jpeg" type="button" class="icon-close btn-close align-self-end"
+                data-bs-dismiss="modal" aria-label="Close">
+            <div class="modal-header">
+                <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="caixa-busca" class="col-form-label"></label>
+                        <input type="search" class="form-control" id="caixa-busca">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FIM DO MODAL DE PESQUISAR -->
+
+<!-- END HEADER -->
 
 <!-- INICIO DO MODAL PESQUISAR -->
 
@@ -190,7 +228,7 @@
 
         <article class="page-content">
             <!-- coluna Menu -->
-            <div class="row">
+            <div class="row responsive-mobile">
                 <div class="col-3 d-md-block d-none"><!--responsividade menu -->
                     <div class="column ms-4">
 
@@ -236,7 +274,7 @@
                         <div class="">
                             <div class="listadesejos">
 
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="row row-cols-1 row-cols-md-3 g-4 responsive-ipadPro">
 
                                     <!-- card 1 -->
                                     <div class="col text-center">
@@ -249,7 +287,7 @@
                                                     <p class="card-text">R$579.000,00</p>
                                                     <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
                                                     <i class="fas fa-car fa-2x"></i> </a>
-                                                    <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>  
+                                                    <a href="#"><img src="../imagens/favorite.png" alt="favotirar" class="favoritar"></a>  
                                                 </div>
                                             </div>
 
@@ -270,7 +308,7 @@
                                                     <p class="card-text">R$209.000,00</p>
                                                     <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
                                                         <i class="fas fa-car fa-2x"></i> </a>
-                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                        <a href="#"><img src="../imagens/favorite.png" alt="favotirar" class="favoritar"></a>
                                                 </div>
                                             </div>
                                         </a>
@@ -290,7 +328,7 @@
                                                     <p class="card-text">R$399.000,00</p>
                                                     <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
                                                         <i class="fas fa-car fa-2x"></i> </a>
-                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                        <a href="#"><img src="../imagens/favorite.png" alt="favotirar" class="favoritar"></a>
                                                 </div>
                                             </div>
                                         </a>
@@ -308,7 +346,7 @@
                                                     <p class="card-text">R$425.000,00</p>
                                                     <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
                                                         <i class="fas fa-car fa-2x"></i> </a>
-                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                        <a href="#"><img src="../imagens/favorite.png" alt="favotirar" class="favoritar"></a>
                                                 </div>
                                             </div>
                                         </a>
@@ -327,7 +365,7 @@
                                                     <p class="card-text">R$1.030.000,00</p>
                                                     <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
                                                         <i class="fas fa-car fa-2x"></i> </a>
-                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                        <a href="#"><img src="../imagens/favorite.png" alt="favotirar" class="favoritar"></a>
                                                 </div>
                                             </div>
                                         </a>
@@ -346,7 +384,7 @@
                                                     <p class="card-text">R$249.000,00</p>
                                                     <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
                                                         <i class="fas fa-car fa-2x"></i> </a>
-                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                        <a href="#"><img src="../imagens/favorite.png" alt="favotirar" class="favoritar"></a>
                                                 </div>
                                             </div>
                                         </a>
@@ -355,7 +393,7 @@
 
 
                                     <!-- card 7 -->
-                                    <div class="col-4 mb-3 text-center">
+                                    <div class="col mb-3 text-center">
                                         <a href="#" class="text-decoration-none">
                                             <div class="card h-100 mb-5">
                                                 <img src="../img/MercedesBenz_AMG_GT_63_S_2020_branco_01-768x576.jpg"
@@ -365,7 +403,7 @@
                                                     <p class="card-text">R$659.000,00</p>
                                                     <a class="btn btn-warning mt-3 buttom-width" href="#" role="button">
                                                         <i class="fas fa-car fa-2x"></i> </a>
-                                                        <a href="#"><img src="../img/coracaocontorno2.jpeg" alt="favotirar" class="favoritar"></a>
+                                                        <a href="#"><img src="../imagens/favorite.png" alt="favotirar" class="favoritar"></a>
                                                 </div>
                                             </div>
                                         </a>
@@ -424,37 +462,41 @@
     <!-- Footer -->
   
     <footer> <!--Começo Footer-->
-        <div class="container mb-5 pt-3 "> <!--Começo Redes Sociais-->
+         <!--Começo Redes Sociais-->
+         
+         <div class="container mb-5 pt-3 redes-sociais"> <!--Começo Redes Sociais-->
         
-                <div class="row justify-content-center responsive-social-media">
-                    <div class="col-md-1"> <!--Icon Facebook-->
-                        <a href="#" target="_blank">
-                            <img src="../images-footer/facebook.png" width="30" height="30">
-                        </a>
-                    </div>
-                    <div class="col-md-1"> <!--Icon Twitter-->
-                        <a href="#" target="_blank">
-                            <img src="../images-footer/twitter.png" width="30" height="30">
-                        </a>
-                    </div>
-                    <div class="col-md-1"> <!--Icon Instagram-->
-                        <a href="#" target="_blank">
-                            <img src="../images-footer/instagram.png" width="30" height="30">
-                        </a>
-                    </div>
-                    <div class="col-md-1"> <!--Icon Linkedin-->
-                        <a href="#" target="_blank">
-                            <img src="../images-footer/linkedin.png" width="30" height="30">
-                        </a>
-                    </div>
-                    <div class="col-md-1"> <!--Icon YouTube-->
-                        <a href="#" target="_blank">
-                            <img src="../images-footer/youtube.png" width="30" height="30">
-                        </a>
-                    </div>
+            <div class="row justify-content-center responsive-social-media mr-2">
+                <div class="col-md-1 col-2"> <!--Icon Facebook-->
+                    <a href="https://pt-br.facebook.com/" target="_blank">
+                        <img src="../images-footer/facebook.png" width="30" height="30">
+                    </a>
                 </div>
-            
-        </div> <!--Fim Redes Sociais-->
+                <div class="col-md-1 col-2"> <!--Icon Twitter-->
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src="../images-footer/twitter.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-md-1 col-2"> <!--Icon Instagram-->
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../images-footer/instagram.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-md-1 col-2"> <!--Icon Linkedin-->
+                    <a href="https://br.linkedin.com/" target="_blank">
+                        <img src="../images-footer/linkedin.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-md-1 col-2"> <!--Icon YouTube-->
+                    <a href="https://www.youtube.com/?hl=pt" target="_blank">
+                        <img src="../images-footer/youtube.png" width="30" height="30">
+                    </a>
+                </div>
+            </div>
+        
+    </div> <!--Fim Redes Sociais-->
+        
+        <!--Fim Redes Sociais-->
 
         <div class="container"> <!--Começo Container Texto-->
             <div class="row gy-5 text-start d-flex justify-content-center ms-3 responsive-footer">
