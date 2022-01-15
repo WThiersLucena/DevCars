@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/pedidos.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+
+<body>
+
+    <!-- BEGIN HEADER -->
+    <header class="style-header mb-5">
+
+        <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
+        <div class="icons-header">
+            <div class="icon-menu">
+                <a class="btn btn-black" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <img src="./img/img-header/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
+                </a>
+
+                <div class="offcanvas offcanvas-start background-menu d-flex flex-column flex-shrink-0 p-3 text-black bg-dark"
+                    tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
+
+                    <hr>
+
+                    <ul class="nav nav-pills flex-column mb-auto">
+
+                        <li>
+                            <a href="#" class="text-black" aria-current="page">
+
+                                <!-- Início do Chevron (icone >) ao lado da opção do menu -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <!-- Fim do Chevron (icone >) ao lado da opção do menu -->
+
+                                <span class="font-menu">HOME</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">SOBRE NÓS</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">ESTOQUE</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">CONTATO</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <hr>
+
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong><span class="font-menu">USUÁRIO</span></strong>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="./carrinho.html"><span
+                                        class="font-menu">Carrinho</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="b-example-divider"></div>
+
+            </div>
+        </div>
+        <!-- FIM DO ICONE MENU HAMBURGUER-->
+
+
+        <!-- INÍCIO DO ICONE DA LOGO -->
+        <div class="icons-header">
+            <div class="icon-logo">
+                <a href="#"><img src="./img/img-header/logo-rev01.jpeg" width="120" /></a>
+            </div>
+        </div>
+        <!-- FIM DO ICONE DA LOGO -->
+
+        <!-- INÍCIO DOS ÍCONES DO LADO DIREITO -->
+        <div class="icons-header right-icons-header">
+
+            <!-- INÍCIO DO ÍCONE DE PESQUISA -->
+            <div class="icons-position-header search-icon">
+                <!-- imagem que abre o modal de pesquisa-->
+                <img src="img/img-header/search.png" class="icons-header" data-bs-toggle="modal"
+                    data-bs-target="#modalPesquisa" width="30" role="button">
+                <!-- fim da imagem que abre o modal-->
+
+                <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content p-5">
+                            <img src="img/img-header/close.png" type="button"
+                                class="icon-close btn-close align-self-end" data-bs-dismiss="modal" aria-label="Close">
+                            <div class="modal-header">
+                                <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="caixa-busca" class="col-form-label"></label>
+                                        <input type="search" class="form-control" id="caixa-busca">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM DO ÍCONE DE PESQUISA -->
+
+            <!-- INÍCIO DO ÍCONE DE FAVORITOS -->
+            <div class="icons-position-header favorite-icon">
+                <a href="#"><img src="img/img-header/favorite.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE FAVORITOS -->
+
+            <!-- INÍCIO DO ÍCONE DE LOGIN -->
+            <div class="icons-position-header user-icon">
+                <a href="#"><img src="img/img-header/user.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE LOGIN -->
+
+            <!-- INÍCIO DO ÍCONE DE CARRINHO -->
+            <div class="icons-position-header garage-icon">
+                <a href="./carrinho.html"><img src="img/img-header/garage-car.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE CARRINHO -->
+
+        </div>
+        <!-- FIM DOS ÍCONES DO LADO DIREITO -->
+
+    </header>
+    <!-- END HEADER -->
+
+
+
+
+    <div class="container">
+        <div class="row mb-3">
+            <!-- <img src="img-pedidos/pedidos.png" class="img-pedidos" alt="pedidos"> -->
+            <h1 class="titulo-pagina pb-3 pt-3 ps-5">PÁGINA DE PEDIDOS</h1>
+        </div>
+
+
+        <div class="row justify-content-center gy-5">
+            <!-- inicio do menu lateral -->
+            <div class="col-12 col-sm-4 flex-row justify-content-center">
+                <div class="column">
+
+                    <!--Navbar-->
+                    <nav class="navbar navbar-light border-bottom-menu titulo-menu mb-3 mt-0 pt-0 pb-2">
+                        <div class="container-fluid d-block text-center">
+                            <span>MENU</span>
+                        </div>
+                    </nav>
+
+                    <ul style="color: #F0F0F0;" class="list-group list-group-flush text-center">
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">MEUS DADOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">MEUS PEDIDOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">CARRINHO</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">LISTA DE DESEJOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">ENDEREÇOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">PAGAMENTOS</li>
+                        </a>
+                        <a href="#" class="text-decoration-none">
+                            <li class="list-group-item">SAIR</li>
+                        </a>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- fim do menu lateral -->
+
+
+            <!-- inicio dos cards de pedidos -->
+            <div class="titulos-detalhes col col-sm-8">
+
+                <nav class="row titulo-menu mb-3 mt-0 pt-0 pb-2">
+                    <div class="col-3 text-center">
+                        <span>PEDIDO</span>
+                    </div>
+
+                    <div class="col text-center">
+                        <span>STATUS</span>
+                    </div>
+
+                    <div class="col text-center">
+                        <span>DATA</span>
+                    </div>
+
+                    <div class="col text-center d-none d-md-none d-xl-block d-xxl-block">
+                        <span>TOTAL</span>
+                    </div>
+                </nav>
+
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <!-- acordeon pedido 1 -->
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+
+                                <div class="col-3">
+                                    <span class="ms-3">#73475</span>
+                                </div>
+
+                                <div class="col status-pedido d-flex align-items-center justify-content-center ms-1">
+                                    <img src="img/img-pedidos/status-cancelado.png" alt="cancelado"
+                                        class="figura-status">
+                                    <span class="ms-1">CANCELADO</span>
+                                </div>
+
+                                <div class="col dt-pedido text-sm-center">
+                                    <span class="ps-5">25/12/2021</span>
+                                </div>
+
+                                <div class="col valor-pedido text-end d-none d-md-none d-xl-block d-xxl-block">
+                                    <span class="">R$ 600.000,00</span>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">
+
+                                <!-- item 1 do pedido 1 -->
+                                <div class="row g-4">
+                                    <div class="col-12 col-sm-12 col-lg-3">
+                                        <img src="img/img-pedidos/MercedesBenz_AMG_GT_63_S_2020_branco_01.jpg"
+                                            alt="MercedesBenz AMG GT63 2020 Branco" class="img-pedido">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="d-flex flex-column">
+                                            <span class="titulo-descricao text-sm-center ">DESCRIÇÃO ITENS</span>
+                                            <span class="descricao text-sm-center">MERCEDES BENSZ AMG GT63 2020
+                                                BRANCO</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                        <div class="d-flex flex-column text-sm-center">
+                                            <span class="titulo-descricao text-sm-center">COD PRODUTO</span>
+                                            <span class="descricao text-sm-center">234</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm">
+                                        <div class="d-flex flex-column text-sm-center">
+                                            <span class="titulo-descricao">QTD</span>
+                                            <span class="descricao">1</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-2 ">
+                                        <div class="d-flex flex-column text-sm-center ">
+                                            <span class="titulo-descricao">VALOR UNIT (R$)</span>
+                                            <span class="descricao">600.000,00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- total do pedido que só aparecerá em tela de celular -->
+                                <div class="row mt-5 d-block d-md-block d-xl-none d-xxl-none">
+                                    <div class="d-flex text-sm-center justify-content-between">
+                                        <span class="titulo-data-pgmt">TOTAL</span>
+                                        <span class="data-pgmt">R$ 1.200.090,00</span>
+                                    </div>
+                                </div>
+                                <!--fim do total do pedido que só aparecerá em tela de celular -->
+
+                                <!-- fim do item 1 do pedido 1 -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- fim do acordeon pedido 1 -->
+
+
+                <!-- acordeon pedido 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+
+                            <div class="col-3">
+                                <span class="ms-3">#43775</span>
+                            </div>
+
+                            <div class="col status-pedido d-flex align-items-center justify-content-center">
+                                <img src="img/img-pedidos/status-entregue.png" alt="cancelado" class="figura-status">
+                                <span class="ms-1">ENTREGUE</span>
+                            </div>
+
+                            <div class="col dt-pedido text-sm-center">
+                                <span class="ps-5">15/11/2021</span>
+                            </div>
+
+                            <div class="col valor-pedido text-end d-none d-md-none d-xl-block d-xxl-block">
+                                <span class="">R$ 600.000,00</span>
+                            </div>
+
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <!-- item 1 do pedido 2 -->
+                            <div class="row g-4">
+                                <div class="col-12 col-sm-12 col-lg-3">
+                                    <img src="img/img-pedidos/resized_IMG_1399-768x576.jpg"
+                                        alt="MercedesBenz AMG GT63 2020 Branco" class="img-pedido">
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="d-flex flex-column">
+                                        <span class="titulo-descricao text-sm-center">DESCRIÇÃO ITENS</span>
+                                        <span class="descricao">AUDI RS Q8 2021 AZUL</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao text-sm-center">COD PRODUTO</span>
+                                        <span class="descricao text-sm-center">234</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao">QTD</span>
+                                        <span class="descricao">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao">VALOR UNIT (R$)</span>
+                                        <span class="descricao">1.230.000,00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fim do item 1 do pedido 2 -->
+
+
+                            <!-- item 2 do pedido 2 -->
+                            <div class="row mt-3 g-4">
+                                <div class="col-12 col-sm-12 col-lg-3">
+                                    <img src="img/img-pedidos/BMW_X7_m50i_2021_preto_01-768x576.jpg"
+                                        alt="MercedesBenz AMG GT63 2020 Branco" class="img-pedido">
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="d-flex flex-column">
+                                        <span class="titulo-descricao text-sm-center">DESCRIÇÃO ITENS</span>
+                                        <span class="descricao">BMW X7 M50I 2021 PRETA</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao text-sm-center">COD PRODUTO</span>
+                                        <span class="descricao text-sm-center">784</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao">QTD</span>
+                                        <span class="descricao">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao">VALOR UNIT (R$)</span>
+                                        <span class="descricao">1.139.000,00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fim do item 2 do pedido 2 -->
+
+                            <!-- detalhes de entrega -->
+                            <div class="row entrega mt-5">
+                                <div class="col-sm-10">
+                                    <div class="d-flex flex-column">
+                                        <span class="titulo-descricao-endereco">ENDEREÇO DE ENTREGA</span>
+                                        <span class="descricao-endereco ps-4">CEP: 12332-032<br>RUA PRAÇA ROBERTO PEDRO
+                                            GOMES Nº 101 - MORUMBI
+                                            (SÃO PAULO/SP)</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-descricao-data">DATA DE ENTREGA</span>
+                                        <span class="descricao-data">25/12/2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- fim dos detalhes de entrega -->
+
+
+                            <!-- detalhes de pagamento -->
+                            <div class="row pagamento mt-5">
+                                <div class="col-sm-10">
+                                    <div class="d-flex flex-column">
+                                        <span class="titulo-descricao-pgmt">FORMA DE PAGAMENTO</span>
+                                        <span class="descricao-pgmt ps-4">TRANSFERÊNCIA BANCÁRIA</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm">
+                                    <div class="d-flex flex-column text-sm-center">
+                                        <span class="titulo-data-pgmt">DATA DO PAGAMENTO</span>
+                                        <span class="data-pgmt">29/11/2021</span>
+                                    </div>
+                                </div>
+                                <!-- fim dos detalhes de pagamento -->
+                            </div>
+
+
+                            <!-- total do pedido que só aparecerá em tela de celular -->
+                            <div class="row mt-5 d-block d-md-block d-xl-none d-xxl-none">
+                                <div class="d-flex text-sm-center justify-content-between">
+                                    <span class="titulo-data-pgmt">TOTAL</span>
+                                    <span class="data-pgmt">R$ 1.200.090,00</span>
+                                </div>
+                            </div>
+                            <!--fim do total do pedido que só aparecerá em tela de celular -->
+
+
+                            <!-- imprimir nf -->
+                            <div class="imprimir-nf mt-5 text-end">
+                                <a href="#" class="text-decoration-none text-dark p-2">Download da N-F Eletrônica</a>
+                            </div>
+                            <!-- fim do imprimir nf -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fim dos cards de pedidos -->
+
+    </div>
+
+
+    <!-- BEGIN FOOTER -->
+
+    <footer class="bg-black">
+        <!--Começo Footer-->
+        <div class="container mt-5 mb-5 pt-3 ">
+            <!--Começo Redes Sociais-->
+
+            <div class="row justify-content-center responsive-social-media pt-3">
+                <div class="col-2 col-md-1">
+                    <!--Icon Facebook-->
+                    <a href="#" target="_blank">
+                        <img src="img/img-footer/facebook.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-2 col-md-1">
+                    <!--Icon Twitter-->
+                    <a href="#" target="_blank">
+                        <img src="img/img-footer/twitter.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-2 col-md-1">
+                    <!--Icon Instagram-->
+                    <a href="#" target="_blank">
+                        <img src="img/img-footer/instagram.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-2 col-md-1">
+                    <!--Icon Linkedin-->
+                    <a href="#" target="_blank">
+                        <img src="img/img-footer/linkedin.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-2 col-md-1">
+                    <!--Icon YouTube-->
+                    <a href="#" target="_blank">
+                        <img src="img/img-footer/youtube.png" width="30" height="30">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!--Fim Redes Sociais-->
+
+        <div class="container">
+            <!--Começo Container Texto-->
+            <div class="row gy-5 text-start d-flex justify-content-center ms-3 responsive-footer">
+                <!-- row-cols-4 py-4 my-5 -->
+                <div class="col-md-3">
+                    <!--Começo Institucional-->
+                    <h5>INSTITUCIONAL</h5>
+                    <br>
+                    <ul class="nav flex-column text-start">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">SOBRE NÓS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TRABALHE CONOSCO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">INVESTIDORES</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE PRIVACIDADE</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Institucional-->
+
+                <div class="col-md-3">
+                    <!--Começo Contato-->
+                    <h5>CONTATO</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11) 5555-5555</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9 5555-5555</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555 5555</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Contato-->
+
+                <div class="col-md-3">
+                    <!--Começo Atendimento-->
+                    <h5>ATENDIMENTO</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE VISITAS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE ATENDIMENTO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">COMO COMPRAR NO SITE</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">PRAZOS DE ENTREGA</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Atendimento-->
+
+                <div class="col-md-3">
+                    <!--Começo Minha Conta-->
+                    <h5>MINHA CONTA</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS PESSOAIS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">EDITAR ENDEREÇOS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ACOMPANHAR UM PEDIDO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CRIAR UM CADASTRO</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Minha Conta-->
+            </div>
+        </div>
+        <div class="formas-pagamento text-center">
+            <!--Começo Gaveta Formas de Pagamento-->
+            <details>
+                <summary>
+                    formas de pagamento
+                </summary>
+                <ul>
+                    <li>
+                        <img src="img/img-footer/logotipo-visa.png" alt="Visa" width="60" height="50">
+                        <!--Icon Visa-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/mastercard.png" alt="MasterCard">
+                        <!--Icon Mastercard-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/hipercard.png" alt="HiperCard">
+                        <!--Icon Hipercard-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/elo.png" alt="Elo">
+                        <!--Icon Elo-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/apple-pay (1).png" alt="Maestro" width="60" height="50">
+                        <!--Icon Maestro-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/codigo-de-barras.png" alt="boleto" width="50">
+                        <!--Icon Boleto-->
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <!--Fim Gaveta Formas de Pagamento-->
+        <div class="text-center p-2">
+            <!--Começo Copyright-->
+            © 2021 DEV CARS AUTOMOBILES.
+        </div>
+        <!--Fim Copyright-->
+    </footer>
+
+    <!-- END FOOTER -->
+
+
+    <!-- import javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
