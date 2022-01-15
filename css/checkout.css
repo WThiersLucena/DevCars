@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Orbitron&family=Questrial&family=Roboto+Condensed:wght@300&display=swap');
+
+body {
+    background-color: #E0E0E0;
+}
+
+.title-page {
+    padding: 2%;
+    font-family: 'Questrial', sans-serif;
+}
+
+.font-text {
+    font-family: 'Questrial', sans-serif;
+}
+
+.font-text-bold {
+    font-family: 'Questrial', sans-serif;
+    font-weight: 800;
+}
+
+.background {
+    background-color: #E0E0E0;
+}
+
+.button {
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.button:hover {
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.button-out-flow {
+    background: linear-gradient(8deg, rgba(88, 87, 82, 0.411) 30%, rgb(193, 193, 189) 70%);
+}
+
+.button-out-flow:hover {
+    background: linear-gradient(191deg, rgba(88, 87, 82, 0.411) 30%, rgb(211, 211, 209) 70%);
+}
+
+.button-checkout {
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.button-checkout:hover {
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.space-input {
+    padding-left: 0.3em;
+}
+
+a button {
+    width: 100%;
+}
+
+
+
+
+
