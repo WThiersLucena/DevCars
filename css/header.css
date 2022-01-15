@@ -58,7 +58,6 @@
     /*
     button {
         background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
-
         font-family: font-family: 'Questrial', sans-serif;
         
         border-radius: 4px;
@@ -66,7 +65,6 @@
         padding: 10px;
         
     }
-
     button:hover {
         background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
     }
@@ -74,7 +72,7 @@
 
 
    .background-menu {
-        background-image: url('../imagens-header/bg-menu.png');
+        background-image: url('../imagens/bg-menu.png');
         background-repeat: no-repeat;
         background-position: center;
    }
@@ -98,29 +96,6 @@
    .icons-header li:hover {
         background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
    }
-
-
-
-   /* -- MODAL PESQUISAR -- */
-
-    .icon-close{
-        width: 25px;
-        height: 25px;
-    }
-
-    .modal-content{
-        background-color: #000000;
-    }
-
-    .modal-header{
-        border-bottom: none;
-    }
-
-    .background-modal-search {
-        background-color: #000000;
-    }
-
-  /* -- FIM MODAL PESQUISAR -- */
 
 
 /* -- END HEADER -- */

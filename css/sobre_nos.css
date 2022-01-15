@@ -396,3 +396,7 @@ body{
 
 /* -- RESPONSIVE - BEGIN HEADER -- */
 
+
+.alinhamento_paragrafo{
+    text-align:justify;
+}
