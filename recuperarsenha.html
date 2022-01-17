@@ -233,16 +233,16 @@
                     </div>
                     <div class="col-12 col-md-12 col-lg-12 w-100" data-validate="Valid email is required: ex@abc.xyz">
                         <label class="label font-login font-recuperarsenha" for="name">Insira uma nova senha</label>
-                        <input class="w-100 mb-2" type="text" name="password" required />
+                        <input class="w-100 mb-2" type="text" name="password"/> <!-- TEM QUE TER REQUIRED -->
                     </div>
                     <div class="col-12 col-md-12 col-lg-12 w-100" data-validate="Password is required">
                         <label class="label font-login font-recuperarsenha" for="name">Cofirme sua nova senha</label>
-                        <input class="w-100 mb-4" type="password" name="password" required />
+                        <input class="w-100 mb-4" type="text" name="password"/> <!-- TEM QUE TER REQUIRED -->
                     </div>
-                    <div class="container-login100-form-btn m-t-20 pb-3 button-recuperarsenha">
-                        <button class="btn w-100 ">
+                    <div class="button-recuperarsenha">
+                        <a href="./login.html"><button class="btn w-100" type="button">
                             Restaurar
-                        </button>
+                        </button></a>
                     </div>
                 </form>
             </div>

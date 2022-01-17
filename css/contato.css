@@ -62,10 +62,22 @@ nav p{
     
 }
 
+.btn-enviar-contato{
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.btn-enviar-contato:hover {
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
 .card{
     width: 100%;
     background-color: #F0F0F0;
     margin-bottom: 20px;
+}
+
+.fonte-pagina-contato {
+    font-family: 'Questrial', sans-serif;
 }
 
 .card .geral{
