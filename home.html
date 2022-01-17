@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevCars ™</title>
+    <link rel="shortcut icon" href="./img/img-header/logo-rev01.jpeg">
+
     <link rel="shortcut icon" href="./imagens/logo_titulo.jpeg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -14,25 +16,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/barra-pesquisa.css">
     <link rel="stylesheet" href="css/produtos.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
     
 
 </head>
 
 <body>
 
-    <!-- BEGIN HEADER -->
-    <header class="style-header">
+     <!-- BEGIN HEADER -->
+     <header class="style-header">
 
         <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
         <div class="icons-header">
             <div class="icon-menu">
                 <a class="btn btn-black" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                     aria-controls="offcanvasExample">
-                    <img src="./imagens/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
+                    <img src="./img/img-header/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
                 </a>
 
                 <div class="offcanvas offcanvas-start background-menu d-flex flex-column flex-shrink-0 p-3 text-black bg-dark"
@@ -69,7 +72,7 @@
                         </li>
 
                         <li>
-                            <a href="./Estoque.html" class="text-black">
+                            <a href="./estoque.html" class="text-black">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -94,27 +97,40 @@
 
                     <hr>
 
-                    <div class="dropdown">
-                        <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
-                            id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
-                                class="rounded-circle me-2">
-                            <strong><span class="font-menu">USUÁRIO</span></strong>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="./carrinho.html"><span
-                                        class="font-menu">Carrinho</span></a></li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
-                        </ul>
+                    <!-- Início da div USUÁRIO -->
+                    <div class="background-user">
+
+                        <div class="dropdown">
+                            
+                            <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2">
+                                <strong><span class="font-menu">USUÁRIO</span></strong>
+                                
+
+                            </a>
+                            
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                                <li><a class="dropdown-item" href="./carrinho.html"><span
+                                            class="font-menu">Carrinho</span></a></li>
+                                <li><a class="dropdown-item" href="./listadesejos.html"><span class="font-menu">Favoritos</span></a></li>
+                                <li><a class="dropdown-item" href="./meusdados.html"><span class="font-menu">Meus dados</span></a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="./home.html"><span class="font-menu">Sair</span></a></li>
+                            </ul>
+                        </div>
+
                     </div>
+                    <!-- Fim da div USUÁRIO -->
+
+
                 </div>
 
-                <div class="b-example-divider"></div>
+                <!-- <div class="b-example-divider"></div> -->
 
             </div>
         </div>
@@ -124,7 +140,7 @@
         <!-- INÍCIO DO ICONE DA LOGO -->
         <div class="icons-header">
             <div class="icon-logo">
-                <a href="#"><img src="./imagens/logo-rev01.jpeg" width="120" /></a>
+                <a href="./home.html"><img src="./img/img-header/logo-rev01.jpeg" width="120" /></a>
             </div>
         </div>
         <!-- FIM DO ICONE DA LOGO -->
@@ -134,26 +150,26 @@
 
             <!-- INÍCIO DO ÍCONE DE PESQUISA -->
             <div class="icons-position-header search-icon">
-                <img src="./imagens/search.png" class="icons-header" data-bs-toggle="modal" width="30"
+                <img src="./img/img-header/search.png" class="icons-header" data-bs-toggle="modal" width="30"
                     data-bs-target="#modalPesquisa" role="button">
             </div>
             <!-- FIM DO ÍCONE DE PESQUISA -->
 
             <!-- INÍCIO DO ÍCONE DE FAVORITOS -->
             <div class="icons-position-header favorite-icon">
-                <a href="#"><img src="./imagens/love.png" width="30" /></a>
+                <a href="./listadesejos.html"><img src="./img/img-header/favorite.png" width="30" /></a>
             </div>
             <!-- FIM DO ÍCONE DE FAVORITOS -->
 
             <!-- INÍCIO DO ÍCONE DE LOGIN -->
             <div class="icons-position-header user-icon">
-                <a href="#"><img src="./imagens/user.png" width="30" /></a>
+                <a href="./login.html"><img src="./img/img-header/user.png" width="30" /></a>
             </div>
             <!-- FIM DO ÍCONE DE LOGIN -->
 
             <!-- INÍCIO DO ÍCONE DE CARRINHO -->
             <div class="icons-position-header garage-icon">
-                <a href="./carrinho.html"><img src="./imagens/private-garage.png" width="30" /></a>
+                <a href="./carrinho.html"><img src="./img/img-header/garage-car.png" width="30"></a>
             </div>
             <!-- FIM DO ÍCONE DE CARRINHO -->
 
@@ -167,7 +183,7 @@
     <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content p-5">
-                <img src="./imagens/close.png" type="button" class="icon-close btn-close align-self-end"
+                <img src="./img/img-header/close.png" type="button" class="icon-close btn-close align-self-end"
                     data-bs-dismiss="modal" aria-label="Close">
                 <div class="modal-header">
                     <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
@@ -188,6 +204,31 @@
 
     <!-- END HEADER -->
 
+    <!-- INICIO DO MODAL PESQUISAR -->
+
+    <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content p-5">
+                <img src=".img/imagens/close.png" type="button" class="icon-close btn-close align-self-end"
+                    data-bs-dismiss="modal" aria-label="Close">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="caixa-busca" class="col-form-label"></label>
+                            <input type="search" class="form-control" id="caixa-busca">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIM DO MODAL DE PESQUISAR -->
+
+    <!-- END HEADER -->
  
         
     
@@ -210,14 +251,14 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="./imagens/Koenigsegg_Gemera.jpg" class="d-block w-100" alt="...">
+                            <img src="./img/img-home/Koenigsegg_Gemera.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Koenigsegg Gemera</h5>
                                 <p>DevCar sera unica e exclusiva importadora Koenigsegg Gemera</p>
                             </div>
                         </div>
                         <div class="carousel-item  carousel-tamanho" data-bs-interval="2000">
-                            <img src="./imagens/Ferarri-monza.jpg" class="d-block w-100 stf2" alt="...">
+                            <img src="./img/img-home/Ferarri-monza.jpg" class="d-block w-100 stf2" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Ferrari MONZA</h5>
                                 <p> Velocidade Máx: 350 Km/h</p>
@@ -225,7 +266,7 @@
                             <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                         </div>
                         <div class="carousel-item">
-                            <img src="./imagens/Bugatti_Chiron.jpg" class="d-block w-100" alt="" width="100%">
+                            <img src="./img/img-home/Koenigsegg_Gemera.jpg" class="d-block w-100" alt="" width="100%">
                             <div class="carousel-caption d-none d-md-block">
                                 <font color="white">
                                     <h5> Bugatti Chiron </h5>
@@ -234,7 +275,7 @@
                             </div>
                         </div>
                         <div class="carousel-item carousel-tamanho" data-bs-interval="1000">
-                            <img src="./imagens/01.png" class="d-block w-100" alt="..." width="100%">
+                            <img src="./img/img-home/home2.jpeg" class="d-block w-100" alt="..." width="100%">
                             <div class="carousel-caption d-none d-md-block">
                                 <font color="white">
                                     <h5>DevCar's</h5>
@@ -269,30 +310,30 @@
                     <div id="carousel-marcas" class="carousel slide logo_marcas" data-bs-ride="carousel-marcas">
                         <div class="carousel-inner">
                             <div class="carousel-item active logo-centralizado">
-                                <img class="icons-marcas" src="./imagens-logo-marcas/astom martin.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/audi.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/bmw.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/bugatti.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/chrysler.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/ferrari (2).png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/ford.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/jaguar.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/lambor.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/astom martin.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/audi.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/bmw.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/bugatti.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/chrysler.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/ferrari (2).png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/ford.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/jaguar.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/lambor.png" height="50px" />
                                 
 
                             </div>
                             <div class="carousel-item fundo-marcas logo-centralizado2  logo-centralizado">
-                                <img class="icons-marcas" src="./imagens-logo-marcas/Mclaren.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/mercedes.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/opel.jpg" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/pagani.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/bmw.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/rolls royce.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/subaru.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/volvo.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/ferrari (2).png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/volvo.png" height="50px" />
-                                <img class="icons-marcas" src="./imagens-logo-marcas/pagani.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/Mclaren.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/mercedes.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/opel.jpg" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/pagani.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/bmw.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/rolls royce.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/subaru.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/volvo.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/ferrari (2).png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/volvo.png" height="50px" />
+                                <img class="icons-marcas" src="./img/img-home/pagani.png" height="50px" />
                                 
                             </div>
                         </div>
@@ -361,14 +402,7 @@
                     
                     
                 </form>
-            
-            
-            
-            
-            
-            
-            
-            
+                  
             
             </div>
 
@@ -398,10 +432,10 @@
                                 <!-- link entre Modal e Card -->
                                 <a href="#" class="text-decoration-none">
                                     <div class="card h-100 mb-5">
-                                        <img src="imagens/LaFerrari.jpg" class="card-img" alt="...">
+                                        <img src="./img/img-estoque/Mercedes-Benz AMG F1 2016.jpg" class="card-img" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title">LaFerrari</h5>
-                                            <p class="card-text">R$14.000.000,00</p>
+                                            <h5 class="card-title">Mercedes Benz AMG F1</h5>
+                                            <p class="card-text">R$19.000.000,00</p>
                                             <a class="btn btn-warning mt-3" href="#" role="button">VER DETALHES</a>
                                         </div>
                                     </div>
@@ -430,12 +464,12 @@
                                                         <video class="img-modal" controns autoplay
                                                         playbackRate = 0.1;
                                                             style="max-width: 102%; padding-top: 5px;">
-                                                            <source src="./videos/Koenigsegg Gemera.mp4"
+                                                            <source src="./videos/F1.mp4"
                                                                 type="video/mp4">
                                                             Your browser does not support the video tag.
                                                         </video>
                                                         
-                                                        <img src="imagens/Hennessey Venom GT.jpg"
+                                                        <img src="./img/img-estoque/Mercedes-Benz AMG F1 2016.jpg"
                                                             class="card-img img-modal" alt="...">
                                                     </div>
 
@@ -489,24 +523,24 @@
                                                                     <div class="carousel-inner carosel-modal  row-cols-1 row-cols-md-3 g-4 justify-content-center mt-4">
                                                                         <div class="carousel-item active">
 
-                                                                            <img src="./img/Chrysler_pacifica_Hybrida_2019_prata_01-768x576.jpg"
+                                                                            <img src="./img/img-estoque/Mercedes-Benz AMG F1 2016.jpg"
                                                                                 class="d-block w-100" alt="..."
                                                                                 width="5%">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -2.jpg"
+                                                                            <img src="./img/img-estoque/Mercedes-Benz AMG F1 2016.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -3.jpg"
+                                                                            <img src="./img/img-estoque/Mercedes-Benz AMG F1 2016.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -4.jpg"
+                                                                            <img src="./img/img-estoque/Mercedes-Benz AMG F1 2016.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -5.jpg"
+                                                                            <img src="./img/img-estoque/Mercedes-Benz AMG F1 2016.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                     </div>
@@ -534,7 +568,7 @@
                                         <div class="modal-footer modalfooter">
                                             <div class="row">
                                                 <div class="col-10 modal-mobily3">
-                                                    <img class="logo-modal" src="./imagens-header/logo-rev01.jpeg"
+                                                    <img class="logo-modal" src="./img/img-header/logo-rev01.jpeg"
                                                         alt="">
                                                 </div>
                                                 <div class="col-1 modal-mobily3">
@@ -560,10 +594,10 @@
                                 <!-- link entre Modal e Card -->
                                 <a href="#" class="text-decoration-none">
                                     <div class="card h-100 mb-5">
-                                        <img src="imagens/Hennessey Venom GT.jpg" class="card-img" alt="...">
+                                        <img src="./img/img-estoque/Bugatti Chiron.jpg" class="card-img" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title">Hennessey Venom GT</h5>
-                                            <p class="card-text">R$11.350.000,00</p>
+                                            <h5 class="card-title">BUGATTI CHIRON</h5>
+                                            <p class="card-text">R$21.000.000,00</p>
                                             <a class="btn btn-warning mt-3" href="#" role="button">VER DETALHES</a>
                                         </div>
                                     </div>
@@ -577,7 +611,7 @@
                                 <div class="modal-dialog modal-xl">
                                     <div class="modal-content cores-modal">
                                         <div class="modal-header cores-modal">
-                                            <h5 class="modal-title" id="exampleModalLabel">JAGUAR E-PACE P-250 AWD 2018
+                                            <h5 class="modal-title" id="exampleModalLabel">BUGATTI CHIRON
                                             </h5>
                                             <button type="button" class="btn-close btn-modal-close"
                                                 data-bs-dismiss="modal" aria-label="Close"></button>
@@ -587,7 +621,7 @@
                                                 <div class="row">
                                                     <div class="col-5">
                                                         <img class="img-modal"
-                                                            src="./img/Jaguar_EPace_P250_STD_2018_branco_01-768x576.jpg"
+                                                            src="./img/img-estoque/Bugatti Chiron.jpg"
                                                             alt="" width="100%" height="90%">
                                                     </div>
 
@@ -640,24 +674,24 @@
                                                                     data-bs-ride="carousel">
                                                                     <div class="carousel-inner carosel-modal">
                                                                         <div class="carousel-item active">
-                                                                            <img src="./img/Chrysler_pacifica_Hybrida_2019_prata_01-768x576.jpg"
+                                                                            <img src="./img/img-estoque/Bugatti Chiron.jpg"
                                                                                 class="d-block w-100" alt="..."
                                                                                 width="5%">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -2.jpg"
+                                                                            <img src="./img/img-estoque/Bugatti Chiron.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -3.jpg"
+                                                                            <img src="../img/img-estoque/Bugatti Chiron.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -4.jpg"
+                                                                            <img src="./img/img-estoque/Bugatti Chiron.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -5.jpg"
+                                                                            <img src="./img/img-estoque/Bugatti Chiron.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                     </div>
@@ -707,10 +741,10 @@
                                 <!-- link entre Modal e Card -->
                                 <a href="#" class="text-decoration-none">
                                     <div class="card h-100 mb-5">
-                                        <img src="imagens/Koenigsegg_Gemera.jpg" class="card-img" alt="...">
+                                        <img src="./img/img-estoque/Lamborghini Huracan.jpg" class="card-img" alt="...">
                                         <div class="card-body">
-                                            <h5 class="card-title">Koenigsegg Regera </h5>
-                                            <p class="card-text">R$7.400.000,00</p>
+                                            <h5 class="card-title">Lamborghini Huracan</h5>
+                                            <p class="card-text">R$4.300.000,00</p>
                                             <a class="btn btn-warning mt-3" href="#" role="button">VER DETALHES</a>
                                         </div>
                                     </div>
@@ -724,7 +758,7 @@
                                 <div class="modal-dialog modal-xl">
                                     <div class="modal-content cores-modal">
                                         <div class="modal-header cores-modal">
-                                            <h5 class="modal-title" id="exampleModalLabel">LAND ROVER EVOQUE 2020</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">LAMBORGHINI HURACAN</h5>
                                             <button type="button" class="btn-close btn-modal-close"
                                                 data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
@@ -733,7 +767,7 @@
                                                 <div class="row">
                                                     <div class="col-5">
                                                         <img class="img-modal"
-                                                            src="./img/Land_Rover_Evoque_HSE_Dynamic_Preta_2020_01-768x576.jpg"
+                                                            src="./img/img-estoque/Lamborghini Huracan.jpg"
                                                             alt="" width="100%" height="90%">
                                                     </div>
 
@@ -786,24 +820,24 @@
                                                                     data-bs-ride="carousel">
                                                                     <div class="carousel-inner carosel-modal">
                                                                         <div class="carousel-item active">
-                                                                            <img src="./img/Chrysler_pacifica_Hybrida_2019_prata_01-768x576.jpg"
+                                                                            <img src="./img/img-estoque/Lamborghini Huracan.jpg"
                                                                                 class="d-block w-100" alt="..."
                                                                                 width="5%">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -2.jpg"
+                                                                            <img src="./img/img-estoque/Lamborghini Huracan.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -3.jpg"
+                                                                            <img src="./img/img-estoque/Lamborghini Huracan.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -4.jpg"
+                                                                            <img src="./img/img-estoque/Lamborghini Huracan.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                         <div class="carousel-item">
-                                                                            <img src="./img/CHRYSLER PACIFICA HYBRID 2019 -5.jpg"
+                                                                            <img src="./img/img-estoque/Lamborghini Huracan.jpg"
                                                                                 class="d-block w-100" alt="10px">
                                                                         </div>
                                                                     </div>
@@ -831,7 +865,7 @@
                                         <div class="modal-footer modalfooter">
                                             <div class="row">
                                                 <div class="col-10">
-                                                    <img class="logo-modal" src="./imagens-header/logo-rev01.jpeg"
+                                                    <img class="logo-modal" src="./img/img-header/logo-rev01.jpeg"
                                                         alt="">
                                                 </div>
                                                 <div class="col-1">
@@ -888,164 +922,184 @@
                         </p>
                     </div>
                     <div class="col-4 imagens-midia">
-                        <img src="./imagens/SSC Tuatara.jpg" alt="" height="100%" width="100%">
+                        <img src="./img/img-home/SSC Tuatara.jpg" alt="" height="100%" width="100%">
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-center text-white">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!-- Section: Social media -->
-            <section class="mb-4">
+    <!-- BEGIN FOOTER -->
 
-                <div class="row justify-content-center">
-
-                    <!-- Facebook -->
-                    <div class="col-md-1 col-sm-6">
-                        <a href="#"><img src="./imagens-footer/facebook.png" width="30"></a>
-
-                    </div>
-
-                    <!-- Twitter -->
-                    <div class="col-md-1 col-sm-6">
-                        <a href="#"><img src="./imagens-footer/twitter.png" width="30"></a>
-
-                    </div>
-
-
-                    <!-- Instagram -->
-                    <div class="col-md-1 col-sm-6">
-                        <a href="#"><img src="./imagens-footer/instagram.png" width="30"></a>
-
-                    </div>
-
-                    <!-- Linkedin -->
-                    <div class="col-md-1 col-sm-6">
-                        <a href="#"><img src="./imagens-footer/linkedin.png" width="30"></a>
-
-                    </div>
-
-                    <!-- YouTube -->
-                    <div class="col-md-1 col-sm-6">
-                        <a href="#"><img src="./imagens-footer/youtube.png" width="30"></a>
-
-                    </div>
-
-
+    <footer class="bg-black">
+        <!--Começo Footer-->
+        <div class="container mt-5 mb-5 pt-3 ">
+            <!--Começo Redes Sociais-->
+    
+            <div class="row justify-content-center responsive-social-media pt-3">
+                <div class="col-2 col-md-1">
+                    <!--Icon Facebook-->
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="img/img-footer/facebook.png" width="30" height="30">
+                    </a>
                 </div>
-
-
-
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Form -->
-            <section class="">
-                <form action="">
-                    <!--Grid row-->
-                    <div class="row d-flex justify-content-center">
-
-
-                        <!--Grid column-->
-                        <div class="col-md-5 col-12">
-
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-auto">
-
-                        </div>
-                        <!--Grid column-->
-                    </div>
-                    <!--Grid row-->
-                </form>
-            </section>
-            <!-- Section: Form -->
-
-
-            </section>
-            <!-- Section: Text -->
-
-            <!-- Section: Links -->
-            <section class="">
-                <!--Grid row-->
-                <div class="row">
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">INSTITUCIONAL</h5>
-                        <P>SOBRE NÓS</P>
-                        <P>TRABALHE CONOSCO</P>
-                        <P>INVESTIDORES</P>
-                        <P>POLÍTICA DE PRIVACIDADE</P>
-
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">CONTATO</h5>
-                        <p>TELEFONE: (11) 5555 - 55555</p>
-                        <p>WHATSAPP:(11) 9 5555-5555</p>
-                        <p>OUVIDORIA: 0800 555 5555</p>
-
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">MINHA CONTA</h5>
-
-                        <P>ALTERAR DADOS PESSOAIS</P>
-                        <P>EDITAR ENDEREÇOS</P>
-                        <P>ACOMPANHAR UM PEDIDO</P>
-                        <P>CRIAR UM CADASTRO</P>
-
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">ATENDIMENTO</h5>
-
-                        <P>AGENDAMENTO DE VISITAS</P>
-                        <P>CENTRAL DE ATENDIMENTO</P>
-                        <P>COMO COMPRAR NO SITE</P>
-                        <P>PRAZOS DE ENTREGA</P>
-
-                    </div>
-
-                    <div>
-                        <p>formas de pagamento ^ </p>
-                        <a href="#"><img src="./imagens-footer/paleta.png" width="150"></a><br><br>
-                        <a href="#"><img src="./imagens-footer/WhatsApp Image 2021-12-29 at 23.43.26.jpeg"
-                                width="140"></a>
-
-                    </div>
-
-
-
-
-                    <!--Grid column-->
+                <div class="col-2 col-md-1">
+                    <!--Icon Twitter-->
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="img/img-footer/twitter.png" width="30" height="30">
+                    </a>
                 </div>
-                <!--Grid row-->
-            </section>
-            <!-- Section: Links -->
+                <div class="col-2 col-md-1">
+                    <!--Icon Instagram-->
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="img/img-footer/instagram.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-2 col-md-1">
+                    <!--Icon Linkedin-->
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="img/img-footer/linkedin.png" width="30" height="30">
+                    </a>
+                </div>
+                <div class="col-2 col-md-1">
+                    <!--Icon YouTube-->
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="img/img-footer/youtube.png" width="30" height="30">
+                    </a>
+                </div>
+            </div>
+    
         </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2021 DEV CARS AUTOMOBILES S.A.S.
-
+        <!--Fim Redes Sociais-->
+    
+        <div class="container">
+            <!--Começo Container Texto-->
+            <div class="row gy-5 text-start d-flex justify-content-center ms-3 responsive-footer">
+                <!-- row-cols-4 py-4 my-5 -->
+                <div class="col-md-3">
+                    <!--Começo Institucional-->
+                    <h5>INSTITUCIONAL</h5>
+                    <br>
+                    <ul class="nav flex-column text-start">
+                        <li class="nav-item mb-2">
+                            <a href="./sobre_nos.html" class="nav-link p-0 text-muted" target="_blank">SOBRE NÓS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TRABALHE CONOSCO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">INVESTIDORES</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./TERMOS E CONDIÇÕES DE USO DEV CARS™.pdf" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE PRIVACIDADE</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Institucional-->
+    
+                <div class="col-md-3">
+                    <!--Começo Contato-->
+                    <h5>CONTATO</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11) 5555-5555</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9 5555-5555</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555 5555</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Contato-->
+    
+                <div class="col-md-3">
+                    <!--Começo Atendimento-->
+                    <h5>ATENDIMENTO</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="./agendamento.html" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE VISITAS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE ATENDIMENTO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">COMO COMPRAR NO SITE</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-muted" target="_blank">PRAZOS DE ENTREGA</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Atendimento-->
+    
+                <div class="col-md-3">
+                    <!--Começo Minha Conta-->
+                    <h5>MINHA CONTA</h5>
+                    <br>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="./meusdados.html" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS PESSOAIS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./meusdados.html" class="nav-link p-0 text-muted" target="_blank">EDITAR ENDEREÇOS</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./pedidos.html" class="nav-link p-0 text-muted" target="_blank">ACOMPANHAR UM PEDIDO</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="./cadastro.html" class="nav-link p-0 text-muted" target="_blank">CRIAR UM CADASTRO</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim Minha Conta-->
+            </div>
         </div>
-        <!-- Copyright -->
+        <div class="formas-pagamento text-center">
+            <!--Começo Gaveta Formas de Pagamento-->
+            <details>
+                <summary>
+                    formas de pagamento
+                </summary>
+                <ul>
+                    <li>
+                        <img src="img/img-footer/logotipo-visa.png" alt="Visa" width="60" height="50">
+                        <!--Icon Visa-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/mastercard.png" alt="MasterCard">
+                        <!--Icon Mastercard-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/hipercard.png" alt="HiperCard">
+                        <!--Icon Hipercard-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/elo.png" alt="Elo">
+                        <!--Icon Elo-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/apple-pay (1).png" alt="Maestro" width="60" height="50">
+                        <!--Icon Maestro-->
+                    </li>
+                    <li>
+                        <img src="img/img-footer/codigo-de-barras.png" alt="boleto" width="50">
+                        <!--Icon Boleto-->
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <!--Fim Gaveta Formas de Pagamento-->
+        <div class="text-center p-2">
+            <!--Começo Copyright-->
+            © 2021 DEV CARS AUTOMOBILES.
+        </div>
+        <!--Fim Copyright-->
     </footer>
-    <!-- Footer -->
+    <!-- END FOOTER -->
 
 
 

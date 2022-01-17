@@ -17,21 +17,21 @@
     <link rel="stylesheet" href="./css/sidebar-menulateral.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/carrinho.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="css/footer.css">
 
 </head>
 
 <body>
 
-      <!-- BEGIN HEADER -->
-      <header class="style-header">
+    <!-- BEGIN HEADER -->
+    <header class="style-header">
 
         <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
         <div class="icons-header">
             <div class="icon-menu">
                 <a class="btn btn-black" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                     aria-controls="offcanvasExample">
-                    <img src="./imagens/img-header/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
+                    <img src="./img/img-header/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
                 </a>
 
                 <div class="offcanvas offcanvas-start background-menu d-flex flex-column flex-shrink-0 p-3 text-black bg-dark"
@@ -42,7 +42,7 @@
                     <ul class="nav nav-pills flex-column mb-auto">
 
                         <li>
-                            <a href="#" class="text-black" aria-current="page">
+                            <a href="./home.html" class="text-black" aria-current="page">
 
                                 <!-- Início do Chevron (icone >) ao lado da opção do menu -->
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -57,7 +57,7 @@
                         </li>
 
                         <li>
-                            <a href="#" class="text-black">
+                            <a href="./sobre_nos.html" class="text-black">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -68,7 +68,7 @@
                         </li>
 
                         <li>
-                            <a href="#" class="text-black">
+                            <a href="./estoque.html" class="text-black">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -79,7 +79,7 @@
                         </li>
 
                         <li>
-                            <a href="#" class="text-black">
+                            <a href="./contato.html" class="text-black">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -97,28 +97,26 @@
                     <div class="background-user">
 
                         <div class="dropdown">
-
-                            <a href="#"
-                                class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                            
+                            <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
                                 id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-
+                                
                                 <img src="https://github.com/mdo.png" alt="" width="32" height="32"
                                     class="rounded-circle me-2">
                                 <strong><span class="font-menu">USUÁRIO</span></strong>
-
+                                
 
                             </a>
-
-                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow"
-                                aria-labelledby="dropdownUser1">
+                            
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                                 <li><a class="dropdown-item" href="./carrinho.html"><span
                                             class="font-menu">Carrinho</span></a></li>
-                                <li><a class="dropdown-item" href="#"><span class="font-menu">Favoritos</span></a></li>
-                                <li><a class="dropdown-item" href="#"><span class="font-menu">Meus dados</span></a></li>
+                                <li><a class="dropdown-item" href="./listadesejos.html"><span class="font-menu">Favoritos</span></a></li>
+                                <li><a class="dropdown-item" href="./meusdados.html"><span class="font-menu">Meus dados</span></a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#"><span class="font-menu">Sair</span></a></li>
+                                <li><a class="dropdown-item" href="./home.html"><span class="font-menu">Sair</span></a></li>
                             </ul>
                         </div>
 
@@ -138,7 +136,7 @@
         <!-- INÍCIO DO ICONE DA LOGO -->
         <div class="icons-header">
             <div class="icon-logo">
-                <a href="#"><img src="./imagens/img-header/logo-rev01.jpeg" width="120" /></a>
+                <a href="./home.html"><img src="./img/img-header/logo-rev01.jpeg" width="120" /></a>
             </div>
         </div>
         <!-- FIM DO ICONE DA LOGO -->
@@ -148,26 +146,26 @@
 
             <!-- INÍCIO DO ÍCONE DE PESQUISA -->
             <div class="icons-position-header search-icon">
-                <img src="./imagens/img-header/search.png" class="icons-header" data-bs-toggle="modal" width="30"
+                <img src="./img/img-header/search.png" class="icons-header" data-bs-toggle="modal" width="30"
                     data-bs-target="#modalPesquisa" role="button">
             </div>
             <!-- FIM DO ÍCONE DE PESQUISA -->
 
             <!-- INÍCIO DO ÍCONE DE FAVORITOS -->
             <div class="icons-position-header favorite-icon">
-                <a href="#"><img src="./imagens/img-header/favorite.png" width="30" /></a>
+                <a href="./listadesejos.html"><img src="./img/img-header/favorite.png" width="30" /></a>
             </div>
             <!-- FIM DO ÍCONE DE FAVORITOS -->
 
             <!-- INÍCIO DO ÍCONE DE LOGIN -->
             <div class="icons-position-header user-icon">
-                <a href="#"><img src="./imagens/img-header/user.png" width="30" /></a>
+                <a href="./login.html"><img src="./img/img-header/user.png" width="30" /></a>
             </div>
             <!-- FIM DO ÍCONE DE LOGIN -->
 
             <!-- INÍCIO DO ÍCONE DE CARRINHO -->
             <div class="icons-position-header garage-icon">
-                <a href="./carrinho.html"><img src="./imagens/img-header/garage-car.png" width="30" /></a>
+                <a href="./carrinho.html"><img src="./img/img-header/garage-car.png" width="30"></a>
             </div>
             <!-- FIM DO ÍCONE DE CARRINHO -->
 
@@ -181,7 +179,33 @@
     <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content p-5">
-                <img src="./imagens/img-header/close.png" type="button" class="icon-close btn-close align-self-end"
+                <img src="./img/img-header/close.png" type="button" class="icon-close btn-close align-self-end"
+                    data-bs-dismiss="modal" aria-label="Close">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="caixa-busca" class="col-form-label"></label>
+                            <input type="search" class="form-control" id="caixa-busca">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIM DO MODAL DE PESQUISAR -->
+
+    <!-- END HEADER -->
+
+    <!-- INICIO DO MODAL PESQUISAR -->
+
+    <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content p-5">
+                <img src=".img/imagens/close.png" type="button" class="icon-close btn-close align-self-end"
                     data-bs-dismiss="modal" aria-label="Close">
                 <div class="modal-header">
                     <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
@@ -222,17 +246,17 @@
                     <div class="btn-group-vertical background-container-subject me-3 shadow" role="group"
                         aria-label="Vertical button group">
                         <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
-                                class="link-solution" href="#">MEUS DADOS</a></button>
+                                class="link-solution" href="./meusdados.html">MEUS DADOS</a></button>
                         <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
-                                class="link-solution" href="#">MEUS PEDIDOS</a></button>
+                                class="link-solution" href="./pedidos.html">MEUS PEDIDOS</a></button>
                         <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
                                 class="link-solution" href="./carrinho.html">CARRINHO DE COMPRA</a></button>
                         <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
-                                class="link-solution" href="#">MEUS FAVORITOS</a></button>
+                                class="link-solution" href="./listadesejos.html">MEUS FAVORITOS</a></button>
                         <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
                                 class="link-solution" href="./compra.html">CHECKOUT</a></button>
                         <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
-                                class="link-solution" href="#">SAIR</a></button>
+                                class="link-solution" href="./home.html">SAIR</a></button>
                     </div>
                 </div>
                 <!-- FIM DO CONTAINER LADO ESQUERDO -->
@@ -246,61 +270,13 @@
                 </div>
 
                 <!-- INICIO DO CONTEUDO DO CONTAINER LADO DIREITO -- AQUI PODE SER INSERIDA UMA DIV NO LUGAR DA TAG P -->
-                <!-- 
-                <p class="background-container-subject">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut elementum nibh. Sed a mi
-                    lectus.
-                    Aenean consectetur interdum eros, sed varius ligula ornare non. Class aptent taciti sociosqu ad
-                    litora
-                    torquent per conubia nostra, per inceptos himenaeos. Quisque suscipit ligula vel faucibus
-                    vestibulum.
-                    Cras convallis finibus nulla, vel congue lectus porta euismod. Integer scelerisque feugiat nisl,
-                    eget
-                    semper elit imperdiet sit amet. Sed non tempor diam, eu scelerisque quam. Suspendisse volutpat eget
-                    elit
-                    in pulvinar. Integer eget lorem sit amet dui accumsan rutrum. Pellentesque eget auctor neque. Ut
-                    porta
-                    vel velit at blandit. Cras leo nisl, malesuada eu est quis, pharetra sollicitudin sem. Orci varius
-                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sit amet
-                    euismod
-                    diam. Phasellus pellentesque faucibus lectus, id molestie velit varius sit amet.
-
-                    Donec nec ex vitae arcu laoreet sollicitudin. Vivamus justo dui, porta at massa eget, imperdiet
-                    interdum
-                    lorem. Ut porttitor at diam eu tincidunt. Etiam varius at nunc id mollis. Nulla et dui eleifend,
-                    dapibus
-                    nulla non, pulvinar neque. Duis sollicitudin elit ultricies ligula mollis convallis. Praesent id
-                    mauris
-                    malesuada, rhoncus tellus id, consectetur lectus. Sed eros lorem, scelerisque at massa in, vehicula
-                    bibendum tellus. Quisque ultricies dolor urna, quis sollicitudin risus laoreet a. Aenean enim eros,
-                    pharetra in gravida nec, aliquam vel mi. Maecenas a justo leo. Fusce elit eros, sodales at
-                    condimentum
-                    nec, ullamcorper quis lacus. In eleifend, justo in varius iaculis, purus metus aliquet urna, a
-                    cursus
-                    neque eros id tortor. Morbi porta at nisl eu egestas. Quisque malesuada est vitae semper posuere.
-                    Pellentesque quis venenatis erat.
-
-                    Fusce neque libero, mollis eget mi ac, dapibus aliquam massa. Donec dolor quam, viverra non sodales
-                    id,
-                    euismod sit amet sem. Donec et fringilla urna. Etiam et tortor accumsan, dignissim dui at, lobortis
-                    arcu. Suspendisse consectetur ut mauris vitae ultrices. Nulla facilisis eget lectus at semper.
-                    Suspendisse urna massa, tempus non volutpat sit amet, tempus vitae ante. Sed at nisi sed purus
-                    dictum
-                    euismod et vel magna. In eu sodales nulla, sit amet condimentum eros. Cras sodales arcu ac mauris
-                    ultrices tincidunt. Vestibulum efficitur nisl augue, quis sagittis lacus congue ullamcorper. Nullam
-                    euismod enim sed efficitur posuere. Donec sollicitudin mauris non libero ullamcorper efficitur. Nunc
-                    in
-                    imperdiet orci.
-                </p>
-
-                -->
 
                 <!-- Início do Card 01 -->
                 <div class="card rounded-3 mb-4 shadow p-3 bg-body rounded">
                     <div class="card-body p-4">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-md-2 col-lg-2 col-xl-2">
-                                <img src="./imagens/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                <img src="./img/img-carrinho/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
                             </div>
                             <div class="col-md-3 col-lg-3 col-xl-3 texto-alinhado">
                                 <p class="lead fw-normal mb-2 text-shopping-cart">CARRO #01</p>
@@ -346,7 +322,7 @@
                     <div class="card-body p-4">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-md-2 col-lg-2 col-xl-2">
-                                <img src="./imagens/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                <img src="./img/img-carrinho/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
                             </div>
                             <div class="col-md-3 col-lg-3 col-xl-3 texto-alinhado">
                                 <p class="lead fw-normal mb-2 text-shopping-cart">CARRO #02</p>
@@ -392,7 +368,7 @@
                     <div class="card-body p-4">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-md-2 col-lg-2 col-xl-2">
-                                <img src="./imagens/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                <img src="./img/img-carrinho/monza.jpg" class="img-fluid rounded-3" alt="Cotton T-shirt">
                             </div>
                             <div class="col-md-3 col-lg-3 col-xl-3 texto-alinhado">
                                 <p class="lead fw-normal mb-2 text-shopping-cart">CARRO #03</p>
@@ -440,18 +416,6 @@
                             class="btn button-continuar btn-block btn-lg btn-continue">Continue</button></a>
                 </div>
 
-                <!-- 
-                <div class="card">
-                    <div class="card-body d-md-flex justify-content-md-center">
-                        <a href="./compra.html"><button type="button"
-                                class="btn button-continuar btn-block btn-lg">Continue</button></a>
-                    </div>
-                </div>
-                -->
-
-
-                <!-- Início do card Código de Continuar -->
-
                 <!-- FIM DO CONTEUDO DO CONTAINER LADO DIREITO -->
 
             </div>
@@ -461,179 +425,177 @@
     <!-- END CONTAINER PRINCIPAL -->
 
 
-    <!-- BEGIN FOOTER -->
+   <!-- BEGIN FOOTER -->
 
-    <footer>
-        <!--Começo Footer-->
-        <div class="container mb-5 pt-3 ">
-            <!--Começo Redes Sociais-->
+   <footer class="bg-black">
+    <!--Começo Footer-->
+    <div class="container mt-5 mb-5 pt-3 ">
+        <!--Começo Redes Sociais-->
 
-            <div class="row justify-content-center responsive-social-media pt-3">
-                <div class="col-2 col-md-1">
-                    <!--Icon Facebook-->
-                    <a href="#" target="_blank">
-                        <img src="./imagens/img-footer/facebook.png" width="30" height="30">
-                    </a>
-                </div>
-                <div class="col-2 col-md-1">
-                    <!--Icon Twitter-->
-                    <a href="#" target="_blank">
-                        <img src="./imagens/img-footer/twitter.png" width="30" height="30">
-                    </a>
-                </div>
-                <div class="col-2 col-md-1">
-                    <!--Icon Instagram-->
-                    <a href="#" target="_blank">
-                        <img src="./imagens/img-footer/instagram.png" width="30" height="30">
-                    </a>
-                </div>
-                <div class="col-2 col-md-1">
-                    <!--Icon Linkedin-->
-                    <a href="#" target="_blank">
-                        <img src="./imagens/img-footer/linkedin.png" width="30" height="30">
-                    </a>
-                </div>
-                <div class="col-2 col-md-1">
-                    <!--Icon YouTube-->
-                    <a href="#" target="_blank">
-                        <img src="./imagens/img-footer/youtube.png" width="30" height="30">
-                    </a>
-                </div>
+        <div class="row justify-content-center responsive-social-media pt-3">
+            <div class="col-2 col-md-1">
+                <!--Icon Facebook-->
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="img/img-footer/facebook.png" width="30" height="30">
+                </a>
             </div>
-
-        </div>
-        <!--Fim Redes Sociais-->
-
-        <div class="container">
-            <!--Começo Container Texto-->
-            <div class="row gy-5 text-start d-flex justify-content-center ms-3 responsive-footer">
-                <!-- row-cols-4 py-4 my-5 -->
-                <div class="col-md-3">
-                    <!--Começo Institucional-->
-                    <h5>INSTITUCIONAL</h5>
-                    <br>
-                    <ul class="nav flex-column text-start">
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">SOBRE NÓS</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TRABALHE CONOSCO</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">INVESTIDORES</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE PRIVACIDADE</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Fim Institucional-->
-
-                <div class="col-md-3">
-                    <!--Começo Contato-->
-                    <h5>CONTATO</h5>
-                    <br>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11) 5555-5555</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9 5555-5555</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555 5555</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Fim Contato-->
-
-                <div class="col-md-3">
-                    <!--Começo Atendimento-->
-                    <h5>ATENDIMENTO</h5>
-                    <br>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE VISITAS</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE ATENDIMENTO</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">COMO COMPRAR NO SITE</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">PRAZOS DE ENTREGA</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Fim Atendimento-->
-
-                <div class="col-md-3">
-                    <!--Começo Minha Conta-->
-                    <h5>MINHA CONTA</h5>
-                    <br>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS PESSOAIS</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">EDITAR ENDEREÇOS</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">ACOMPANHAR UM PEDIDO</a>
-                        </li>
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-muted" target="_blank">CRIAR UM CADASTRO</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Fim Minha Conta-->
+            <div class="col-2 col-md-1">
+                <!--Icon Twitter-->
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="img/img-footer/twitter.png" width="30" height="30">
+                </a>
+            </div>
+            <div class="col-2 col-md-1">
+                <!--Icon Instagram-->
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img/img-footer/instagram.png" width="30" height="30">
+                </a>
+            </div>
+            <div class="col-2 col-md-1">
+                <!--Icon Linkedin-->
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="img/img-footer/linkedin.png" width="30" height="30">
+                </a>
+            </div>
+            <div class="col-2 col-md-1">
+                <!--Icon YouTube-->
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="img/img-footer/youtube.png" width="30" height="30">
+                </a>
             </div>
         </div>
-        <div class="formas-pagamento text-center">
-            <!--Começo Gaveta Formas de Pagamento-->
-            <details>
-                <summary>
-                    formas de pagamento
-                </summary>
-                <ul>
-                    <li>
-                        <img src="./imagens/img-footer/logotipo-visa.png" alt="Visa" width="60" height="50">
-                        <!--Icon Visa-->
+
+    </div>
+    <!--Fim Redes Sociais-->
+
+    <div class="container">
+        <!--Começo Container Texto-->
+        <div class="row gy-5 text-start d-flex justify-content-center ms-3 responsive-footer">
+            <!-- row-cols-4 py-4 my-5 -->
+            <div class="col-md-3">
+                <!--Começo Institucional-->
+                <h5>INSTITUCIONAL</h5>
+                <br>
+                <ul class="nav flex-column text-start">
+                    <li class="nav-item mb-2">
+                        <a href="./sobre_nos.html" class="nav-link p-0 text-muted" target="_blank">SOBRE NÓS</a>
                     </li>
-                    <li>
-                        <img src="./imagens/img-footer/mastercard.png" alt="MasterCard">
-                        <!--Icon Mastercard-->
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">TRABALHE CONOSCO</a>
                     </li>
-                    <li>
-                        <img src="./imagens/img-footer/hipercard.png" alt="HiperCard">
-                        <!--Icon Hipercard-->
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">INVESTIDORES</a>
                     </li>
-                    <li>
-                        <img src="./imagens/img-footer/elo.png" alt="Elo">
-                        <!--Icon Elo-->
-                    </li>
-                    <li>
-                        <img src="./imagens/img-footer/apple-pay (1).png" alt="Maestro" width="60" height="50">
-                        <!--Icon Maestro-->
-                    </li>
-                    <li>
-                        <img src="./imagens/img-footer/codigo-de-barras.png" alt="boleto" width="50">
-                        <!--Icon Boleto-->
+                    <li class="nav-item mb-2">
+                        <a href="./TERMOS E CONDIÇÕES DE USO DEV CARS™.pdf" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE PRIVACIDADE</a>
                     </li>
                 </ul>
-            </details>
-        </div>
-        <!--Fim Gaveta Formas de Pagamento-->
-        <div class="text-center p-2">
-            <!--Começo Copyright-->
-            © 2021 DEV CARS AUTOMOBILES.
-        </div>
-        <!--Fim Copyright-->
-    </footer>
+            </div>
+            <!--Fim Institucional-->
 
-    <!-- END FOOTER -->
+            <div class="col-md-3">
+                <!--Começo Contato-->
+                <h5>CONTATO</h5>
+                <br>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11) 5555-5555</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9 5555-5555</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555 5555</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Fim Contato-->
 
+            <div class="col-md-3">
+                <!--Começo Atendimento-->
+                <h5>ATENDIMENTO</h5>
+                <br>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="./agendamento.html" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE VISITAS</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE ATENDIMENTO</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">COMO COMPRAR NO SITE</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">PRAZOS DE ENTREGA</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Fim Atendimento-->
+
+            <div class="col-md-3">
+                <!--Começo Minha Conta-->
+                <h5>MINHA CONTA</h5>
+                <br>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="./meusdados.html" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS PESSOAIS</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./meusdados.html" class="nav-link p-0 text-muted" target="_blank">EDITAR ENDEREÇOS</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./pedidos.html" class="nav-link p-0 text-muted" target="_blank">ACOMPANHAR UM PEDIDO</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./cadastro.html" class="nav-link p-0 text-muted" target="_blank">CRIAR UM CADASTRO</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Fim Minha Conta-->
+        </div>
+    </div>
+    <div class="formas-pagamento text-center">
+        <!--Começo Gaveta Formas de Pagamento-->
+        <details>
+            <summary>
+                formas de pagamento
+            </summary>
+            <ul>
+                <li>
+                    <img src="img/img-footer/logotipo-visa.png" alt="Visa" width="60" height="50">
+                    <!--Icon Visa-->
+                </li>
+                <li>
+                    <img src="img/img-footer/mastercard.png" alt="MasterCard">
+                    <!--Icon Mastercard-->
+                </li>
+                <li>
+                    <img src="img/img-footer/hipercard.png" alt="HiperCard">
+                    <!--Icon Hipercard-->
+                </li>
+                <li>
+                    <img src="img/img-footer/elo.png" alt="Elo">
+                    <!--Icon Elo-->
+                </li>
+                <li>
+                    <img src="img/img-footer/apple-pay (1).png" alt="Maestro" width="60" height="50">
+                    <!--Icon Maestro-->
+                </li>
+                <li>
+                    <img src="img/img-footer/codigo-de-barras.png" alt="boleto" width="50">
+                    <!--Icon Boleto-->
+                </li>
+            </ul>
+        </details>
+    </div>
+    <!--Fim Gaveta Formas de Pagamento-->
+    <div class="text-center p-2">
+        <!--Começo Copyright-->
+        © 2021 DEV CARS AUTOMOBILES.
+    </div>
+    <!--Fim Copyright-->
+</footer>
+<!-- END FOOTER -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
