@@ -50,6 +50,11 @@ body{
     margin-bottom: 10px;
 }
 
+.titulo-data-pgmt{
+    font-size: 11px;
+}
+
+
 .descricao, .descricao-data, .descricao-endereco, .data-pgmt, .descricao-pgmt{
     font-size: 13px;
 }

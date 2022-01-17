@@ -287,11 +287,11 @@
 
 
 
-                 <!-- acordeon pedido 2 -->
-                 <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="flush-headingTwo">
+                <!-- acordeon pedido 1 -->
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
 
                             <div class="col-3">
                                 <span class="ms-3">#43775</span>
@@ -312,7 +312,7 @@
 
                         </button>
                     </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <!-- item 1 do pedido 1 -->
@@ -335,7 +335,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm">
+                                <div class="col-sm-1">
                                     <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-descricao">QTD</span>
                                         <span class="descricao">1</span>
@@ -351,20 +351,13 @@
                             </div>
                             <!-- fim do item 1 do pedido 1 -->
 
-                            
+
                             <!-- detalhes de pagamento -->
                             <div class="row pagamento mt-5">
-                                <div class="col-sm-10">
-                                    <div class="d-flex flex-column">
-                                        <span class="titulo-descricao-pgmt">FORMA DE PAGAMENTO</span>
-                                        <span class="descricao-pgmt ps-4">TRANSFERÊNCIA BANCÁRIA</span>
-                                    </div>
-                                </div>
-
                                 <div class="col-sm">
-                                    <div class="d-flex flex-column text-sm-center">
-                                        <span class="titulo-data-pgmt">DATA DO PAGAMENTO</span>
-                                        <span class="data-pgmt">29/11/2021</span>
+                                    <div class="d-flex flex-column text-sm-start">
+                                        <span class="titulo-data-pgmt">DATA AGENDADA: </span>
+                                        <span class="data-pgmt">dd/MM/YYYY</span>
                                     </div>
                                 </div>
                                 <!-- fim dos detalhes de pagamento -->
@@ -384,14 +377,13 @@
                     </div>
                 </div>
 
-
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <!-- acordeon pedido 2 -->
+                <!-- acordeon pedido 2 -->
+                <div class="accordion accordion-flush" id="flush-headingTwo">
                     <div class="accordion-item mb-3">
-                        <h2 class="accordion-header" id="flush-headingOne">
+                        <h2 class="accordion-header" id="flush-headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
 
                                 <div class="col-3">
                                     <span class="ms-3">#73475</span>
@@ -400,7 +392,7 @@
                                 <div class="col status-pedido d-flex align-items-center justify-content-center ms-1">
                                     <img src="img/img-pedidos/status-cancelado.png" alt="cancelado"
                                         class="figura-status">
-                                    <span class="ms-1">CANCELADO</span>
+                                    <span class="">CANCELADO</span>
                                 </div>
 
                                 <div class="col dt-pedido text-sm-center">
@@ -412,8 +404,8 @@
                                 </div>
                             </button>
                         </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#flush-headingTwo">
 
                             <div class="accordion-body">
 
@@ -438,7 +430,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-sm">
+                                    <div class="col-sm-1">
                                         <div class="d-flex flex-column text-sm-center">
                                             <span class="titulo-descricao">QTD</span>
                                             <span class="descricao">1</span>
@@ -474,9 +466,9 @@
 
                 <!-- acordeon pedido 3 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
+                    <h2 class="accordion-header" id="flush-headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
 
                             <div class="col-3">
                                 <span class="ms-3">#43775</span>
@@ -497,7 +489,7 @@
 
                         </button>
                     </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <!-- item 1 do pedido 2 -->
@@ -520,7 +512,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm">
+                                <div class="col-sm-1">
                                     <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-descricao">QTD</span>
                                         <span class="descricao">1</span>
@@ -557,7 +549,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm">
+                                <div class="col-sm-1">
                                     <div class="d-flex flex-column text-sm-center">
                                         <span class="titulo-descricao">QTD</span>
                                         <span class="descricao">1</span>
