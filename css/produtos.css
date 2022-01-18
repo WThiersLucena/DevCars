@@ -137,6 +137,16 @@ body{
    margin-left: 1px;
 }
 
+.info-gerais-linhas:hover{
+    background-color: rgba(172, 98, 98, 0.1);
+}
+
+.btn-detalhes{
+    margin-top: 20px;
+    margin-bottom: 2px;
+    align-items: center;
+}
+
 .linhas-modal{
     
     justify-content: space-between;
