@@ -42,8 +42,6 @@ body{
 }
 
 
-
-
 .carosel_01{
     display: block;
     width: 100%;
@@ -115,6 +113,7 @@ body{
         margin-top: 50px;
         text-align: center;
         margin-bottom: 2px;
+        
     }
 
 
@@ -157,6 +156,11 @@ body{
     background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
 }
 
+
+.imagens-midia{
+    justify-items: center;
+    margin-top: 50px;
+}
 
 /* -- RESPONSIVE - BEGIN HEADER -- */
 
@@ -224,6 +228,7 @@ body{
         margin-left: 1%;
         justify-content: center;
         
+        
     }
 
     .botao-buscar{           
@@ -234,7 +239,7 @@ body{
     }
 
  .btn-detalhes{
-        width: 900px;       
+    margin-top: 100px;
 
  }
     
@@ -293,7 +298,7 @@ body{
 
     .linhaDestaque{
         justify-content: center;
-        margin-left: 12%;
+        display: none;
     }
 
 

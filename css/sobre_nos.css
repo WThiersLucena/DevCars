@@ -15,6 +15,7 @@ body{
 .linha_sobre_nos1{
     justify-content: center;
     margin-top: 10px;
+   
 }
 
 .sobre_nos .sobre_nos1{
@@ -29,10 +30,20 @@ body{
 
 .social{
     margin-bottom: 45px;
+    margin-top: 45px;
+    
 }
 
 
 
+.alinhamento_paragrafo{
+    text-align:justify;   
+    
+}
+
+.texto-sobre-nos{
+    margin: px;
+}
 
 
 
@@ -396,7 +407,3 @@ body{
 
 /* -- RESPONSIVE - BEGIN HEADER -- */
 
-
-.alinhamento_paragrafo{
-    text-align:justify;
-}

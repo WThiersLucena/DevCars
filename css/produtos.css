@@ -59,6 +59,11 @@ body{
     text-transform: uppercase
 }
 
+
+.fundo-filtro{
+    background-color: #E0E0E0;
+    margin-bottom: 2%;
+}
 .carosel-modal{
     height: 40%;
     width: 40%;
@@ -211,6 +216,13 @@ body{
         margin-left: 12%;
     }
 
+    
+    .filtro-de-busca{
+        margin-left: 1%;
+        justify-content: center;
+        
+        
+    }
 
 }
 

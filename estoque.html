@@ -180,25 +180,7 @@
 
     <!-- INICIO DO MODAL PESQUISAR -->
 
-    <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content p-5">
-                <img src="./img/img-header/close.png" type="button" class="icon-close btn-close align-self-end"
-                    data-bs-dismiss="modal" aria-label="Close">
-                <div class="modal-header">
-                    <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="caixa-busca" class="col-form-label"></label>
-                            <input type="search" class="form-control" id="caixa-busca">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- FIM DO MODAL DE PESQUISAR -->
 
@@ -231,33 +213,58 @@
     <!-- END HEADER -->
 
     <nav>
-        <div class="container">
+        
             <!-- filtro de busca -->
-            <form class="filtro-de-busca row gx-5 align-items-center rounded p-3 mt-5">
-                <legend class="text-center">ENCONTRE SEU CARRO</legend>
-
-                <div class="col-md-3">
-                    <select id="inputState" class="form-select">
-                        <option selected>Marca...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <select id="inputState" class="form-select">
-                        <option selected>Modelo...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <select id="inputState" class="form-select">
-                        <option selected>Ano...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="botao-buscar col-md-3 text-center btn p-0">
-                    <button type="submit" class="btn">BUSCAR</button>
-                </div>
-            </form>
+            <hr>            
+            <div class="row-cols-1 row-cols-md-12 g-4 justify-content-center mt-4">
+                
+                <form class=" filtro-de-busca row gx-12 align-items-center rounded p-3 mt-5 ">
+                    <legend class="text-center">ENCONTRE SEU CARRO</legend>
+        
+                    <div class="col-md-3 ">
+                        <select id="inputState" class="form-select fundo-filtro">
+                            <option selected>Selecione a Marca</option>
+                            <option>Ferrari</option>
+                            <option>Bentley</option>
+                            <option>Porsche</option>
+                            <option>Ford</option>
+                            <option>Audi</option>
+                            <option>Mazda</option>
+                            <option>Masserati</option>
+                            <option>Jaguar</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 ">
+                        <select id="inputState" class="form-select fundo-filtro">
+                            <option selected>Selecione o Modelo</option>
+                            <option>aaaaa</option>
+                            <option>bbbbb</option>
+                            <option>ccccc</option>
+                            <option>ddddd</option>
+        
+                        </select>
+                    </div>
+                    <div class="col-md-2 ">
+                        <select id="inputState" class="form-select fundo-filtro">
+                            <option selected>Selecione o Ano</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                        </select>
+                        
+                    </div>
+                    
+                        <div  class="botao-buscar col-md-3 text-center btn p-0">
+                            <button type="submit" class="btn botao-buscar-home">BUSCAR</button>
+                        </div>
+                    
+                    
+                </form>
+                  
+            
+            </div>
             <!-- fim filtro de busca -->
 
             <!-- Inicio do Ccontainer dos cards -->
@@ -272,6 +279,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Lamborghini Urus </h5>
                                 <p class="card-text"><strong> R$ 3.000.000,00</strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar btn-detalhes" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -286,6 +295,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Bugatti Chiron</h5>
                                 <p class="card-text"><strong> R$ 21.000.000,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -300,6 +311,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">NissanGT-R</h5>
                                 <p class="card-text"><strong> R$ 769.109,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn  mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -314,6 +327,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Mercedes-Benz Classe S (V223)</h5>
                                 <p class="card-text">R$ 641.000,00</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -328,6 +343,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Mercedes-Benz Classe G (W463) AMG</h5>
                                 <p class="card-text"><strong> R$ 2.200.000,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -341,6 +358,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Mercedes-Benz AMG GT R</h5>
                                 <p class="card-text">R$2.200.000,00</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -355,6 +374,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Aston Martin DB11</h5>
                                 <p class="card-text"> <strong> R$ 3.000.000,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -369,6 +390,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Mercedes-Benz AMG F1 2016</h5>
                                 <p class="card-text"><strong> R$ 19.000.000,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -383,6 +406,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Bentley Mulliner Bacalar</h5>
                                 <p class="card-text"><strong> R$ 1.350.000,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -398,6 +423,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Bentley Continental GT3</h5>
                                 <p class="card-text"><strong> R$ 1.950.000,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -413,6 +440,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Ares S1</h5>
                                 <p class="card-text"><strong> R$ 7.100.000,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -428,6 +457,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">Lamborghini Huracan </h5>
                                 <p class="card-text"><strong> R$ 4.300.000,00 </strong></p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
+                                <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀</p>
                                 <a class="btn mt-3 btn_buscar" href="#" role="button">VER DETALHES</a>
                             </div>
                         </div>
@@ -2110,7 +2141,7 @@
                     <a href="#" class="btn btn-outline-secondary m-3"><</a>
                     <a href="./estoque.html" class="btn btn-outline-secondary">1</a>
                     <a href="./estoque-2.html" class="btn btn-outline-secondary">2</a>
-                    <a href="#" class="btn btn-outline-secondary">3</a>
+                    <a href="./estoque-3.html" class="btn btn-outline-secondary">3</a>
                     <a href="#" class="btn btn-outline-secondary m-3">></a>
                 </div>
             </div>
