@@ -42,8 +42,6 @@ body{
 }
 
 
-
-
 .carosel_01{
     display: block;
     width: 100%;
@@ -115,6 +113,7 @@ body{
         margin-top: 50px;
         text-align: center;
         margin-bottom: 2px;
+        
     }
 
 
@@ -156,3 +155,314 @@ body{
 .botao-buscar:hover{
     background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
 }
+
+
+.imagens-midia{
+    justify-items: center;
+    margin-top: 50px;
+}
+
+/* -- RESPONSIVE - BEGIN HEADER -- */
+
+@media (max-width: 1000px) {
+            
+             
+    .logo_marcas{
+        display: none;         
+    }
+  
+    .pesquisar{
+        margin-left: 5%;
+    }
+      
+  
+    .texto_midia {
+      display: inline-block;
+      flex-direction: row;
+      justify-content: space-between;
+      justify-items: center; 
+      padding-top: 1%;
+      padding-left: 5%;
+      padding-bottom: 1%;
+      padding-right: 2%;
+      height: 100%;
+      width: 100%;            
+  }
+  
+  .imagens-midia{
+      display: inline-block;
+      flex-direction: row;
+      justify-content: space-between;
+      justify-items: center;    
+      background-color: #E0E0E0;            
+      padding-top: 1%;
+      padding-left: 5%;
+      padding-bottom: 10%;
+      padding-right: 2%;
+      height: 100%;
+      width: 100%; 
+      }
+  
+  
+      .modal-mobily{
+          width: 100%;
+      }
+      .modal-mobily2{
+          width: 100%;
+          margin-top: 40px;
+      }
+  
+      .modal-mobily3{
+          width: 75%;
+          margin-left: 10%;
+      }
+  
+      
+  }
+
+  
+@media (max-width: 800px) {
+        
+   
+    .filtro-de-busca{
+        margin-left: 1%;
+        justify-content: center;
+        
+        
+    }
+
+    .botao-buscar{           
+        width: 50%;
+        justify-items: center;
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+
+ .btn-detalhes{
+    margin-top: 100px;
+
+ }
+    
+    .logo_marcas{
+        display: none;
+    }
+    
+
+    .texto_midia {
+        display: inline-block;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;    
+        background-color: #E0E0E0;            
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-bottom: 1%;
+        padding-right: 2%;
+        height: 100%;
+        width: 100%;            
+    }
+
+    .imagens-midia{
+        display: inline-block;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;    
+        background-color: #E0E0E0;            
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-bottom: 10%;
+        padding-right: 2%;
+        height: 100%;
+        width: 100%; 
+
+    }
+
+    .modal-mobily{
+        width: 100%;
+    }
+    .modal-mobily2{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .modal-mobily3{
+        width: 75%;
+        margin-left: 10%;
+    }
+
+    .pesquisar{
+        justify-content: center;
+        margin-left: 12%;
+        
+    }
+
+    .linhaDestaque{
+        justify-content: center;
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 640px) {
+        
+    
+
+    .modal-mobily{
+        width: 100%;
+    }
+    .modal-mobily2{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .modal-mobily3{
+        width: 75%;
+        margin-left: 10%;
+    }
+    
+}
+
+/* -- FOR IPHONE 6/7/8 -- */
+@media (max-width: 500px) {
+    
+    
+    .logo_marcas{
+        display: nome;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;    
+        background-color: #E0E0E0;            
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-bottom: 0%;
+        padding-right: 2%;
+        height: 25%;
+        
+    }      
+  
+
+    .texto_midia {
+        display: inline-block;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;           
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-bottom: 10%;
+        padding-right: 2%;
+        height: 100%;
+        width: 100%;            
+    }
+
+    .imagens-midia{
+        display: inline-block;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;    
+        background-color: #E0E0E0;            
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-bottom: 10%;
+        padding-right: 2%;
+        height: 100%;
+        width: 100%; 
+
+    }
+
+    @media (max-width: 450px) {
+    
+    
+        .logo_marcas{
+            display: nome;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;    
+            background-color: #E0E0E0;            
+            padding-top: 1%;
+            padding-left: 5%;
+            padding-bottom: 0%;
+            padding-right: 2%;
+            height: 25%;
+            
+        }      
+      
+    
+        .texto_midia {
+            display: inline-block;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;           
+            padding-top: 1%;
+            padding-left: 5%;
+            padding-bottom: 10%;
+            padding-right: 2%;
+            height: 100%;
+            width: 100%;            
+        }
+    
+        .imagens-midia{
+            display: inline-block;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;    
+            background-color: #E0E0E0;            
+            padding-top: 1%;
+            padding-left: 5%;
+            padding-bottom: 10%;
+            padding-right: 2%;
+            height: 100%;
+            width: 100%; 
+    
+        }
+
+    .pesquisar{
+        justify-content: center;
+        margin-left: 1%;
+    }
+
+    .linhaDestaque{
+        justify-content: center;
+        margin-left: 1%;
+    }
+
+          
+
+    .modal-mobily{
+        width: 100%;
+    }
+    .modal-mobily2{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .modal-mobily3{
+        width: 75%;
+        margin-left: 10%;
+    }
+   
+
+    .search-icon {
+        display: none;
+    }
+
+    .favorite-icon {
+        display: none;
+    }
+
+    .garage-icon {
+        display: none;
+    }
+
+    .user-icon {
+        padding-top: 150%;
+    }
+    
+    .icon-logo {
+        padding-left: 9%;
+    }
+
+}
+
+
+/* -- RESPONSIVE - BEGIN HEADER -- */
