@@ -116,6 +116,7 @@ create table tb_endereco
 	rua_endereco varchar(50) not null,
 	complemento varchar(30)  null,
 	numero_endereco varchar(10) null,
+	bairro varchar(50) not null,
 	cidade varchar(30) not null,
 	uf varchar(2) not null,
 
