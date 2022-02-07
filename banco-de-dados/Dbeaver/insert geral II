@@ -2162,18 +2162,7 @@ insert into tb_cliente
 )
 ;
 
-cod_endereco int not null,
-	cep_endereco varchar(10) not null,
-	rua_endereco varchar(50) not null,
-	complemento varchar(30) not null,
-	numero_endereco varchar(10) null,
-	cidade varchar(30) not null,
-	uf varchar(2) not null,
-
-
-
-
-
+	
 insert into tb_endereco
 (
 	cod_endereco,
@@ -4052,5 +4041,23 @@ values(
 -- update tb_pedido set data_envio = '2021-10-25', previsao_entrega = 15 where cod_pedido = 1; 
  -- alter table tb_item_nf alter column percentual_icms decimal(4,2);
 
+select * from tb_fornecedor tf ;
+select * from tb_combustivel tc ;
+select * from tb_cambio tc ;
+select * from tb_cor tc ;
+select * from tb_marca tm ;
+select * from tb_motor tm ;
+select * from tb_veiculo tv ;
+select * from tb_cliente tc ;
+select * from tb_endereco te ;
+select * from tb_endereco_cliente tec ;
+select * from tb_modalidade_cartao tmc ;
+select * from tb_cartao tc ;
+select * from tb_agendamento ta ;
+select * from tb_favorito tf ;
+select * from tb_favorito_veiculo tfv ;
+select * from tb_loja tl ;
+select * from tb_natureza_operacao tno ;
+select * from tb_frete tf ;
 
 select * from tb_item_nf tin  ;
