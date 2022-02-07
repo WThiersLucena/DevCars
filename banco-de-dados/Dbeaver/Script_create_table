@@ -72,6 +72,7 @@ create table tb_veiculo
 	cod_motor smallint not null,
 	cod_combustivel smallint not null,
 	cod_cambio smallint not null,
+	cod_fornecedor smallint not null,
 	estoque boolean not null,
 	destaque boolean not null,
 	
@@ -80,6 +81,8 @@ create table tb_veiculo
 	foreign key (cod_cor) references tb_cor (cod_cor),
 	foreign key (cod_combustivel) references tb_combustivel (cod_combustivel),
 	foreign key (cod_cambio) references tb_cambio (cod_cambio),
+	foreign key (cod_motor) references tb_motor (cod_motor),
+	foreign key (cod_fornecedor) references tb_fornecedor (cod_fornecedor),
 	unique key (numero_chassi)
 
 
@@ -88,15 +91,15 @@ create table tb_veiculo
 create table tb_cliente
 (
 	cod_cliente int not null,
-	tipo_documento int not null,
+	tipo_documento varchar(4) not null,
 	numero_documento varchar(21) not null,
-	nume_cliente varchar(50) not null,
+	nome_cliente varchar(50) null,
 	data_nascimento date null,
 	email_cliente varchar(50) not null,
 	telefone_cliente varchar(20) not null,
 	senha_cliente varchar(10) not null,
-	inscricao_estadual varchar(15) not null,
-	razao_social varchar(50) not null,
+	inscricao_estadual varchar(15) null,
+	razao_social varchar(50) null,
 
 	primary key (cod_cliente),
 	
@@ -111,7 +114,7 @@ create table tb_endereco
 	cod_endereco int not null,
 	cep_endereco varchar(10) not null,
 	rua_endereco varchar(50) not null,
-	complemento varchar(30) not null,
+	complemento varchar(30)  null,
 	numero_endereco varchar(10) null,
 	cidade varchar(30) not null,
 	uf varchar(2) not null,
@@ -194,11 +197,11 @@ create table tb_favorito
 
 create table tb_favorito_veiculo
 (
-	cod_cliente int not null,
+	cod_veiculo int not null,
 	cod_favorito int not null,
 
-	primary key (cod_cliente, cod_favorito),
-	foreign key (cod_cliente) references tb_cliente (cod_cliente),
+	primary key (cod_veiculo, cod_favorito),
+	foreign key (cod_veiculo) references tb_veiculo (cod_veiculo),
 	foreign key (cod_favorito) references tb_favorito (cod_favorito)
 );
 
@@ -232,7 +235,7 @@ create table tb_frete
 (
 	cod_frete smallint not null,
 	unidade_federativa varchar (2) not null,
-	valor_frete decimal (6,2) not null,
+	valor_frete decimal (10,2) not null,
 
 	primary key (cod_frete)
 
@@ -349,7 +352,7 @@ create table tb_item_nf (
 		cod_iten_nf  int not null,
 		cod_nota int not null,
 		preco_veiculo decimal (12,2) not null,
-		percentual_icms decimal (2,2) not null,
+		percentual_icms decimal (4,2) not null,
 		valor_icms decimal (12,2) not null,
 
 		primary key (cod_iten_nf),
