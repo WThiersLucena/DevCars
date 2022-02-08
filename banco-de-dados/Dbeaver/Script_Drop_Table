@@ -1,5 +1,7 @@
 drop table tb_agendamento;
 drop table tb_item_pedido;
+drop table tb_favorito_veiculo;
+drop table tb_favorito;
 drop table tb_veiculo;
 drop table tb_motor;
 drop table tb_marca;
@@ -16,8 +18,6 @@ drop table tb_endereco_cliente;
 drop table tb_loja;
 drop table tb_endereco;
 drop table tb_fornecedor;
-drop table tb_favorito_veiculo;
-drop table tb_favorito;
 drop table tb_cliente;
 drop table tb_frete;
 drop table tb_natureza_operacao;
