@@ -62,11 +62,11 @@ create table tb_motor
 
 create table tb_veiculo
 (
-	cod_veiculo int not null,
+	cod_veiculo int not null auto_increment,
 	modelo_veiculo varchar (50) not null,
 	cod_marca smallint  not null,
 	numero_chassi varchar (17) not null,
-	ano_veiculo smallint not null,
+	ano_veiculo varchar(4) not null,
 	preco_veiculo decimal (12,2) not null,
 	cod_cor smallint not null,
 	cod_motor smallint not null,
