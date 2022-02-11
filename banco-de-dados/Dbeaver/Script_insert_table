@@ -3897,14 +3897,12 @@ values
 
 insert into tb_item_pedido
 (
-	cod_item_pedido,
 	cod_veiculo,
 	cod_pedido
 
 )
 
 values(
-	1,
 	18,
 	1
 );
@@ -3912,20 +3910,15 @@ values(
 
 insert into tb_item_pedido
 (
-	cod_item_pedido,
 	cod_veiculo,
 	cod_pedido
 
 )
 
 values(
-	2,
 	13,
 	2
 );
-
-
-
 
 insert into tb_cabecalho_nf 
 (
@@ -3940,7 +3933,6 @@ insert into tb_cabecalho_nf
 		data_emissao_nf,
 		cod_pedido,
 		cod_frete
-
 )
 
 values (
@@ -4059,5 +4051,30 @@ select * from tb_favorito_veiculo tfv ;
 select * from tb_loja tl ;
 select * from tb_natureza_operacao tno ;
 select * from tb_frete tf ;
-
+select * from tb_cabecalho_nf tcn ;
 select * from tb_item_nf tin  ;
+select * from tb_pedido tp ;
+select * from tb_item_pedido tip ;
+select * from tb_forma_pagamento tfp ;
+select * from tb_status ts 
+
+select * from tb_veiculo tv;
+select * from tb_frete tf ;
+select * from tb_status ts;
+select * from tb_pedido tp;
+
+
+-- trazer o que eu quero mostrar na lista
+select nome_cliente, razao_social, numero_documento, email_cliente,telefone_cliente, descricao_forma_pagamento, valor_frete, status, marca_veiculo
+
+-- endereco da tabela que quero trazer informaçoes
+from tb_pedido tp
+
+inner join tb_cliente tc on (tp.cod_cliente = tc.cod_cliente )
+inner join tb_forma_pagamento tfp on (tp.cod_forma_pagamento = tfp.cod_forma_pagamento)
+inner join tb_frete tf on (tp.cod_frete = tf.cod_frete)
+inner join tb_status ts on (tp.cod_status = ts.cod_status)
+inner join tb_item_pedido tip on (tp.cod_veiculo = tip.cod_veiculo)
+inner join tb_veiculo tv on (tv.cod_veiculo = tp.cod_veiculo)
+inner join tb_marca tm on (tv.cod_marca = tm.cod_marca);
+
