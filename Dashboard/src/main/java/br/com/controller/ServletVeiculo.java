@@ -58,22 +58,23 @@ public class ServletVeiculo extends HttpServlet {
 	
 	private void insertVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String modelo_veiculo = request.getParameter("modelo_veiculo");
-		Integer cod_marca = Integer.parseInt(request.getParameter("cod_marca"));
-		String numero_chassi = request.getParameter("numero_chassi");
-		Integer ano_veiculo = Integer.parseInt(request.getParameter("ano_veiculo"));
-		Double preco_veiculo = Double.parseDouble(request.getParameter("preco_veiculo"));
-		Integer cod_cor = Integer.parseInt(request.getParameter("cod_cor"));
-		Integer cod_motor = Integer.parseInt(request.getParameter("cod_motor"));
-		Integer cod_combustivel = Integer.parseInt(request.getParameter("cod_combustivel"));
-		Integer cod_cambio = Integer.parseInt(request.getParameter("cod_cambio"));
-		Integer cod_fornecedor = Integer.parseInt(request.getParameter("cod_fornecedor"));
-		Boolean estoque = Boolean.parseBoolean(request.getParameter("estoque"));
-		Boolean destaque = Boolean.parseBoolean(request.getParameter("destaque"));
 		
-		if(  (modelo_veiculo != null)  &&  (cod_marca != null )  && (numero_chassi != null )  && (ano_veiculo != null )  && (preco_veiculo != null ) && (cod_cor != null )  && (cod_motor != null )  && (cod_combustivel != null )  && (cod_cambio != null)  && (cod_fornecedor != null)  && (estoque != null )  && (destaque != null) ) {
+		String marca_veiculo = request.getParameter("marca_veiculo");
+		String modelo_veiculo = request.getParameter("modelo_veiculo");
+		String nome_cor = request.getParameter("nome_cor");
+		Integer ano_veiculo = Integer.parseInt(request.getParameter("ano_veiculo"));
+		String motor_veiculo = request.getParameter("motor_veiculo");
+		String potencia_cv = request.getParameter("potencia_cv");
+		Double preco_veiculo = Double.parseDouble(request.getParameter("preco_veiculo"));
+		String tipo_combustivel = request.getParameter("tipo_combustivel");
+		String cambio = request.getParameter("cambio");
+		String numero_chassi = request.getParameter("numero_chassi");
+		Boolean estoque = Boolean.parseBoolean(request.getParameter("estoque"));
+		
+		
+		if(  (marca_veiculo != null)  &&  (modelo_veiculo != null )  && (nome_cor != null )  && (ano_veiculo != null )  && (motor_veiculo != null ) && (potencia_cv != null )  && (preco_veiculo != null )  && (tipo_combustivel != null )  && (cambio != null)  && (numero_chassi != null)  && (estoque != null ) ) {
 			if(!modelo_veiculo.equals("")) {
-				Veiculo veiculo1 = new Veiculo(modelo_veiculo, cod_marca, numero_chassi, ano_veiculo, preco_veiculo, cod_cor, cod_motor, cod_combustivel, cod_cambio, cod_fornecedor, estoque, destaque);
+				Veiculo veiculo1 = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, preco_veiculo, tipo_combustivel, cambio, numero_chassi, estoque);
 				
 				veic.adicionarVeiculo(veiculo1);
 			}
@@ -102,6 +103,27 @@ public class ServletVeiculo extends HttpServlet {
 	
 	private void updateVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String marca_veiculo = request.getParameter("marca_veiculo");
+		String modelo_veiculo = request.getParameter("modelo_veiculo");
+		String nome_cor = request.getParameter("nome_cor");
+		Integer ano_veiculo = Integer.parseInt(request.getParameter("ano_veiculo"));
+		String motor_veiculo = request.getParameter("motor_veiculo");
+		String potencia_cv = request.getParameter("potencia_cv");
+		Double preco_veiculo = Double.parseDouble(request.getParameter("preco_veiculo"));
+		String tipo_combustivel = request.getParameter("tipo_combustivel");
+		String cambio = request.getParameter("cambio");
+		String numero_chassi = request.getParameter("numero_chassi");
+		Boolean estoque = Boolean.parseBoolean(request.getParameter("estoque"));
+		
+		if(  (marca_veiculo != null)  &&  (modelo_veiculo != null )  && (nome_cor != null )  && (ano_veiculo != null )  && (motor_veiculo != null ) && (potencia_cv != null )  && (preco_veiculo != null )  && (tipo_combustivel != null )  && (cambio != null)  && (numero_chassi != null)  && (estoque != null ) ) {
+			if(!modelo_veiculo.equals("")) {
+				Veiculo veiculo1 = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, preco_veiculo, tipo_combustivel, cambio, numero_chassi, estoque);
+				
+				veic.atualizarVeiculo(veiculo1);
+			}
+		}
+		
+		response.sendRedirect("servletVeiculo");
 	}
 	
 }

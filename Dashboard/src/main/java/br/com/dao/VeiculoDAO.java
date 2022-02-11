@@ -24,17 +24,16 @@ public class VeiculoDAO {
 			PreparedStatement p = con.prepareStatement("insert into tb_veiculo (modelo_veiculo, cod_marca, numero_chassi, ano_veiculo, preco_veiculo, cod_cor, cod_motor, cod_combustivel, cod_cambio, cod_fornecedor, estoque, destaque) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			
 			p.setString(1, veiculo.getModelo_veiculo());
-			p.setInt(2, veiculo.getCod_marca());
+			p.setString(2, veiculo.getMarca_veiculo());
 			p.setString(3, veiculo.getNumero_chassi());
 			p.setInt(4, veiculo.getAno_veiculo());
 			p.setDouble(5, veiculo.getPreco_veiculo());
-			p.setInt(6, veiculo.getCod_cor());
-			p.setInt(7, veiculo.getCod_motor());
-			p.setInt(8, veiculo.getCod_combustivel());
-			p.setInt(9, veiculo.getCod_cambio());
-			p.setInt(10, veiculo.getCod_fornecedor());
-			p.setBoolean(11, veiculo.isEstoque());
-			p.setBoolean(12, veiculo.isDestaque());
+			p.setString(6, veiculo.getNome_cor());
+			p.setString(7, veiculo.getMotor_veiculo());
+			p.setString(8, veiculo.getTipo_combustivel());
+			p.setString(9, veiculo.getCambio());
+			p.setBoolean(11, veiculo.getEstoque());
+
 			
 			System.out.println(p);
 			p.executeUpdate();
@@ -54,26 +53,33 @@ public class VeiculoDAO {
 		ArrayList<Veiculo> lista = new ArrayList<Veiculo>();
 		
 		try {
-			PreparedStatement p = con.prepareStatement("select * from tb_veiculo");
+			PreparedStatement p = con.prepareStatement("select cod_veiculo, marca_veiculo, modelo_veiculo, numero_chassi, ano_veiculo, preco_veiculo, nome_cor, motor_veiculo, potencia_cv, tipo_combustivel, cambio\r\n"
+					+ "from tb_veiculo tv \r\n"
+					+ "inner join tb_marca tm on (tv.cod_marca = tm.cod_marca)\r\n"
+					+ "inner join tb_cor tc on (tv.cod_cor = tc.cod_cor)\r\n"
+					+ "inner join tb_motor tm2 on (tv.cod_motor = tm2.cod_motor)\r\n"
+					+ "inner join tb_combustivel tc2 on (tv.cod_combustivel = tc2.cod_combustivel)\r\n"
+					+ "\r\n"
+					+ "order by cod_veiculo;");
 			ResultSet r = p.executeQuery();
 			
 			while (r.next()) {
 				Integer cod_veiculo = r.getInt("cod_veiculo");
+				String marca_veiculo = r.getString("marca_veiculo");
 				String modelo_veiculo = r.getString("modelo_veiculo");
-				Integer cod_marca = r.getInt("cod_marca");
 				String numero_chassi = r.getString("numero_chassi");
 				Integer ano_veiculo = r.getInt("ano_veiculo");
 				Double preco_veiculo = r.getDouble("preco_veiculo");
-				Integer cod_cor = r.getInt("cod_cor");
-				Integer cod_motor = r.getInt("cod_motor");
-				Integer cod_combustivel = r.getInt("cod_combustivel");
-				Integer cod_cambio = r.getInt("cod_cambio");
-				Integer cod_fornecedor = r.getInt("cod_fornecedor");
+				String nome_cor = r.getString("nome_cor");
+				String motor_veiculo = r.getString("motor_veiculo");
+				String potencia_cv = r.getString("potencia_cv");
+				String tipo_combustivel = r.getString("tipo_combustivel");
+				String cambio = r.getString("cambio");
 				Boolean estoque = r.getBoolean("estoque");
-				Boolean destaque = r.getBoolean("destaque");
 				
-				Veiculo v = new Veiculo(modelo_veiculo, cod_marca, numero_chassi, ano_veiculo, preco_veiculo, cod_cor, cod_motor, cod_combustivel, cod_cambio, cod_fornecedor, estoque, destaque);
 				
+				
+				Veiculo v = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, preco_veiculo, tipo_combustivel, cambio, numero_chassi, estoque);
 				v.setCod_veiculo(cod_veiculo);
 				lista.add(v);
 			}
@@ -111,23 +117,24 @@ public class VeiculoDAO {
 		Conexao c = Conexao.getInstance();
 		Connection con = c.getConnection();
 		
+		
+		System.out.println(veiculo);
+		
 		try {
 			PreparedStatement p = con.prepareStatement("update tb_veiculo set modelo_veiculo = ?, cod_marca = ?, numero_chassi = ?, ano_veiculo = ?, preco_veiculo = ?, cod_cor = ?, cod_motor = ?, cod_combustivel = ?, cod_cambio = ?, cod_fornecedor = ?, estoque = ?, destaque = ? where cod_veiculo = ?");
 			
 			p.setString(1, veiculo.getModelo_veiculo());
-			p.setInt(2, veiculo.getCod_marca());
+			p.setString(2, veiculo.getMarca_veiculo());
 			p.setString(3, veiculo.getNumero_chassi());
 			p.setInt(4, veiculo.getAno_veiculo());
 			p.setDouble(5, veiculo.getPreco_veiculo());
-			p.setInt(6, veiculo.getCod_cor());
-			p.setInt(7, veiculo.getCod_motor());
-			p.setInt(8, veiculo.getCod_combustivel());
-			p.setInt(9, veiculo.getCod_cambio());
-			p.setInt(10, veiculo.getCod_fornecedor());
-			p.setBoolean(11, veiculo.isEstoque());
-			p.setBoolean(12, veiculo.isDestaque());
+			p.setString(6, veiculo.getNome_cor());
+			p.setString(7, veiculo.getMotor_veiculo());
+			p.setString(8, veiculo.getTipo_combustivel());
+			p.setString(9, veiculo.getCambio());
+			p.setBoolean(11, veiculo.getEstoque());
 			p.setInt(13, veiculo.getCod_veiculo());
-			System.out.println("--------------------------------");
+			
 			System.out.println(p);
 			
 			p.executeUpdate();
@@ -152,22 +159,24 @@ public class VeiculoDAO {
 			ResultSet r = p.executeQuery();
 			
 			while (r.next()) {
+
 				Integer cod_veiculo2 = r.getInt("cod_veiculo");
+				String marca_veiculo = r.getString("marca_veiculo");
 				String modelo_veiculo = r.getString("modelo_veiculo");
-				Integer cod_marca = r.getInt("cod_marca");
 				String numero_chassi = r.getString("numero_chassi");
 				Integer ano_veiculo = r.getInt("ano_veiculo");
 				Double preco_veiculo = r.getDouble("preco_veiculo");
-				Integer cod_cor = r.getInt("cod_cor");
-				Integer cod_motor = r.getInt("cod_motor");
-				Integer cod_combustivel = r.getInt("cod_combustivel");
-				Integer cod_cambio = r.getInt("cod_cambio");
-				Integer cod_fornecedor = r.getInt("cod_fornecedor");
+				String nome_cor = r.getString("nome_cor");
+				String motor_veiculo = r.getString("motor_veiculo");
+				String potencia_cv = r.getString("potencia_cv");
+				String tipo_combustivel = r.getString("tipo_combustivel");
+				String cambio = r.getString("cambio");
 				Boolean estoque = r.getBoolean("estoque");
-				Boolean destaque = r.getBoolean("destaque");
 				
-				v = new Veiculo(modelo_veiculo, cod_marca, numero_chassi, ano_veiculo, preco_veiculo, cod_cor, cod_motor, cod_combustivel, cod_cambio, cod_fornecedor, estoque, destaque);
-				v.setCod_veiculo(cod_veiculo);
+				
+				v = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, preco_veiculo, tipo_combustivel, cambio, numero_chassi, estoque);
+				
+				v.setCod_veiculo(cod_veiculo2);
 				
 			
 			}
