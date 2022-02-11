@@ -66,7 +66,7 @@ create table tb_veiculo
 	modelo_veiculo varchar (50) not null,
 	cod_marca smallint  not null,
 	numero_chassi varchar (17) not null,
-	ano_veiculo varchar(4) not null,
+	ano_veiculo smallint not null,
 	preco_veiculo decimal (12,2) not null,
 	cod_cor smallint not null,
 	cod_motor smallint not null,
@@ -310,11 +310,11 @@ create table tb_pedido
 
 create table tb_item_pedido
 (
-	cod_item_pedido int not null,
+	
 	cod_veiculo int not null,
 	cod_pedido int not null,
 
-	primary key (cod_item_pedido),
+	primary key (cod_veiculo, cod_pedido),
 	
 	foreign key (cod_veiculo) references tb_veiculo (cod_veiculo),
 	foreign key (cod_pedido) references tb_pedido (cod_pedido)
