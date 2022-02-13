@@ -8,8 +8,7 @@
 <meta charset="UTF-8">
 <title>Dashboard - Painel ADM</title>
 
-<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
-	rel="stylesheet">
+<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
 
 <style>
