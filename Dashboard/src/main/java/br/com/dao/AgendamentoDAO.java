@@ -49,8 +49,6 @@ public class AgendamentoDAO {
 				String tipo_combustivel = r.getString("tipo_combustivel");
 				String cambio = r.getString("cambio");
 				String numero_chassi = r.getString("numero_chassi");				
-//				Integer cod_veiculo = r.getInt("cod_veiculo");
-//				Integer cod_cliente = r.getInt("cod_cliente");
 				Date data_reserva = r.getDate("data_reserva");
 				Double taxa_agendamento = r.getDouble("taxa_agendamento");
 				
