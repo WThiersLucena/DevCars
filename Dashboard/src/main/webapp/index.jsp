@@ -188,7 +188,7 @@
 							</tr>
 							<tr>
 								<td>1002</td>
-								<td><img alt="" src="logo-rev01.jpeg" widht="50" height="50" style="border-radius: 50px;"></td>
+								<td><img alt="" src="guilherme.jpeg" widht="50" height="50" style="border-radius: 50px;"></td>
 								<td>Guilherme Viana</td>
 								<td>Developer</td>
 								<td>guilhermeviana@devcars.com</td>
