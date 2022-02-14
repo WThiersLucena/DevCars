@@ -82,9 +82,8 @@ public class ServletVeiculo extends HttpServlet {
 	
 	private void insertVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		String marca_veiculo = request.getParameter("marca_veiculo");
 		String modelo_veiculo = request.getParameter("modelo_veiculo");
+		String marca_veiculo = request.getParameter("marca_veiculo");
 		String nome_cor = request.getParameter("nome_cor");
 		Integer ano_veiculo = Integer.parseInt(request.getParameter("ano_veiculo"));
 		String motor_veiculo = request.getParameter("motor_veiculo");
