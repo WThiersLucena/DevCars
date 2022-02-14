@@ -57,27 +57,28 @@ pageEncoding="UTF-8"%>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.jsp">
               <span data-feather="home"></span>
-              Dashboard
+              HOME
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="veiculo.jsp">
               
-            <form action="ServletCliente" method="post">
+            <form action="ServletVeiculo" method="post">
 						<button type="submit" class="btn">
 						<span data-feather="file"></span>
-						Orders
+						VEÍCULO
 						</button>
 			</form>
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="cliente.jsp">
             
             <form action="ServletCliente" method="post">
 						<button type="submit" class="btn">
 						<span data-feather="shopping-cart"></span>
-             			 Products
+             			 CLIENTE
 						</button>
 			</form>
             
@@ -85,11 +86,11 @@ pageEncoding="UTF-8"%>
             </a>
           </li>
           <li class="nav-item" >
-            <a class="nav-link" href="cliente.jsp" >
-            <form action="ServletCliente" method="post">
+            <a class="nav-link" href="fornecedor.jsp" >
+            <form action="ServletFornecedor" method="post">
 						<button type="submit" class="btn">
 						<span data-feather="users"></span>
-						Cliente
+						FORNECEDOR
 						</button>
 		</form>
             
@@ -97,24 +98,24 @@ pageEncoding="UTF-8"%>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="pedido.jsp">
             
             
-            <form action="ServletCliente" method="post">
+            <form action="ServletPedido" method="post">
 						<button type="submit" class="btn">
 						 <span data-feather="bar-chart-2"></span>
-             				 Reports
+             				 PEDIDO
 						</button>
 			</form> 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="agendamento.jsp">
             
-             <form action="ServletCliente" method="post">
+             <form action="ServletAgendamento" method="post">
 						<button type="submit" class="btn">
 						 <span data-feather="layers"></span>
-            				  Integrations
+            				  AGENDAMENTO
 						</button>
 			</form> 
             
@@ -124,38 +125,7 @@ pageEncoding="UTF-8"%>
           </li>
         </ul>
 
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <a class="link-secondary" href="#" aria-label="Add a new report">
-            <span data-feather="plus-circle"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Year-end sale
-            </a>
-          </li>
-        </ul>
+        
       </div>
     </nav>
     
