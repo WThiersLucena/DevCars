@@ -117,7 +117,7 @@ pageEncoding="ISO-8859-1"%>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <form action="ServletVeiculo" method="post">
-                    <button class="btn btn-primary mb-3" type="submit" name="optionFornecedor" value="insertFormSupplier">Adicionar Veículo</button>
+                    <button class="btn btn-primary mb-3" type="submit" name="optionVeiculo" value="insertFormSupplier">Adicionar Veículo</button>
                 </form>
           </div>
         </div>
@@ -127,46 +127,89 @@ pageEncoding="ISO-8859-1"%>
 		<table class="table table-striped table-sm table-bordered" >
 			<thead>
 				<tr>
-					<th class="col-1">COD</th>
-					<th class="col-3">RAZÃO SOCIAL</th>
-					<th class="col-2">EMAIL</th>
-					<th class="col-2">TELEFONE</th>
-					<th class="col-2">CNPJ</th>
-					<th class="col-2">AÇÕES</th>
+					<th class="col-1">Cod</th>
+					<th class="col-3">Marca</th>
+					<th class="col-2">Modelo</th>
+					<th class="col-2">Cor</th>
+					<th class="col-2">Ano</th>
+					<th class="col-2">Motor</th>
+					<th class="col-1">Potência</th>
+					<th class="col-3">Preço</th>
+					<th class="col-2">Combustível</th>
+					<th class="col-2">Câmbio</th>
+					<th class="col-2">Chassi</th>
+					<th class="col-2">Estoque</th>
+					<th class="col-2">Ações</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="supplier" items="${listSupplier}">
+				<c:forEach var="veiculo" items="${listVeiculo}">
 					<tr>
-						<form action="ServletFornecedor" method="post">
+						<form action="ServletVeiculo" method="post">
 						
 							<td>
-								<c:out value="${supplier.cod_fornecedor}"/>
-								<input type="hidden" name="cod_fornecedor" value="${supplier.cod_fornecedor}"/>
+								<c:out value="${veiculo.cod_veiculo}"/>
+								<input type="hidden" name="cod_veiculo" value="${veiculo.cod_veiculo}"/>
 							</td>
 							
 							<td>
-								<c:out value="${supplier.razao_social}"/>
+								<c:out value="${veiculo.marca_veiculo}"/>
 							</td>
 							
 							<td>
-								<c:out value="${supplier.email_fornecedor}"/>
+								<c:out value="${veiculo.modelo_veiculo}"/>
 							</td>
 							
 							<td>
-								<c:out value="${supplier.telefone_fornecedor}"/>
+								<c:out value="${veiculo.nome_cor}"/>
 							</td>
 							
 							<td>
-								<c:out value="${supplier.cnpj}"/>
+								<c:out value="${veiculo.ano_veiculo}"/>
 							</td>
+							
+							<td>
+								<c:out value="${veiculo.motor_veiculo}"/>
+							</td>
+							
+							<td>
+								<c:out value="${veiculo.potencia_cv}"/>
+							</td>
+							
+							<td>
+								<c:out value="${veiculo.preco_veiculo}"/>
+							</td>
+							
+							<td>
+								<c:out value="${veiculo.tipo_combustivel}"/>
+							</td>
+							
+							<td>
+								<c:out value="${veiculo.cambio}"/>
+							</td>
+							
+							<td>
+								<c:out value="${veiculo.numero_chassi}"/>
+							</td>
+							
+							
+							<td>
+							<c:choose>
+								    <c:when test="${veiculo.estoque == true}">
+								        <p>DISPONÍVEL</p>
+								    </c:when>    
+								    <c:otherwise>
+								        <p>INDISPONÍVEL</p>
+								    </c:otherwise>
+								</c:choose>
+							</td>
+							
 							
 							<td>
 								<div class="d-grid gap-2 d-md-flex justify-content-md-center">
-									<button class="btn btn-primary" type="submit" name="optionFornecedor" value="deleteSupplier">Deletar</button>
-									<button class="btn btn-primary" type="submit" name="optionFornecedor" value="updateFormSupplier">Atualizar</button>
+									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="deleteSupplier">Deletar</button>
+									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="updateFormSupplier">Atualizar</button>
 								</div>
-								
 							</td>
 						</form>
 					</tr>
