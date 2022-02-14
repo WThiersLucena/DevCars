@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>FORNECEDORES</title>
+<title>CADASTRAR FORNECEDOR</title>
+
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -24,6 +24,7 @@ pageEncoding="ISO-8859-1"%>
         }
       }
     </style>
+    
 
 <link href="./dashboard.css" rel="stylesheet"/>
 
@@ -75,7 +76,7 @@ pageEncoding="ISO-8859-1"%>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./fornecedor.jsp" >
+            <a class="nav-link" href="./fornecedor.jsp">
               <span data-feather="users"></span>
               FORNECEDOR
             </a>
@@ -142,60 +143,86 @@ pageEncoding="ISO-8859-1"%>
         </div>
       </div>
 
-      <div class="table-responsive">
-        <!-- <table class="table table-striped table-sm">  -->
-
-		<table class="table table-striped table-sm table-bordered" >
-			<thead>
-				<tr>
-					<th class="col-1">COD</th>
-					<th class="col-3">RAZÃO SOCIAL</th>
-					<th class="col-2">EMAIL</th>
-					<th class="col-2">TELEFONE</th>
-					<th class="col-2">CNPJ</th>
-					<th class="col-2">AÇÕES</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="supplier" items="${listSupplier}">
-					<tr>
-						<form action="ServletFornecedor" method="post">
+	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3">
+		<h3 class="card-title text-center mb-3">ADICIONAR FORNECEDOR</h3>
+	
+		<form action="ServletFornecedor" method="post">
+				<c:choose>
+					<c:when test="${ supplier == null }">
+					
+						<div class=mb-3>
+							<label class="form-label">CNPJ:</label>
+							<input type="text" class="form-control" name="cnpj" required/>
+						</div>
+					
+						<div class=mb-3>
+							<label class="form-label">RAZÃO SOCIAL:</label>
+							<input type="text" class="form-control" name="razao_social" required/>
+						</div>
 						
-							<td>
-								<c:out value="${supplier.cod_fornecedor}"/>
-								<input type="hidden" name="cod_fornecedor" value="${supplier.cod_fornecedor}"/>
-							</td>
-							
-							<td>
-								<c:out value="${supplier.razao_social}"/>
-							</td>
-							
-							<td>
-								<c:out value="${supplier.email_fornecedor}"/>
-							</td>
-							
-							<td>
-								<c:out value="${supplier.telefone_fornecedor}"/>
-							</td>
-							
-							<td>
-								<c:out value="${supplier.cnpj}"/>
-							</td>
-							
-							<td>
-								<div class="d-grid gap-2 d-md-flex justify-content-md-center">
-									<button class="btn btn-primary" type="submit" name="optionFornecedor" value="deleteSupplier">Deletar</button>
-									<button class="btn btn-primary" type="submit" name="optionFornecedor" value="updateFormSupplier">Atualizar</button>
-								</div>
-								
-							</td>
-						</form>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-
-      </div>
+						<div class=mb-3>
+							<label class="form-label">INSCRIÇÃO ESTADUAL:</label>
+							<input type="text" class="form-control" name="inscricao_estadual" required/>
+						</div>
+						
+						<div class=mb-3>
+							<label class="form-label">EMAIL:</label>
+							<input type="text" class="form-control" name="email_fornecedor" required/>
+						</div>
+						
+						<div class=mb-3>
+							<label class="form-label">TELEFONE:</label>
+							<input type="text" class="form-control" name="telefone_fornecedor" required/>
+						</div>
+						
+						
+						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+							<button type="submit" name="optionFornecedor" class="btn btn-primary flex-start" value="insertSupplier">Salvar</button>
+						</div>
+						
+					</c:when>
+				
+					<c:otherwise>
+					
+						<div class="mb-3">
+							<input type="hidden" name="cod_fornecedor" value="${supplier.cod_fornecedor}"/>
+						</div>
+						
+						<div class=mb-3>
+							<label class="form-label">CNPJ:</label>
+							<input type="text" class="form-control" name="cnpj" value="${supplier.cnpj}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">RAZÃO SOCIAL:</label>
+							<input type="text" class="form-control" name="razao_social" value="${supplier.razao_social}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">INSCRIÇÃO ESTADUAL:</label>
+							<input type="text" class="form-control" name="inscricao_estadual" value="${supplier.inscricao_estadual}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">EMAIL:</label>
+							<input type="text" class="form-control" name="email_fornecedor" value="${supplier.email_fornecedor}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">TELEFONE:</label>
+							<input type="text" class="form-control" name="telefone_fornecedor" value="${supplier.telefone_fornecedor}"/>
+						</div>
+						
+						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+							<button type="submit" name="optionFornecedor" class="btn btn-primary flex-start" value="updateSupplier">Atualizar</button>
+						</div>
+						
+					</c:otherwise>
+				
+				</c:choose>
+		</form>
+	</div>
+      
     </main>
   </div>
 </div>
@@ -204,7 +231,6 @@ pageEncoding="ISO-8859-1"%>
  
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
  <script src="./dashboard.js"></script>
- 
 
 </body>
 </html>

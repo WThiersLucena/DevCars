@@ -45,13 +45,9 @@ public class ServletAgendamento extends HttpServlet {
 	}
 	
 	
-	private void mostrarAgenda(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-//		String taxa = this.a.getTaxa_agendamento().toString();
-//		DecimalFormat df = new DecimalFormat("#,###.00");
-//		df.format(taxa);
-//		
+	private void mostrarAgenda(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{	
 		request.setAttribute("agenda", this.agenda.mostrarAgenda());
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		request.getRequestDispatcher("./agendamento.jsp").forward(request, response);
 	}
 
 }

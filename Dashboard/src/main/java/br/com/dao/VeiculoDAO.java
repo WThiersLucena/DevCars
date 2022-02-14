@@ -53,14 +53,15 @@ public class VeiculoDAO {
 		ArrayList<Veiculo> lista = new ArrayList<Veiculo>();
 		
 		try {
-			PreparedStatement p = con.prepareStatement("select cod_veiculo, marca_veiculo, modelo_veiculo, numero_chassi, ano_veiculo, preco_veiculo, nome_cor, motor_veiculo, potencia_cv, tipo_combustivel, cambio\r\n"
-					+ "from tb_veiculo tv \r\n"
-					+ "inner join tb_marca tm on (tv.cod_marca = tm.cod_marca)\r\n"
-					+ "inner join tb_cor tc on (tv.cod_cor = tc.cod_cor)\r\n"
-					+ "inner join tb_motor tm2 on (tv.cod_motor = tm2.cod_motor)\r\n"
-					+ "inner join tb_combustivel tc2 on (tv.cod_combustivel = tc2.cod_combustivel)\r\n"
-					+ "\r\n"
-					+ "order by cod_veiculo;");
+			PreparedStatement p = con.prepareStatement("select cod_veiculo, marca_veiculo, modelo_veiculo, numero_chassi, ano_veiculo, preco_veiculo, nome_cor, motor_veiculo, potencia_cv, tipo_combustivel, cambio, estoque\r\n"
+					+ "					 from tb_veiculo tv\r\n"
+					+ "					 inner join tb_marca tm on (tv.cod_marca = tm.cod_marca)\r\n"
+					+ "					 inner join tb_cor tc on (tv.cod_cor = tc.cod_cor)\r\n"
+					+ "					 inner join tb_motor tm2 on (tv.cod_motor = tm2.cod_motor)\r\n"
+					+ "					 inner join tb_combustivel tc2 on (tv.cod_combustivel = tc2.cod_combustivel)\r\n"
+					+ "					 inner join tb_cambio tc3 on (tv.cod_cambio = tc3.cod_cambio)\r\n"
+					+ "					 order by cod_veiculo;\r\n"
+					+ "");
 			ResultSet r = p.executeQuery();
 			
 			while (r.next()) {
