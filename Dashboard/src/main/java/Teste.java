@@ -6,7 +6,7 @@ import br.com.entidade.Fornecedor;
 public class Teste {
 	public static void main(String[] args) {
 		
-//		VeiculoDAO veiculoD = new VeiculoDAO();
+		VeiculoDAO veiculoD = new VeiculoDAO();
 		Conexao c = new Conexao();
 		c.getConnection();
 		
@@ -22,7 +22,7 @@ public class Teste {
 		
 
 
-//		System.out.println(veiculoD.mostrarVeiculo());
+		System.out.println(veiculoD.mostrarVeiculo());
 		
 		
 		// INICIO ADICIONAR FORNECEDOR
