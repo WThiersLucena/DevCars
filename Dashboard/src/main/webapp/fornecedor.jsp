@@ -51,52 +51,68 @@ pageEncoding="ISO-8859-1"%>
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="index.jsp">
               <span data-feather="home"></span>
               HOME
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              VEÍCULOS
+            <a class="nav-link" href="veiculo.jsp"> 
+            	<form action="ServletVeiculo" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="file"></span>
+						VEÍCULO
+					</button>
+				</form>
             </a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              CLIENTES
+            <a class="nav-link" href="cliente.jsp">
+            	<form action="ServletCliente" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="shopping-cart"></span>
+             			 CLIENTE
+					</button>
+				</form>  
             </a>
           </li>
           
-		  <li class="nav-item">
-            <a class="nav-link" href="./fornecedor.jsp">
+          <li class="nav-item" >
+          	<a class="nav-link" href="fornecedor.jsp" >
             	<form action="ServletFornecedor" method="post">
-            		<button type="submit" class="btn">
-            			<span data-feather="users"></span>
-            			FORNECEDOR
-            		</button>
-            	</form>
+					<button type="submit" class="btn">
+						<span data-feather="users"></span>
+						FORNECEDOR
+					</button>
+				</form>
             </a>
           </li>
           
+          <li class="nav-item">
+            <a class="nav-link" href="pedido.jsp">
+            	<form action="ServletPedido" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="bar-chart-2"></span>
+             				 PEDIDO
+					</button>
+				</form> 
+            </a>
+          </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              PEDIDOS
+            <a class="nav-link" href="agendamento.jsp">    
+             	<form action="ServletAgendamento" method="post">
+					<button type="submit" class="btn">
+						 <span data-feather="layers"></span>
+            				  AGENDAMENTO
+					</button>
+				</form> 
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              AGENDAMENTO
-            </a>
-          </li>
+          
         </ul>
-
-       
       </div>
     </nav>
     <!--  END SIDEBAR -->
