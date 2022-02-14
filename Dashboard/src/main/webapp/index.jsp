@@ -8,6 +8,7 @@ pageEncoding="ISO-8859-1"%>
 <meta charset="ISO-8859-1">
 <title>Dashboard - Painel ADM</title>
 
+
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -60,32 +61,66 @@ pageEncoding="ISO-8859-1"%>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Orders
+            
+            <form action="" method="post">
+						<button type="submit" class="btn">
+						<span data-feather="file"></span>
+						Orders
+						</button>
+			</form>
+            
+            
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              Products
+            
+            <form action="" method="post">
+						<button type="submit" class="btn">
+						<span data-feather="shopping-cart"></span>
+             			 Products
+						</button>
+			</form>
+            
+              
+            </a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="cliente.jsp" >
+            <form action="ServletCliente" method="post">
+						<button type="submit" class="btn">
+						<span data-feather="users"></span>
+						Cliente
+						</button>
+		</form>
+            
+            
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Customers
+            
+            
+            <form action="" method="post">
+						<button type="submit" class="btn">
+						 <span data-feather="bar-chart-2"></span>
+             				 Reports
+						</button>
+			</form> 
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Integrations
+            
+             <form action="" method="post">
+						<button type="submit" class="btn">
+						 <span data-feather="layers"></span>
+            				  Integrations
+						</button>
+			</form> 
+            
+            
+              
             </a>
           </li>
         </ul>
