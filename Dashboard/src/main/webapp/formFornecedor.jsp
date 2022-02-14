@@ -63,24 +63,25 @@
               VEÍCULOS
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              PEDIDOS
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="users"></span>
               CLIENTES
             </a>
           </li>
-          <li class="nav-item">
+
+          		  <li class="nav-item">
             <a class="nav-link" href="./fornecedor.jsp">
-              <span data-feather="users"></span>
-              FORNECEDOR
+            	<form action="ServletFornecedor" method="post">
+            		<button type="submit" class="btn">
+            			<span data-feather="users"></span>
+            			FORNECEDOR
+            		</button>
+            	</form>
             </a>
           </li>
+        
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
@@ -134,13 +135,7 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">LISTA DE FORNECEDORES</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
-            <form action="ServletFornecedor" method="post">
-                    <button class="btn btn-primary mb-3" type="submit" name="optionFornecedor" value="insertFormSupplier">Adicionar Fornecedor</button>
-                </form>
-          </div>
-        </div>
+        
       </div>
 
 	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3">
