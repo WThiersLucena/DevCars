@@ -37,9 +37,33 @@ public class ServletVeiculo extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String optionFornecedor = request.getParameter("optionFornecedor");
+		if (optionFornecedor == null) {
+			optionFornecedor = "";
+		}
+//		 System.out.println("doPost =" + optionFornecedor);
+		 
+		switch(optionFornecedor) {
+			case ("insertFormSupplier"):
+				showInsertVeiculo(request, response);
+				break;
+			case ("updateFormSupplier"):
+				showUpdateVeiculo(request, response);
+				break;
+			case ("updateSupplier"):
+				updateVeiculo(request, response);
+				break;
+			case ("deleteSupplier"):
+				deleteVeiculo(request, response);
+				break;
+			case ("insertSupplier"):
+				insertVeiculo(request, response);
+				break;
+			default:
+				selectAllVeiculos(request, response);
+		}
 	}
+	
 	
 	private void showInsertVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getRequestDispatcher("/").forward(request, response); //INSERIR PÁGINA DE CADASTRO DE VEÍCULO//
