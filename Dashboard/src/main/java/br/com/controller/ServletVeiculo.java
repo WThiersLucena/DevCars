@@ -37,26 +37,26 @@ public class ServletVeiculo extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String optionFornecedor = request.getParameter("optionFornecedor");
+		String optionFornecedor = request.getParameter("optionVeiculo");
 		if (optionFornecedor == null) {
 			optionFornecedor = "";
 		}
 //		 System.out.println("doPost =" + optionFornecedor);
 		 
 		switch(optionFornecedor) {
-			case ("insertFormSupplier"):
+			case ("insertFormVeiculo"):
 				showInsertVeiculo(request, response);
 				break;
-			case ("updateFormSupplier"):
+			case ("updateFormVeiculo"):
 				showUpdateVeiculo(request, response);
 				break;
-			case ("updateSupplier"):
+			case ("updateVeiculo"):
 				updateVeiculo(request, response);
 				break;
-			case ("deleteSupplier"):
+			case ("deleteVeiculo"):
 				deleteVeiculo(request, response);
 				break;
-			case ("insertSupplier"):
+			case ("insertVeiculo"):
 				insertVeiculo(request, response);
 				break;
 			default:
@@ -103,7 +103,7 @@ public class ServletVeiculo extends HttpServlet {
 			}
 		}
 		
-		response.sendRedirect("servletVeiculo");
+		response.sendRedirect("ServletVeiculo");
 	}
 	
 	private void selectAllVeiculos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -146,7 +146,7 @@ public class ServletVeiculo extends HttpServlet {
 			}
 		}
 		
-		response.sendRedirect("servletVeiculo");
+		response.sendRedirect("ServletVeiculo");
 	}
 	
 }
