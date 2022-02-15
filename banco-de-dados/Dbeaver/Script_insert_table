@@ -4065,7 +4065,7 @@ select * from tb_pedido tp;
 
 
 -- trazer o que eu quero mostrar na lista
-select nome_cliente, razao_social, numero_documento, email_cliente,telefone_cliente, descricao_forma_pagamento, valor_frete, status, marca_veiculo
+select cod_pedido, nome_cliente, razao_social, numero_documento, email_cliente,telefone_cliente, descricao_forma_pagamento, valor_frete,valor_total_pedido, data_pedido,status
 
 -- endereco da tabela que quero trazer informaçoes
 from tb_pedido tp
@@ -4073,8 +4073,10 @@ from tb_pedido tp
 inner join tb_cliente tc on (tp.cod_cliente = tc.cod_cliente )
 inner join tb_forma_pagamento tfp on (tp.cod_forma_pagamento = tfp.cod_forma_pagamento)
 inner join tb_frete tf on (tp.cod_frete = tf.cod_frete)
-inner join tb_status ts on (tp.cod_status = ts.cod_status)
-inner join tb_item_pedido tip on (tp.cod_veiculo = tip.cod_veiculo)
-inner join tb_veiculo tv on (tv.cod_veiculo = tp.cod_veiculo)
-inner join tb_marca tm on (tv.cod_marca = tm.cod_marca);
+inner join tb_status ts on (tp.cod_status = ts.cod_status);
+
+
+-- inner join tb_item_pedido tip on (tp.cod_veiculo = tip.cod_veiculo);
+-- inner join tb_veiculo tv on (tv.cod_veiculo = tp.cod_veiculo)
+-- inner join tb_marca tm on (tv.cod_marca = tm.cod_marca);
 
