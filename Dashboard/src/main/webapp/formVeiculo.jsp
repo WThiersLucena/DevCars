@@ -246,7 +246,7 @@
 						
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button type="submit" name="optionFornecedor" class="btn btn-primary flex-start" value="insertSupplier">Salvar</button>
+							<button type="submit" name="optionVeiculo" class="btn btn-primary flex-start" value="insertVeiculo">Salvar</button>
 						</div>
 						
 					</c:when>
@@ -283,7 +283,7 @@
 						</div>
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button type="submit" name="optionFornecedor" class="btn btn-primary flex-start" value="updateSupplier">Atualizar</button>
+							<button type="submit" name="optionVeiculo" class="btn btn-primary flex-start" value="updateVeiculo">Atualizar</button>
 						</div>
 						
 					</c:otherwise>
