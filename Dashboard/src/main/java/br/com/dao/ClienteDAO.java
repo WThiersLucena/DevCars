@@ -137,6 +137,50 @@ public class ClienteDAO {
 		
 				
 	
+//	public ArrayList<Cliente> mostrarClienteDetalhes() {
+//		
+//		Conexao c = Conexao.getInstance();
+//		Connection con = c.getConnection();
+//		
+//		ArrayList<Cliente> listaDetalhes = new ArrayList<Cliente>();
+//		
+//		try {
+//			PreparedStatement p = con.prepareStatement("select tb_cliente.cod_cliente , tb_cliente.nome_cliente,tb_cliente.razao_social ,tb_endereco.cep_endereco ,\r\n"
+//					+ "	   tb_endereco.rua_endereco, tb_endereco.numero_endereco ,tb_endereco.complemento, tb_endereco.bairro ,tb_endereco.cidade,\r\n"
+//					+ "	   tb_endereco.uf \r\n"
+//					+ "from tb_endereco_cliente \r\n"
+//					+ "inner join tb_cliente on tb_cliente.cod_cliente = tb_endereco_cliente.cod_cliente \r\n"
+//					+ "inner join tb_endereco  on tb_endereco.cod_endereco = tb_endereco_cliente.cod_endereco\r\n"
+//					+ "\r\n"
+//					+ "order by cod_cliente;");
+//			ResultSet r = p.executeQuery();
+//			
+//			while (r.next()) {
+//				String cod_cliente2 = r.getString("cod_cliente");
+//				String nome_cliente = r.getString("nome_cliente");
+//				String razao_social = r.getString("razao_social");
+//				String cep_endereco = r.getString("cep_endereco");
+//				String rua_endereco = r.getString("rua_endereco");
+//				String numero_endereco = r.getString("numero_endereco");
+//				String complemento = r.getString("complemento");				
+//				String bairro = r.getString("bairro");
+//				String uf = r.getString("uf");
+//				
+//			
+//				Cliente c2 = new Cliente(cod_cliente2, nome_cliente,razao_social,cep_endereco,rua_endereco,numero_endereco,complemento,bairro,uf);
+//				c2.setCod_cliente(cod_cliente2);
+//				listaDetalhes.add(c2);
+//			}
+//
+//
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		return listaDetalhes;
+//	}
+	
+	
 	
 	
 	}

@@ -50,13 +50,19 @@ public class Cliente {
 
 
 
+
+
+
+
+
+
+
+
 	public Integer getCod_cliente() {
 		return cod_cliente;
 	}
 
-	public void setCod_cliente(Integer cod_cliente) {
-		this.cod_cliente = cod_cliente;
-	}
+
 
 //	public String getTipo_documento() {
 //		return tipo_documento;
@@ -147,6 +153,21 @@ public class Cliente {
 				+ numero_documento + ", nome_cliente=" + nome_cliente + ", data_nascimento=" + data_nascimento
 				+ ", email_cliente=" + email_cliente + ", telefone_cliente=" + telefone_cliente + ""
 				+  ", razao_social=" + razao_social + "]";
+	}
+
+
+
+
+
+
+
+
+
+
+
+	public void setCod_cliente(Integer cod_cliente2) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
