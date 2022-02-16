@@ -166,11 +166,11 @@ pageEncoding="ISO-8859-1"%>
 								<c:out value="${supplier.email_fornecedor}"/>
 							</td>
 							
-							<td>
+							<td class="exampleInputTelefone">
 								<c:out value="${supplier.telefone_fornecedor}"/>
 							</td>
 							
-							<td>
+							<td class="exampleInputCnpj">
 								<c:out value="${supplier.cnpj}"/>
 							</td>
 							
@@ -221,6 +221,22 @@ pageEncoding="ISO-8859-1"%>
  
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
  <script src="./dashboard.js"></script>
+ 
+ 
+ <!-- jQuery Mask -->
+ <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="jquery.mask.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.exampleInputTelefone').mask('(00) 00000-0000');
+            $('.exampleInputInscEstadual').mask('000.000.000.000');
+            $('.exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
+            $('.placeholder').mask("00/00/0000", { placeholder: "__/__/____" });
+        });
+    </script>
 
 </body>
 </html>

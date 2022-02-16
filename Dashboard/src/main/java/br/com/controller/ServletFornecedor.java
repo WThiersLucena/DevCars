@@ -75,11 +75,11 @@ public class ServletFornecedor extends HttpServlet {
 	private void insertSupplier(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		
 //		 System.out.println("qqr coisa 2");
-		String cnpjBack = request.getParameter("cnpj");
+		String cnpjBack = request.getParameter("cnpj").replace("/", "").replace(".", "").replace("-", "");
 		String razao_socialBack = request.getParameter("razao_social");
-		String inscricao_estadualBack = request.getParameter("inscricao_estadual");
+		String inscricao_estadualBack = request.getParameter("inscricao_estadual").replace("/", "").replace(".", "");
 		String email_fornecedorBack = request.getParameter("email_fornecedor");
-		String telefone_fornecedorBack = request.getParameter("telefone_fornecedor");
+		String telefone_fornecedorBack = request.getParameter("telefone_fornecedor").replace(")", "").replace("(", "").replace(" ", "").replace("-", "");
 		
 //		 System.out.println("qqr coisa 2 = " + cnpjBack);
 //		 System.out.println("qqr coisa 2 = " + razao_socialBack);
@@ -130,7 +130,7 @@ public class ServletFornecedor extends HttpServlet {
 		if ((cnpjBack != null) && (razao_socialBack != null) && (inscricao_estadualBack != null) && (email_fornecedorBack != null) && (telefone_fornecedorBack != null) && (cod_fornecedorBack != null)) {
 			if (!cnpjBack.equals("")){
 				Integer cod_fornecedor = Integer.parseInt(cod_fornecedorBack);
-				Fornecedor supplier1 = new Fornecedor(cnpjBack, razao_socialBack, inscricao_estadualBack, email_fornecedorBack, telefone_fornecedorBack); // ERRO ESTAVA AQUI: INVERTER PAIS COM EMAIL E EMAIL COM PAIS. AGORA ESTÁ CERTO
+				Fornecedor supplier1 = new Fornecedor(cnpjBack, razao_socialBack, inscricao_estadualBack, email_fornecedorBack, telefone_fornecedorBack); // ERRO ESTAVA AQUI: INVERTER PAIS COM EMAIL E EMAIL COM PAIS. AGORA ESTÃ� CERTO
 				supplier1.setCod_fornecedor(cod_fornecedor);
 				this.fornec.updateSupplier(supplier1);
 			}
