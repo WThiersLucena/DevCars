@@ -1,6 +1,6 @@
 create table tb_fornecedor
-(
-	cod_fornecedor smallint not null,
+(	
+	cod_fornecedor smallint not null auto_increment,
 	cnpj varchar(18) not null,
 	razao_social varchar(50) not null,
 	inscricao_estadual varchar(15) not null,
