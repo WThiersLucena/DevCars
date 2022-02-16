@@ -218,8 +218,8 @@ pageEncoding="ISO-8859-1"%>
 							
 							<td>
 								<div class="d-grid gap-2 d-md-flex justify-content-md-center">
-									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="deleteSupplier">Deletar</button>
-									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="updateFormSupplier">Atualizar</button>
+									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="deleteVeiculo">Deletar</button>
+									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="updateFormVeiculo">Atualizar</button>
 								</div>
 							</td>
 						</form>

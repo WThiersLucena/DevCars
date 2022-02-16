@@ -7,7 +7,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>FORNECEDORES</title>
+<title>Agendamentos</title>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -18,7 +18,6 @@ pageEncoding="ISO-8859-1"%>
         -moz-user-select: none;
         user-select: none;
       }
-
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -121,11 +120,8 @@ pageEncoding="ISO-8859-1"%>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Agendamentos</h1>
       </div>
-
       <div>
-        <!-- <table class="table table-striped table-sm">  -->
-
-		<table class="table table-striped table-sm table-bordered" >
+       <table class="table table-striped table-sm table-bordered" >
 			<thead>
 				<tr class="row">
 					<th class="col-1 text-center">Código</th>
