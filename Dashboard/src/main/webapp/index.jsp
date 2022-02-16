@@ -53,85 +53,77 @@
 		</div>
 	</header>
 
-<<<<<<< HEAD
  <!--  BEGIN SIDEBAR -->
  
 <div class="container-fluid">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+	<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="index.jsp">
               <span data-feather="home"></span>
-              Dashboard
+              HOME
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-            
-            <form action="" method="post">
-						<button type="submit" class="btn">
+            <a class="nav-link" href="veiculo.jsp"> 
+            	<form action="ServletVeiculo" method="post">
+					<button type="submit" class="btn">
 						<span data-feather="file"></span>
-						Orders
-						</button>
-			</form>
-            
-            
+						VEÍCULO
+					</button>
+				</form>
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-            
-            <form action="" method="post">
-						<button type="submit" class="btn">
+            <a class="nav-link" href="cliente.jsp">
+            	<form action="ServletCliente" method="post">
+					<button type="submit" class="btn">
 						<span data-feather="shopping-cart"></span>
-             			 Products
-						</button>
-			</form>
-            
-              
+             			 CLIENTE
+					</button>
+				</form>  
             </a>
           </li>
+          
           <li class="nav-item" >
-            <a class="nav-link" href="cliente.jsp" >
-            <form action="ServletCliente" method="post">
-						<button type="submit" class="btn">
+          	<a class="nav-link" href="fornecedor.jsp" >
+            	<form action="ServletFornecedor" method="post">
+					<button type="submit" class="btn">
 						<span data-feather="users"></span>
-						Cliente
-						</button>
-		</form>
-            
-            
+						FORNECEDOR
+					</button>
+				</form>
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-            
-            
-            <form action="" method="post">
-						<button type="submit" class="btn">
-						 <span data-feather="bar-chart-2"></span>
-             				 Reports
-						</button>
-			</form> 
+            <a class="nav-link" href="pedido.jsp">
+            	<form action="ServletPedido" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="bar-chart-2"></span>
+             				 PEDIDO
+					</button>
+				</form> 
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-            
-             <form action="" method="post">
-						<button type="submit" class="btn">
+            <a class="nav-link" href="agendamento.jsp">    
+             	<form action="ServletAgendamento" method="post">
+					<button type="submit" class="btn">
 						 <span data-feather="layers"></span>
-            				  Integrations
-						</button>
-			</form> 
-            
-            
-              
+            				  AGENDAMENTO
+					</button>
+				</form> 
             </a>
           </li>
+          
         </ul>
+<<<<<<< HEAD
 
 	<!--  BEGIN SIDEBAR -->
 
@@ -207,6 +199,10 @@
 					</ul>
 				</div>
 			</nav>
+=======
+      </div>
+    </nav>
+>>>>>>> c6fcd451c0bb21b22b49b1913450ac4390a3e999
 			<!--  END SIDEBAR -->
 
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">

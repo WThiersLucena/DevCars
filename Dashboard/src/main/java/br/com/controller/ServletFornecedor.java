@@ -101,14 +101,21 @@ public class ServletFornecedor extends HttpServlet {
 		request.getRequestDispatcher("fornecedor.jsp").forward(request, response);
 	}
 	
+	
 	private void deleteSupplier(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String cod_fornecedorBack = request.getParameter("cod_fornecedor");
+		
+		System.out.println(cod_fornecedorBack);
+		
+		
 		
 		if (cod_fornecedorBack != null) {
 			Integer cod_fornecedor = Integer.parseInt(cod_fornecedorBack);
 			this.fornec.removeSupplier(cod_fornecedor);
 		}
 		response.sendRedirect("ServletFornecedor");
+		
+		
 	}
 	
 	private void updateSupplier(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

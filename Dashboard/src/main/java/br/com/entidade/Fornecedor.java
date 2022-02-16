@@ -19,9 +19,9 @@ public class Fornecedor {
 		this.email_fornecedor = email_fornecedor;
 		this.telefone_fornecedor = telefone_fornecedor;
 	}
-	
-	//Métodos Getters and Setters
 
+	//Métodos Getters and Setters
+	
 	public Integer getCod_fornecedor() {
 		return cod_fornecedor;
 	}

@@ -51,80 +51,67 @@ pageEncoding="ISO-8859-1"%>
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="index.jsp">
               <span data-feather="home"></span>
               HOME
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              VEÍCULOS
+            <a class="nav-link" href="veiculo.jsp"> 
+            	<form action="ServletVeiculo" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="file"></span>
+						VEÍCULO
+					</button>
+				</form>
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              PEDIDOS
+            <a class="nav-link" href="cliente.jsp">
+            	<form action="ServletCliente" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="shopping-cart"></span>
+             			 CLIENTE
+					</button>
+				</form>  
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              CLIENTES
+          
+          <li class="nav-item" >
+          	<a class="nav-link" href="fornecedor.jsp" >
+            	<form action="ServletFornecedor" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="users"></span>
+						FORNECEDOR
+					</button>
+				</form>
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="./fornecedor.jsp" >
-              <span data-feather="users"></span>
-              FORNECEDOR
+            <a class="nav-link" href="pedido.jsp">
+            	<form action="ServletPedido" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="bar-chart-2"></span>
+             				 PEDIDO
+					</button>
+				</form> 
             </a>
           </li>
+          
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              PEDIDOS
+            <a class="nav-link" href="agendamento.jsp">    
+             	<form action="ServletAgendamento" method="post">
+					<button type="submit" class="btn">
+						 <span data-feather="layers"></span>
+            				  AGENDAMENTO
+					</button>
+				</form> 
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              AGENDAMENTO
-            </a>
-          </li>
-        </ul>
-
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <a class="link-secondary" href="#" aria-label="Add a new report">
-            <span data-feather="plus-circle"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Year-end sale
-            </a>
-          </li>
+          
         </ul>
       </div>
     </nav>
@@ -156,19 +143,23 @@ pageEncoding="ISO-8859-1"%>
 					<th class="col-2">AÇÕES</th>
 				</tr>
 			</thead>
+			
 			<tbody>
+			
 				<c:forEach var="supplier" items="${listSupplier}">
+						
 					<tr>
-						<form action="ServletFornecedor" method="post">
+						<form action="ServletFornecedor" method="post"> 
 						
 							<td>
 								<c:out value="${supplier.cod_fornecedor}"/>
-								<input type="hidden" name="cod_fornecedor" value="${supplier.cod_fornecedor}"/>
+								<!-- <input type="hidden" name="cod_fornecedor" value="${supplier.cod_fornecedor}"/> -->
 							</td>
 							
 							<td>
 								<c:out value="${supplier.razao_social}"/>
 							</td>
+							
 							
 							<td>
 								<c:out value="${supplier.email_fornecedor}"/>
@@ -184,13 +175,43 @@ pageEncoding="ISO-8859-1"%>
 							
 							<td>
 								<div class="d-grid gap-2 d-md-flex justify-content-md-center">
-									<button class="btn btn-primary" type="submit" name="optionFornecedor" value="deleteSupplier">Deletar</button>
+									
+									<!-- INICIO do Botão que chama o MODAL -->
+									<!-- <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#modal-delete" name="optionFornecedor" value="deleteSupplier">Deletar</button> --> 
+									<!-- <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete">Deletar</button>   -->
+									<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete" id="${supplier.cod_fornecedor}" onclick="myFunction(this)">Deletar</button>
+									
+									<!-- FIM do Botão que chama o MODAL -->
+									
+									<!-- INÍCIO DO MODAL DE DELETAR -->
+									<div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="inicioModal" aria-hidden="true">
+									<form action="ServletFornecedor" method="post">
+									
+									<input id="cod_fornecedor" name="cod_fornecedor" type="hidden" value="" />
+									
+										<div class="modal-dialog modal-dialog-centered">
+											<div class="modal-content bg-dark bg-gradient">
+												<div class="text-center px-3 py-3">
+													<h5 class="text-white pb-3">TEM CERTEZA QUE DESEJA DELETAR?</h5>
+													<p class=" text-warning">ESSA AÇÃO NÃO PODERÁ SER DESFEITA!</p>
+												</div>
+												<div class="d-grid gap-2 d-md-flex justify-content-md-center px-3 py-3">
+													<button class="btn btn-outline-primary px-3" type="submit" name="optionFornecedor" value="qualquerCoisa">Cancelar</button>
+  													<button class="btn btn-outline-primary" type="submit" name="optionFornecedor" value="deleteSupplier">Deletar</button>
+												</div>
+											</div>
+										</div>
+										</form>
+									</div>
+									<!-- FIM DO MODAL DE DELETAR -->
+									
 									<button class="btn btn-primary" type="submit" name="optionFornecedor" value="updateFormSupplier">Atualizar</button>
 								</div>
 								
 							</td>
 						</form>
 					</tr>
+					
 				</c:forEach>
 			</tbody>
 		</table>
@@ -204,6 +225,22 @@ pageEncoding="ISO-8859-1"%>
  
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
  <script src="./dashboard.js"></script>
+ 
+ <script>
+
+	function myFunction(abobrinha) {
+	  //console.log("Hello World");
+	  //console.log(abobrinha.innerHTML);
+	  //console.log(abobrinha.id);
+	  //console.log("Hello World2");
+	  
+	  const demoId = document.querySelector('#cod_fornecedor');
+	  console.log(demoId);
+	  demoId.setAttribute('value', abobrinha.id);
+	  //demoId.innerHTML = abobrinha.id;
+	}
+	          
+</script>
  
 
 </body>
