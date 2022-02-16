@@ -9,12 +9,21 @@ public class Teste {
 	public static void main(String[] args) {
 
 // ---------> MOSTRAR CLIENTE <------------
+
 		
-		ClienteDAO clienteD = new ClienteDAO();
-		VeiculoDAO veiculoD = new VeiculoDAO();
-		Conexao c = new Conexao();
-		c.getConnection();		
-		System.out.println(clienteD.mostrarCliente());
+//		ClienteDAO clienteD = new ClienteDAO();
+//		VeiculoDAO veiculoD = new VeiculoDAO();
+//		Conexao c = new Conexao();
+//		c.getConnection();		
+//		System.out.println(clienteD.mostrarCliente());
+
+//		
+//		ClienteDAO clienteD = new ClienteDAO();
+//		VeiculoDAO veiculoD = new VeiculoDAO();
+//		Conexao c = new Conexao();
+//		c.getConnection();		
+//		System.out.println(clienteD.mostrarCliente());
+
 
 		
 
@@ -100,7 +109,8 @@ public class Teste {
 
 		// INICIO MOSTRAR CLIENTE [ COMENTAR TUDO ANTES DE TESTAR ]
 //	 ---------> MOSTRAR CLIENTE <------------
-//		
+
+		
 //				ClienteDAO clienteD = new ClienteDAO();
 //
 //				VeiculoDAO veiculoD = new VeiculoDAO();
@@ -108,7 +118,7 @@ public class Teste {
 //				Conexao c = new Conexao();
 //				c.getConnection();		
 //				System.out.println(clienteD.mostrarCliente());
-				
+
 		
 			
 		
