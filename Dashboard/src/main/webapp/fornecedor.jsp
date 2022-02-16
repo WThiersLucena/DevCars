@@ -146,7 +146,7 @@ pageEncoding="ISO-8859-1"%>
 			<tbody>
 				<c:forEach var="supplier" items="${listSupplier}">
 					<tr>
-						<form action="ServletFornecedor" method="post">
+						<form action="ServletFornecedor" method="post"> 
 						
 							<td>
 								<c:out value="${supplier.cod_fornecedor}"/>
@@ -171,7 +171,32 @@ pageEncoding="ISO-8859-1"%>
 							
 							<td>
 								<div class="d-grid gap-2 d-md-flex justify-content-md-center">
-									<button class="btn btn-primary" type="submit" name="optionFornecedor" value="deleteSupplier">Deletar</button>
+									
+									<!-- INICIO do Botão que chama o MODAL -->
+									<!-- <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#modal-delete" name="optionFornecedor" value="deleteSupplier">Deletar</button> --> 
+									<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete">Deletar</button> 
+									<!-- FIM do Botão que chama o MODAL -->
+									
+									<!-- INÍCIO DO MODAL DE DELETAR -->
+									<div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="inicioModal" aria-hidden="true">
+									<form action="ServletFornecedor" method="post">
+										<div class="modal-dialog modal-dialog-centered">
+											<div class="modal-content bg-dark bg-gradient">
+												<div class="text-center px-3 py-3">
+													<h5 class="text-white pb-3">TEM CERTEZA QUE DESEJA DELETAR?</h5>
+													<p class=" text-warning">ESSA AÇÃO NÃO PODERÁ SER DESFEITA!</p>
+												</div>
+												<div class="d-grid gap-2 d-md-flex justify-content-md-center px-3 py-3">
+													<button class="btn btn-outline-primary px-3 mx-2" type="submit" name="optionFornecedor" value="qualquerCoisa">Cancelar</button>
+  													<button class="btn btn-outline-primary" type="submit" name="optionFornecedor" value="deleteSupplier">Deletar</button>
+												</div>
+											</div>
+										</div>
+										</form>
+									</div>
+									<!-- FIM DO MODAL DE DELETAR -->
+									
+									
 									<button class="btn btn-primary" type="submit" name="optionFornecedor" value="updateFormSupplier">Atualizar</button>
 								</div>
 								
