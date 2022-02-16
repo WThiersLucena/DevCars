@@ -7,10 +7,6 @@ import br.com.entidade.Veiculo;
 
 public class Teste {
 	public static void main(String[] args) {
-<<<<<<< HEAD
-		
-
-=======
 
 // ---------> MOSTRAR CLIENTE <------------
 		
@@ -19,7 +15,7 @@ public class Teste {
 		Conexao c = new Conexao();
 		c.getConnection();		
 		System.out.println(clienteD.mostrarCliente());
->>>>>>> c6fcd451c0bb21b22b49b1913450ac4390a3e999
+
 		
 
 		
@@ -104,14 +100,14 @@ public class Teste {
 
 		// INICIO MOSTRAR CLIENTE [ COMENTAR TUDO ANTES DE TESTAR ]
 //	 ---------> MOSTRAR CLIENTE <------------
-		
-				ClienteDAO clienteD = new ClienteDAO();
-
-				VeiculoDAO veiculoD = new VeiculoDAO();
-
-				Conexao c = new Conexao();
-				c.getConnection();		
-				System.out.println(clienteD.mostrarCliente());
+//		
+//				ClienteDAO clienteD = new ClienteDAO();
+//
+//				VeiculoDAO veiculoD = new VeiculoDAO();
+//
+//				Conexao c = new Conexao();
+//				c.getConnection();		
+//				System.out.println(clienteD.mostrarCliente());
 				
 		
 			
