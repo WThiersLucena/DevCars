@@ -7,15 +7,11 @@ import br.com.entidade.Veiculo;
 
 public class Teste {
 	public static void main(String[] args) {
-		
-<<<<<<< HEAD
-		
+
 // ---------> MOSTRAR CLIENTE <------------
 		
 		ClienteDAO clienteD = new ClienteDAO();
-=======
 		VeiculoDAO veiculoD = new VeiculoDAO();
->>>>>>> ac2f469db6be26991c2111963e7a3c5b91732048
 		Conexao c = new Conexao();
 		c.getConnection();		
 		System.out.println(clienteD.mostrarCliente());

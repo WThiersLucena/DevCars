@@ -107,6 +107,8 @@ public class ServletFornecedor extends HttpServlet {
 		
 		System.out.println(cod_fornecedorBack);
 		
+		
+		
 		if (cod_fornecedorBack != null) {
 			Integer cod_fornecedor = Integer.parseInt(cod_fornecedorBack);
 			this.fornec.removeSupplier(cod_fornecedor);
