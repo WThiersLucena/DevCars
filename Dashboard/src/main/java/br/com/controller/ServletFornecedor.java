@@ -120,11 +120,11 @@ public class ServletFornecedor extends HttpServlet {
 	
 	private void updateSupplier(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String cnpjBack = request.getParameter("cnpj");
+		String cnpjBack = request.getParameter("cnpj").replace("/", "").replace(".", "").replace("-", "");;
 		String razao_socialBack = request.getParameter("razao_social");
-		String inscricao_estadualBack = request.getParameter("inscricao_estadual");
+		String inscricao_estadualBack = request.getParameter("inscricao_estadual").replace("/", "").replace(".", "");
 		String email_fornecedorBack = request.getParameter("email_fornecedor");
-		String telefone_fornecedorBack = request.getParameter("telefone_fornecedor");
+		String telefone_fornecedorBack = request.getParameter("telefone_fornecedor").replace(")", "").replace("(", "").replace(" ", "").replace("-", "");
 		String cod_fornecedorBack = request.getParameter("cod_fornecedor");
 		
 		if ((cnpjBack != null) && (razao_socialBack != null) && (inscricao_estadualBack != null) && (email_fornecedorBack != null) && (telefone_fornecedorBack != null) && (cod_fornecedorBack != null)) {
