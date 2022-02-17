@@ -91,7 +91,7 @@ public class ServletVeiculo extends HttpServlet {
 		Double preco_veiculo = Double.parseDouble(request.getParameter("preco_veiculo"));
 		String tipo_combustivel = request.getParameter("tipo_combustivel");
 		String cambio = request.getParameter("cambio");
-		String numero_chassi = request.getParameter("numero_chassi");
+		String numero_chassi = request.getParameter("numero_chassi").replace(".", "");
 		Boolean estoque = Boolean.parseBoolean(request.getParameter("estoque"));
 		
 		
@@ -136,7 +136,7 @@ public class ServletVeiculo extends HttpServlet {
 		Double preco_veiculo = Double.parseDouble(request.getParameter("preco_veiculo"));
 		String tipo_combustivel = request.getParameter("tipo_combustivel");
 		String cambio = request.getParameter("cambio");
-		String numero_chassi = request.getParameter("numero_chassi");
+		String numero_chassi = request.getParameter("numero_chassi").replace(".", "");
 		Boolean estoque = Boolean.parseBoolean(request.getParameter("estoque"));
 		
 		if(  (marca_veiculo != null)  &&  (modelo_veiculo != null )  && (nome_cor != null )  && (ano_veiculo != null )  && (motor_veiculo != null ) && (potencia_cv != null )  && (preco_veiculo != null )  && (tipo_combustivel != null )  && (cambio != null)  && (numero_chassi != null)  && (estoque != null ) ) {
