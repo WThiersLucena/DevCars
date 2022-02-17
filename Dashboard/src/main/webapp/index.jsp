@@ -123,7 +123,6 @@
           </li>
           
         </ul>
-<<<<<<< HEAD
 
 	<!--  BEGIN SIDEBAR -->
 
@@ -199,10 +198,10 @@
 					</ul>
 				</div>
 			</nav>
-=======
+
       </div>
     </nav>
->>>>>>> c6fcd451c0bb21b22b49b1913450ac4390a3e999
+
 			<!--  END SIDEBAR -->
 
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
