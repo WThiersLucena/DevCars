@@ -135,6 +135,32 @@ public class ClienteDAO {
 			return lista;
 		}
 		
+	
+	
+	public Integer contarUsuarios() {
+		Conexao c = Conexao.getInstance();
+		Connection con = c.getConnection();
+		 try {
+			 Integer cont = null;
+			 PreparedStatement p = con.prepareStatement("select count(*) as NumeroDeUsuarios from tb_cliente");
+			 ResultSet r = p.executeQuery();
+			 r.next();
+			 
+			 cont = r.getInt("NumeroDeUsuarios");
+			 
+			 System.out.println(cont);
+			
+			//System.out.println(cont);
+			r.close();
+			p.close();
+			
+			return cont;
+		 } catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;    		
+    }
+
 				
 	
 //	public ArrayList<Cliente> mostrarClienteDetalhes() {

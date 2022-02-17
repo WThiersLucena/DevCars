@@ -120,7 +120,5 @@ public class Teste {
 //				System.out.println(clienteD.mostrarCliente());
 
 		
-			
-		
 	}
 }

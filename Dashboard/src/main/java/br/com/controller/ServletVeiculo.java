@@ -109,6 +109,7 @@ public class ServletVeiculo extends HttpServlet {
 	private void selectAllVeiculos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setAttribute("listVeiculo", this.veic.mostrarVeiculo());
+		request.setAttribute("contagemVeiculos", this.veic.contarVeiculos());
 		request.getRequestDispatcher("veiculo.jsp").forward(request, response);
 	}
 	

@@ -195,4 +195,29 @@ public class VeiculoDAO {
 	
 	
 	
+	public Integer contarVeiculos() {
+		Conexao c = Conexao.getInstance();
+		Connection con = c.getConnection();
+		 try {
+			 Integer cont = null;
+			 PreparedStatement p = con.prepareStatement("select count(*) as NumeroDeVeiculos from tb_veiculo");
+			 ResultSet r = p.executeQuery();
+			 r.next();
+			 
+			 cont = r.getInt("NumeroDeVeiculos");
+			 
+			 System.out.println(cont);
+			
+			//System.out.println(cont);
+			r.close();
+			p.close();
+			
+			return cont;
+		 } catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;    		
+    }
+	
+	
 }
