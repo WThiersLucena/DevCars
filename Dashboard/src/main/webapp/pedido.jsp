@@ -125,9 +125,9 @@ ul{
 				</div>
 
 				<div class="table-responsive">
-				<form action="ServletPedido" name="optionPedido" method="post">
+			<!-- 	<form action="ServletPedido" name="optionPedido" method="post">
 						<button type="submit" value="Kbeludo" class="btn btn-outline-dark">MOSTRAR PEDIDO</button>
-					</form>
+					</form> -->
 				
 					<table class="table align-middle">
 							<thead>
