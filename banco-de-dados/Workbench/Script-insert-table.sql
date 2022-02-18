@@ -4039,14 +4039,14 @@ values(
 -- update tb_pedido set data_envio = '2021-10-25', previsao_entrega = 15 where cod_pedido = 1; 
  -- alter table tb_item_nf alter column percentual_icms decimal(4,2);
 
-select * from tb_fornecedor tf ;
--- select * from tb_combustivel tc ;
--- select * from tb_cambio tc ;
+-- select * from tb_fornecedor tf ;
+ select * from tb_combustivel tc ;
+select * from tb_cambio tc ;
 -- select * from tb_cor tc ;
--- select * from tb_marca tm ;
+ select * from tb_marca tm ;
 -- select * from tb_motor tm ;
--- select * from tb_veiculo tv ;
- select * from tb_cliente tc ;
+ select * from tb_veiculo tv ;
+ -- select * from tb_cliente tc ;
 -- select * from tb_endereco te ;
 -- select * from tb_endereco_cliente tec ;
 -- select * from tb_modalidade_cartao tmc ;

@@ -22,6 +22,8 @@ public class Veiculo {
 	private Integer cod_cambio;
 	private Integer cod_fornecedor;
 	
+	
+	
 	private Veiculo() {
 		super();
 	}
@@ -63,24 +65,6 @@ public class Veiculo {
 		this.estoque = estoque;
 		this.destaque = destaque;
 	}
-
-//	public Veiculo(Integer cod_veiculo, String marca_veiculo, String modelo_veiculo, String nome_cor,
-//			Integer ano_veiculo, String motor_veiculo, String potencia_cv, Double preco_veiculo,
-//			String tipo_combustivel, String cambio, String numero_chassi, Boolean estoque) {
-//		super();
-//		this.cod_veiculo = cod_veiculo;
-//		this.marca_veiculo = marca_veiculo;
-//		this.modelo_veiculo = modelo_veiculo;
-//		this.nome_cor = nome_cor;
-//		this.ano_veiculo = ano_veiculo;
-//		this.motor_veiculo = motor_veiculo;
-//		this.pontencia_cv = potencia_cv;
-//		this.preco_veiculo = preco_veiculo;
-//		this.tipo_combustivel = tipo_combustivel;
-//		this.cambio = cambio;
-//		this.numero_chassi = numero_chassi;
-//		this.estoque = estoque;
-//	}
 
 
 	public Integer getCod_veiculo() {
@@ -312,16 +296,32 @@ public class Veiculo {
 
 	@Override
 	public String toString() {
-		return "Veiculo [cod_veiculo=" + cod_veiculo + ", marca_veiculo=" + marca_veiculo + ", modelo_veiculo="
-				+ modelo_veiculo + ", nome_cor=" + nome_cor + ", ano_veiculo=" + ano_veiculo + ", motor_veiculo="
-				+ motor_veiculo + ", potencia_cv=" + potencia_cv + ", preco_veiculo=" + preco_veiculo
-				+ ", tipo_combustivel=" + tipo_combustivel + ", cambio=" + cambio + ", numero_chassi=" + numero_chassi
-				+ ", estoque=" + estoque + ", destaque=" + destaque + "]";
+		return "Veiculo [cod_veiculo=" + cod_veiculo + ", modelo_veiculo=" + modelo_veiculo + ", ano_veiculo="
+				+ ano_veiculo + ", preco_veiculo=" + preco_veiculo + ", numero_chassi=" + numero_chassi + ", estoque="
+				+ estoque + ", destaque=" + destaque + ", cod_marca=" + cod_marca + ", cod_cor=" + cod_cor
+				+ ", cod_motor=" + cod_motor + ", cod_combustivel=" + cod_combustivel + ", cod_cambio=" + cod_cambio
+				+ ", cod_fornecedor=" + cod_fornecedor + "]";
 	}
 
 
 
+
+
+
+//	@Override
+//	public String toString() {
+////		return "Veiculo [cod_veiculo=" + cod_veiculo + ", marca_veiculo=" + marca_veiculo + ", modelo_veiculo="
+////				+ modelo_veiculo + ", nome_cor=" + nome_cor + ", ano_veiculo=" + ano_veiculo + ", motor_veiculo="
+////				+ motor_veiculo + ", potencia_cv=" + potencia_cv + ", preco_veiculo=" + preco_veiculo
+////				+ ", tipo_combustivel=" + tipo_combustivel + ", cambio=" + cambio + ", numero_chassi=" + numero_chassi
+////				+ ", estoque=" + estoque + ", destaque=" + destaque + "]";
+//	
+		
 	
-
-
+		
+		
+		
+//		update tb_veiculo set modelo_veiculo = "URUS", cod_marca = 1, numero_chassi = "12345678903336521", ano_veiculo = 2020, preco_veiculo = 100000.00,
+//				cod_cor = 1, cod_motor = 1, cod_combustivel = 1, cod_cambio = 1, cod_fornecedor = 1, estoque = TRUE, destaque = FALSE
+//				where cod_veiculo = 27;
 }

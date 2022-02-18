@@ -1,8 +1,4 @@
-import br.com.conexao.Conexao;
-import br.com.dao.ClienteDAO;
-import br.com.dao.FornecedorDAO;
-import br.com.dao.VeiculoDAO;
-import br.com.entidade.Fornecedor;
+import br.com.dao.CambioDAO;
 import br.com.entidade.Veiculo;
 
 public class Teste {
@@ -125,17 +121,70 @@ public class Teste {
 		
 //		VeiculoDAO veiculo = new VeiculoDAO();
 //		System.out.println(veiculo.mostrarVeiculo());
+	//FIM DO TESTE
 		
-	//TESTE PARA ADICIONAR VEICULO
+	//TESTE PARA ADICIONAR VEICULO E BUSCAR PELO ID
 		
-		VeiculoDAO veiculo = new VeiculoDAO();
-//		Veiculo veiculo27 = new Veiculo(1, "URUS", 1, 2020, 1, 100000.00, 1, 1, 1, "12345678903336521", true, false);
+//		VeiculoDAO veiculo = new VeiculoDAO();
+//    	Veiculo veiculo27 = new Veiculo(1, "URUS", 1, 2020, 1, 100000.00, 1, 1, 1, "12345678903336521", true, false);
 //		veiculo.adicionarVeiculo(veiculo27);
-		System.out.println(veiculo.buscarVeiculo(28));
+//		System.out.println(veiculo.buscarVeiculo(30));
+		
+//		System.out.println(veiculo.mostrarVeiculo());
+	//FIM DO TESTE
 		
 		
-//		Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
-//		   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque    
+		
+	//TESTE PARA MOSTRAR TODOS OS VEÍCULOS VEICULOS
+//		VeiculoDAO veiculo = new VeiculoDAO();
+//		System.out.println(veiculo.mostrarVeiculo());
+	//FIM DO TESTE	
+		
+		
+		
 	
+	//TESTE PARA REMOVER O VEICULO PELO ID
+//		VeiculoDAO veiculo = new VeiculoDAO();
+//		veiculo.removerVeiculo(30);
+//		System.out.println(veiculo.mostrarVeiculo());
+	//FIM DO TESTE
+		
+		
+		
+		
+	//TESTE PARA ALTERAR O VEÍCULO
+//		VeiculoDAO veiculo = new VeiculoDAO();
+//		veiculo27.setCod_cor(2);
+//		veiculo27.setCod_veiculo(27);
+//		veiculo.atualizarVeiculo(veiculo27);
+//		//System.out.println(veiculo.buscarVeiculo(27));
+	// FIM DO TESTE
+		
+  	
+    	
+    // TESTE PARA LISTAR TODAS AS CORES 
+//    	CorDAO cor = new CorDAO();
+//    	System.out.println(cor.mostrarCor());
+    // FIM TESTE
+    	
+    	
+    // TESTE PARA LISTA TODOS OS COMBUSTIVEL
+//    	CombustivelDAO combustivel = new CombustivelDAO();
+//    	System.out.println(combustivel.mostrarCombustivel());
+    // FIM TESTE
+    	
+    
+    // TESTE PARA LISTAR TODOS AS MARCAS
+//    	MarcaDAO marca = new MarcaDAO();
+//    	System.out.println(marca.mostrarMarca());
+    // FIM TESTE
+    
+    	
+     // TESTE PARA LISTAR TODOS AS MARCAS
+//    	CambioDAO cambio = new CambioDAO();
+//    	System.out.println(cambio.mostrarCambio());
+    // FIM TESTE
+
+		
 	}
 }

@@ -245,6 +245,24 @@
 						
 						<div class=mb-3>
 							<div class=mb-3>
+							<label class="form-label">FORNECEDOR:</label>
+							<select class="form-select form-select-lg mb-3 fs-6" name="cod_fornecedor" required>
+  								<option selected>SELECIONE O FORNECEDOR</option>
+  								<option value="1">FERRARI CORPORATION</option>
+ 								<option value="2">PORSCHE S/A</option>
+  								<option value="3">BUGATTI CORPORATION</option>
+  								<option value="4">LAMBOGHINI S/A</option>
+								<option value="5">TESLA S/A</option>
+								<option value="6">BMW ASSOCIAÇÃO</option>
+								<option value="7">AUDI CORPORATION</option>
+								<option value="8">ASTON MARTIN S/A</option>
+								<option value="9">BENTLEY S/A</option>
+								<option value="10">MERCEDES CORPORATION</option>
+							</select>
+						</div>
+						
+						<div class=mb-3>
+							<div class=mb-3>
 							<label class="form-label">ESTOQUE:</label>
 							<select class="form-select form-select-lg mb-3 fs-6" name="estoque" required>
   								<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
@@ -284,7 +302,7 @@
 						
 						<div class="mb-3">
 							<label class="form-label">MARCA:</label>
-							<input type="text" class="form-control" name="marca_veiculo" value="${veiculo.marca_veiculo}"/>
+							<input type="text" class="form-control" name="cod_marca" value="${veiculo.cod_marca}"/>
 						</div>
 						
 						<div class="mb-3">
@@ -304,22 +322,27 @@
 						
 						<div class="mb-3">
 							<label class="form-label">COR:</label>
-							<input type="text" class="form-control" name="nome_cor" value="${veiculo.nome_cor}"/>
+							<input type="text" class="form-control" name="cod_cor" value="${veiculo.cod_cor}"/>
 						</div>
 						
 						<div class="mb-3">
 							<label class="form-label">MOTOR DO VEÍCULO:</label>
-							<input type="text" class="form-control" name="preco_veiculo" value="${veiculo.preco_veiculo}"/>
+							<input type="text" class="form-control" name="cod_motor" value="${veiculo.cod_motor}"/>
 						</div>
 						
 						<div class="mb-3">
 							<label class="form-label">TIPO DE COMBUSTÍVEL:</label>
-							<input type="text" class="form-control" name="tipo_combustivel" value="${veiculo.tipo_combustivel}"/>
+							<input type="text" class="form-control" name="cod_combustivel" value="${veiculo.cod_combustivel}"/>
 						</div>
 						
 						<div class="mb-3">
 							<label class="form-label">TIPO DE CÂMBIO:</label>
-							<input type="text" class="form-control" name="cambio" value="${veiculo.cambio}"/>
+							<input type="text" class="form-control" name="cod_cambio" value="${veiculo.cod_cambio}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">FORNECEDOR:</label>
+							<input type="text" class="form-control" name="cod_fornecedor" value="${veiculo.cod_fornecedor}"/>
 						</div>
 						
 						<div class="mb-3">
