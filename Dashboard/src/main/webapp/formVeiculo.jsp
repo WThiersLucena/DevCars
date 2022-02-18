@@ -142,7 +142,9 @@
 							<label class="form-label">MARCA DO VEÍCULO:</label>
 							<select class="form-select form-select-lg mb-3 fs-6" name="cod_marca" required>
   								<option selected>SELECIONE A MARCA</option>
-  								<option value="1">LAMBORGHINI</option>
+  								<c:forEach var="marca" items="${listMarca}">
+  									<option value="{marca.cod_marca}">{marca.marca_veiculo}</option>
+  								<!--  <option value="1">LAMBORGHINI</option>
  								<option value="2">FERRARI</option>
   								<option value="3">BUGATTI</option>
   								<option value="4">PORSCHE</option>
@@ -150,7 +152,8 @@
   								<option value="6">AUDI</option>
   								<option value="7">BMW</option>
   								<option value="8">ASTON MARTIN</option>
-  								<option value="9">BENTLEY</option>
+  								<option value="9">BENTLEY</option> -->
+  								</c:forEach>
 							</select>
 						</div>
 						
@@ -173,14 +176,17 @@
 							<label class="form-label">COR DO VEÍCULO:</label>
 							<select class="form-select form-select-lg mb-3 fs-6" name="cod_cor" required>
   								<option selected>SELECIONE A COR</option>
-  								<option value="1">PRETO</option>
+  								<c:forEach var="cor" items="${listCor}">
+  									<option value="{marca.cod_cor}">{cor.nome_cor}</option>
+  								<!--   <option value="1">PRETO</option>
  								<option value="2">BRANCO</option>
   								<option value="3">AMARELO</option>
   								<option value="4">VERMELHO</option>
   								<option value="5">CINZA</option>
   								<option value="6">AZUL</option>
   								<option value="7">PRATA</option>
-  								<option value="8">VERDE</option>
+  								<option value="8">VERDE</option>-->
+  								</c:forEach>
 							</select>
 						</div>
 						
@@ -188,7 +194,9 @@
 							<label class="form-label">MOTOR DO VEÍCULO:</label>
 							<select class="form-select form-select-lg mb-3 fs-6" name="cod_motor" required>
   								<option selected>SELECIONE O TIPO DE MOTOR E POTÊNCIA</option>
-  								<option value="1">4.0L V8 BI TURBO 650 CV</option>
+  								<c:forEach var="motor" items="${listMotor}">
+  									<option value="{motor.cod_motor}">{motor.motor_veiculo} {motor.potencia_cv}</option>
+  								<!--  <option value="1">4.0L V8 BI TURBO 650 CV</option>
  								<option value="2">6.5L V12 750 CV</option>
   								<option value="3">6.2L V12 580 CV</option>
   								<option value="4">4.5L V8 570 CV</option>
@@ -213,7 +221,8 @@
   								<option value="23">2.0L TURBO 194 CV</option>
   								<option value="24">6 CILINDROS EM LINHA, 3.0L TWIN TURBO + ELÉTRICO 394 CV</option>
   								<option value="25">5.2L V12 TURBO 608 CV</option>
-  								<option value="26">6.0L V12 BI TURBO 659 CV</option>
+  								<option value="26">6.0L V12 BI TURBO 659 CV</option>-->
+  								</c:forEach>
 							</select>
 						</div>
 						
@@ -221,10 +230,13 @@
 							<label class="form-label">TIPO COMBUSTIVEL:</label>
 							<select class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel" required>
   								<option selected>SELECIONE O TIPO DE COMBUSTIVEL</option>
-  								<option value="1">GASOLINA</option>
+  								<c:forEach var="combustivel" items="${listCombustivel}">
+  									<option value="{combustivel.cod_combustivel}">{combustivel.tipo_combustivel}</option>
+  								<!--   <option value="1">GASOLINA</option>
  								<option value="2">FLEX</option>
   								<option value="3">ELETRICO</option>
-  								<option value="4">HIBRIDO</option>
+  								<option value="4">HIBRIDO</option>-->
+  								</c:forEach>
 							</select>
 						</div>
 						
@@ -232,14 +244,17 @@
 							<div class=mb-3>
 							<label class="form-label">TIPO CAMBIO:</label>
 							<select class="form-select form-select-lg mb-3 fs-6" name="cod_cambio" required>
-  								<option selected>SELECIONE O TIPO DE CÂMBIO</option>
+							<c:forEach var="cambio" items="${listCambio}">
+  								<option value="{cambio.cod_cambio}">{cambio.cambio}</option>
+  								<!--  <option selected>SELECIONE O TIPO DE CÂMBIO</option>
   								<option value="1">AUTOMATICO 6 MARCHAS</option>
  								<option value="2">AUTOMATICO 7 MARCHAS</option>
   								<option value="3">AUTOMATICO 8 MARCHAS</option>
   								<option value="4">AUTOMATICO 9 MARCHAS</option>
 								<option value="5">PDK</option>
 								<option value="6">AUTOMATICO DE 1 VELOCIDADE</option>
-								<option value="7">MANUAL 6 MARCHAS</option>
+								<option value="7">MANUAL 6 MARCHAS</option> -->
+								</c:forEach>
 							</select>
 						</div>
 						
@@ -248,7 +263,9 @@
 							<label class="form-label">FORNECEDOR:</label>
 							<select class="form-select form-select-lg mb-3 fs-6" name="cod_fornecedor" required>
   								<option selected>SELECIONE O FORNECEDOR</option>
-  								<option value="1">FERRARI CORPORATION</option>
+  								<c:forEach var="fornecedor" items="${listFornecedor}">
+  									<option value="{fornecedor.cod_fornecedor}">{fornecedor.razao_social}</option>
+  								<!-- <option value="1">FERRARI CORPORATION</option>
  								<option value="2">PORSCHE S/A</option>
   								<option value="3">BUGATTI CORPORATION</option>
   								<option value="4">LAMBOGHINI S/A</option>
@@ -257,7 +274,8 @@
 								<option value="7">AUDI CORPORATION</option>
 								<option value="8">ASTON MARTIN S/A</option>
 								<option value="9">BENTLEY S/A</option>
-								<option value="10">MERCEDES CORPORATION</option>
+								<option value="10">MERCEDES CORPORATION</option> -->
+								</c:forEach>
 							</select>
 						</div>
 						
