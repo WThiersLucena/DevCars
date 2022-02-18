@@ -128,7 +128,7 @@ pageEncoding="ISO-8859-1"%>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <form action="ServletVeiculo" method="post">
-                    <button class="btn btn-primary mb-3" type="submit" name="optionVeiculo" value="insertFormSupplier">Adicionar Veículo</button>
+                    <button class="btn btn-primary mb-3" type="submit" name="optionVeiculo" value="insertFormVeiculo">Adicionar Veículo</button>
                 </form>
           </div>
         </div>
@@ -199,12 +199,13 @@ pageEncoding="ISO-8859-1"%>
 								<c:out value="${veiculo.cambio}"/>
 							</td>
 							
-							<td class="exampleInputChassi">
+							<td>
 								<c:out value="${veiculo.numero_chassi}"/>
 							</td>
 							
 							
 							<td>
+							
 							<c:choose>
 								    <c:when test="${veiculo.estoque == true}">
 								        <p>DISPONÍVEL</p>

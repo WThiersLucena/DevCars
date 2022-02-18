@@ -140,7 +140,7 @@
 					
 						<div class=mb-3>
 							<label class="form-label">MARCA DO VEÍCULO:</label>
-							<select class="form-select form-select-lg mb-3 fs-6" name="marca_veiculo" required>
+							<select class="form-select form-select-lg mb-3 fs-6" name="cod_marca" required>
   								<option selected>SELECIONE A MARCA</option>
   								<option value="1">LAMBORGHINI</option>
  								<option value="2">FERRARI</option>
@@ -171,7 +171,7 @@
 						
 						<div class=mb-3>
 							<label class="form-label">COR DO VEÍCULO:</label>
-							<select class="form-select form-select-lg mb-3 fs-6" name="cor_veiculo" required>
+							<select class="form-select form-select-lg mb-3 fs-6" name="cod_cor" required>
   								<option selected>SELECIONE A COR</option>
   								<option value="1">PRETO</option>
  								<option value="2">BRANCO</option>
@@ -186,7 +186,7 @@
 						
 						<div class=mb-3>
 							<label class="form-label">MOTOR DO VEÍCULO:</label>
-							<select class="form-select form-select-lg mb-3 fs-6" name="cor_veiculo" required>
+							<select class="form-select form-select-lg mb-3 fs-6" name="cod_motor" required>
   								<option selected>SELECIONE O TIPO DE MOTOR E POTÊNCIA</option>
   								<option value="1">4.0L V8 BI TURBO 650 CV</option>
  								<option value="2">6.5L V12 750 CV</option>
@@ -219,7 +219,7 @@
 						
 						<div class=mb-3>
 							<label class="form-label">TIPO COMBUSTIVEL:</label>
-							<select class="form-select form-select-lg mb-3 fs-6" name="tipo_combustivel" required>
+							<select class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel" required>
   								<option selected>SELECIONE O TIPO DE COMBUSTIVEL</option>
   								<option value="1">GASOLINA</option>
  								<option value="2">FLEX</option>
@@ -243,6 +243,26 @@
 							</select>
 						</div>
 						
+						<div class=mb-3>
+							<div class=mb-3>
+							<label class="form-label">ESTOQUE:</label>
+							<select class="form-select form-select-lg mb-3 fs-6" name="estoque" required>
+  								<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
+  								<option value="0">NÃO</option>
+  								<option value="1">SIM</option>
+							</select>
+						</div>
+						
+						<div class=mb-3>
+							<div class=mb-3>
+							<label class="form-label">DESTAQUE:</label>
+							<select class="form-select form-select-lg mb-3 fs-6" name="destaque" required>
+  								<option selected>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
+  								<option value="0">NÃO</option>
+  								<option value="1">SIM</option>
+							</select>
+						</div>
+						
 						
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -254,32 +274,62 @@
 					<c:otherwise>
 					
 						<div class="mb-3">
-							<input type="hidden" name="cod_fornecedor" value="${supplier.cod_fornecedor}"/>
+							<input type="hidden" name="cod_fornecedor" value="${veiculo.cod_veiculo}"/>
 						</div>
 						
 						<div class=mb-3>
-							<label class="form-label">CNPJ:</label>
-							<input type="text" class="form-control" name="cnpj" value="${supplier.cnpj}"/>
+							<label class="form-label">MODELO:</label>
+							<input type="text" class="form-control" name="modelo_veiculo" value="${veiculo.modelo_veiculo}"/>
 						</div>
 						
 						<div class="mb-3">
-							<label class="form-label">RAZÃO SOCIAL:</label>
-							<input type="text" class="form-control" name="razao_social" value="${supplier.razao_social}"/>
+							<label class="form-label">MARCA:</label>
+							<input type="text" class="form-control" name="marca_veiculo" value="${veiculo.marca_veiculo}"/>
 						</div>
 						
 						<div class="mb-3">
-							<label class="form-label">INSCRIÇÃO ESTADUAL:</label>
-							<input type="text" class="form-control" name="inscricao_estadual" value="${supplier.inscricao_estadual}"/>
+							<label class="form-label">CHASSI:</label>
+							<input type="text" class="form-control" name="numero_chassi" value="${veiculo.numero_chassi}"/>
 						</div>
 						
 						<div class="mb-3">
-							<label class="form-label">EMAIL:</label>
-							<input type="text" class="form-control" name="email_fornecedor" value="${supplier.email_fornecedor}"/>
+							<label class="form-label">ANO DE FABRICAÇÃO:</label>
+							<input type="text" class="form-control" name="ano_veiculo" value="${veiculo.ano_veiculo}"/>
 						</div>
 						
 						<div class="mb-3">
-							<label class="form-label">TELEFONE:</label>
-							<input type="text" class="form-control" name="telefone_fornecedor" value="${supplier.telefone_fornecedor}"/>
+							<label class="form-label">PREÇO:</label>
+							<input type="text" class="form-control" name="preco_veiculo" value="${veiculo.preco_veiculo}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">COR:</label>
+							<input type="text" class="form-control" name="nome_cor" value="${veiculo.nome_cor}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">MOTOR DO VEÍCULO:</label>
+							<input type="text" class="form-control" name="preco_veiculo" value="${veiculo.preco_veiculo}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">TIPO DE COMBUSTÍVEL:</label>
+							<input type="text" class="form-control" name="tipo_combustivel" value="${veiculo.tipo_combustivel}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">TIPO DE CÂMBIO:</label>
+							<input type="text" class="form-control" name="cambio" value="${veiculo.cambio}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">EM ESTOQUE:</label>
+							<input type="text" class="form-control" name="estoque" value="${veiculo.estoque}"/>
+						</div>
+						
+						<div class="mb-3">
+							<label class="form-label">EM DESTAQUE:</label>
+							<input type="text" class="form-control" name="destaque" value="${veiculo.destaque}"/>
 						</div>
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">

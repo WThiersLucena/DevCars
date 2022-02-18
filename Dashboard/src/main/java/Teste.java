@@ -120,5 +120,22 @@ public class Teste {
 //				System.out.println(clienteD.mostrarCliente());
 
 		
+		
+	//TESTE PARA MOSTRAR VEICULO
+		
+//		VeiculoDAO veiculo = new VeiculoDAO();
+//		System.out.println(veiculo.mostrarVeiculo());
+		
+	//TESTE PARA ADICIONAR VEICULO
+		
+		VeiculoDAO veiculo = new VeiculoDAO();
+//		Veiculo veiculo27 = new Veiculo(1, "URUS", 1, 2020, 1, 100000.00, 1, 1, 1, "12345678903336521", true, false);
+//		veiculo.adicionarVeiculo(veiculo27);
+		System.out.println(veiculo.buscarVeiculo(28));
+		
+		
+//		Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
+//		   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque    
+	
 	}
 }
