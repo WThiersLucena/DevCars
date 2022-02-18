@@ -76,9 +76,9 @@ public class ServletFornecedor extends HttpServlet {
 		
 //		 System.out.println("qqr coisa 2");
 		String cnpjBack = request.getParameter("cnpj").replace("/", "").replace(".", "").replace("-", "");
-		String razao_socialBack = request.getParameter("razao_social");
+		String razao_socialBack = request.getParameter("razao_social").toUpperCase();
 		String inscricao_estadualBack = request.getParameter("inscricao_estadual").replace("/", "").replace(".", "");
-		String email_fornecedorBack = request.getParameter("email_fornecedor");
+		String email_fornecedorBack = request.getParameter("email_fornecedor").toUpperCase();
 		String telefone_fornecedorBack = request.getParameter("telefone_fornecedor").replace(")", "").replace("(", "").replace(" ", "").replace("-", "");
 		
 //		 System.out.println("qqr coisa 2 = " + cnpjBack);
@@ -120,10 +120,10 @@ public class ServletFornecedor extends HttpServlet {
 	
 	private void updateSupplier(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String cnpjBack = request.getParameter("cnpj").replace("/", "").replace(".", "").replace("-", "");;
-		String razao_socialBack = request.getParameter("razao_social");
+		String cnpjBack = request.getParameter("cnpj").replace("/", "").replace(".", "").replace("-", "");
+		String razao_socialBack = request.getParameter("razao_social").toUpperCase();
 		String inscricao_estadualBack = request.getParameter("inscricao_estadual").replace("/", "").replace(".", "");
-		String email_fornecedorBack = request.getParameter("email_fornecedor");
+		String email_fornecedorBack = request.getParameter("email_fornecedor").toUpperCase();
 		String telefone_fornecedorBack = request.getParameter("telefone_fornecedor").replace(")", "").replace("(", "").replace(" ", "").replace("-", "");
 		String cod_fornecedorBack = request.getParameter("cod_fornecedor");
 		
