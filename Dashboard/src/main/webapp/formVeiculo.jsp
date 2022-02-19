@@ -299,36 +299,76 @@
 										<option selected>SELECIONE A COR</option>
 										<c:forEach var="cor" items="${listCor}">
 											<option>${cor.nome_cor}</option>
-
 										</c:forEach>
 									</select>
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">MOTOR DO VEÍCULO:</label> <input
-										type="text" class="form-control" name="cod_motor"
-										value="${veiculo.cod_motor}" />
+									<label class="form-label">SELECIONE O TIPO DE MOTOR E POTÊNCIA:</label> <select value="${motor.cod_motor}"
+										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
+										required>
+										<c:forEach var="cor" items="${listMotor}">
+											<option>${motor.motor_veiclo} + ${motor_potencia_cv}</option>
+										</c:forEach>
+									</select>
+								</div>
+								<div class=mb-3>
+									<label class="form-label">TIPO COMBUSTIVEL:</label> <select
+										class="form-select form-select-lg mb-3 fs-6"
+										name="cod_combustivel" required>
+										<option selected>SELECIONE O TIPO DE COMBUSTIVEL</option>
+										<c:forEach var="combustivel" items="${listCombustivel}">
+											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
+										</c:forEach>
+									</select>
 								</div>
 
-								<div class="mb-3">
-									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <input
-										type="text" class="form-control" name="cod_combustivel"
-										value="${veiculo.cod_combustivel}" />
-								</div>
+								<div class=mb-3>
+									<div class=mb-3>
+										<label class="form-label">TIPO CAMBIO:</label> <select
+											class="form-select form-select-lg mb-3 fs-6"
+											name="cod_cambio" required>
+											<c:forEach var="cambio" items="${listCambio}">
+												<option value="${cambio.cod_cambio}">${cambio.cambio}</option>
+											</c:forEach>
+										</select>
+									</div>
 
-								<div class="mb-3">
-									<label class="form-label">TIPO DE CÂMBIO:</label> <input
-										type="text" class="form-control" name="cod_cambio"
-										value="${veiculo.cod_cambio}" />
-								</div>
+								<div class=mb-3>
+										<div class=mb-3>
+											<label class="form-label">FORNECEDOR:</label> <select
+												class="form-select form-select-lg mb-3 fs-6"
+												name="cod_fornecedor" required>
+												<option selected>SELECIONE O FORNECEDOR</option>
+												<c:forEach var="fornecedor" items="${listFornecedor}">
+													<option value="${fornecedor.cod_fornecedor}">${fornecedor.razao_social}</option>
+												</c:forEach>
+											</select>
+										</div>
+										<div class=mb-3>
+											<div class=mb-3>
+												<label class="form-label">ESTOQUE:</label> <select
+													class="form-select form-select-lg mb-3 fs-6" name="estoque"
+													required>
+													<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
+													<option value="0">NÃO</option>
+													<option value="1">SIM</option>
+												</select>
+											</div>
 
-								<div class="mb-3">
-									<label class="form-label">FORNECEDOR:</label> <input
-										type="text" class="form-control" name="cod_fornecedor"
-										value="${veiculo.cod_fornecedor}" />
-								</div>
+											<div class=mb-3>
+												<div class=mb-3>
+													<label class="form-label">DESTAQUE:</label> <select
+														class="form-select form-select-lg mb-3 fs-6"
+														name="destaque" required>
+														<option selected>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
+														<option value="0">NÃO</option>
+														<option value="1">SIM</option>
+													</select>
+												</div>
+										
 
-								<div class="mb-3">
+							<!-- 	<div class="mb-3">
 									<label class="form-label">EM ESTOQUE:</label> <input
 										type="text" class="form-control" name="estoque"
 										value="${veiculo.estoque}" />
@@ -338,7 +378,7 @@
 									<label class="form-label">EM DESTAQUE:</label> <input
 										type="text" class="form-control" name="destaque"
 										value="${veiculo.destaque}" />
-								</div>
+								</div> -->
 
 								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 									<button type="submit" name="optionVeiculo"

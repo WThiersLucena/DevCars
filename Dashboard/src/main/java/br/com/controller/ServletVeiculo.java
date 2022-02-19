@@ -211,7 +211,7 @@ public class ServletVeiculo extends HttpServlet {
 				Boolean estoqueBack = Boolean.parseBoolean(estoque);
 				Boolean destaqueBack = Boolean.parseBoolean(destaque);
 				
-				Veiculo veiculo1 = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculoBack, motor_veiculo, potencia_cv, preco_veiculoBack, tipo_combustivel, cambio, numero_chassi, estoqueBack, destaqueBack);
+				Veiculo veiculo1 = new Veiculo(modelo_veiculo, marca_veiculo, nome_cor, ano_veiculoBack, motor_veiculo, potencia_cv, preco_veiculoBack, tipo_combustivel, cambio, numero_chassi, estoqueBack, destaqueBack);
 				veic.atualizarVeiculo(veiculo1);
 			}
 		}
