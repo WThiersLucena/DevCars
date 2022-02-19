@@ -8,6 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.dao.CambioDAO;
+import br.com.dao.CombustivelDAO;
+import br.com.dao.CorDAO;
+import br.com.dao.FornecedorDAO;
+import br.com.dao.MarcaDAO;
+import br.com.dao.MotorDAO;
 import br.com.dao.VeiculoDAO;
 import br.com.entidade.Veiculo;
 
@@ -19,11 +25,23 @@ public class ServletVeiculo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     private VeiculoDAO veic;
+    private CambioDAO camb;
+    private CombustivelDAO combust;
+    private CorDAO cor;
+    private FornecedorDAO fornec;
+    private MarcaDAO marca;
+    private MotorDAO motor;
 	
 	
     public ServletVeiculo() {
         super();
      this.veic = new VeiculoDAO();
+     this.camb = new CambioDAO();
+     this.combust = new CombustivelDAO();
+     this.cor = new CorDAO();
+     this.fornec = new FornecedorDAO();
+     this.marca = new MarcaDAO();
+     this.motor = new MotorDAO();
     }
 
     
@@ -62,6 +80,10 @@ public class ServletVeiculo extends HttpServlet {
 	
 	
 	private void showInsertVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+//		request.setAttribute("listVeiculo", this.veic.mostrarVeiculo());
+		request.setAttribute("listCombustivel", this.combust.mostrarCombustivel());
+		
 		request.getRequestDispatcher("formVeiculo.jsp").forward(request, response); //INSERIR P�GINA DE CADASTRO DE VE�CULO//
 	}
 	

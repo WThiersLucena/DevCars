@@ -231,7 +231,7 @@
 							<select class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel" required>
   								<option selected>SELECIONE O TIPO DE COMBUSTIVEL</option>
   								<c:forEach var="combustivel" items="${listCombustivel}">
-  									<option value="{combustivel.cod_combustivel}">{combustivel.tipo_combustivel}</option>
+  									<option value="{combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
   								<!--   <option value="1">GASOLINA</option>
  								<option value="2">FLEX</option>
   								<option value="3">ELETRICO</option>
