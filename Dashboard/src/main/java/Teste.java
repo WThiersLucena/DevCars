@@ -143,9 +143,9 @@ public class Teste {
 		
 	
 	//TESTE PARA REMOVER O VEICULO PELO ID
-		VeiculoDAO veiculo = new VeiculoDAO();
-		veiculo.removerVeiculo(36);
-		System.out.println(veiculo.mostrarVeiculo());
+//		VeiculoDAO veiculo = new VeiculoDAO();
+//		veiculo.removerVeiculo(36);
+//		System.out.println(veiculo.mostrarVeiculo());
 	//FIM DO TESTE
 		
 		
