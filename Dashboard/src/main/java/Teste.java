@@ -1,4 +1,4 @@
-import br.com.dao.MotorDAO;
+import br.com.dao.VeiculoDAO;
 
 public class Teste {
 	public static void main(String[] args) {
@@ -187,8 +187,8 @@ public class Teste {
 		
 		
   // TESTE PARA LISTAR TODOS OS MOTORES
-		MotorDAO m = new MotorDAO();
-		System.out.println(m.mostrarMotor());
-		
+//		MotorDAO m = new MotorDAO();
+//		System.out.println(m.mostrarMotor());
+//		
 	}
 }

@@ -20,10 +20,8 @@
 }
 
 #exampleInputChassi {
-
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
-
 
 @media ( min-width : 768px) {
 	.bd-placeholder-img-lg {
@@ -137,13 +135,12 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">MARCA DO VEÍCULO:</label> <select
+									<label class="form-label">MARCA DO VEÍCULO:</label> <select value="${marca.cod_marca}"
 										class="form-select form-select-lg mb-3 fs-6" name="cod_marca"
 										required>
 										<option selected>SELECIONE A MARCA</option>
 										<c:forEach var="marca" items="${listMarca}">
-											<option value="{marca.cod_marca}">${marca.marca_veiculo}</option>
-
+											<option>${marca.marca_veiculo}</option>
 										</c:forEach>
 									</select>
 								</div>
@@ -165,107 +162,58 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">COR DO VEÍCULO:</label> <select
+									<label class="form-label">COR DO VEÍCULO:</label> <select value="${cor.cod_cor}"
 										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
 										required>
 										<option selected>SELECIONE A COR</option>
 										<c:forEach var="cor" items="${listCor}">
-											<option value="{cor.cod_cor}">${cor.nome_cor}</option>
-
+											<option>${cor.nome_cor}</option>
 										</c:forEach>
 									</select>
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">MOTOR DO VEÍCULO:</label> <select
+									<label class="form-label">MOTOR DO VEÍCULO:</label> <select  value="${motor.cod_motor}"
 										class="form-select form-select-lg mb-3 fs-6" name="cod_motor"
 										required>
 										<option selected>SELECIONE O TIPO DE MOTOR E POTÊNCIA</option>
 										<c:forEach var="motor" items="${listMotor}">
-											<option value="{motor.cod_motor}">${motor.motor_veiculo}
+											<option>${motor.motor_veiculo}
 												${motor.potencia_cv}</option>
-											<!--  <option value="1">4.0L V8 BI TURBO 650 CV</option>
- 								<option value="2">6.5L V12 750 CV</option>
-  								<option value="3">6.2L V12 580 CV</option>
-  								<option value="4">4.5L V8 570 CV</option>
-  								<option value="5">3.9L V8 BI TURBO 620 CV</option>
-  								<option value="6">6.5L V12 810 CV</option>
-  								<option value="7">8.0L QUADRI-TURBO 1600 CV</option>
-  								<option value="8">3.8L V12 BI-TURBO 580 CV</option>
-  								<option value="9">4.0L 6 CILINDROS BOXER TURBO 450 CV</option>
-  								<option value="10">4.0L V8 BI TURBO + ELETRICO 680 CV</option>
-  								<option value="11">3.0L 6 CILINDROS BOXER BI TURBO 450 CV</option>
-  								<option value="12">2.9L V6 BI TURBO + ELÉTRICO 560 CV</option>
-  								<option value="13">2 MOTORES ELÉTRICOS 468 CV</option>
-  								<option value="14">5.2L V10 610 CV</option>
-  								<option value="15">3.0L V6 TFSI 340 CV</option>
-  								<option value="16">4.0L V8 BI TURBO FSI 600 CV</option>
-  								<option value="17">2.0L TURBO FSI 230 CV</option>
-  								<option value="18">2.0L TURBO 184 CV</option>
-  								<option value="19">6 CILINDROS EM LINHA, 3.0L TWIN TURBO 411 CV</option>
-  								<option value="20">6 CILINDROS EM LINHA, 3.0L TWIN TURBO 460 CV</option>
-  								<option value="21">4.4L V8 TWIN TURBO 625 CV</option>
-  								<option value="22">4.4L V8 TWIN TURBO 530 CV</option>
-  								<option value="23">2.0L TURBO 194 CV</option>
-  								<option value="24">6 CILINDROS EM LINHA, 3.0L TWIN TURBO + ELÉTRICO 394 CV</option>
-  								<option value="25">5.2L V12 TURBO 608 CV</option>
-  								<option value="26">6.0L V12 BI TURBO 659 CV</option>-->
 										</c:forEach>
 									</select>
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">TIPO COMBUSTIVEL:</label> <select
+									<label class="form-label">TIPO COMBUSTIVEL:</label> <select value="${combustivel.cod_combustivel}"
 										class="form-select form-select-lg mb-3 fs-6"
 										name="cod_combustivel" required>
 										<option selected>SELECIONE O TIPO DE COMBUSTIVEL</option>
 										<c:forEach var="combustivel" items="${listCombustivel}">
-											<option value="{combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
-											<!--   <option value="1">GASOLINA</option>
- 								<option value="2">FLEX</option>
-  								<option value="3">ELETRICO</option>
-  								<option value="4">HIBRIDO</option>-->
+											<option>${combustivel.tipo_combustivel}</option>
 										</c:forEach>
 									</select>
 								</div>
 
 								<div class=mb-3>
 									<div class=mb-3>
-										<label class="form-label">TIPO CAMBIO:</label> <select
+										<label class="form-label">TIPO CAMBIO:</label> <select value="${cambio.cod_cambio}"
 											class="form-select form-select-lg mb-3 fs-6"
 											name="cod_cambio" required>
 											<c:forEach var="cambio" items="${listCambio}">
-												<option value="{cambio.cod_cambio}">${cambio.cambio}</option>
-												<!--  <option selected>SELECIONE O TIPO DE CÂMBIO</option>
-  								<option value="1">AUTOMATICO 6 MARCHAS</option>
- 								<option value="2">AUTOMATICO 7 MARCHAS</option>
-  								<option value="3">AUTOMATICO 8 MARCHAS</option>
-  								<option value="4">AUTOMATICO 9 MARCHAS</option>
-								<option value="5">PDK</option>
-								<option value="6">AUTOMATICO DE 1 VELOCIDADE</option>
-								<option value="7">MANUAL 6 MARCHAS</option> -->
+												<option>${cambio.cambio}</option>
 											</c:forEach>
 										</select>
 									</div>
 
 									<div class=mb-3>
 										<div class=mb-3>
-											<label class="form-label">FORNECEDOR:</label> <select
+											<label class="form-label">FORNECEDOR:</label> <select value="${fornecedor.cod_fornecedor}"
 												class="form-select form-select-lg mb-3 fs-6"
 												name="cod_fornecedor" required>
 												<option selected>SELECIONE O FORNECEDOR</option>
 												<c:forEach var="fornecedor" items="${listFornecedor}">
-													<option value="{fornecedor.cod_fornecedor}">${fornecedor.razao_social}</option>
-													<!-- <option value="1">FERRARI CORPORATION</option>
- 								<option value="2">PORSCHE S/A</option>
-  								<option value="3">BUGATTI CORPORATION</option>
-  								<option value="4">LAMBOGHINI S/A</option>
-								<option value="5">TESLA S/A</option>
-								<option value="6">BMW ASSOCIAÇÃO</option>
-								<option value="7">AUDI CORPORATION</option>
-								<option value="8">ASTON MARTIN S/A</option>
-								<option value="9">BENTLEY S/A</option>
-								<option value="10">MERCEDES CORPORATION</option> -->
+													<option>${fornecedor.razao_social}</option>
 												</c:forEach>
 											</select>
 										</div>
@@ -314,9 +262,16 @@
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">MARCA:</label> <input type="text"
-										class="form-control" name="cod_marca"
-										value="${veiculo.cod_marca}" />
+									<label class="form-label">MARCA:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_marca"
+										required>
+
+										<option selected>SELECIONE A MARCA</option>
+										<c:forEach var="marca" items="${listMarca}">
+											<option value="${marca.cod_marca}">${marca.marca_veiculo}</option>
+										</c:forEach>
+
+									</select>
 								</div>
 
 								<div class="mb-3">
@@ -338,8 +293,15 @@
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">COR:</label> <input type="text"
-										class="form-control" name="cod_cor" value="${veiculo.cod_cor}" />
+									<label class="form-label">COR:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
+										required>
+										<option selected>SELECIONE A COR</option>
+										<c:forEach var="cor" items="${listCor}">
+											<option value="${cor.cod_cor}">${cor.nome_cor}</option>
+
+										</c:forEach>
+									</select>
 								</div>
 
 								<div class="mb-3">
@@ -420,9 +382,9 @@
 					'Z' : {
 						pattern : /[A-Z0-9]/,
 						optional : true,
-						transform: function(d) { 
-					        return d.toUpperCase(); 
-					      }
+						transform : function(d) {
+							return d.toUpperCase();
+						}
 					}
 				},
 			});

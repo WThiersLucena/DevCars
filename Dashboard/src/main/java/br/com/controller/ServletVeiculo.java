@@ -99,7 +99,12 @@ public class ServletVeiculo extends HttpServlet {
 		Veiculo v = veic.buscarVeiculo(cod_veiculo);
 		
 		request.setAttribute("veiculo", v);
-		
+		request.setAttribute("listCombustivel", this.combust.mostrarCombustivel());
+		request.setAttribute("listCor", this.cor.mostrarCor());
+		request.setAttribute("listMotor", this.motor.mostrarMotor());
+		request.setAttribute("listCambio", this.camb.mostrarCambio());
+		request.setAttribute("listFornecedor", this.fornec.getListSupplier());
+		request.setAttribute("listMarca", this.marca.mostrarMarca());
 		request.getRequestDispatcher("formVeiculo.jsp").forward(request, response); //INSERIR A P�GINA DE CADASTRO DE VE�CULO//
 	}
 
@@ -135,7 +140,7 @@ public class ServletVeiculo extends HttpServlet {
 		if(  (cod_marca != null)  &&  (modelo_veiculo != null )  && (cod_cor != null )  && (ano_veiculo != null )  && (cod_motor != null ) && (cod_fornecedor != null )  && (preco_veiculo != null )  && (cod_combustivel != null )  && (cod_cambio != null)  && (numero_chassi != null)  && (estoque != null ) && (destaque != null) ) {
 			if(!modelo_veiculo.equals("")) {
 				
-				Integer ano_veiculoBack = Integer.parseInt(ano_veiculo);
+//				Integer ano_veiculoBack = Integer.parseInt(ano_veiculo);
 				Integer cod_marcaBack = Integer.parseInt(cod_marca);
 				Integer cod_corBack = Integer.parseInt(cod_cor);
 				Integer ano_veiculo1 = Integer.parseInt(ano_veiculo);
