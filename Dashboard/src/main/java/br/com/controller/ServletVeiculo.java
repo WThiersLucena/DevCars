@@ -83,6 +83,12 @@ public class ServletVeiculo extends HttpServlet {
 		
 //		request.setAttribute("listVeiculo", this.veic.mostrarVeiculo());
 		request.setAttribute("listCombustivel", this.combust.mostrarCombustivel());
+		request.setAttribute("listCor", this.cor.mostrarCor());
+		request.setAttribute("listMotor", this.motor.mostrarMotor());
+		request.setAttribute("listCambio", this.camb.mostrarCambio());
+		request.setAttribute("listFornecedor", this.fornec.getListSupplier());
+		request.setAttribute("listMarca", this.marca.mostrarMarca());
+		
 		
 		request.getRequestDispatcher("formVeiculo.jsp").forward(request, response); //INSERIR P�GINA DE CADASTRO DE VE�CULO//
 	}
@@ -122,7 +128,7 @@ public class ServletVeiculo extends HttpServlet {
 		String cod_combustivel = request.getParameter("cod_combustivel");
 		String cod_cambio = request.getParameter("cod_cambio");
 		String cod_fornecedor = request.getParameter("cod_fornecedor");
-		String numero_chassi = request.getParameter("numero_chassi").replace(".", "");
+		String numero_chassi = request.getParameter("numero_chassi").replace(".", "").toUpperCase();
 		String estoque = request.getParameter("estoque");
 		String destaque = request.getParameter("destaque");
 		

@@ -248,13 +248,7 @@ pageEncoding="ISO-8859-1"%>
 
     <script type="text/javascript">
       
-        $('.exampleInputChassi').mask('X.XX.XXXXXXXX.X.XXXXX', {
-            translation: {
-              'X': {
-                pattern: /[A-Z]/, optional: true
-              }
-            }
-          });
+        $('.exampleInputChassi').mask('Z',{translation:  {'Z': {pattern: /[a-zA-Z0-9 ]/, recursive: true}}});
     </script>
 
 </body>
