@@ -195,7 +195,7 @@
 									</select>
 								</div>
 
-								<div class=mb-3>
+								
 									<div class=mb-3>
 										<label class="form-label">TIPO CAMBIO:</label> <select
 											class="form-select form-select-lg mb-3 fs-6"
@@ -206,7 +206,7 @@
 										</select>
 									</div>
 
-									<div class=mb-3>
+									
 										<div class=mb-3>
 											<label class="form-label">FORNECEDOR:</label> <select
 												class="form-select form-select-lg mb-3 fs-6"
@@ -218,7 +218,7 @@
 											</select>
 										</div>
 
-										<div class=mb-3>
+										
 											<div class=mb-3>
 												<label class="form-label">ESTOQUE:</label> <select
 													class="form-select form-select-lg mb-3 fs-6" name="estoque"
@@ -229,7 +229,7 @@
 												</select>
 											</div>
 
-											<div class=mb-3>
+											
 												<div class=mb-3>
 													<label class="form-label">DESTAQUE:</label> <select
 														class="form-select form-select-lg mb-3 fs-6"
@@ -251,22 +251,19 @@
 							<c:otherwise>
 
 								<div class="mb-3">
-									<input type="hidden" name="cod_fornecedor"
+									<input type="hidden" name="cod_veiculo"
 										value="${veiculo.cod_veiculo}" />
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">MODELO:</label> <input type="text"
-										class="form-control" name="modelo_veiculo"
-										value="${veiculo.modelo_veiculo}" />
+									<label class="form-label">MODELO:</label>
+									 <input type="text" class="form-control" name="modelo_veiculo" value="${veiculo.modelo_veiculo}" />
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">MARCA:</label> <select
-										class="form-select form-select-lg mb-3 fs-6" name="cod_marca"
-										required>
+									<label class="form-label">MARCA:</label> <select class="form-select form-select-lg mb-3 fs-6" name="cod_marca" required>
 
-										<option selected>SELECIONE A MARCA</option>
+										<!--<option selected>SELECIONE A MARCA</option>  -->
 										<c:forEach var="marca" items="${listMarca}">
 											<option value="${marca.cod_marca}">${marca.marca_veiculo}</option>
 										</c:forEach>
@@ -307,8 +304,8 @@
 									<label class="form-label">SELECIONE O TIPO DE MOTOR E POTÊNCIA:</label> <select value="${motor.cod_motor}"
 										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
 										required>
-										<c:forEach var="cor" items="${listMotor}">
-											<option>${motor.motor_veiclo} + ${motor_potencia_cv}</option>
+										<c:forEach var="motor" items="${listMotor}">
+											<option>${motor.motor_veiculo} ${motor.potencia_cv}</option>
 										</c:forEach>
 									</select>
 								</div>

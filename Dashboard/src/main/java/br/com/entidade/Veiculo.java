@@ -81,6 +81,25 @@ public class Veiculo {
 //		this.estoque = estoque;
 //		this.destaque = destaque;
 //	}
+	
+	
+//	//Método construtor para atualizar
+//	public Veiculo(Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
+//			   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque) {
+//	super();
+//	this.modelo_veiculo = modelo_veiculo;
+//	this.cod_marca = cod_marca;
+//	this.cod_cor = cod_cor;
+//	this.ano_veiculo = ano_veiculo;
+//	this.cod_motor = cod_motor;
+//	this.preco_veiculo = preco_veiculo;
+//	this.cod_combustivel = cod_combustivel;
+//	this.cod_cambio = cod_cambio;
+//	this.cod_fornecedor = cod_fornecedor;
+//	this.numero_chassi = numero_chassi;
+//	this.estoque = estoque;
+//	this.destaque = destaque;
+//}
 
 	
 	public Veiculo( String modelo_veiculo, Integer cod_marca, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,

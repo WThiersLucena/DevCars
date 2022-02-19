@@ -125,7 +125,7 @@ public class Teste {
 	//TESTE PARA ADICIONAR VEICULO E BUSCAR PELO ID
 		
 //		VeiculoDAO veiculo = new VeiculoDAO();
-//    	Veiculo veiculo27 = new Veiculo(1, "URUS", 1, 2020, 1, 100000.00, 1, 1, 1, "12345678903336521", true, false);
+ //   	Veiculo veiculo27 = new Veiculo(1, "URUS", 1, 2020, 1, 100000.00, 1, 1, 1, "12345678903336521", true, false);
 //		veiculo.adicionarVeiculo(veiculo27);
 //		System.out.println(veiculo.buscarVeiculo(30));
 		
@@ -134,7 +134,7 @@ public class Teste {
 		
 		
 		
-	//TESTE PARA MOSTRAR TODOS OS VEÃ�CULOS VEICULOS
+	//TESTE PARA MOSTRAR TODOS OS VEICULOS
 //		VeiculoDAO veiculo = new VeiculoDAO();
 //		System.out.println(veiculo.mostrarVeiculo());
 	//FIM DO TESTE	
@@ -143,9 +143,9 @@ public class Teste {
 		
 	
 	//TESTE PARA REMOVER O VEICULO PELO ID
-//		VeiculoDAO veiculo = new VeiculoDAO();
-//		veiculo.removerVeiculo(30);
-//		System.out.println(veiculo.mostrarVeiculo());
+		VeiculoDAO veiculo = new VeiculoDAO();
+		veiculo.removerVeiculo(36);
+		System.out.println(veiculo.mostrarVeiculo());
 	//FIM DO TESTE
 		
 		
@@ -153,10 +153,11 @@ public class Teste {
 		
 	//TESTE PARA ALTERAR O VEÃ�CULO
 //		VeiculoDAO veiculo = new VeiculoDAO();
+//		Veiculo veiculo27 = new Veiculo(1, "URUS", 1, 2020, 1, 100000.00, 1, 1, 1, "12345678903336521", true, false);
 //		veiculo27.setCod_cor(2);
 //		veiculo27.setCod_veiculo(27);
 //		veiculo.atualizarVeiculo(veiculo27);
-//		//System.out.println(veiculo.buscarVeiculo(27));
+//		System.out.println(veiculo.buscarVeiculo(27));
 	// FIM DO TESTE
 		
   	

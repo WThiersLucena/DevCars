@@ -139,17 +139,18 @@ pageEncoding="ISO-8859-1"%>
 			<thead>
 				<tr>
 					<th class="col-1">Cod</th>
-					<th class="col-3">Marca</th>
-					<th class="col-2">Modelo</th>
-					<th class="col-2">Cor</th>
-					<th class="col-2">Ano</th>
-					<th class="col-2">Motor</th>
+					<th class="col-1">Modelo</th>
+					<th class="col-1">Marca</th>
+					
+					<th class="col-1">Cor</th>
+					<th class="col-1">Ano</th>
+					<th class="col-1">Motor</th>
 					<th class="col-1">Potência</th>
-					<th class="col-3">Preço</th>
-					<th class="col-2">Combustível</th>
-					<th class="col-2">Câmbio</th>
-					<th class="col-2">Chassi</th>
-					<th class="col-2">Estoque</th>
+					<th class="col-1">Preço</th>
+					<th class="col-1">Combustível</th>
+					<!-- <th class="col-2">Câmbio</th> -->
+					<!-- <th class="col-2">Chassi</th>  -->
+					<th class="col-1">Estoque</th>
 					<th class="col-2">Ações</th>
 				</tr>
 			</thead>
@@ -195,13 +196,13 @@ pageEncoding="ISO-8859-1"%>
 								<c:out value="${veiculo.tipo_combustivel}"/>
 							</td>
 							
-							<td>
+							<!-- <td>
 								<c:out value="${veiculo.cambio}"/>
-							</td>
+							</td>  -->
 							
-							<td>
+							<!-- <td>
 								<c:out value="${veiculo.numero_chassi}"/>
-							</td>
+							</td> -->
 							
 							
 							<td>
@@ -219,7 +220,33 @@ pageEncoding="ISO-8859-1"%>
 							
 							<td>
 								<div class="d-grid gap-2 d-md-flex justify-content-md-center">
-									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="deleteVeiculo">Deletar</button>
+									
+									
+									<!-- INICIO do Botão que chama o MODAL -->
+						
+									<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete-${veiculo.cod_veiculo}" id="${veiculo.cod_veiculo}">Deletar</button>
+									
+									<!-- FIM do Botão que chama o MODAL -->
+									
+									<!-- INÍCIO DO MODAL DE DELETAR -->
+									<div class="modal fade" id="modal-delete-${veiculo.cod_veiculo}" tabindex="-1" aria-labelledby="inicioModal" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered">
+											<div class="modal-content bg-dark bg-gradient">
+												<div class="text-center px-3 py-3">
+													<h6 class="fs-6 text-white pb-3">TEM CERTEZA QUE DESEJA DELETAR O CÓDIGO <c:out value="${veiculo.cod_veiculo}"/>?</h6>
+													<p class=" text-warning">ESSA AÇÃO NÃO PODERÁ SER DESFEITA!</p>
+												</div>
+												<div class="d-grid gap-2 d-md-flex justify-content-md-center px-3 py-3">
+													<button class="btn btn-outline-primary px-3" type="submit" name="optionVeiculo" value="qualquerCoisa">Cancelar</button>
+  													<button class="btn btn-outline-primary" type="submit" name="optionVeiculo" value="deleteVeiculo">Deletar</button>
+												</div>
+											</div>
+										</div>
+					
+									</div>
+									<!-- FIM DO MODAL DE DELETAR -->
+									
+									
 									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="updateFormVeiculo">Atualizar</button>
 								</div>
 							</td>
