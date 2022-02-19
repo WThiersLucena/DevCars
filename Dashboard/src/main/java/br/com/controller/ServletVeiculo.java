@@ -99,13 +99,14 @@ public class ServletVeiculo extends HttpServlet {
 		Veiculo v = veic.buscarVeiculo(cod_veiculo);
 		
 		request.setAttribute("veiculo", v);
+		
 		request.setAttribute("listCombustivel", this.combust.mostrarCombustivel());
 		request.setAttribute("listCor", this.cor.mostrarCor());
 		request.setAttribute("listMotor", this.motor.mostrarMotor());
 		request.setAttribute("listCambio", this.camb.mostrarCambio());
 		request.setAttribute("listFornecedor", this.fornec.getListSupplier());
 		request.setAttribute("listMarca", this.marca.mostrarMarca());
-		request.getRequestDispatcher("formVeiculo.jsp").forward(request, response); //INSERIR A P�GINA DE CADASTRO DE VE�CULO//
+		request.getRequestDispatcher("formVeiculo.jsp").forward(request, response);
 	}
 
 	
