@@ -155,11 +155,12 @@ public class ServletVeiculo extends HttpServlet {
 //				Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
 //				   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque
 //				
-				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, cod_corBack, ano_veiculo1, cod_motorBack, preco_veiculoBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, numero_chassi, estoqueBack, destaqueBack);
+				Veiculo veiculo1 = new Veiculo(modelo_veiculo, cod_marcaBack, cod_corBack, ano_veiculo1, cod_motorBack, preco_veiculoBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, numero_chassi, estoqueBack, destaqueBack);
 				
 				veic.adicionarVeiculo(veiculo1);
 			}
-		}
+			
+		} System.out.println("nulo");
 		
 		response.sendRedirect("ServletVeiculo");
 	}
