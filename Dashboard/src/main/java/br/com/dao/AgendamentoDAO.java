@@ -29,7 +29,7 @@ public class AgendamentoDAO {
 					+ "inner join tb_motor tm2 on (tm2.cod_motor = tv.cod_motor)\r\n"
 					+ "inner join tb_combustivel tc3 on (tv.cod_combustivel = tc3.cod_combustivel)\r\n"
 					+ "inner join tb_cambio tc4 on (tv.cod_cambio = tc4.cod_cambio)\r\n"
-					+ "order by cod_agendamento;");
+					+ "order by cod_agendamento desc;");
 			ResultSet r = p.executeQuery();
 			
 

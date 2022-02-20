@@ -32,6 +32,11 @@ pageEncoding="ISO-8859-1"%>
       	border-color: #fff
       }
       
+      .accordion-button:focus{
+      	border-color: #F0CA4F;
+      	box-shadow: none
+      }
+      
       .ac-header:not(.collapsed){
       	color: #fff;
       	background-color: #F0CA4F;
