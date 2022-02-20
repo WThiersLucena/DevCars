@@ -24,6 +24,19 @@
 	user-select: none;
 }
 
+.card-style-yellow{
+	box-shadow: 12px 16px 21px -1px rgba(186,140,0);
+}
+
+.card-style-black{
+	box-shadow: 12px 16px 21px -1px rgba(94,94,94);
+}
+
+.card-style-white{
+	box-shadow: 12px 16px 21px -1px rgba(181,181,181);
+}
+
+
 @media ( min-width : 768px) {
 	.bd-placeholder-img-lg {
 		font-size: 3.5rem;
@@ -196,7 +209,7 @@
 
 					<div class="row row-cols-1 row-cols-md-3 g-4">
 						<div class="col">
-							<div class="card text-dark bg-warning mb-3"
+							<div class="card text-dark bg-warning mb-3 card-style-yellow"
 								style="max-width: 18rem;">
 								<div class="card-body">
 									<h5 class="card-title">Missão</h5>
@@ -211,7 +224,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<div class="card text-white bg-dark mb-3"
+							<div class="card text-white bg-dark mb-3 card-style-black"
 								style="max-width: 18rem;">
 								<div class="card-header">Recados</div>
 								<div class="card-body">
@@ -223,7 +236,7 @@
 							</div>
 						</div>
 						<div class="col">
-							<div class="card text-dark bg-light mb-3"
+							<div class="card text-dark bg-light mb-3 card-style-white"
 								style="max-width: 18rem;">
 								<div class="card-body">
 									<h5 class="card-title">Motivação</h5>
