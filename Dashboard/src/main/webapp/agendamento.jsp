@@ -135,16 +135,16 @@ pageEncoding="ISO-8859-1"%>
 										aria-expanded="false"
 										aria-controls="flush-collapse-${a.cod_agendamento}">
 
-										<div class="row col-11 col-md-11 col-lg-11">
-											<div class="col-3">
+										<div class="row col-12 col-md-12 col-lg-12">
+											<div class="col-3 text-start">
 												<p># <c:out value="${a.cod_agendamento}" /></p>
 											</div>
 
-											<div class="col-6">
+											<div class="col-6 text-center">
 												<p> <c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" /></p>
 											</div>
 
-											<div class="col-3 text-end">
+											<div class="col-3 text-center">
 												<p> <fmt:formatDate value="${a.data_reserva}"
 														pattern="dd/MM/yyyy" />
 												</p>
