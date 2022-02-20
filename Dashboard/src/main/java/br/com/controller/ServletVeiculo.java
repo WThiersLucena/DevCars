@@ -95,6 +95,19 @@ public class ServletVeiculo extends HttpServlet {
 	
 	private void showUpdateVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer cod_veiculo = Integer.parseInt(request.getParameter("cod_veiculo"));
+//		String modelo_veiculo = request.getParameter("modelo_veiculo");
+//		Integer cod_marca = Integer.parseInt(request.getParameter("cod_marca"));
+//		Integer cod_cor = Integer.parseInt(request.getParameter("cod_cor"));
+//		Integer ano_veiculo = Integer.parseInt(request.getParameter("ano_veiculo"));
+//		Integer cod_motor = Integer.parseInt(request.getParameter("cod_motor"));
+//		Double preco_veiculo = Double.parseDouble(request.getParameter("preco_veiculo"));
+//		Integer cod_combustivel = Integer.parseInt(request.getParameter("cod_combustivel"));
+//		Integer cod_cambio = Integer.parseInt(request.getParameter("cod_cambio"));
+//		Integer cod_fornecedor = Integer.parseInt(request.getParameter("cod_fornecedor"));
+//		String numero_chassi = request.getParameter("numero_chassi").replace(".", "").toUpperCase();
+//		Boolean estoque = Boolean.parseBoolean(request.getParameter("estoque"));
+//		Boolean destaque = Boolean.parseBoolean(request.getParameter("destaque"));
+//		
 		
 		Veiculo v = veic.buscarVeiculo(cod_veiculo);
 		
@@ -144,7 +157,7 @@ public class ServletVeiculo extends HttpServlet {
 //				Integer ano_veiculoBack = Integer.parseInt(ano_veiculo);
 				Integer cod_marcaBack = Integer.parseInt(cod_marca);
 				Integer cod_corBack = Integer.parseInt(cod_cor);
-				Integer ano_veiculo1 = Integer.parseInt(ano_veiculo);
+				Integer ano_veiculoBack = Integer.parseInt(ano_veiculo);
 				Integer cod_motorBack = Integer.parseInt(cod_motor);
 				Integer cod_combustivelBack = Integer.parseInt(cod_combustivel);
 				Integer cod_cambioBack = Integer.parseInt(cod_cambio);
@@ -156,12 +169,13 @@ public class ServletVeiculo extends HttpServlet {
 //				Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
 //				   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque
 //				
-				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, cod_corBack, ano_veiculo1, cod_motorBack, preco_veiculoBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, numero_chassi, estoqueBack, destaqueBack);
+				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack);
 				
 				veic.adicionarVeiculo(veiculo1);
+				System.out.println("nulo");
 			}
 			
-		} System.out.println("nulo");
+		} 
 		
 		response.sendRedirect("ServletVeiculo");
 	}
@@ -232,9 +246,20 @@ public class ServletVeiculo extends HttpServlet {
 				
 //				Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
 //				   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque
+			//	p.setInt(1, veiculo.getCod_marca());
+//				p.setString(2, veiculo.getModelo_veiculo());
+//				p.setString(3, veiculo.getNumero_chassi());
+//				p.setInt(4, veiculo.getAno_veiculo());
+//				p.setDouble(5, veiculo.getPreco_veiculo());
+//				p.setInt(6, veiculo.getCod_cor());
+//				p.setInt(7, veiculo.getCod_motor());
+//				p.setInt(8, veiculo.getCod_combustivel());
+//				p.setInt(9, veiculo.getCod_cambio());
+//				p.setInt(10, veiculo.getCod_fornecedor());
+//				p.setBoolean(11, veiculo.getEstoque());
+//				p.setBoolean(12, veiculo.getDestaque());
 				
-				
-				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, cod_corBack, ano_veiculoBack, cod_motorBack, preco_veiculoBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, numero_chassi, estoqueBack, destaqueBack);
+				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack);
 				veiculo1.setCod_veiculo(cod_veiculoBack);
 				this.veic.atualizarVeiculo(veiculo1);
 			}

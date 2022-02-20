@@ -208,6 +208,8 @@ public class Teste {
 //		System.out.println(m.mostrarMotor());
 //		
 		
+		VeiculoDAO v = new VeiculoDAO();
+		System.out.println(v.buscarVeiculo(22));
 		
 	}
 

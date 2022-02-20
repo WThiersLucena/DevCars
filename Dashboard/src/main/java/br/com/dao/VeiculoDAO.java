@@ -127,13 +127,14 @@ public class VeiculoDAO {
 		
 		System.out.println(veiculo);
 		
+		
 		try {
-			PreparedStatement p = con.prepareStatement("update tb_veiculo set modelo_veiculo = ?, cod_marca = ?, numero_chassi = ?, ano_veiculo = ?, "
+			PreparedStatement p = con.prepareStatement("update tb_veiculo set cod_marca = ?, modelo_veiculo = ?,  numero_chassi = ?, ano_veiculo = ?, "
 													+ "preco_veiculo = ?, cod_cor = ?, cod_motor = ?, cod_combustivel = ?, cod_cambio = ?, "
 													+ "cod_fornecedor = ?, estoque = ?, destaque = ? where cod_veiculo = ?");
 			
-			p.setString(1, veiculo.getModelo_veiculo());
-			p.setInt(2, veiculo.getCod_marca());
+			p.setInt(1, veiculo.getCod_marca());
+			p.setString(2, veiculo.getModelo_veiculo());
 			p.setString(3, veiculo.getNumero_chassi());
 			p.setInt(4, veiculo.getAno_veiculo());
 			p.setDouble(5, veiculo.getPreco_veiculo());
@@ -149,7 +150,7 @@ public class VeiculoDAO {
 			System.out.println(p);
 			
 			p.executeUpdate();
-			System.out.println("Ve�culo Atualizado");
+			System.out.println("Veiculo Atualizado");
 			p.close();
 			
 		} catch (SQLException e) {

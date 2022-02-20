@@ -185,10 +185,10 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">TIPO COMBUSTIVEL:</label> <select
-										class="form-select form-select-lg mb-3 fs-6"
-										name="cod_combustivel" required>
-										<!--<option selected>SELECIONE O TIPO DE COMBUSTIVEL</option>  -->
+									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel"
+										required>
+										<option selected>SELECIONE O TIPODE COMBUSTÍVEL</option>
 										<c:forEach var="combustivel" items="${listCombustivel}">
 											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
 										</c:forEach>
@@ -239,14 +239,16 @@
 										<option value="TRUE">SIM</option>
 									</select>
 								</div>
-
-
-
+								
 								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 									<button type="submit" name="optionVeiculo"
 										class="btn btn-primary flex-start" value="insertVeiculo">Salvar</button>
 								</div>
 							</c:when>
+							
+							
+							
+							
 
 							<c:otherwise>
 
@@ -267,7 +269,7 @@
 										required>
 										<!--<option selected>SELECIONE A MARCA</option>  -->
 										<c:forEach var="marca" items="${listMarca}">
-											<option selected value="${marca.cod_marca}">${marca.marca_veiculo}</option>
+											<option value="${marca.cod_marca}">${marca.marca_veiculo}</option>
 										</c:forEach>
 
 									</select>
@@ -276,7 +278,7 @@
 								<div class="mb-3">
 									<label class="form-label">CHASSI:</label> <input type="text"
 										class="form-control" name="numero_chassi"
-										value="${veiculo.numero_chassi}" />
+										value="${veiculo.numero_chassi}" disabled/>
 								</div>
 
 								<div class="mb-3">
@@ -297,7 +299,7 @@
 										required>
 										<!--  <option selected>SELECIONE A COR</option> -->
 										<c:forEach var="cor" items="${listCor}">
-											<option selected value="${cor.cod_cor}">${cor.nome_cor}</option>
+											<option value="${cor.cod_cor}">${cor.nome_cor}</option>
 										</c:forEach>
 									</select>
 								</div>
@@ -305,20 +307,20 @@
 								<div class="mb-3">
 									<label class="form-label">SELECIONE O TIPO DE MOTOR E
 										POTÊNCIA:</label> <select
-										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
+										class="form-select form-select-lg mb-3 fs-6" name="cod_motor"
 										required>
 										<c:forEach var="motor" items="${listMotor}">
-											<option selected value="${motor.cod_motor}">${motor.motor_veiculo} ${motor.potencia_cv}</option>
+											<option value="${motor.cod_motor}">${motor.motor_veiculo} ${motor.potencia_cv}</option>
 										</c:forEach>
 									</select>
 								</div>
 								<div class=mb-3>
-									<label class="form-label">TIPO COMBUSTIVEL:</label> <select
-										class="form-select form-select-lg mb-3 fs-6"
-										name="cod_combustivel" required>
-										<!-- <option selected>SELECIONE O TIPO DE COMBUSTIVEL</option> -->
+									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel"
+										required>
+										<option selected>SELECIONE O TIPO DE COMBUSTÍVEL</option>
 										<c:forEach var="combustivel" items="${listCombustivel}">
-											<option	selected value="${veiculo.cod_combustivel}">${combustivel.tipo_combustivel}</option>
+											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
 										</c:forEach>
 									</select>
 								</div>
@@ -329,7 +331,7 @@
 											class="form-select form-select-lg mb-3 fs-6"
 											name="cod_cambio" required>
 											<c:forEach var="cambio" items="${listCambio}">
-												<option selected value="${cambio.cod_cambio}">${cambio.cambio}</option>
+												<option value="${cambio.cod_cambio}">${cambio.cambio}</option>
 											</c:forEach>
 										</select>
 									</div>
@@ -341,7 +343,7 @@
 												name="cod_fornecedor" required>
 												<option selected>SELECIONE O FORNECEDOR</option>
 												<c:forEach var="fornecedor" items="${listFornecedor}">
-													<option selected value="${fornecedor.cod_fornecedor}">${fornecedor.razao_social}</option>
+													<option value="${fornecedor.cod_fornecedor}">${fornecedor.razao_social}</option>
 												</c:forEach>
 											</select>
 										</div>
@@ -350,7 +352,7 @@
 												<label class="form-label">ESTOQUE:</label> <select
 													class="form-select form-select-lg mb-3 fs-6" name="estoque"
 													required>
-													<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
+													<option>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
 													<option value="FALSE">NÃO</option>
 													<option value="TRUE">SIM</option>
 												</select>
@@ -361,7 +363,7 @@
 													<label class="form-label">DESTAQUE:</label> <select
 														class="form-select form-select-lg mb-3 fs-6"
 														name="destaque" required>
-														<option selected>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
+														<option>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
 														<option value="FALSE">NÃO</option>
 														<option value="TRUE">SIM</option>
 													</select>
