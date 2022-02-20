@@ -117,58 +117,81 @@ pageEncoding="ISO-8859-1"%>
     </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Agendamentos</h1>
-      </div>
-      <div>
-       <table class="table table-striped table-sm table-bordered" >
-			<thead>
-				<tr class="row">
-					<th class="col-1 text-center">Código</th>
-					<th class="col">Veiculo</th>
-					<th class="col">Cliente</th>
-					<th class="col-1 text-center">Data</th>
-					<th class="col-2 text-center">Taxa de Agendamento</th>
-				</tr>
-			</thead>
-			
-			<tbody>
-				<c:forEach var="a" items="${agenda}">
-					<tr class="row">
-						<td class="col-1 text-center"><c:out value="${a.cod_agendamento}" /> 
-						<input type="hidden" name="id"
-							value="${a.cod_agendamento}" /></td>
-							
-						<td class="col"><p>DETALHES DO VEÍCULO: 
-						<p><c:out value="${a.marca_veiculo}" />
-						<c:out value="${a.nome_cor}" />
-						<c:out value="${a.ano_veiculo}" />
-						<c:out value="${a.motor_veiculo}" />
-						<c:out value="${a.potencia_cv}" />
-						<c:out value="${a.tipo_combustivel}" /></p>
-						<p><c:out value="${a.cambio}" /></p>
-						<p>NUMERO CHASSI: <c:out value="${a.numero_chassi}" /></p></td>
-						
-						<td class="col">
-						<p>NOME: 
-							<c:out value="${a.nome_cliente}" />
-							<c:out value="${a.razao_social}" />
-						</p>
-						<p>CPF/CNPJ: <c:out value="${a.numero_documento}" /></p>
-						
-						<p>EMAIL: <c:out value="${a.email_cliente}" /></p>
-						
-						<p>TELEFONE: <c:out value="${a.telefone_cliente}" /></p></td>
-						
-						<td class="col-1 text-center"><fmt:formatDate value="${a.data_reserva}" pattern="dd/MM/yyyy"/></td>					
-						<td class="col-2 text-center">R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.taxa_agendamento}" /></td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				<div
+					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2">Agendamentos</h1>
+				</div>
+				<div>
+					<c:forEach var="a" items="${agenda}">
+						<input type="hidden" name="id" value="${a.cod_agendamento}" />
 
-      </div>
-    </main>
+						<!-- inicio acordeon -->
+						<div class="accordion accordion-flush border border-secondary border-1 rounded mb-5" id="accordionFlushExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header"
+									id="flush-heading-${a.cod_agendamento}">
+									<button class="accordion-button collapsed" type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapse-${a.cod_agendamento}"
+										aria-expanded="false"
+										aria-controls="flush-collapse-${a.cod_agendamento}">
+
+										<div class="row">
+											<div class="col-3">
+												<p># <c:out value="${a.cod_agendamento}" /></p>
+											</div>
+
+											<div class="col-6">
+												<p> <c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" /></p>
+											</div>
+
+											<div class="col text-end">
+												<p> <fmt:formatDate value="${a.data_reserva}"
+														pattern="dd/MM/yyyy" />
+												</p>
+											</div>
+										</div>
+
+									</button>
+								</h2>
+								<div id="flush-collapse-${a.cod_agendamento}"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-heading-${a.cod_agendamento}"
+									data-bs-parent="#accordionFlushExample">
+									<div class="accordion-body">
+										<div class="row">
+											<div class="col-md">
+												<div class="cliente">
+													<h3 class="fs-5">Cliente</h3>
+													<p class="fs-6">NOME: <c:out value="${a.nome_cliente}" /><c:out value="${a.razao_social}" /></p>
+													<p class="fs-6">CPF/CNPJ: <c:out value="${a.numero_documento}" /></p>
+													<p class="fs-6">EMAIL: <c:out value="${a.email_cliente}" /></p>
+													<p class="fs-6">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+												</div>
+											</div>
+
+											<div class="col-md">
+											<h3 class="fs-5">Detalhes do veículo</h3>
+												<p class="fs-6">Motor: <c:out value="${a.motor_veiculo}" /></p>
+												<p class="fs-6">Potência: <c:out value="${a.potencia_cv}" /></p>
+												<p class="fs-6">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
+												<p class="fs-6">Câmbio: <c:out value="${a.cambio}" /></p>
+												<p class="fs-6">Número chassi: <c:out value="${a.numero_chassi}" /></p>
+											</div>
+
+											<div class="col-md-3">
+												<h3 class="fs-5">Taxa de agendamento: </h3>
+												<p class="fs-6">R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.taxa_agendamento}" /></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- fim acordeon -->
+					</c:forEach>
+				</div>
+			</main>
   </div>
 </div>
 

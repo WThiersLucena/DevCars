@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+   
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
@@ -133,7 +134,7 @@
 					
 						<div class=mb-3>
 							<label class="form-label">CNPJ:</label>
-							<input type="text" class="form-control" name="cnpj" required/>
+							<input type="text" class="form-control" id="exampleInputCnpj" name="cnpj" required/>
 						</div>
 					
 						<div class=mb-3>
@@ -143,7 +144,7 @@
 						
 						<div class=mb-3>
 							<label class="form-label">INSCRIÇÃO ESTADUAL:</label>
-							<input type="text" class="form-control" name="inscricao_estadual" required/>
+							<input type="text" class="form-control" id="exampleInputInscEstadual" name="inscricao_estadual" required/>
 						</div>
 						
 						<div class=mb-3>
@@ -153,7 +154,7 @@
 						
 						<div class=mb-3>
 							<label class="form-label">TELEFONE:</label>
-							<input type="text" class="form-control" name="telefone_fornecedor" required/>
+							<input type="text" class="form-control" id="exampleInputTelefone" name="telefone_fornecedor" required/>
 						</div>
 						
 						
@@ -171,7 +172,7 @@
 						
 						<div class=mb-3>
 							<label class="form-label">CNPJ:</label>
-							<input type="text" class="form-control" name="cnpj" value="${supplier.cnpj}"/>
+							<input type="text" class="form-control" id="exampleInputCnpj" name="cnpj" value="${supplier.cnpj}"/>
 						</div>
 						
 						<div class="mb-3">
@@ -181,7 +182,7 @@
 						
 						<div class="mb-3">
 							<label class="form-label">INSCRIÇÃO ESTADUAL:</label>
-							<input type="text" class="form-control" name="inscricao_estadual" value="${supplier.inscricao_estadual}"/>
+							<input type="text" class="form-control" id="exampleInputInscEstadual" name="inscricao_estadual" value="${supplier.inscricao_estadual}"/>
 						</div>
 						
 						<div class="mb-3">
@@ -191,7 +192,7 @@
 						
 						<div class="mb-3">
 							<label class="form-label">TELEFONE:</label>
-							<input type="text" class="form-control" name="telefone_fornecedor" value="${supplier.telefone_fornecedor}"/>
+							<input type="text" class="form-control" name="telefone_fornecedor" id="exampleInputTelefone" value="${supplier.telefone_fornecedor}"/>
 						</div>
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -212,6 +213,21 @@
  
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
  <script src="./dashboard.js"></script>
+ 
+ <!-- jQuery Mask -->
+ <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="jquery.mask.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#exampleInputTelefone').mask('(00) 00000-0000');
+            $('#exampleInputInscEstadual').mask('000.000.000.000');
+            $('#exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
+            $('.placeholder').mask("00/00/0000", { placeholder: "__/__/____" });
+        });
+    </script>
 
 </body>
 </html>

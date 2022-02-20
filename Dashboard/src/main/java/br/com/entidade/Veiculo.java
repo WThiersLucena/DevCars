@@ -2,8 +2,8 @@ package br.com.entidade;
 
 public class Veiculo {
 	private Integer cod_veiculo;
-	private String marca_veiculo;
 	private String modelo_veiculo;
+	private String marca_veiculo;
 	private String nome_cor;
 	private Integer ano_veiculo;
 	private String motor_veiculo;
@@ -13,55 +13,115 @@ public class Veiculo {
 	private String cambio;
 	private String numero_chassi;
 	private Boolean estoque;
+	private Boolean destaque;
+	
+	private Integer cod_marca;
+	private Integer cod_cor;
+	private Integer cod_motor;
+	private Integer cod_combustivel;
+	private Integer cod_cambio;
+	private Integer cod_fornecedor;
 	
 	
 	
 	private Veiculo() {
 		super();
 	}
+	
+	//Método para inserir
+	
+	public Veiculo( String modelo_veiculo, Integer cod_marca, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
+			   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque) {
+	super();
+	this.modelo_veiculo = modelo_veiculo;
+	this.cod_marca = cod_marca;
+	this.cod_cor = cod_cor;
+	this.ano_veiculo = ano_veiculo;
+	this.cod_motor = cod_motor;
+	this.preco_veiculo = preco_veiculo;
+	this.cod_combustivel = cod_combustivel;
+	this.cod_cambio = cod_cambio;
+	this.cod_fornecedor = cod_fornecedor;
+	this.numero_chassi = numero_chassi;
+	this.estoque = estoque;
+	this.destaque = destaque;
+}
+	
 
+	public Veiculo( String modelo_veiculo, String marca_veiculo,String nome_cor, Integer ano_veiculo,
+		       String motor_veiculo, String potencia_cv, Double preco_veiculo, String tipo_combustivel, String cambio,
+		       String numero_chassi, Boolean estoque, Boolean destaque) {
+	super();
+	this.modelo_veiculo = modelo_veiculo;
+	this.marca_veiculo = marca_veiculo;
+	this.nome_cor = nome_cor;
+	this.ano_veiculo = ano_veiculo;
+	this.motor_veiculo = motor_veiculo;
+	this.potencia_cv = potencia_cv;
+	this.preco_veiculo = preco_veiculo;
+	this.tipo_combustivel = tipo_combustivel;
+	this.cambio = cambio;
+	this.numero_chassi = numero_chassi;
+	this.estoque = estoque;
+	this.destaque = destaque;
+}
 
-
-	public Veiculo(String marca_veiculo, String modelo_veiculo, String nome_cor, Integer ano_veiculo,
-			String motor_veiculo, String potencia_cv, Double preco_veiculo, String tipo_combustivel, String cambio,
-			String numero_chassi, Boolean estoque) {
-		super();
-		this.marca_veiculo = marca_veiculo;
-		this.modelo_veiculo = modelo_veiculo;
-		this.nome_cor = nome_cor;
-		this.ano_veiculo = ano_veiculo;
-		this.motor_veiculo = motor_veiculo;
-		this.potencia_cv = potencia_cv;
-		this.preco_veiculo = preco_veiculo;
-		this.tipo_combustivel = tipo_combustivel;
-		this.cambio = cambio;
-		this.numero_chassi = numero_chassi;
-		this.estoque = estoque;
-	}
-//
-//
-//
-//	public Veiculo(Integer cod_veiculo, String marca_veiculo, String modelo_veiculo, String nome_cor,
-//			Integer ano_veiculo, String motor_veiculo, String potencia_cv, Double preco_veiculo,
-//			String tipo_combustivel, String cambio, String numero_chassi, Boolean estoque) {
+//	public Veiculo(String marca_veiculo, String modelo_veiculo, String nome_cor, Integer ano_veiculo,
+//			       String motor_veiculo, String potencia_cv, Double preco_veiculo, String tipo_combustivel, String cambio,
+//			       String numero_chassi, Boolean estoque, Boolean destaque) {
 //		super();
-//		this.cod_veiculo = cod_veiculo;
 //		this.marca_veiculo = marca_veiculo;
 //		this.modelo_veiculo = modelo_veiculo;
 //		this.nome_cor = nome_cor;
 //		this.ano_veiculo = ano_veiculo;
 //		this.motor_veiculo = motor_veiculo;
-//		this.pontencia_cv = potencia_cv;
+//		this.potencia_cv = potencia_cv;
 //		this.preco_veiculo = preco_veiculo;
 //		this.tipo_combustivel = tipo_combustivel;
 //		this.cambio = cambio;
 //		this.numero_chassi = numero_chassi;
 //		this.estoque = estoque;
+//		this.destaque = destaque;
 //	}
-//
+	
+	
+//	public Veiculo(Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
+//				   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque) {
+//		super();
+//		this.cod_marca = cod_marca;
+//		this.modelo_veiculo = modelo_veiculo;
+//		this.cod_cor = cod_cor;
+//		this.ano_veiculo = ano_veiculo;
+//		this.cod_motor = cod_motor;
+//		this.preco_veiculo = preco_veiculo;
+//		this.cod_combustivel = cod_combustivel;
+//		this.cod_cambio = cod_cambio;
+//		this.cod_fornecedor = cod_fornecedor;
+//		this.numero_chassi = numero_chassi;
+//		this.estoque = estoque;
+//		this.destaque = destaque;
+//	}
+	
+	
+//	//Método construtor para atualizar
+//	public Veiculo(Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
+//			   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque) {
+//	super();
+//	this.modelo_veiculo = modelo_veiculo;
+//	this.cod_marca = cod_marca;
+//	this.cod_cor = cod_cor;
+//	this.ano_veiculo = ano_veiculo;
+//	this.cod_motor = cod_motor;
+//	this.preco_veiculo = preco_veiculo;
+//	this.cod_combustivel = cod_combustivel;
+//	this.cod_cambio = cod_cambio;
+//	this.cod_fornecedor = cod_fornecedor;
+//	this.numero_chassi = numero_chassi;
+//	this.estoque = estoque;
+//	this.destaque = destaque;
+//}
 
-
-
+	
 
 
 	public Integer getCod_veiculo() {
@@ -200,24 +260,125 @@ public class Veiculo {
 		return this.estoque;
 	}
 
-
-
-	@Override
-	public String toString() {
-		return "Veiculo [cod_veiculo=" + cod_veiculo + ", marca_veiculo=" + marca_veiculo + ", modelo_veiculo="
-				+ modelo_veiculo + ", nome_cor=" + nome_cor + ", ano_veiculo=" + ano_veiculo + ", motor_veiculo="
-				+ motor_veiculo + ", potencia_cv=" + potencia_cv + ", preco_veiculo=" + preco_veiculo
-				+ ", tipo_combustivel=" + tipo_combustivel + ", cambio=" + cambio + ", numero_chassi=" + numero_chassi
-				+ ", estoque=" + estoque + "]";
-	}
-
-
-
+	
 	public void setEstoque(Boolean estoque) {
 		this.estoque = estoque;
 	}
 	
 	
+	public Boolean getDestaque() {
+		return destaque;
+	}
 
 
+
+	public void setDestaque(Boolean destaque) {
+		this.destaque = destaque;
+	}
+
+
+	
+
+	public Integer getCod_marca() {
+		return cod_marca;
+	}
+
+
+
+	public void setCod_marca(Integer cod_marca) {
+		this.cod_marca = cod_marca;
+	}
+
+
+
+	public Integer getCod_cor() {
+		return cod_cor;
+	}
+
+
+
+	public void setCod_cor(Integer cod_cor) {
+		this.cod_cor = cod_cor;
+	}
+
+
+
+	public Integer getCod_motor() {
+		return cod_motor;
+	}
+
+
+
+	public void setCod_motor(Integer cod_motor) {
+		this.cod_motor = cod_motor;
+	}
+
+
+
+	public Integer getCod_combustivel() {
+		return cod_combustivel;
+	}
+
+
+
+	public void setCod_combustivel(Integer cod_combustivel) {
+		this.cod_combustivel = cod_combustivel;
+	}
+
+
+
+	public Integer getCod_cambio() {
+		return cod_cambio;
+	}
+
+
+
+	public void setCod_cambio(Integer cod_cambio) {
+		this.cod_cambio = cod_cambio;
+	}
+
+
+
+	public Integer getCod_fornecedor() {
+		return cod_fornecedor;
+	}
+
+
+
+	public void setCod_fornecedor(Integer cod_fornecedor) {
+		this.cod_fornecedor = cod_fornecedor;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Veiculo [cod_veiculo=" + cod_veiculo + ", modelo_veiculo=" + modelo_veiculo + ", ano_veiculo="
+				+ ano_veiculo + ", preco_veiculo=" + preco_veiculo + ", numero_chassi=" + numero_chassi + ", estoque="
+				+ estoque + ", destaque=" + destaque + ", cod_marca=" + cod_marca + ", cod_cor=" + cod_cor
+				+ ", cod_motor=" + cod_motor + ", cod_combustivel=" + cod_combustivel + ", cod_cambio=" + cod_cambio
+				+ ", cod_fornecedor=" + cod_fornecedor + "]";
+	}
+
+
+
+
+
+
+//	@Override
+//	public String toString() {
+////		return "Veiculo [cod_veiculo=" + cod_veiculo + ", marca_veiculo=" + marca_veiculo + ", modelo_veiculo="
+////				+ modelo_veiculo + ", nome_cor=" + nome_cor + ", ano_veiculo=" + ano_veiculo + ", motor_veiculo="
+////				+ motor_veiculo + ", potencia_cv=" + potencia_cv + ", preco_veiculo=" + preco_veiculo
+////				+ ", tipo_combustivel=" + tipo_combustivel + ", cambio=" + cambio + ", numero_chassi=" + numero_chassi
+////				+ ", estoque=" + estoque + ", destaque=" + destaque + "]";
+//	
+		
+	
+		
+		
+		
+//		update tb_veiculo set modelo_veiculo = "URUS", cod_marca = 1, numero_chassi = "12345678903336521", ano_veiculo = 2020, preco_veiculo = 100000.00,
+//				cod_cor = 1, cod_motor = 1, cod_combustivel = 1, cod_cambio = 1, cod_fornecedor = 1, estoque = TRUE, destaque = FALSE
+//				where cod_veiculo = 27;
 }

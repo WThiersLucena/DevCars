@@ -21,18 +21,22 @@ public class VeiculoDAO {
 		Connection con = c.getConnection();
 		
 		try {
-			PreparedStatement p = con.prepareStatement("insert into tb_veiculo (modelo_veiculo, cod_marca, numero_chassi, ano_veiculo, preco_veiculo, cod_cor, cod_motor, cod_combustivel, cod_cambio, cod_fornecedor, estoque, destaque) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			PreparedStatement p = con.prepareStatement("insert into tb_veiculo (modelo_veiculo, cod_marca, numero_chassi, ano_veiculo, "
+														+ "preco_veiculo, cod_cor, cod_motor, cod_combustivel, cod_cambio, cod_fornecedor,"
+														+ " estoque, destaque) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 			
 			p.setString(1, veiculo.getModelo_veiculo());
-			p.setString(2, veiculo.getMarca_veiculo());
+			p.setInt(2, veiculo.getCod_marca());
 			p.setString(3, veiculo.getNumero_chassi());
 			p.setInt(4, veiculo.getAno_veiculo());
 			p.setDouble(5, veiculo.getPreco_veiculo());
-			p.setString(6, veiculo.getNome_cor());
-			p.setString(7, veiculo.getMotor_veiculo());
-			p.setString(8, veiculo.getTipo_combustivel());
-			p.setString(9, veiculo.getCambio());
+			p.setInt(6, veiculo.getCod_cor());
+			p.setInt(7, veiculo.getCod_motor());
+			p.setInt(8, veiculo.getCod_combustivel());
+			p.setInt(9, veiculo.getCod_cambio());
+			p.setInt(10, veiculo.getCod_fornecedor());
 			p.setBoolean(11, veiculo.getEstoque());
+			p.setBoolean(12, veiculo.getDestaque());
 
 			
 			System.out.println(p);
@@ -53,7 +57,7 @@ public class VeiculoDAO {
 		ArrayList<Veiculo> lista = new ArrayList<Veiculo>();
 		
 		try {
-			PreparedStatement p = con.prepareStatement("select cod_veiculo, marca_veiculo, modelo_veiculo, numero_chassi, ano_veiculo, preco_veiculo, nome_cor, motor_veiculo, potencia_cv, tipo_combustivel, cambio, estoque\r\n"
+			PreparedStatement p = con.prepareStatement("select cod_veiculo, marca_veiculo, modelo_veiculo, numero_chassi, ano_veiculo, preco_veiculo, nome_cor, motor_veiculo, potencia_cv, tipo_combustivel, cambio, estoque, destaque\r\n"
 					+ "					 from tb_veiculo tv\r\n"
 					+ "					 inner join tb_marca tm on (tv.cod_marca = tm.cod_marca)\r\n"
 					+ "					 inner join tb_cor tc on (tv.cod_cor = tc.cod_cor)\r\n"
@@ -77,10 +81,11 @@ public class VeiculoDAO {
 				String tipo_combustivel = r.getString("tipo_combustivel");
 				String cambio = r.getString("cambio");
 				Boolean estoque = r.getBoolean("estoque");
+				Boolean destaque = r.getBoolean("destaque");
 				
 				
 				
-				Veiculo v = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, preco_veiculo, tipo_combustivel, cambio, numero_chassi, estoque);
+				Veiculo v = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, preco_veiculo, tipo_combustivel, cambio, numero_chassi, estoque, destaque);
 				v.setCod_veiculo(cod_veiculo);
 				lista.add(v);
 			}
@@ -104,7 +109,7 @@ public class VeiculoDAO {
 			
 			System.out.println(p);
 			p.executeUpdate();
-			System.out.println("Veículo Excluído");
+			System.out.println("Veï¿½culo Excluï¿½do");
 			
 			p.close();
 			
@@ -122,24 +127,28 @@ public class VeiculoDAO {
 		System.out.println(veiculo);
 		
 		try {
-			PreparedStatement p = con.prepareStatement("update tb_veiculo set modelo_veiculo = ?, cod_marca = ?, numero_chassi = ?, ano_veiculo = ?, preco_veiculo = ?, cod_cor = ?, cod_motor = ?, cod_combustivel = ?, cod_cambio = ?, cod_fornecedor = ?, estoque = ?, destaque = ? where cod_veiculo = ?");
+			PreparedStatement p = con.prepareStatement("update tb_veiculo set modelo_veiculo = ?, cod_marca = ?, numero_chassi = ?, ano_veiculo = ?, "
+													+ "preco_veiculo = ?, cod_cor = ?, cod_motor = ?, cod_combustivel = ?, cod_cambio = ?, "
+													+ "cod_fornecedor = ?, estoque = ?, destaque = ? where cod_veiculo = ?");
 			
 			p.setString(1, veiculo.getModelo_veiculo());
-			p.setString(2, veiculo.getMarca_veiculo());
+			p.setInt(2, veiculo.getCod_marca());
 			p.setString(3, veiculo.getNumero_chassi());
 			p.setInt(4, veiculo.getAno_veiculo());
 			p.setDouble(5, veiculo.getPreco_veiculo());
-			p.setString(6, veiculo.getNome_cor());
-			p.setString(7, veiculo.getMotor_veiculo());
-			p.setString(8, veiculo.getTipo_combustivel());
-			p.setString(9, veiculo.getCambio());
+			p.setInt(6, veiculo.getCod_cor());
+			p.setInt(7, veiculo.getCod_motor());
+			p.setInt(8, veiculo.getCod_combustivel());
+			p.setInt(9, veiculo.getCod_cambio());
+			p.setInt(10, veiculo.getCod_fornecedor());
 			p.setBoolean(11, veiculo.getEstoque());
+			p.setBoolean(12, veiculo.getDestaque());
 			p.setInt(13, veiculo.getCod_veiculo());
 			
 			System.out.println(p);
 			
 			p.executeUpdate();
-			System.out.println("Veículo Atualizado");
+			System.out.println("Veï¿½culo Atualizado");
 			p.close();
 			
 		} catch (SQLException e) {
@@ -155,7 +164,16 @@ public class VeiculoDAO {
 		Veiculo v = null;
 		
 		try {
-			PreparedStatement p = con.prepareStatement("select * from tb_veiculo where cod_veiculo = ?");
+			PreparedStatement p = con.prepareStatement("select cod_veiculo, marca_veiculo, modelo_veiculo, numero_chassi, ano_veiculo, preco_veiculo, nome_cor, motor_veiculo, potencia_cv, tipo_combustivel, cambio, estoque, destaque\r\n"
+					+ "	from tb_veiculo tv\r\n"
+					+ "	inner join tb_marca tm on (tv.cod_marca = tm.cod_marca)\r\n"
+					+ "	inner join tb_cor tc on (tv.cod_cor = tc.cod_cor)\r\n"
+					+ "	inner join tb_motor tm2 on (tv.cod_motor = tm2.cod_motor)\r\n"
+					+ "	inner join tb_combustivel tc2 on (tv.cod_combustivel = tc2.cod_combustivel)\r\n"
+					+ "	inner join tb_cambio tc3 on (tv.cod_cambio = tc3.cod_cambio)\r\n"
+					+ "	where cod_veiculo = ?\r\n"
+					+ "	order by cod_veiculo;\r\n"
+					+ "");
 			p.setInt(1, cod_veiculo);
 			ResultSet r = p.executeQuery();
 			
@@ -173,9 +191,10 @@ public class VeiculoDAO {
 				String tipo_combustivel = r.getString("tipo_combustivel");
 				String cambio = r.getString("cambio");
 				Boolean estoque = r.getBoolean("estoque");
+				Boolean destaque = r.getBoolean("destaque");
 				
 				
-				v = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, preco_veiculo, tipo_combustivel, cambio, numero_chassi, estoque);
+				v = new Veiculo(marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, preco_veiculo, tipo_combustivel, cambio, numero_chassi, estoque, destaque);
 				
 				v.setCod_veiculo(cod_veiculo2);
 				
@@ -194,5 +213,30 @@ public class VeiculoDAO {
 	
 	
 	
+	
+	public Integer contarVeiculos() {
+		Conexao c = Conexao.getInstance();
+		Connection con = c.getConnection();
+		 try {
+			 Integer cont = null;
+			 PreparedStatement p = con.prepareStatement("select count(*) as NumeroDeVeiculos from tb_veiculo");
+			 ResultSet r = p.executeQuery();
+			 r.next();
+			 
+			 cont = r.getInt("NumeroDeVeiculos");
+			 
+			 System.out.println(cont);
+			
+			//System.out.println(cont);
+			r.close();
+			p.close();
+			
+			return cont;
+		 } catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;    		
+    }
+			
 	
 }

@@ -1,0 +1,63 @@
+@charset "ISO-8859-1";
+
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+}
+
+.form-signin input[type="senha"] {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+}
+
+label{
+  color: white;
+}
+
+.btn {
+  background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+  margin-top: 5px;
+}
+
+.btn > a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn:hover{
+  background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+  color: black;
+  text-decoration: bold;
+}
+
+.form-control:focus{
+  border-color: rgb(255, 255, 68);
+  box-shadow: 0 0 0 0.25rem rgba(217, 252, 22, 0.25);
+}

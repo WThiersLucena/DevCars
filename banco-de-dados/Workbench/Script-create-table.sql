@@ -1,5 +1,5 @@
 create table tb_fornecedor
-(	
+(
 	cod_fornecedor smallint not null auto_increment,
 	cnpj varchar(18) not null,
 	razao_social varchar(50) not null,
@@ -66,7 +66,7 @@ create table tb_veiculo
 	modelo_veiculo varchar (50) not null,
 	cod_marca smallint  not null,
 	numero_chassi varchar (17) not null,
-	ano_veiculo smallint not null,
+	ano_veiculo varchar(4) not null,
 	preco_veiculo decimal (12,2) not null,
 	cod_cor smallint not null,
 	cod_motor smallint not null,
@@ -97,7 +97,7 @@ create table tb_cliente
 	data_nascimento date null,
 	email_cliente varchar(50) not null,
 	telefone_cliente varchar(20) not null,
-	senha_cliente varchar(10) not null,
+	senha_cliente varchar(40) not null,
 	inscricao_estadual varchar(15) null,
 	razao_social varchar(50) null,
 
@@ -310,7 +310,6 @@ create table tb_pedido
 
 create table tb_item_pedido
 (
-	
 	cod_veiculo int not null,
 	cod_pedido int not null,
 
@@ -365,5 +364,3 @@ create table tb_item_nf (
 
 
 show tables;
-
-
