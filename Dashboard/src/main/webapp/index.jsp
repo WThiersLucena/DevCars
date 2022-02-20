@@ -48,8 +48,9 @@
 		<input class="form-control form-control-dark w-100" type="text"
 			placeholder="Pesquisar" aria-label="Search">
 		<div class="navbar-nav">
+			
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="#">Sair</a>
+				<a class="nav-link px-3" href="./login.jsp">LOGIN</a>
 			</div>
 		</div>
 	</header>
@@ -188,7 +189,7 @@
 				<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 					<div
 						class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-						<h1 class="h2">Dashboard</h1>
+						<h1 class="h2">DASHBOARD</h1>
 						<img alt="logo-dev-cars" src="logo-rev01.jpeg" width="120"
 							height="120" style="border-radius: 60px;" />
 					</div>

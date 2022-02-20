@@ -116,9 +116,7 @@
 					<div class="btn-toolbar mb-2 mb-md-0">
 						<div class="btn-group me-2">
 							<form action="ServletFornecedor" method="post">
-								<button class="btn btn-primary mb-3" type="submit"
-									name="optionFornecedor" value="insertFormSupplier">Adicionar
-									Fornecedor</button>
+								<button class="btn btn-primary mb-3" type="submit" name="optionFornecedor" value="insertFormSupplier">Adicionar Fornecedor</button>
 							</form>
 						</div>
 					</div>

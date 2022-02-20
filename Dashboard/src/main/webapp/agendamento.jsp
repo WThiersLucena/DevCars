@@ -117,16 +117,15 @@ pageEncoding="ISO-8859-1"%>
     </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-				<div
-					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">Agendamentos</h1>
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2">AGENDAMENTOS</h1>
 				</div>
 				<div>
 					<c:forEach var="a" items="${agenda}">
 						<input type="hidden" name="id" value="${a.cod_agendamento}" />
 
 						<!-- inicio acordeon -->
-						<div class="accordion accordion-flush border border-secondary border-1 rounded mb-5" id="accordionFlushExample">
+						<div class="accordion accordion-flush border border-secondary border-1 rounded mb-5 shadow rounded-3" id="accordionFlushExample">
 							<div class="accordion-item">
 								<h2 class="accordion-header"
 									id="flush-heading-${a.cod_agendamento}">
