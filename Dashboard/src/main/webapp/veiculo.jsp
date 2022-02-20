@@ -139,9 +139,9 @@ pageEncoding="ISO-8859-1"%>
 			<thead>
 				<tr>
 					<th class="col-1">Cod</th>
-					<th class="col-1">Modelo</th>
-					<th class="col-1">Marca</th>
 					
+					<th class="col-1">Marca</th>
+					<th class="col-1">Modelo</th>
 					<th class="col-1">Cor</th>
 					<th class="col-1">Ano</th>
 					<th class="col-1">Motor</th>

@@ -30,7 +30,7 @@ public class Veiculo {
 	
 	//Método para inserir
 	
-	public Veiculo( String modelo_veiculo, Integer cod_marca, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
+	public Veiculo(Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
 			   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque) {
 	super();
 	this.modelo_veiculo = modelo_veiculo;
