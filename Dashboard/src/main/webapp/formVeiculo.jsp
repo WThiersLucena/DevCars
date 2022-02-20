@@ -224,8 +224,8 @@
 										class="form-select form-select-lg mb-3 fs-6" name="estoque"
 										required>
 										<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
-										<option value="0">NÃO</option>
-										<option value="1">SIM</option>
+										<option value="FALSE">NÃO</option>
+										<option value="TRUE">SIM</option>
 									</select>
 								</div>
 
@@ -235,8 +235,8 @@
 										class="form-select form-select-lg mb-3 fs-6" name="destaque"
 										required>
 										<option selected>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
-										<option value="0">NÃO</option>
-										<option value="1">SIM</option>
+										<option value="FALSE">NÃO</option>
+										<option value="TRUE">SIM</option>
 									</select>
 								</div>
 

@@ -165,11 +165,11 @@ pageEncoding="ISO-8859-1"%>
 							</td>
 							
 							<td>
-								<c:out value="${veiculo.marca_veiculo}"/>
+								<c:out value="${veiculo.modelo_veiculo}"/>
 							</td>
 							
 							<td>
-								<c:out value="${veiculo.modelo_veiculo}"/>
+								<c:out value="${veiculo.marca_veiculo}"/>
 							</td>
 							
 							<td>
