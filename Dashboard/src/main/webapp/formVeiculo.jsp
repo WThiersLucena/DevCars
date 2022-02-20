@@ -267,7 +267,7 @@
 										required>
 										<!--<option selected>SELECIONE A MARCA</option>  -->
 										<c:forEach var="marca" items="${listMarca}">
-											<option value="${marca.cod_marca}">${marca.marca_veiculo}</option>
+											<option selected value="${marca.cod_marca}">${marca.marca_veiculo}</option>
 										</c:forEach>
 
 									</select>
@@ -297,8 +297,7 @@
 										required>
 										<!--  <option selected>SELECIONE A COR</option> -->
 										<c:forEach var="cor" items="${listCor}">
-											<option 
-										value="${cor.cod_cor}">${cor.nome_cor}</option>
+											<option selected value="${cor.cod_cor}">${cor.nome_cor}</option>
 										</c:forEach>
 									</select>
 								</div>
@@ -309,7 +308,7 @@
 										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
 										required>
 										<c:forEach var="motor" items="${listMotor}">
-											<option value="${motor.cod_motor}">${motor.motor_veiculo} ${motor.potencia_cv}</option>
+											<option selected value="${motor.cod_motor}">${motor.motor_veiculo} ${motor.potencia_cv}</option>
 										</c:forEach>
 									</select>
 								</div>
@@ -319,7 +318,7 @@
 										name="cod_combustivel" required>
 										<!-- <option selected>SELECIONE O TIPO DE COMBUSTIVEL</option> -->
 										<c:forEach var="combustivel" items="${listCombustivel}">
-											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
+											<option	selected value="${veiculo.cod_combustivel}">${combustivel.tipo_combustivel}</option>
 										</c:forEach>
 									</select>
 								</div>
@@ -330,7 +329,7 @@
 											class="form-select form-select-lg mb-3 fs-6"
 											name="cod_cambio" required>
 											<c:forEach var="cambio" items="${listCambio}">
-												<option value="${cambio.cod_cambio}">${cambio.cambio}</option>
+												<option selected value="${cambio.cod_cambio}">${cambio.cambio}</option>
 											</c:forEach>
 										</select>
 									</div>
@@ -342,7 +341,7 @@
 												name="cod_fornecedor" required>
 												<option selected>SELECIONE O FORNECEDOR</option>
 												<c:forEach var="fornecedor" items="${listFornecedor}">
-													<option value="${fornecedor.cod_fornecedor}">${fornecedor.razao_social}</option>
+													<option selected value="${fornecedor.cod_fornecedor}">${fornecedor.razao_social}</option>
 												</c:forEach>
 											</select>
 										</div>
