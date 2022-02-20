@@ -83,8 +83,7 @@ public class ClienteDAO {
 			return lista;
 		}
 		
-<<<<<<< HEAD
-=======
+
 	
 	
 	public Integer contarUsuarios() {
@@ -157,9 +156,6 @@ public class ClienteDAO {
 //	}
 	
 	
-	
-	
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
 	}
 
 

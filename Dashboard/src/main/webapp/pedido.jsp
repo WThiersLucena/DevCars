@@ -60,11 +60,10 @@ ul{
 
 	<div class="container-fluid">
 		<div class="row">
-<<<<<<< HEAD
-  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-=======
+
+ 
 	<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
+
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -132,14 +131,11 @@ ul{
         </ul>
       </div>
     </nav>
-<<<<<<< HEAD
+
 
       </div>
-    </nav>
 
-=======
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
-			<!--  END SIDEBAR -->
+	<!--  END SIDEBAR -->
 			
 
 
@@ -149,13 +145,11 @@ ul{
 				</div>
 
 				<div class="table-responsive">
-<<<<<<< HEAD
-				
-=======
+
 			<!-- 	<form action="ServletPedido" name="optionPedido" method="post">
 						<button type="submit" value="Kbeludo" class="btn btn-outline-dark">MOSTRAR PEDIDO</button>
 					</form> -->
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
+
 				
 					<table class="table align-middle">
 							<thead>

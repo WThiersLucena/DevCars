@@ -35,10 +35,10 @@ pageEncoding="ISO-8859-1"%>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Pesquisar" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="#">Sair</a>
     </div>
   </div>
 </header>
@@ -136,7 +136,7 @@ pageEncoding="ISO-8859-1"%>
 										aria-expanded="false"
 										aria-controls="flush-collapse-${a.cod_agendamento}">
 
-										<div class="row">
+										<div class="row col-11 col-md-11 col-lg-11">
 											<div class="col-3">
 												<p># <c:out value="${a.cod_agendamento}" /></p>
 											</div>
@@ -145,7 +145,7 @@ pageEncoding="ISO-8859-1"%>
 												<p> <c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" /></p>
 											</div>
 
-											<div class="col text-end">
+											<div class="col-3 text-end">
 												<p> <fmt:formatDate value="${a.data_reserva}"
 														pattern="dd/MM/yyyy" />
 												</p>

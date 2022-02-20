@@ -56,14 +56,13 @@ private ClienteDAO clie;
 
 	private void selectAllCliente(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-<<<<<<< HEAD
+
 		request.setAttribute("listCliente", this.clie.mostrarCliente());	
 		
 		
-=======
+
 		request.setAttribute("listCliente", this.clie.mostrarCliente());
 		request.setAttribute("contagemUsuarios", this.clie.contarUsuarios());
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
 		request.getRequestDispatcher("cliente.jsp").forward(request, response);
 	}
 
