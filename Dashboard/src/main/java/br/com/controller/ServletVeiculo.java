@@ -17,9 +17,7 @@ import br.com.dao.MotorDAO;
 import br.com.dao.VeiculoDAO;
 import br.com.entidade.Veiculo;
 
-/**
- * Servlet implementation class ServletVeiculo
- */
+
 @WebServlet("/ServletVeiculo")
 public class ServletVeiculo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -81,7 +79,6 @@ public class ServletVeiculo extends HttpServlet {
 	
 	private void showInsertVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		request.setAttribute("listVeiculo", this.veic.mostrarVeiculo());
 		request.setAttribute("listCombustivel", this.combust.mostrarCombustivel());
 		request.setAttribute("listCor", this.cor.mostrarCor());
 		request.setAttribute("listMotor", this.motor.mostrarMotor());
@@ -95,19 +92,6 @@ public class ServletVeiculo extends HttpServlet {
 	
 	private void showUpdateVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer cod_veiculo = Integer.parseInt(request.getParameter("cod_veiculo"));
-//		String modelo_veiculo = request.getParameter("modelo_veiculo");
-//		Integer cod_marca = Integer.parseInt(request.getParameter("cod_marca"));
-//		Integer cod_cor = Integer.parseInt(request.getParameter("cod_cor"));
-//		Integer ano_veiculo = Integer.parseInt(request.getParameter("ano_veiculo"));
-//		Integer cod_motor = Integer.parseInt(request.getParameter("cod_motor"));
-//		Double preco_veiculo = Double.parseDouble(request.getParameter("preco_veiculo"));
-//		Integer cod_combustivel = Integer.parseInt(request.getParameter("cod_combustivel"));
-//		Integer cod_cambio = Integer.parseInt(request.getParameter("cod_cambio"));
-//		Integer cod_fornecedor = Integer.parseInt(request.getParameter("cod_fornecedor"));
-//		String numero_chassi = request.getParameter("numero_chassi").replace(".", "").toUpperCase();
-//		Boolean estoque = Boolean.parseBoolean(request.getParameter("estoque"));
-//		Boolean destaque = Boolean.parseBoolean(request.getParameter("destaque"));
-//		
 		
 		Veiculo v = veic.buscarVeiculo(cod_veiculo);
 		
@@ -125,19 +109,6 @@ public class ServletVeiculo extends HttpServlet {
 	
 	private void insertVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		String modelo_veiculo = request.getParameter("modelo_veiculo");
-//		String marca_veiculo = request.getParameter("marca_veiculo");
-//		String nome_cor = request.getParameter("nome_cor");
-//		String ano_veiculo = request.getParameter("ano_veiculo");
-//		String motor_veiculo = request.getParameter("motor_veiculo");
-//		String potencia_cv = request.getParameter("potencia_cv");
-//		String preco_veiculo = request.getParameter("preco_veiculo");
-//		String tipo_combustivel = request.getParameter("tipo_combustivel");
-//		String cambio = request.getParameter("cambio");
-//		String numero_chassi = request.getParameter("numero_chassi").replace(".", "");
-//		String estoque = request.getParameter("estoque");
-//		String destaque = request.getParameter("destaque");
-		
 		String modelo_veiculo = request.getParameter("modelo_veiculo");
 		String cod_marca = request.getParameter("cod_marca");
 		String cod_cor = request.getParameter("cod_cor");
@@ -154,7 +125,7 @@ public class ServletVeiculo extends HttpServlet {
 		if(  (cod_marca != null)  &&  (modelo_veiculo != null )  && (cod_cor != null )  && (ano_veiculo != null )  && (cod_motor != null ) && (cod_fornecedor != null )  && (preco_veiculo != null )  && (cod_combustivel != null )  && (cod_cambio != null)  && (numero_chassi != null)  && (estoque != null ) && (destaque != null) ) {
 			if(!modelo_veiculo.equals("")) {
 				
-//				Integer ano_veiculoBack = Integer.parseInt(ano_veiculo);
+
 				Integer cod_marcaBack = Integer.parseInt(cod_marca);
 				Integer cod_corBack = Integer.parseInt(cod_cor);
 				Integer ano_veiculoBack = Integer.parseInt(ano_veiculo);
@@ -166,9 +137,7 @@ public class ServletVeiculo extends HttpServlet {
 				Boolean estoqueBack = Boolean.parseBoolean(estoque);
 				Boolean destaqueBack = Boolean.parseBoolean(destaque);
 				
-//				Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
-//				   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque
-//				
+			
 				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack);
 				
 				veic.adicionarVeiculo(veiculo1);
@@ -201,19 +170,7 @@ public class ServletVeiculo extends HttpServlet {
 	
 	private void updateVeiculo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		String modelo_veiculo = request.getParameter("modelo_veiculo");
-//		String marca_veiculo = request.getParameter("marca_veiculo");
-//		String nome_cor = request.getParameter("nome_cor");
-//		String ano_veiculo = request.getParameter("ano_veiculo");
-//		String motor_veiculo = request.getParameter("motor_veiculo");
-//		String potencia_cv = request.getParameter("potencia_cv");
-//		String preco_veiculo = request.getParameter("preco_veiculo");
-//		String tipo_combustivel = request.getParameter("tipo_combustivel");
-//		String cambio = request.getParameter("cambio");
-//		String numero_chassi = request.getParameter("numero_chassi").replace(".", "");
-//		String estoque = request.getParameter("estoque");
-//		String destaque = request.getParameter("destaque");
-//		String cod_veiculoBack = request.getParameter("cod_veiculo");
+
 		String cod_veiculo = request.getParameter("cod_veiculo");
 		String modelo_veiculo = request.getParameter("modelo_veiculo");
 		String cod_marca = request.getParameter("cod_marca");
@@ -244,20 +201,6 @@ public class ServletVeiculo extends HttpServlet {
 				Integer cod_veiculoBack = Integer.parseInt(cod_veiculo);
 				Integer cod_fornecedorBack = Integer.parseInt(cod_fornecedor);
 				
-//				Integer cod_marca, String modelo_veiculo, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
-//				   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque
-			//	p.setInt(1, veiculo.getCod_marca());
-//				p.setString(2, veiculo.getModelo_veiculo());
-//				p.setString(3, veiculo.getNumero_chassi());
-//				p.setInt(4, veiculo.getAno_veiculo());
-//				p.setDouble(5, veiculo.getPreco_veiculo());
-//				p.setInt(6, veiculo.getCod_cor());
-//				p.setInt(7, veiculo.getCod_motor());
-//				p.setInt(8, veiculo.getCod_combustivel());
-//				p.setInt(9, veiculo.getCod_cambio());
-//				p.setInt(10, veiculo.getCod_fornecedor());
-//				p.setBoolean(11, veiculo.getEstoque());
-//				p.setBoolean(12, veiculo.getDestaque());
 				
 				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack);
 				veiculo1.setCod_veiculo(cod_veiculoBack);
