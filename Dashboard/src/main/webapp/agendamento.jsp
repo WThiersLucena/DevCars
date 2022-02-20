@@ -19,6 +19,7 @@ pageEncoding="ISO-8859-1"%>
         user-select: none;
       }
       
+      
       .accordion-button{
       	-webkit-box-shadow: 11px 11px 28px 10px rgba(191,161,63,0.45); 
 		box-shadow: 11px 11px 28px 10px rgba(191,161,63,0.45);
