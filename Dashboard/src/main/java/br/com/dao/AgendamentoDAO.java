@@ -42,7 +42,7 @@ public class AgendamentoDAO {
 				String telefone_cliente = r.getString("telefone_cliente");
 				String marca_veiculo = r.getString("marca_veiculo");
 				String modelo_veiculo = r.getString("modelo_veiculo");
-				String nome_cor = r.getString("modelo_veiculo");
+				String nome_cor = r.getString("nome_cor");
 				String ano_veiculo = r.getString("ano_veiculo");
 				String motor_veiculo = r.getString("motor_veiculo");
 				String potencia_cv = r.getString("potencia_cv");
