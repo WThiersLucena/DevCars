@@ -278,7 +278,7 @@
 								<div class="mb-3">
 									<label class="form-label">CHASSI:</label> <input type="text"
 										class="form-control" name="numero_chassi"
-										value="${veiculo.numero_chassi}" disabled/>
+										value="${veiculo.numero_chassi}"/>
 								</div>
 
 								<div class="mb-3">
