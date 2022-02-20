@@ -86,17 +86,16 @@ pageEncoding="ISO-8859-1"%>
 </header>
 
  <!--  BEGIN SIDEBAR -->
- 
-<div class="container-fluid">
-  <div class="row">
 
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+	<div class="container-fluid">
+		<div class="row">
+			    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.jsp">
               <span data-feather="home"></span>
-              Home
+              HOME
             </a>
           </li>
           
@@ -105,7 +104,7 @@ pageEncoding="ISO-8859-1"%>
             	<form action="ServletVeiculo" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="file"></span>
-						Veiculo
+						VEÍCULO
 					</button>
 				</form>
             </a>
@@ -116,7 +115,7 @@ pageEncoding="ISO-8859-1"%>
             	<form action="ServletCliente" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="shopping-cart"></span>
-             			 Cliente
+             			 CLIENTE
 					</button>
 				</form>  
             </a>
@@ -127,7 +126,7 @@ pageEncoding="ISO-8859-1"%>
             	<form action="ServletFornecedor" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="users"></span>
-						Fornecedor
+						FORNECEDOR
 					</button>
 				</form>
             </a>
@@ -138,7 +137,7 @@ pageEncoding="ISO-8859-1"%>
             	<form action="ServletPedido" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="bar-chart-2"></span>
-             				 Pedido
+             				 PEDIDO
 					</button>
 				</form> 
             </a>
@@ -149,15 +148,16 @@ pageEncoding="ISO-8859-1"%>
              	<form action="ServletAgendamento" method="post">
 					<button type="submit" class="btn">
 						 <span data-feather="layers"></span>
-            				  Agendamento
+            				  AGENDAMENTO
 					</button>
 				</form> 
             </a>
           </li>
+          
         </ul>
       </div>
     </nav>
-
+		
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2">Agendamentos</h1>
