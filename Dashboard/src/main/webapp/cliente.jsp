@@ -12,20 +12,27 @@ pageEncoding="UTF-8"%>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <style>
+ <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
-      }
+ }
+      
+      
+ul{
+    list-style-type: none;
+    list-style: none;
+}
 
-      @media (min-width: 768px) {
+@media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
+}
+
     </style>
 
 <link href="./dashboard.css" rel="stylesheet"/>
@@ -34,18 +41,23 @@ pageEncoding="UTF-8"%>
 <body>
 
 
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
-    </div>
-  </div>
-</header>
+<header
+		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<button class="navbar-toggler position-absolute d-md-none collapsed"
+			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+			aria-controls="sidebarMenu" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<input class="form-control form-control-dark w-100" type="text"
+			placeholder="Pesquisar" aria-label="Search">
+		<div class="navbar-nav">
+			<div class="nav-item text-nowrap">
+				<a class="nav-link px-3" href="#">Sair</a>
+			</div>
+		</div>
+	</header>
 
  <!--  BEGIN SIDEBAR -->
 
@@ -134,71 +146,88 @@ pageEncoding="UTF-8"%>
 
 
 
+    <!--      TESTE COM DETALHES DE ENDEREÇO --> 
+ <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+				<h1>Clientes	</h1>
+				</div>
 
+				<div class="table-responsive">
+				
+				
+					<table class="table align-middle">
+							<thead>
+							
+								<tr>
+									<th class="col-1 ">Cod Cliente</th>
+									<th class="col-2">Nome Cliente</th>
+									<th class="col-1">telefone</th>
+									<th class="col-2">Data Nac</th>
+									<th class="col-2">Endereço</th>
+																	
+								</tr>
+							</thead>
+							<tbody>
 
-
-<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Lista Cliente</h1>
-        <form action="ServletCliente" method="post">
-						<button type="submit" class="btn btn-warning">ATUALIZAR</button>
+								
+								<c:forEach var="cliente" items="${listCliente}">
+								
+							
+						<tr class="font-family: var;">			
 						
-		</form>
-      </div>
-
-      <h2></h2>
-      <div class="table-responsive">
- <!--        <table class="table table-striped table-sm">  -->
-         <table class="table table-bordered" >
-         	
-			<thead>
-				<tr>
-					<th class="col-2 ">Cod Cliente</th>
-					<th class="col-1">Nº Documento</th>
-					<th class="col-3">Nome Cliente</th>
-					<th class="col-2">Data Nac</th>
-					<th class="col-2">Email</th>
-					<th class="col-2">Telefone</th>					
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="cliente" items="${listCliente}">
-					<tr class="font-family: var;">
+						<form action="ServletCliente" method ="post">
 						
 							<td>
 								<c:out value="${cliente.cod_cliente}"/>
+								
 							</td>
-							<td>
-								<c:out value="${cliente.numero_documento}"/>
-							</td>
+							
 							<td>
 								<c:out value="${cliente.nome_cliente}"/>
 								<c:out value="${cliente.razao_social}"/>
 							</td>
-						<td>
-								<c:out value="${cliente.data_nascimento}"/>
-							</td>
-							<td>
-								<c:out value="${cliente.email_cliente}"/>
-							</td>
+							
 							<td>
 								<c:out value="${cliente.telefone_cliente}"/>
 							</td>
-							<td>	
+							
+							
+							
+						<td>
+							
+						 	<c:out value="${cliente.data_nascimento}"/>    
 						</td>
-												
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-         
-         
-         
-         
-      </div>
-    </main>
-  </div>
-</div>
+							
+						</td>
+						
+						<td class="detalhes">
+												<details>
+													<summary>  Detalhes </summary>
+														<ul>
+															<li> UF : [ ${cliente.uf} ]</li>
+															<li> ${cliente.cidade} </li>
+															<li>${cliente.bairro} </li>
+															<li>${cliente.cep_endeco} </li>
+																														
+															<li>
+																<c:out value="${cliente.rua_endereco}"/> nº
+																<c:out value="${cliente.numero_endereco}"/> 
+																<c:out value="${cliente.complemento}"/> 
+															</li>
+														 </ul>
+												</details>
+						</td>
+									
+					</form>
+				</tr>
+			</c:forEach>
+									
+									
+						</tbody>
+					</table>
+				</div>
+			</main>
+
 
 
 

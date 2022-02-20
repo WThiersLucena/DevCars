@@ -101,14 +101,23 @@ public class Teste {
 		
 				ClienteDAO clienteD = new ClienteDAO();
 
-				VeiculoDAO veiculoD = new VeiculoDAO();
+//				VeiculoDAO veiculoD = new VeiculoDAO();
 
 				Conexao c = new Conexao();
 				c.getConnection();		
-				System.out.println(clienteD.mostrarCliente());
+				System.out.println(clienteD.mostrarCliente());				
 				
 		
-			
-		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

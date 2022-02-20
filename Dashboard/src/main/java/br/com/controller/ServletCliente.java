@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.dao.ClienteDAO;
-import br.com.dao.VeiculoDAO;
+//import br.com.dao.EnderecoClienteDAO;
 
 /**
  * Servlet implementation class ServletCliente
@@ -19,10 +19,18 @@ public class ServletCliente extends HttpServlet {
 	
 private ClienteDAO clie;	
 	
+
     public ServletCliente() {
         super();
      this.clie = new ClienteDAO();
+
+     
     }
+    
+ 
+    
+    
+    
     
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,19 +48,20 @@ private ClienteDAO clie;
 //		doGet(request, response);
 		
 		selectAllCliente(request,response);
+		
+
 	}
-	
+
+
+
 	private void selectAllCliente(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setAttribute("listCliente", this.clie.mostrarCliente());
+		request.setAttribute("listCliente", this.clie.mostrarCliente());	
+		
+		
 		request.getRequestDispatcher("cliente.jsp").forward(request, response);
 	}
 
-	
-	
-	
-	
-	
 	
 	
 	
