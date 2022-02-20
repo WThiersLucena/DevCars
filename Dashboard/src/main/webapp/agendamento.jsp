@@ -18,6 +18,47 @@ pageEncoding="ISO-8859-1"%>
         -moz-user-select: none;
         user-select: none;
       }
+      
+      .accordion-button{
+      	-webkit-box-shadow: 11px 11px 28px 10px rgba(191,161,63,0.45); 
+		box-shadow: 11px 11px 28px 10px rgba(191,161,63,0.45);
+      }
+      
+       
+      .accordion-button:not(.collapsed){
+      	color: #000;
+      	background-color: #fff;
+      	border-color: #fff
+      }
+      
+      .ac-header:not(.collapsed){
+      	color: #fff;
+      	background-color: #F0CA4F;
+      	
+      }
+      
+      .ac-header{
+      	color: #fff;
+      	background-color: #F0CA4F;
+      }
+      
+      
+      .fw-bolder{
+      	text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.68);
+      }
+      
+      
+      h3{
+      	 font-family: Arial, Helvetica, Verdana, sans-serif;
+      	 margin-bottom: 8px;
+      	 font-size: 18px;
+      	 font-weight: bold
+      }
+      
+      p{
+      	margin-bottom: 4px
+      }
+      
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -54,7 +95,7 @@ pageEncoding="ISO-8859-1"%>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.jsp">
               <span data-feather="home"></span>
-              HOME
+              Home
             </a>
           </li>
           
@@ -63,7 +104,7 @@ pageEncoding="ISO-8859-1"%>
             	<form action="ServletVeiculo" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="file"></span>
-						VEÍCULO
+						Veiculo
 					</button>
 				</form>
             </a>
@@ -74,7 +115,7 @@ pageEncoding="ISO-8859-1"%>
             	<form action="ServletCliente" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="shopping-cart"></span>
-             			 CLIENTE
+             			 Cliente
 					</button>
 				</form>  
             </a>
@@ -85,7 +126,7 @@ pageEncoding="ISO-8859-1"%>
             	<form action="ServletFornecedor" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="users"></span>
-						FORNECEDOR
+						Fornecedor
 					</button>
 				</form>
             </a>
@@ -96,7 +137,7 @@ pageEncoding="ISO-8859-1"%>
             	<form action="ServletPedido" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="bar-chart-2"></span>
-             				 PEDIDO
+             				 Pedido
 					</button>
 				</form> 
             </a>
@@ -107,7 +148,7 @@ pageEncoding="ISO-8859-1"%>
              	<form action="ServletAgendamento" method="post">
 					<button type="submit" class="btn">
 						 <span data-feather="layers"></span>
-            				  AGENDAMENTO
+            				  Agendamento
 					</button>
 				</form> 
             </a>
@@ -118,33 +159,33 @@ pageEncoding="ISO-8859-1"%>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">AGENDAMENTOS</h1>
+					<h1 class="h2">Agendamentos</h1>
 				</div>
 				<div>
 					<c:forEach var="a" items="${agenda}">
 						<input type="hidden" name="id" value="${a.cod_agendamento}" />
 
 						<!-- inicio acordeon -->
-						<div class="accordion accordion-flush border border-secondary border-1 rounded mb-5 shadow rounded-3" id="accordionFlushExample">
+						<div class="accordion accordion-flush border rounded mb-5 shadow rounded-3 ac-style" id="accordionFlushExample">
 							<div class="accordion-item">
-								<h2 class="accordion-header"
+								<h2 class="accordion-header "
 									id="flush-heading-${a.cod_agendamento}">
-									<button class="accordion-button collapsed" type="button"
+									<button class="accordion-button collapsed ac-header" type="button"
 										data-bs-toggle="collapse"
 										data-bs-target="#flush-collapse-${a.cod_agendamento}"
 										aria-expanded="false"
 										aria-controls="flush-collapse-${a.cod_agendamento}">
 
 										<div class="row col-12 col-md-12 col-lg-12">
-											<div class="col-3 text-start">
+											<div class="col-3 text-start fw-bolder">
 												<p># <c:out value="${a.cod_agendamento}" /></p>
 											</div>
 
-											<div class="col-6 text-center">
+											<div class="col-6 text-center fw-bolder">
 												<p> <c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" /></p>
 											</div>
 
-											<div class="col-3 text-center">
+											<div class="col-3 text-center fw-bolder">
 												<p> <fmt:formatDate value="${a.data_reserva}"
 														pattern="dd/MM/yyyy" />
 												</p>
@@ -161,26 +202,26 @@ pageEncoding="ISO-8859-1"%>
 										<div class="row">
 											<div class="col-md">
 												<div class="cliente">
-													<h3 class="fs-5">Cliente</h3>
-													<p class="fs-6">NOME: <c:out value="${a.nome_cliente}" /><c:out value="${a.razao_social}" /></p>
-													<p class="fs-6">CPF/CNPJ: <c:out value="${a.numero_documento}" /></p>
-													<p class="fs-6">EMAIL: <c:out value="${a.email_cliente}" /></p>
-													<p class="fs-6">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+													<h3 class="">Cliente</h3>
+													<p class="">NOME: <c:out value="${a.nome_cliente}" /><c:out value="${a.razao_social}" /></p>
+													<p class="">CPF/CNPJ: <c:out value="${a.numero_documento}" /></p>
+													<p class="">EMAIL: <c:out value="${a.email_cliente}" /></p>
+													<p class="">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
 												</div>
 											</div>
 
 											<div class="col-md">
-											<h3 class="fs-5">Detalhes do veículo</h3>
-												<p class="fs-6">Motor: <c:out value="${a.motor_veiculo}" /></p>
-												<p class="fs-6">Potência: <c:out value="${a.potencia_cv}" /></p>
-												<p class="fs-6">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
-												<p class="fs-6">Câmbio: <c:out value="${a.cambio}" /></p>
-												<p class="fs-6">Número chassi: <c:out value="${a.numero_chassi}" /></p>
+											<h3 class="">Detalhes do veículo</h3>
+												<p class="">Motor: <c:out value="${a.motor_veiculo}" /></p>
+												<p class="">Potência: <c:out value="${a.potencia_cv}" /></p>
+												<p class="">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
+												<p class="">Câmbio: <c:out value="${a.cambio}" /></p>
+												<p class="">Número chassi: <c:out value="${a.numero_chassi}" /></p>
 											</div>
 
 											<div class="col-md-3">
-												<h3 class="fs-5">Taxa de agendamento: </h3>
-												<p class="fs-6">R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.taxa_agendamento}" /></p>
+												<h3 class="tex-end">Taxa de agendamento: </h3>
+												<p class="text-start">R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.taxa_agendamento}" /></p>
 											</div>
 										</div>
 									</div>
@@ -198,6 +239,9 @@ pageEncoding="ISO-8859-1"%>
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
  <script src="./dashboard.js"></script>
+ 
+ 
+ 
  
 </body>
 </html>
