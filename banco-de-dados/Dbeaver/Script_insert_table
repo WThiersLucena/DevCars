@@ -2858,7 +2858,7 @@ values
 	1,
 	1,
 	1,
-	'2022-05-02',	
+	'2021-05-02',	
 	'5000.00'
 );
 
@@ -2878,7 +2878,7 @@ values
 	2,
 	1,
 	2,
-	'2022-08-09',	
+	'2021-06-09',	
 	'5000.00'
 );
 
@@ -2897,8 +2897,8 @@ values
 (
 	3,
 	2,
-	2,
-	'2022-07-01',	
+	3,
+	'2021-07-01',	
 	'5000.00'
 );
 
@@ -2918,8 +2918,8 @@ values
 (
 	4,
 	2,
-	2,
-	'2022-09-03',	
+	4,
+	'2021-09-03',	
 	'6000.00'
 );
 
@@ -2939,9 +2939,265 @@ values
 	5,
 	5,
 	5,
-	'2022-08-12',	
+	'2021-10-12',	
 	'7000.00'
 );
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	6,
+	26,
+	6,
+	'2021-12-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	7,
+	25,
+	7,
+	'2022-01-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	8,
+	15,
+	8,
+	'2022-01-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	9,
+	14,
+	9,
+	'2022-01-22',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	10,
+	11,
+	10,
+	'2022-01-24',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	11,
+	23,
+	5,
+	'2022-01-26',	
+	'7000.00'
+);
+
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	12,
+	24,
+	2,
+	'2022-01-27',	
+	'7000.00'
+);
+
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	13,
+	1,
+	1,
+	'2022-01-30',	
+	'7000.00'
+);
+
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	14,
+	17,
+	3,
+	'2022-02-01',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	15,
+	5,
+	4,
+	'2022-02-7',	
+	'7000.00'
+);
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	16,
+	6,
+	8,
+	'2022-02-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	17,
+	7,
+	10,
+	'2022-02-14',	
+	'7000.00'
+);
+
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	18,
+	13,
+	5,
+	'2022-02-14',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	19,
+	20,
+	5,
+	'2022-02-17',	
+	'7000.00'
+);
+
 
 -- INSERTS FAVORITO
 

@@ -167,7 +167,7 @@ pageEncoding="ISO-8859-1"%>
 						<input type="hidden" name="id" value="${a.cod_agendamento}" />
 
 						<!-- inicio acordeon -->
-						<div class="accordion accordion-flush border rounded mb-5 shadow rounded-3 ac-style" id="accordionFlushExample">
+						<div class="accordion accordion-flush border rounded m-3 shadow rounded-3 ac-style" id="accordionFlushExample">
 							<div class="accordion-item">
 								<h2 class="accordion-header "
 									id="flush-heading-${a.cod_agendamento}">
