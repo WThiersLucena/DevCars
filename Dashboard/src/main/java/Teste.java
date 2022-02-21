@@ -3,8 +3,7 @@ import br.com.dao.VeiculoDAO;
 public class Teste {
 	public static void main(String[] args) {
 
-<<<<<<< HEAD
-=======
+
 // ---------> MOSTRAR CLIENTE <------------
 
 		
@@ -21,9 +20,6 @@ public class Teste {
 //		c.getConnection();		
 //		System.out.println(clienteD.mostrarCliente());
 
-
-		
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
 
 		
 		
@@ -124,15 +120,12 @@ public class Teste {
 //				c.getConnection();		
 //				System.out.println(clienteD.mostrarCliente());
 
-<<<<<<< HEAD
 //				VeiculoDAO veiculoD = new VeiculoDAO();
 
-				Conexao c = new Conexao();
-				c.getConnection();		
-				System.out.println(clienteD.mostrarCliente());				
+//				Conexao c = new Conexao();
+//				c.getConnection();		
+//				System.out.println(clienteD.mostrarCliente());				
 				
-		
-=======
 		
 		
 	//TESTE PARA MOSTRAR VEICULO
@@ -210,17 +203,6 @@ public class Teste {
 //		MotorDAO m = new MotorDAO();
 //		System.out.println(m.mostrarMotor());
 //		
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

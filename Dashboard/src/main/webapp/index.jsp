@@ -123,19 +123,13 @@
           </li>
           
         </ul>
-<<<<<<< HEAD
-
-
-=======
       </div>
     </nav>
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
 	<!--  BEGIN SIDEBAR -->
 
 
 	<div class="container-fluid">
 		<div class="row">
-<<<<<<< HEAD
   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
@@ -209,11 +203,10 @@
     </nav>
 
 			<!--  END SIDEBAR -->
-=======
+
 		
 
     			<!--  END SIDEBAR -->
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
 
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div
