@@ -222,7 +222,7 @@ pageEncoding="ISO-8859-1"%>
 												<p class="">Potência: <c:out value="${a.potencia_cv}" /></p>
 												<p class="">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
 												<p class="">Câmbio: <c:out value="${a.cambio}" /></p>
-												<p class="">Número chassi: <c:out value="${a.numero_chassi}" /></p>
+												<p class="" id="">Chassi: <c:out value="${a.numero_chassi}" /></p>
 											</div>
 
 											<div class="col-md-3">
@@ -247,7 +247,30 @@ pageEncoding="ISO-8859-1"%>
  <script src="./dashboard.js"></script>
  
  
- 
+ <!-- jQuery Mask -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="jquery.mask.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#exampleInputChassi').mask('A.AA.AAAAAAAA.A.AAAAA', {
+				translation : {
+					'Z' : {
+						pattern : /[A-Z0-9]/,
+						optional : true,
+						transform : function(d) {
+							return d.toUpperCase();
+						}
+					}
+				},
+			});
+			$('.exampleInputTelefone').mask('(00) 00000-0000');
+		});
+	</script>
  
  
 </body>
