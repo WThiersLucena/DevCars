@@ -12,7 +12,81 @@ pageEncoding="UTF-8"%>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
 
- <style>
+<!--  teste de padronização  -->
+
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      
+      
+      .accordion-button{
+      	-webkit-box-shadow: 11px 11px 28px 10px rgba(191,161,63,0.45); 
+		box-shadow: 5px 5px 28px 10px rgba(191,161,63,0.45);
+      }
+      
+       
+      .accordion-button:not(.collapsed){
+      	color: #000;
+      	background-color: #fff;
+      	border-color: #fff
+      }
+      
+      .accordion-button:focus{
+      	border-color: #F0CA4F;
+      	box-shadow: none
+      }
+      
+      .ac-header:not(.collapsed){
+      	color: #fff;
+      	background-color: #F0CA4F;
+      	
+      }
+      
+      .ac-header{
+      	color: #fff;
+      	background-color: #F0CA4F;
+      }
+      
+      
+      .fw-bolder{
+      	text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.68);
+      }
+      
+      
+      h3{
+      	 font-family: Arial, Helvetica, Verdana, sans-serif;
+      	 margin-bottom: 8px;
+      	 font-size: 18px;
+      	 font-weight: bold
+      }
+      
+      p{
+      	margin-bottom: 4px
+      }
+      
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    
+<link href="./dashboard.css" rel="stylesheet"/>
+
+</head>
+
+
+
+
+<!--  teste de padronização  -->
+
+<!--  versao antiga   -->
+ <!-- <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -38,6 +112,8 @@ ul{
 <link href="./dashboard.css" rel="stylesheet"/>
 
 </head>
+
+ -->
 <body>
 
 
@@ -146,13 +222,91 @@ ul{
 
 
 
-    <!--      TESTE COM DETALHES DE ENDEREÇO --> 
+    <!--      TESTE COM DETALHES DE  
  <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 				<h1>Clientes	</h1>
 				</div>
+				ENDEREÇO -->
+				<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2 text-light">Clientes	</h1>
+				</div>
+				
+	<div>
+					<c:forEach var="cliente" items="${listCliente}">
+						<input type="hidden" name="id" value="${cliente.cod_cliente}" />
 
-				<div class="table-responsive">
+						<!-- inicio acordeon -->
+						<div class="accordion accordion-flush border rounded m-3 shadow rounded-3 ac-style" id="accordionFlushExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header "
+									id="flush-heading-${cliente.cod_cliente}">
+									<button class="accordion-button collapsed ac-header" type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapse-${cliente.cod_cliente}"
+										aria-expanded="false"
+										aria-controls="flush-collapse-${cliente.cod_cliente}">
+
+										<div class="row col-12 col-md-12 col-lg-12">
+											<div class="col-2 text-start fw-bolder">
+												<p>Cod : <c:out value="${cliente.cod_cliente}" /></p>
+											</div>
+
+											<div class="col-5 text-center fw-bolder">
+												<p>   <c:out value=" ${cliente.nome_cliente}  ${cliente.razao_social}  " />  </p>
+											</div>
+
+											<div class="col-5 text-center fw-bolder">
+												<p> <c:out value="${cliente.email_cliente}"/>
+												</p>
+											</div>
+										</div>
+
+									</button>
+								</h2>
+								<div id="flush-collapse-${cliente.cod_cliente}"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-heading-${cliente.cod_cliente}"
+									data-bs-parent="#accordionFlushExample">
+									<div class="accordion-body">
+										<div class="row">
+											<div class="col-md">
+												<div class="cliente">
+													<h3 class="">Cliente</h3>
+													<p class="">NOME: <c:out value="${cliente.nome_cliente}" /><c:out value="${cliente.razao_social}" /></p>
+													<!-- <p class="">CPF/CNPJ: <c:out value="${cliente.numero_documento}" /></p> -->
+													<p class="">EMAIL: <c:out value="${cliente.email_cliente}" /></p>
+													<p class="">TELEFONE: <c:out value="${cliente.telefone_cliente}" /></p>
+												</div>
+											</div>
+
+											<div class="col-md">
+											<h3 class="">Endereço</h3>
+												<p class="">UF: <c:out value="${cliente.uf}" /></p>
+												<p class="">Cidade: <c:out value="${cliente.cidade}" /></p>
+												<p class="">Bairro: <c:out value="${cliente.bairro}" /></p>
+												<p class="">Cep: <c:out value="${cliente.cep_endeco}" /></p></p>
+												<p class="">Logradouro: <c:out value="${cliente.rua_endereco}" /> <c:out value="${cliente.numero_endereco}" /> <c:out value="${cliente.complemento}" /></p>
+											</div>											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- fim acordeon -->
+					</c:forEach>
+				</div>
+			</main>
+	
+	
+	
+	
+	
+	
+				
+
+<!-- 				<div class="table-responsive">
 				
 				
 					<table class="table align-middle">
@@ -227,18 +381,22 @@ ul{
 					</table>
 				</div>
 			</main>
-
-
-
-
+ -->
 
 
 
  <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
+ <script src="./dashboard.js"></script>
+
+
+
+<!--  <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
  
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
  <script src="./dashboard.js"></script>
- 
+  -->
  
 </body>
 </html>

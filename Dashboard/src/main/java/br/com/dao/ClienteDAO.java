@@ -32,7 +32,7 @@ public class ClienteDAO {
 			try {
 				PreparedStatement p = con.prepareStatement("select tb_cliente.cod_cliente , tb_cliente.nome_cliente,tb_cliente.razao_social ,tb_cliente.email_cliente ,tb_cliente.telefone_cliente ,tb_cliente.data_nascimento ,tb_endereco.cep_endereco ,\r\n"
 						+ "	   tb_endereco.rua_endereco ,tb_endereco.complemento, tb_endereco.numero_endereco , tb_endereco.bairro ,tb_endereco.cidade,\r\n"
-						+ "	   tb_endereco.uf \r\n"
+						+ "	   tb_endereco.uf, tb_cliente.numero_documento \r\n"
 						+ "from tb_endereco_cliente \r\n"
 						+ "inner join tb_cliente on tb_cliente.cod_cliente = tb_endereco_cliente.cod_cliente \r\n"
 						+ "inner join tb_endereco  on tb_endereco.cod_endereco = tb_endereco_cliente.cod_endereco\r\n"
@@ -66,9 +66,10 @@ public class ClienteDAO {
 					
 					String uf = r.getString("uf"); 
 					
+					String numero_documento = r.getString("uf");
 						
 				
-					Cliente c1 = new Cliente(cod_cliente, nome_cliente,razao_social,email_cliente, data_nascimento,telefone_cliente,cep_endereco,rua_endereco,complemento,numero_endereco,bairro,cidade,uf);
+					Cliente c1 = new Cliente(cod_cliente, nome_cliente,razao_social,email_cliente, data_nascimento,telefone_cliente,cep_endereco,rua_endereco,complemento,numero_endereco,bairro,cidade,uf,numero_documento);
 					c1.setCod_cliente(cod_cliente);
 					lista.add(c1);
 					

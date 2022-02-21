@@ -17,11 +17,12 @@ public class Cliente {
 	private String bairro;
 	private String cidade;
 	private String uf;
+	private String numero_documento;
 	
 	
 	public Cliente(String cod_cliente, String nome_cliente, String razao_social, String email_cliente,
 			Date data_nascimento, String telefone_cliente, String cep_endeco, String rua_endereco, String complemento,
-			String numero_endereco, String bairro, String cidade, String uf) {
+			String numero_endereco, String bairro, String cidade, String uf, String numero_documento) {
 		super();
 		this.cod_cliente = cod_cliente;
 		this.nome_cliente = nome_cliente;
@@ -36,13 +37,14 @@ public class Cliente {
 		this.bairro = bairro;
 		this.cidade = cidade;
 		this.uf = uf;
+		this.numero_documento = numero_documento;
 	}
 	
 	
 	
 	public Cliente(String nome_cliente, String razao_social, String email_cliente, Date data_nascimento,
 			String telefone_cliente, String cep_endeco, String rua_endereco, String complemento, String numero_endereco,
-			String bairro, String cidade, String uf) {
+			String bairro, String cidade, String uf, String numero_documento) {
 		super();
 		this.nome_cliente = nome_cliente;
 		this.razao_social = razao_social;
@@ -56,6 +58,7 @@ public class Cliente {
 		this.bairro = bairro;
 		this.cidade = cidade;
 		this.uf = uf;
+		this.numero_documento = numero_documento;
 	}
 
 
@@ -139,6 +142,12 @@ public class Cliente {
 		this.uf = uf;
 	}
 
+	public String getnumero_documento() {
+		return numero_documento;
+	}
+	public void setnumero_documento(String uf) {
+		this.uf = numero_documento;
+	}
 
 
 	@Override
@@ -147,7 +156,7 @@ public class Cliente {
 				+ razao_social + ", email_cliente=" + email_cliente + ", data_nascimento=" + data_nascimento
 				+ ", telefone_cliente=" + telefone_cliente + ", cep_endeco=" + cep_endeco + ", rua_endereco="
 				+ rua_endereco + ", complemento=" + complemento + ", numero_endereco=" + numero_endereco + ", bairro="
-				+ bairro + ", cidade=" + cidade + ", uf=" + uf + "]";
+				+ bairro + ", cidade=" + cidade + ", uf=" + uf + ", numero_documento=" + numero_documento+"]";
 	}
 	
 	

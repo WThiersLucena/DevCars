@@ -1,3 +1,5 @@
+import br.com.conexao.Conexao;
+import br.com.dao.ClienteDAO;
 import br.com.dao.VeiculoDAO;
 
 public class Teste {
@@ -12,7 +14,7 @@ public class Teste {
 //		Conexao c = new Conexao();
 //		c.getConnection();		
 //		System.out.println(clienteD.mostrarCliente());
-
+//
 //		
 //		ClienteDAO clienteD = new ClienteDAO();
 //		VeiculoDAO veiculoD = new VeiculoDAO();
@@ -120,9 +122,9 @@ public class Teste {
 //				Conexao c = new Conexao();
 //				c.getConnection();		
 //				System.out.println(clienteD.mostrarCliente());
-
+//
 //				VeiculoDAO veiculoD = new VeiculoDAO();
-
+//
 //				Conexao c = new Conexao();
 //				c.getConnection();		
 //				System.out.println(clienteD.mostrarCliente());				
@@ -210,7 +212,7 @@ public class Teste {
 	
 
 		
-		VeiculoDAO v = new VeiculoDAO();
+//		VeiculoDAO v = new VeiculoDAO();
 //		System.out.println(v.buscarVeiculo(22));
 		
 }
