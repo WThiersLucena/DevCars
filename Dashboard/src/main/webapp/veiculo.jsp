@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -199,9 +201,12 @@ pageEncoding="ISO-8859-1"%>
 								<c:out value="${veiculo.potencia_cv}"/>
 							</td>
 							
-							<td class="exampleInputMoney">
+							<!--  <td class="exampleInputMoney">
 								<c:out value="R$ ${veiculo.preco_veiculo}"/>
-							</td>
+							</td> -->
+							
+							
+							<td class="text-start">R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${veiculo.preco_veiculo}" /></td>
 							
 							<td>
 								<c:out value="${veiculo.tipo_combustivel}"/>
