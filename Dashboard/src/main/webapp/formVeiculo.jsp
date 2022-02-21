@@ -158,7 +158,7 @@
 
 								<div class=mb-3>
 									<label class="form-label">PREÇO DO VEÍCULO (R$):</label> <input
-										type="text" class="form-control" name="preco_veiculo" required />
+										type="text" id="exampleInputMoney" class="form-control" name="preco_veiculo" required />
 								</div>
 
 								<div class=mb-3>
@@ -289,7 +289,7 @@
 
 								<div class="mb-3">
 									<label class="form-label">PREÇO:</label> <input type="text"
-										class="form-control" name="preco_veiculo"
+										class="form-control" name="preco_veiculo" id="exampleInputMoney"
 										value="${veiculo.preco_veiculo}" />
 								</div>
 
@@ -429,6 +429,7 @@
 					}
 				},
 			});
+			$('#exampleInputMoney').mask("R$#.###.###,00", {reverse: true});
 		});
 	</script>
 

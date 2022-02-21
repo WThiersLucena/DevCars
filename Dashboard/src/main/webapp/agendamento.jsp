@@ -163,9 +163,9 @@ pageEncoding="ISO-8859-1"%>
       </div>
     </nav>
 		
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">Lista de Agendamentos</h1>
+					<h1 class="h2 text-light">LISTE DE AGENDAMENTOS</h1>
 				</div>
 				<div>
 					<c:forEach var="a" items="${agenda}">
@@ -245,6 +245,7 @@ pageEncoding="ISO-8859-1"%>
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
  <script src="./dashboard.js"></script>
+ 
  
  
  

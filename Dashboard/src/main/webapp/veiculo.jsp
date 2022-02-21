@@ -291,9 +291,23 @@ pageEncoding="ISO-8859-1"%>
 
 
     <script type="text/javascript">
+        $(document).ready(function () {
+        	$('.exampleInputChassi').mask('Z',{translation:  {'Z': {pattern: /[a-zA-Z0-9 ]/, recursive: true}}});
+        	$('.money').mask("#.##0,00", {reverse: true});
+        });
+    </script>
+ 
+ 
+ <!-- jQuery Mask
+ <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="jquery.mask.js"></script>
+
+
+    <script type="text/javascript">
       
         $('.exampleInputChassi').mask('Z',{translation:  {'Z': {pattern: /[a-zA-Z0-9 ]/, recursive: true}}});
-    </script>
+    </script> -->
 
 </body>
 </html>
