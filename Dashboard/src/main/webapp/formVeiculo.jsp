@@ -114,14 +114,14 @@
 			</nav>
 			<!--  END SIDEBAR -->
 
-			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">ADICIONAR VEÍCULOS</h1>
+					<h1 class="h2 text-light">ADICIONAR VEÍCULOS</h1>
 
 				</div>
 
-				<div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3">
+				<div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
 					<h3 class="card-title text-center mb-3">CADASTRAR VEÍCULO</h3>
 
 					<form action="ServletVeiculo" method="post">
@@ -242,7 +242,7 @@
 								
 								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 									<button type="submit" name="optionVeiculo"
-										class="btn btn-primary flex-start" value="insertVeiculo">Salvar</button>
+										class="btn btn-warning flex-start" value="insertVeiculo">Salvar</button>
 								</div>
 							</c:when>
 							
@@ -384,7 +384,7 @@
 
 												<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 													<button type="submit" name="optionVeiculo"
-														class="btn btn-primary flex-start" value="updateVeiculo">Atualizar</button>
+														class="btn btn-warning flex-start" value="updateVeiculo">Atualizar</button>
 												</div>
 							</c:otherwise>
 

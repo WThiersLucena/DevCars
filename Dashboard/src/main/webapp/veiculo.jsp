@@ -122,36 +122,36 @@ pageEncoding="ISO-8859-1"%>
     </nav>
 		
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">LISTA DE VEÍCULOS</h1>
+        <h1 class="h2 text-white">LISTA DE VEÍCULOS</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <form action="ServletVeiculo" method="post">
-                    <button class="btn btn-primary mb-3" type="submit" name="optionVeiculo" value="insertFormVeiculo">Adicionar Veículo</button>
+                    <button class="btn btn-warning mb-3" type="submit" name="optionVeiculo" value="insertFormVeiculo">Adicionar Veículo</button>
                 </form>
           </div>
         </div>
       </div>
 
 
-		<table class="table table-striped table-sm table-bordered" >
+		<table class="table table-striped table-sm table-light table-bordered shadow" >
 			<thead>
 				<tr>
-					<th class="col-1">Cod</th>
+					<th class="col-1">COD</th>
 					
-					<th class="col-1">Marca</th>
-					<th class="col-1">Modelo</th>
-					<th class="col-1">Cor</th>
-					<th class="col-1">Ano</th>
-					<th class="col-1">Motor</th>
-					<th class="col-1">Potência</th>
-					<th class="col-1">Preço</th>
-					<th class="col-1">Combustível</th>
+					<th class="col-1">MARCA</th>
+					<th class="col-1">MODELO</th>
+					<th class="col-1">COR</th>
+					<th class="col-1">ANO</th>
+					<th class="col-2">MOTOR</th>
+					<th class="col-1">POTÊNCIA</th>
+					<th class="col-1">PREÇO</th>
+					<th class="col-1">COMBUSTÍVEL</th>
 					<!-- <th class="col-2">Câmbio</th> -->
 					<!-- <th class="col-2">Chassi</th>  -->
-					<th class="col-1">Estoque</th>
-					<th class="col-2">Ações</th>
+					<th class="col-1">ESTOQUE</th>
+					<th class="col-1">AÇÕES</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -224,7 +224,15 @@ pageEncoding="ISO-8859-1"%>
 									
 									<!-- INICIO do Botão que chama o MODAL -->
 						
-									<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete-${veiculo.cod_veiculo}" id="${veiculo.cod_veiculo}">Deletar</button>
+									<button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete-${veiculo.cod_veiculo}" id="${veiculo.cod_veiculo}">
+									
+													<!-- INÍCIO DA IMAGEM DE DELETAR -->
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+  														<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+ 														<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+													</svg>
+													<!-- FIM DA IMAGEM DE ATUALIZAR -->
+									</button>
 									
 									<!-- FIM do Botão que chama o MODAL -->
 									
@@ -234,11 +242,11 @@ pageEncoding="ISO-8859-1"%>
 											<div class="modal-content bg-dark bg-gradient">
 												<div class="text-center px-3 py-3">
 													<h6 class="fs-6 text-white pb-3">TEM CERTEZA QUE DESEJA DELETAR O CÓDIGO <c:out value="${veiculo.cod_veiculo}"/>?</h6>
-													<p class=" text-warning">ESSA AÇÃO NÃO PODERÁ SER DESFEITA!</p>
+													<p class=" text-danger fw-bold">ESSA AÇÃO NÃO PODERÁ SER DESFEITA!</p>
 												</div>
 												<div class="d-grid gap-2 d-md-flex justify-content-md-center px-3 py-3">
-													<button class="btn btn-outline-primary px-3" type="submit" name="optionVeiculo" value="qualquerCoisa">Cancelar</button>
-  													<button class="btn btn-outline-primary" type="submit" name="optionVeiculo" value="deleteVeiculo">Deletar</button>
+													<button class="btn btn-outline-light px-3" type="submit" name="optionVeiculo" value="qualquerCoisa">Cancelar</button>
+  													<button class="btn btn-outline-danger" type="submit" name="optionVeiculo" value="deleteVeiculo">Deletar</button>
 												</div>
 											</div>
 										</div>
@@ -247,7 +255,16 @@ pageEncoding="ISO-8859-1"%>
 									<!-- FIM DO MODAL DE DELETAR -->
 									
 									
-									<button class="btn btn-primary" type="submit" name="optionVeiculo" value="updateFormVeiculo">Atualizar</button>
+									<button class="btn btn-warning" type="submit" name="optionVeiculo" value="updateFormVeiculo">
+									
+									<!-- INÍCIO DA IMAGEM DE ATUALIZAR -->
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+  										<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+ 										<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+									</svg>
+									<!-- FIM DA IMAGEM DE ATUALIZAR -->
+									
+									</button>
 								</div>
 							</td>
 						</form>

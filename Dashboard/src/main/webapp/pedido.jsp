@@ -151,23 +151,24 @@ ul{
 					</form> -->
 
 				
-					<table class="table align-middle">
+					<table class="table align-middle table table-striped table-sm table-light table-bordered shadow w-100">
 							<thead>
 							
 								<tr>
-									<th scope="col">Pedido</th> <!--Table tittle-->
+									<th scope="col">COD</th> <!--Table tittle-->
 									<!-- <th scope="col">nome_cliente</th> <!--Table tittle-->
 									<!-- <th scope="col">razao_social</th> <!--Table tittle-->
 									<!-- <th scope="col">numero_documento</th> <!--Table tittle-->
 									<!-- <th scope="col">email_cliente</th> <!--Table tittle-->
 									<!-- <th scope="col">telefone_cliente</th> <!--Table tittle-->
 									<!-- <th scope="col">descricao_pagamento</th> <!--Table tittle-->
-									<th scope="col">Valor Total</th>
+									<th scope="col">VALOR TOTAL</th>
 									<!--Table tittle-->
-									<th scope="col">Data</th>
+									<th scope="col">DATA DE EMISSÃO</th>
 									<!--Table tittle-->
-									<th scope="col">Status</th>
+									<th scope="col">STATUS</th>
 									<!--Table tittle-->
+									<th scope="col">DETALHES</th>
 								</tr>
 							</thead>
 							<tbody>
