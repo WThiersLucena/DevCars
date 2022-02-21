@@ -239,7 +239,7 @@
 		</div>
 	</div>
 
-	<script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
@@ -259,7 +259,6 @@
 
 	<script type="text/javascript" src="jquery.mask.js"></script>
 
-
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('.exampleInputTelefone').mask('(00) 00000-0000');
@@ -272,6 +271,7 @@
 			});
 		});
 	</script>
+
 
 </body>
 </html>
