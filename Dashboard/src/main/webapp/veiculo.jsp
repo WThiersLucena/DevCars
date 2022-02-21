@@ -151,7 +151,6 @@ pageEncoding="ISO-8859-1"%>
 			<thead>
 				<tr>
 					<th class="col-1">COD</th>
-					
 					<th class="col-1">MARCA</th>
 					<th class="col-1">MODELO</th>
 					<th class="col-1">COR</th>
@@ -200,13 +199,8 @@ pageEncoding="ISO-8859-1"%>
 								<c:out value="${veiculo.potencia_cv}"/>
 							</td>
 							
-<<<<<<< HEAD
-							<td id="">
-								R$<c:out value="${veiculo.preco_veiculo}"/>
-=======
 							<td>
 								<c:out value="R$ ${veiculo.preco_veiculo}"/>
->>>>>>> 88ffea5015dcbba15d78a4e8a8d681f299a96437
 							</td>
 							
 							<td>
