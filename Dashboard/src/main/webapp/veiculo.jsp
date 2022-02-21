@@ -199,7 +199,7 @@ pageEncoding="ISO-8859-1"%>
 								<c:out value="${veiculo.potencia_cv}"/>
 							</td>
 							
-							<td>
+							<td class="exampleInputMoney">
 								<c:out value="R$ ${veiculo.preco_veiculo}"/>
 							</td>
 							
@@ -304,7 +304,7 @@ pageEncoding="ISO-8859-1"%>
     <script type="text/javascript">
         $(document).ready(function () {
         	$('.exampleInputChassi').mask('Z',{translation:  {'Z': {pattern: /[a-zA-Z0-9 ]/, recursive: true}}});
-        	$('#exampleInputMoney').mask("#.##0,00", {reverse: true});
+        	$('.exampleInputMoney').mask("R$#.000.000.000,00");
         });
     </script>
  
