@@ -39,7 +39,7 @@
 
 	<header
 		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DEVCARS</a>
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
@@ -47,10 +47,10 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<input class="form-control form-control-dark w-100" type="text"
-			placeholder="Search" aria-label="Search">
+			placeholder="Pesquisar" aria-label="Search">
 		<div class="navbar-nav">
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="#">Sign out</a>
+				<a class="nav-link px-3" href="#">Sair</a>
 			</div>
 		</div>
 	</header>
@@ -114,14 +114,14 @@
 			</nav>
 			<!--  END SIDEBAR -->
 
-			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">ADICIONAR VEÍCULOS</h1>
+					<h1 class="h2 text-light">ADICIONAR VEÍCULOS</h1>
 
 				</div>
 
-				<div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3">
+				<div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
 					<h3 class="card-title text-center mb-3">CADASTRAR VEÍCULO</h3>
 
 					<form action="ServletVeiculo" method="post">
@@ -146,23 +146,25 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">CHASSI:</label> 
-									<input type="text" class="form-control" name="numero_chassi" id="exampleInputChassi" required />
+									<label class="form-label">CHASSI:</label> <input type="text"
+										class="form-control" name="numero_chassi"
+										id="exampleInputChassi" required />
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">ANO DO VEÍCULO:</label>
-									<input type="number" class="form-control" name="ano_veiculo" required />
+									<label class="form-label">ANO DO VEÍCULO:</label> <input
+										type="number" class="form-control" name="ano_veiculo" required />
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">PREÇO DO VEÍCULO (R$):</label>
-									 <input type="text" class="form-control" name="preco_veiculo" required />
+									<label class="form-label">PREÇO DO VEÍCULO (R$):</label> <input
+										type="text" id="exampleInputMoney" class="form-control" name="preco_veiculo" required />
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">COR DO VEÍCULO:</label>
-										<select class="form-select form-select-lg mb-3 fs-6" name="cod_cor" required>
+									<label class="form-label">COR DO VEÍCULO:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
+										required>
 										<!-- <option selected>SELECIONE A COR</option>  -->
 										<c:forEach var="cor" items="${listCor}">
 											<option value="${cor.cod_cor}">${cor.nome_cor}</option>
@@ -171,72 +173,82 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">MOTOR DO VEÍCULO:</label>
-										<select class="form-select form-select-lg mb-3 fs-6" name="cod_motor" required>
-											<option selected>SELECIONE O TIPO DE MOTOR E POTÊNCIA</option>
-											<c:forEach var="motor" items="${listMotor}">
-												<option  value="${motor.cod_motor}">${motor.motor_veiculo} ${motor.potencia_cv}</option>
-											</c:forEach>
-										</select>
-								</div>
-
-								<div class=mb-3>
-									<label class="form-label">TIPO COMBUSTIVEL:</label> <select class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel" required>
-										<!--<option selected>SELECIONE O TIPO DE COMBUSTIVEL</option>  -->
-											<c:forEach var="combustivel" items="${listCombustivel}">
-												<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
-											</c:forEach>
+									<label class="form-label">MOTOR DO VEÍCULO:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_motor"
+										required>
+										<option selected>SELECIONE O TIPO DE MOTOR E POTÊNCIA</option>
+										<c:forEach var="motor" items="${listMotor}">
+											<option value="${motor.cod_motor}">${motor.motor_veiculo}
+												${motor.potencia_cv}</option>
+										</c:forEach>
 									</select>
 								</div>
 
+								<div class=mb-3>
+									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel"
+										required>
+										<option selected>SELECIONE O TIPODE COMBUSTÍVEL</option>
+										<c:forEach var="combustivel" items="${listCombustivel}">
+											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
+										</c:forEach>
+									</select>
+								</div>
+
+
+								<div class=mb-3>
+									<label class="form-label">TIPO CAMBIO:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_cambio"
+										required>
+										<c:forEach var="cambio" items="${listCambio}">
+											<option value="${cambio.cod_cambio}">${cambio.cambio}</option>
+										</c:forEach>
+									</select>
+								</div>
+
+
+								<div class=mb-3>
+									<label class="form-label">FORNECEDOR:</label> <select
+										class="form-select form-select-lg mb-3 fs-6"
+										name="cod_fornecedor" required>
+										<!-- <option selected>SELECIONE O FORNECEDOR</option>  -->
+										<c:forEach var="fornecedor" items="${listFornecedor}">
+											<option value="${fornecedor.cod_fornecedor}">${fornecedor.razao_social}</option>
+										</c:forEach>
+									</select>
+								</div>
+
+
+								<div class=mb-3>
+									<label class="form-label">ESTOQUE:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="estoque"
+										required>
+										<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
+										<option value="FALSE">NÃO</option>
+										<option value="TRUE">SIM</option>
+									</select>
+								</div>
+
+
+								<div class=mb-3>
+									<label class="form-label">DESTAQUE:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="destaque"
+										required>
+										<option selected>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
+										<option value="FALSE">NÃO</option>
+										<option value="TRUE">SIM</option>
+									</select>
+								</div>
 								
-									<div class=mb-3>
-										<label class="form-label">TIPO CAMBIO:</label> 
-											<select class="form-select form-select-lg mb-3 fs-6" name="cod_cambio" required>
-												<c:forEach var="cambio" items="${listCambio}">
-													<option value="${cambio.cod_cambio}">${cambio.cambio}</option>
-												</c:forEach>
-											</select>
-									</div>
-
-									
-										<div class=mb-3>
-											<label class="form-label">FORNECEDOR:</label>
-												 <select class="form-select form-select-lg mb-3 fs-6" name="cod_fornecedor" required>
-												<!-- <option selected>SELECIONE O FORNECEDOR</option>  -->
-													<c:forEach var="fornecedor" items="${listFornecedor}">
-														<option value="${fornecedor.cod_fornecedor}">${fornecedor.razao_social}</option>
-													</c:forEach>
-												</select>
-										</div>
-
-										
-											<div class=mb-3>
-												<label class="form-label">ESTOQUE:</label>
-													<select class="form-select form-select-lg mb-3 fs-6" name="estoque" required>
-														<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
-														<option value="0">NÃO</option>
-														<option value="1">SIM</option>
-													</select>
-											</div>
-
-											
-											<div class=mb-3>
-												<label class="form-label">DESTAQUE:</label>
-													<select class="form-select form-select-lg mb-3 fs-6" name="destaque" required>
-														<option selected>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
-														<option value="0">NÃO</option>
-														<option value="1">SIM</option>
-													</select>
-											</div>
-
-
-
-												<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-													<button type="submit" name="optionVeiculo"
-														class="btn btn-primary flex-start" value="insertVeiculo">Salvar</button>
-												</div>
+								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+									<button type="submit" name="optionVeiculo"
+										class="btn btn-warning flex-start" value="insertVeiculo">Salvar</button>
+								</div>
 							</c:when>
+							
+							
+							
+							
 
 							<c:otherwise>
 
@@ -246,13 +258,15 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">MODELO:</label>
-									 <input type="text" class="form-control" name="modelo_veiculo" value="${veiculo.modelo_veiculo}" />
+									<label class="form-label">MODELO:</label> <input type="text"
+										class="form-control" name="modelo_veiculo"
+										value="${veiculo.modelo_veiculo}" />
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">MARCA:</label> <select class="form-select form-select-lg mb-3 fs-6" name="cod_marca" required>
-
+									<label class="form-label">MARCA:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_marca"
+										required>
 										<!--<option selected>SELECIONE A MARCA</option>  -->
 										<c:forEach var="marca" items="${listMarca}">
 											<option value="${marca.cod_marca}">${marca.marca_veiculo}</option>
@@ -264,46 +278,47 @@
 								<div class="mb-3">
 									<label class="form-label">CHASSI:</label> <input type="text"
 										class="form-control" name="numero_chassi"
-										value="${veiculo.numero_chassi}" />
+										value="${veiculo.numero_chassi}"/>
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">ANO DE FABRICAÇÃO:</label> <input
+									<label class="form-label">ANO DE FABRICAÇÃO:</label> <input value="${veiculo.ano_veiculo}" 
 										type="text" class="form-control" name="ano_veiculo"
-										value="${veiculo.ano_veiculo}" />
+										/>
 								</div>
 
 								<div class="mb-3">
 									<label class="form-label">PREÇO:</label> <input type="text"
-										class="form-control" name="preco_veiculo"
+										class="form-control" name="preco_veiculo" id="exampleInputMoney"
 										value="${veiculo.preco_veiculo}" />
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">COR:</label> <select value="${cor.cod_cor}"
+									<label class="form-label">COR:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
 										required>
-										<option selected>SELECIONE A COR</option>
+										<!--  <option selected>SELECIONE A COR</option> -->
 										<c:forEach var="cor" items="${listCor}">
-											<option>${cor.nome_cor}</option>
+											<option value="${cor.cod_cor}">${cor.nome_cor}</option>
 										</c:forEach>
 									</select>
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">SELECIONE O TIPO DE MOTOR E POTÊNCIA:</label> <select value="${motor.cod_motor}"
-										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
+									<label class="form-label">SELECIONE O TIPO DE MOTOR E
+										POTÊNCIA:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_motor"
 										required>
 										<c:forEach var="motor" items="${listMotor}">
-											<option>${motor.motor_veiculo} ${motor.potencia_cv}</option>
+											<option value="${motor.cod_motor}">${motor.motor_veiculo} ${motor.potencia_cv}</option>
 										</c:forEach>
 									</select>
 								</div>
 								<div class=mb-3>
-									<label class="form-label">TIPO COMBUSTIVEL:</label> <select
-										class="form-select form-select-lg mb-3 fs-6"
-										name="cod_combustivel" required>
-										<option selected>SELECIONE O TIPO DE COMBUSTIVEL</option>
+									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <select
+										class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel"
+										required>
+										<option selected>SELECIONE O TIPO DE COMBUSTÍVEL</option>
 										<c:forEach var="combustivel" items="${listCombustivel}">
 											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
 										</c:forEach>
@@ -321,7 +336,7 @@
 										</select>
 									</div>
 
-								<div class=mb-3>
+									<div class=mb-3>
 										<div class=mb-3>
 											<label class="form-label">FORNECEDOR:</label> <select
 												class="form-select form-select-lg mb-3 fs-6"
@@ -337,7 +352,7 @@
 												<label class="form-label">ESTOQUE:</label> <select
 													class="form-select form-select-lg mb-3 fs-6" name="estoque"
 													required>
-													<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
+													<option>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
 													<option value="FALSE">NÃO</option>
 													<option value="TRUE">SIM</option>
 												</select>
@@ -348,14 +363,14 @@
 													<label class="form-label">DESTAQUE:</label> <select
 														class="form-select form-select-lg mb-3 fs-6"
 														name="destaque" required>
-														<option selected>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
+														<option>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
 														<option value="FALSE">NÃO</option>
 														<option value="TRUE">SIM</option>
 													</select>
 												</div>
-										
 
-							<!-- 	<div class="mb-3">
+
+												<!-- 	<div class="mb-3">
 									<label class="form-label">EM ESTOQUE:</label> <input
 										type="text" class="form-control" name="estoque"
 										value="${veiculo.estoque}" />
@@ -367,11 +382,10 @@
 										value="${veiculo.destaque}" />
 								</div> -->
 
-								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-									<button type="submit" name="optionVeiculo"
-										class="btn btn-primary flex-start" value="updateVeiculo">Atualizar</button>
-								</div>
-
+												<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+													<button type="submit" name="optionVeiculo"
+														class="btn btn-warning flex-start" value="updateVeiculo">Atualizar</button>
+												</div>
 							</c:otherwise>
 
 						</c:choose>
@@ -415,6 +429,7 @@
 					}
 				},
 			});
+			$('#exampleInputMoney').mask("R$#.###.###,00", {reverse: true});
 		});
 	</script>
 

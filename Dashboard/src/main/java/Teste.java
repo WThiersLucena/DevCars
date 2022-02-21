@@ -22,6 +22,7 @@ public class Teste {
 
 
 		
+
 		
 //		VeiculoDAO veiculoD = new VeiculoDAO();
 // 		Conexao c = new Conexao();
@@ -127,6 +128,7 @@ public class Teste {
 //				System.out.println(clienteD.mostrarCliente());				
 				
 		
+
 		
 	//TESTE PARA MOSTRAR VEICULO
 		
@@ -203,6 +205,13 @@ public class Teste {
 //		MotorDAO m = new MotorDAO();
 //		System.out.println(m.mostrarMotor());
 //		
+
 	}
 	
+
+		
+		VeiculoDAO v = new VeiculoDAO();
+//		System.out.println(v.buscarVeiculo(22));
+		
 }
+

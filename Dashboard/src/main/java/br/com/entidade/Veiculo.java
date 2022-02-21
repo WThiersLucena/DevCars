@@ -30,8 +30,21 @@ public class Veiculo {
 	
 	//Método para inserir
 	
-	public Veiculo( String modelo_veiculo, Integer cod_marca, Integer cod_cor, Integer ano_veiculo, Integer cod_motor, Double preco_veiculo,
-			   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, String numero_chassi, Boolean estoque, Boolean destaque) {
+//	p.setInt(1, veiculo.getCod_marca());
+//	p.setString(2, veiculo.getModelo_veiculo());
+//	p.setString(3, veiculo.getNumero_chassi());
+//	p.setInt(4, veiculo.getAno_veiculo());
+//	p.setDouble(5, veiculo.getPreco_veiculo());
+//	p.setInt(6, veiculo.getCod_cor());
+//	p.setInt(7, veiculo.getCod_motor());
+//	p.setInt(8, veiculo.getCod_combustivel());
+//	p.setInt(9, veiculo.getCod_cambio());
+//	p.setInt(10, veiculo.getCod_fornecedor());
+//	p.setBoolean(11, veiculo.getEstoque());
+//	p.setBoolean(12, veiculo.getDestaque());
+	
+	public Veiculo(Integer cod_marca, String modelo_veiculo, String numero_chassi, Integer ano_veiculo, Double preco_veiculo,Integer cod_cor, Integer cod_motor,
+			   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, Boolean estoque, Boolean destaque) {
 	super();
 	this.modelo_veiculo = modelo_veiculo;
 	this.cod_marca = cod_marca;

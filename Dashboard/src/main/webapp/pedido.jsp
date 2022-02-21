@@ -39,7 +39,7 @@ ul{
 
 	<header
 		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
@@ -60,11 +60,10 @@ ul{
 
 	<div class="container-fluid">
 		<div class="row">
-<<<<<<< HEAD
-  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-=======
+
+ 
 	<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
+
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -132,48 +131,44 @@ ul{
         </ul>
       </div>
     </nav>
-<<<<<<< HEAD
+
 
       </div>
-    </nav>
 
-=======
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
-			<!--  END SIDEBAR -->
+	<!--  END SIDEBAR -->
 			
 
 
-			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-				<h1>Pedidos	</h1>
+				<h1 class="h2">PEDIDOS	</h1>
 				</div>
 
 				<div class="table-responsive">
-<<<<<<< HEAD
-				
-=======
+
 			<!-- 	<form action="ServletPedido" name="optionPedido" method="post">
 						<button type="submit" value="Kbeludo" class="btn btn-outline-dark">MOSTRAR PEDIDO</button>
 					</form> -->
->>>>>>> f627350005e9de42ec127d3098bde8b6ea8056ac
+
 				
-					<table class="table align-middle">
+					<table class="table align-middle table table-striped table-sm table-light table-bordered shadow w-100">
 							<thead>
 							
 								<tr>
-									<th scope="col">Pedido</th> <!--Table tittle-->
+									<th scope="col">COD</th> <!--Table tittle-->
 									<!-- <th scope="col">nome_cliente</th> <!--Table tittle-->
 									<!-- <th scope="col">razao_social</th> <!--Table tittle-->
 									<!-- <th scope="col">numero_documento</th> <!--Table tittle-->
 									<!-- <th scope="col">email_cliente</th> <!--Table tittle-->
 									<!-- <th scope="col">telefone_cliente</th> <!--Table tittle-->
 									<!-- <th scope="col">descricao_pagamento</th> <!--Table tittle-->
-									<th scope="col">Valor Total</th>
+									<th scope="col">VALOR TOTAL</th>
 									<!--Table tittle-->
-									<th scope="col">Data</th>
+									<th scope="col">DATA DE EMISSÃO</th>
 									<!--Table tittle-->
-									<th scope="col">Status</th>
+									<th scope="col">STATUS</th>
 									<!--Table tittle-->
+									<th scope="col">DETALHES</th>
 								</tr>
 							</thead>
 							<tbody>

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 
 import br.com.conexao.Conexao;
@@ -15,7 +16,7 @@ public class FornecedorDAO {
 		
 	}
 	
-	//Método que ADICIONA Fornecedor
+	//MÃ©todo que ADICIONA Fornecedor
 	
 	public void addSupplier(Fornecedor addFornecedor) {
 		Conexao c = Conexao.getInstance();
@@ -38,7 +39,7 @@ public class FornecedorDAO {
 		
 	}
 	
-	//Método que OBTEM LISTA de Fornecedores
+	//MÃ©todo que OBTEM LISTA de Fornecedores
 	
 	public ArrayList<Fornecedor> getListSupplier(){
 		Conexao c = Conexao.getInstance();
@@ -67,7 +68,7 @@ public class FornecedorDAO {
 		return listaFornecedor;
 	}
 	
-	//Método que REMOVE fornecedor
+	//MÃ©todo que REMOVE fornecedor
 	
 	public void removeSupplier(Integer cod_fornecedor) {
 		Conexao c = Conexao.getInstance();
@@ -78,14 +79,17 @@ public class FornecedorDAO {
 			p.setInt(1, cod_fornecedor);
 			System.out.println(p);
 			p.executeUpdate();
-			System.out.println("Remoção fornecedor: executado");
+			System.out.println("RemoÃ§Ã£o fornecedor: executado");
 			p.close();
+			
+		}catch (SQLIntegrityConstraintViolationException s) {
+			System.out.println("Chave estrangeira!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 	
-	//Método que ATUALIZA dados do fornecedor
+	//MÃ©todo que ATUALIZA dados do fornecedor
 	
 	public void updateSupplier(Fornecedor updateSupplier) {
 		Conexao c = Conexao.getInstance();
@@ -101,7 +105,7 @@ public class FornecedorDAO {
 			p.setInt(6, updateSupplier.getCod_fornecedor());
 			System.out.println(p);
 			p.executeUpdate();
-			System.out.println("Atualização Fornecedor: executado");
+			System.out.println("AtualizaÃ§Ã£o Fornecedor: executado");
 			p.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -109,7 +113,7 @@ public class FornecedorDAO {
 	}
 	
 	
-	//Método de BUSCAR o fornecedor
+	//MÃ©todo de BUSCAR o fornecedor
 	
 	public Fornecedor buscarSupplier(Integer cod_fornecedor) {
 		Conexao c = Conexao.getInstance();
@@ -129,7 +133,7 @@ public class FornecedorDAO {
 				String email_fornecedor = r.getString("email_fornecedor");
 				String telefone_fornecedor = r.getString("telefone_fornecedor");
 			
-				f = new Fornecedor(cnpj, razao_social, inscricao_estadual, email_fornecedor, telefone_fornecedor); // Inverteu-se email no lugar de pais e pais no lugar de email. AGORA ESTÁ CERTO.
+				f = new Fornecedor(cnpj, razao_social, inscricao_estadual, email_fornecedor, telefone_fornecedor); // Inverteu-se email no lugar de pais e pais no lugar de email. AGORA ESTÃ� CERTO.
 				f.setCod_fornecedor(cod_fornecedor);
 			}
 			r.close();

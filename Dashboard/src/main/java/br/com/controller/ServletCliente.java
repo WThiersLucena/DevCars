@@ -58,8 +58,7 @@ private ClienteDAO clie;
 		
 
 		request.setAttribute("listCliente", this.clie.mostrarCliente());	
-		
-		
+
 		request.setAttribute("listCliente", this.clie.mostrarCliente());
 		request.setAttribute("contagemUsuarios", this.clie.contarUsuarios());
 		request.getRequestDispatcher("cliente.jsp").forward(request, response);

@@ -84,6 +84,7 @@ public class ClienteDAO {
 		}
 		
 
+
 	
 	public Integer contarUsuarios() {
 		Conexao c = Conexao.getInstance();
@@ -108,7 +109,10 @@ public class ClienteDAO {
 		}
 		return null;    		
     }
+	
+	
 }
+
 
 
 

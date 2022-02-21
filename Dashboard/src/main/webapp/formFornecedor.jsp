@@ -33,14 +33,14 @@
 <body>
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DEVCARS</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Pesquisar" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="#">Sair</a>
     </div>
   </div>
 </header>
@@ -119,13 +119,13 @@
 
     <!--  END SIDEBAR -->
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">LISTA DE FORNECEDORES</h1>
+        <h1 class="h2 text-light">CADASTRAR DE FORNECEDORES</h1>
         
       </div>
 
-	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3">
+	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
 		<h3 class="card-title text-center mb-3">ADICIONAR FORNECEDOR</h3>
 	
 		<form action="ServletFornecedor" method="post">
@@ -159,7 +159,7 @@
 						
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button type="submit" name="optionFornecedor" class="btn btn-primary flex-start" value="insertSupplier">Salvar</button>
+							<button type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="insertSupplier">Salvar</button>
 						</div>
 						
 					</c:when>

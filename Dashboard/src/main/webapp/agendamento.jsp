@@ -7,7 +7,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Agendamentos</title>
+<title>Lista de Agendamentos</title>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -18,6 +18,53 @@ pageEncoding="ISO-8859-1"%>
         -moz-user-select: none;
         user-select: none;
       }
+      
+      
+      .accordion-button{
+      	-webkit-box-shadow: 11px 11px 28px 10px rgba(191,161,63,0.45); 
+		box-shadow: 5px 5px 28px 10px rgba(191,161,63,0.45);
+      }
+      
+       
+      .accordion-button:not(.collapsed){
+      	color: #000;
+      	background-color: #fff;
+      	border-color: #fff
+      }
+      
+      .accordion-button:focus{
+      	border-color: #F0CA4F;
+      	box-shadow: none
+      }
+      
+      .ac-header:not(.collapsed){
+      	color: #fff;
+      	background-color: #F0CA4F;
+      	
+      }
+      
+      .ac-header{
+      	color: #fff;
+      	background-color: #F0CA4F;
+      }
+      
+      
+      .fw-bolder{
+      	text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.68);
+      }
+      
+      
+      h3{
+      	 font-family: Arial, Helvetica, Verdana, sans-serif;
+      	 margin-bottom: 8px;
+      	 font-size: 18px;
+      	 font-weight: bold
+      }
+      
+      p{
+      	margin-bottom: 4px
+      }
+      
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -31,24 +78,23 @@ pageEncoding="ISO-8859-1"%>
 <body>
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DEVCARS</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Pesquisar" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="#">Sair</a>
     </div>
   </div>
 </header>
 
  <!--  BEGIN SIDEBAR -->
- 
-<div class="container-fluid">
-  <div class="row">
 
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+	<div class="container-fluid">
+		<div class="row">
+			    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -112,40 +158,40 @@ pageEncoding="ISO-8859-1"%>
 				</form> 
             </a>
           </li>
+          
         </ul>
       </div>
     </nav>
-
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-				<div
-					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2">Agendamentos</h1>
+		
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
+				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2 text-light">LISTE DE AGENDAMENTOS</h1>
 				</div>
 				<div>
 					<c:forEach var="a" items="${agenda}">
 						<input type="hidden" name="id" value="${a.cod_agendamento}" />
 
 						<!-- inicio acordeon -->
-						<div class="accordion accordion-flush border border-secondary border-1 rounded mb-5" id="accordionFlushExample">
+						<div class="accordion accordion-flush border rounded m-3 shadow rounded-3 ac-style" id="accordionFlushExample">
 							<div class="accordion-item">
-								<h2 class="accordion-header"
+								<h2 class="accordion-header "
 									id="flush-heading-${a.cod_agendamento}">
-									<button class="accordion-button collapsed" type="button"
+									<button class="accordion-button collapsed ac-header" type="button"
 										data-bs-toggle="collapse"
 										data-bs-target="#flush-collapse-${a.cod_agendamento}"
 										aria-expanded="false"
 										aria-controls="flush-collapse-${a.cod_agendamento}">
 
-										<div class="row">
-											<div class="col-3">
+										<div class="row col-12 col-md-12 col-lg-12">
+											<div class="col-3 text-start fw-bolder">
 												<p># <c:out value="${a.cod_agendamento}" /></p>
 											</div>
 
-											<div class="col-6">
+											<div class="col-6 text-center fw-bolder">
 												<p> <c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" /></p>
 											</div>
 
-											<div class="col text-end">
+											<div class="col-3 text-center fw-bolder">
 												<p> <fmt:formatDate value="${a.data_reserva}"
 														pattern="dd/MM/yyyy" />
 												</p>
@@ -162,26 +208,26 @@ pageEncoding="ISO-8859-1"%>
 										<div class="row">
 											<div class="col-md">
 												<div class="cliente">
-													<h3 class="fs-5">Cliente</h3>
-													<p class="fs-6">NOME: <c:out value="${a.nome_cliente}" /><c:out value="${a.razao_social}" /></p>
-													<p class="fs-6">CPF/CNPJ: <c:out value="${a.numero_documento}" /></p>
-													<p class="fs-6">EMAIL: <c:out value="${a.email_cliente}" /></p>
-													<p class="fs-6">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+													<h3 class="">Cliente</h3>
+													<p class="">NOME: <c:out value="${a.nome_cliente}" /><c:out value="${a.razao_social}" /></p>
+													<p class="">CPF/CNPJ: <c:out value="${a.numero_documento}" /></p>
+													<p class="">EMAIL: <c:out value="${a.email_cliente}" /></p>
+													<p class="">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
 												</div>
 											</div>
 
 											<div class="col-md">
-											<h3 class="fs-5">Detalhes do veículo</h3>
-												<p class="fs-6">Motor: <c:out value="${a.motor_veiculo}" /></p>
-												<p class="fs-6">Potência: <c:out value="${a.potencia_cv}" /></p>
-												<p class="fs-6">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
-												<p class="fs-6">Câmbio: <c:out value="${a.cambio}" /></p>
-												<p class="fs-6">Número chassi: <c:out value="${a.numero_chassi}" /></p>
+											<h3 class="">Detalhes do veículo</h3>
+												<p class="">Motor: <c:out value="${a.motor_veiculo}" /></p>
+												<p class="">Potência: <c:out value="${a.potencia_cv}" /></p>
+												<p class="">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
+												<p class="">Câmbio: <c:out value="${a.cambio}" /></p>
+												<p class="">Número chassi: <c:out value="${a.numero_chassi}" /></p>
 											</div>
 
 											<div class="col-md-3">
-												<h3 class="fs-5">Taxa de agendamento: </h3>
-												<p class="fs-6">R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.taxa_agendamento}" /></p>
+												<h3 class="tex-end">Taxa de agendamento: </h3>
+												<p class="text-start">R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.taxa_agendamento}" /></p>
 											</div>
 										</div>
 									</div>
@@ -199,6 +245,10 @@ pageEncoding="ISO-8859-1"%>
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
  <script src="./dashboard.js"></script>
+ 
+ 
+ 
+ 
  
 </body>
 </html>
