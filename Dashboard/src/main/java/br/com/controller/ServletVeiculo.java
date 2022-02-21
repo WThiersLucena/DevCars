@@ -177,7 +177,7 @@ public class ServletVeiculo extends HttpServlet {
 		String cod_cor = request.getParameter("cod_cor");
 		String ano_veiculo = request.getParameter("ano_veiculo");
 		String cod_motor = request.getParameter("cod_motor");
-		String preco_veiculo = request.getParameter("preco_veiculo");
+		String preco_veiculo = request.getParameter("preco_veiculo").replace(".", "").replace(",", ".");;
 		String cod_combustivel = request.getParameter("cod_combustivel");
 		String cod_cambio = request.getParameter("cod_cambio");
 		String cod_fornecedor = request.getParameter("cod_fornecedor");
