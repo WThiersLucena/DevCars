@@ -2860,7 +2860,7 @@ values
 	1,
 	1,
 	1,
-	'2022-05-02',	
+	'2021-05-02',	
 	'5000.00'
 );
 
@@ -2880,7 +2880,7 @@ values
 	2,
 	1,
 	2,
-	'2022-08-09',	
+	'2021-06-09',	
 	'5000.00'
 );
 
@@ -2899,9 +2899,9 @@ values
 (
 	3,
 	2,
-	2,
-	'2022-07-01',	
-	'5000.00'
+	3,
+	'2021-07-01',	
+	'6000.00'
 );
 
 
@@ -2920,8 +2920,8 @@ values
 (
 	4,
 	2,
-	2,
-	'2022-09-03',	
+	4,
+	'2021-09-03',	
 	'6000.00'
 );
 
@@ -2941,7 +2941,262 @@ values
 	5,
 	5,
 	5,
-	'2022-08-12',	
+	'2021-10-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	6,
+	26,
+	6,
+	'2021-12-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	7,
+	25,
+	7,
+	'2022-01-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	8,
+	15,
+	8,
+	'2022-01-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	9,
+	14,
+	9,
+	'2022-01-22',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	10,
+	11,
+	10,
+	'2022-01-24',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	11,
+	23,
+	5,
+	'2022-01-26',	
+	'7000.00'
+);
+
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	12,
+	24,
+	2,
+	'2022-01-27',	
+	'7000.00'
+);
+
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	13,
+	1,
+	1,
+	'2022-01-30',	
+	'5000.00'
+);
+
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	14,
+	17,
+	3,
+	'2022-02-01',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	15,
+	5,
+	4,
+	'2022-02-7',	
+	'7000.00'
+);
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	16,
+	6,
+	8,
+	'2022-02-12',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	17,
+	7,
+	10,
+	'2022-02-14',	
+	'7000.00'
+);
+
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	18,
+	13,
+	5,
+	'2022-02-14',	
+	'7000.00'
+);
+
+
+insert into tb_agendamento
+(
+	cod_agendamento,
+	cod_veiculo,
+	cod_cliente,
+	data_reserva,
+	taxa_agendamento
+)
+values
+(
+	19,
+	20,
+	5,
+	'2022-02-17',	
 	'7000.00'
 );
 
@@ -3896,6 +4151,36 @@ values
 	
 );
 
+insert into tb_pedido
+(
+	
+	cod_pedido, 
+	cod_cliente,
+	cod_forma_pagamento,
+	cod_frete, 
+	valor_total_pedido, 
+	data_pedido, 
+	previsao_entrega,
+	data_envio, 
+	cod_endereco_cliente, 
+	cod_status 
+)
+values
+(
+	3,
+	2,
+	2, 
+	19,
+	326000.00,
+	'2022-03-10',
+	15,
+	'2022-03-26',
+	1,
+	3
+	
+);
+
+
 
 insert into tb_item_pedido
 (
@@ -4040,18 +4325,18 @@ values(
  -- alter table tb_item_nf alter column percentual_icms decimal(4,2);
 
 -- select * from tb_fornecedor tf ;
- select * from tb_combustivel tc ;
-select * from tb_cambio tc ;
+-- select * from tb_combustivel tc ;
+-- select * from tb_cambio tc ;
 -- select * from tb_cor tc ;
- select * from tb_marca tm ;
+ -- select * from tb_marca tm ;
 -- select * from tb_motor tm ;
- select * from tb_veiculo tv ;
+ -- select * from tb_veiculo tv ;
  -- select * from tb_cliente tc ;
 -- select * from tb_endereco te ;
 -- select * from tb_endereco_cliente tec ;
 -- select * from tb_modalidade_cartao tmc ;
 -- select * from tb_cartao tc ;
--- select * from tb_agendamento ta ;
+ select * from tb_agendamento ta ;
 -- select * from tb_favorito tf ;
 -- select * from tb_favorito_veiculo tfv ;
 -- select * from tb_loja tl ;
