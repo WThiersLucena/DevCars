@@ -128,7 +128,19 @@ pageEncoding="ISO-8859-1"%>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <form action="ServletVeiculo" method="post">
-                    <button class="btn btn-warning mb-3" type="submit" name="optionVeiculo" value="insertFormVeiculo">Adicionar Veículo</button>
+            
+            		<!-- INÍCIO DE BOTÃO DE ADICIONAR VEÍCULO -->
+                    <button class="btn btn-warning mb-3 pb-2" type="submit" name="optionVeiculo" value="insertFormVeiculo">
+                    
+                    <!-- INÍCIO ÍCONE DE ADICIONAR VEÍCULO -->
+                    	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+  							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  							<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+						</svg><span class="text-dark fw-bold"> Adicionar veículo</span>
+                    <!-- FIM ÍCONE DE ADICIONAR VEÍCULO -->
+                    </button>
+                    <!--  FIM BOTÃO DE ADICIONAR VEÍCULO -->
+                    
                 </form>
           </div>
         </div>
@@ -146,7 +158,7 @@ pageEncoding="ISO-8859-1"%>
 					<th class="col-1">ANO</th>
 					<th class="col-2">MOTOR</th>
 					<th class="col-1">POTÊNCIA</th>
-					<th class="col-1">PREÇO</th>
+					<th class="col-2">PREÇO</th>
 					<th class="col-1">COMBUSTÍVEL</th>
 					<!-- <th class="col-2">Câmbio</th> -->
 					<!-- <th class="col-2">Chassi</th>  -->
@@ -189,7 +201,7 @@ pageEncoding="ISO-8859-1"%>
 							</td>
 							
 							<td>
-								<c:out value="${veiculo.preco_veiculo}"/>
+								<c:out value="R$ ${veiculo.preco_veiculo}"/>
 							</td>
 							
 							<td>
