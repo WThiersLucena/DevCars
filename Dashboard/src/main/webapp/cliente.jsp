@@ -277,8 +277,8 @@ ul{
 													<p class="">NOME: <c:out value="${cliente.nome_cliente}" /><c:out value="${cliente.razao_social}" /></p>
 													<!-- <p class="">CPF/CNPJ: <c:out value="${cliente.numero_documento}" /></p> -->
 													<p class="">EMAIL: <c:out value="${cliente.email_cliente}" /></p>
-													<p class="">TELEFONE: <c:out value="${cliente.telefone_cliente}" /></p>
-												</div>
+													<p class="">TELEFONE: <c:out value="${cliente.telefone_cliente} " /></p>
+													</div>
 											</div>
 
 											<div class="col-md">
@@ -302,82 +302,6 @@ ul{
 	
 				
 
-<!-- 				<div class="table-responsive">
-				
-				
-					<table class="table align-middle">
-							<thead>
-							
-								<tr>
-									<th class="col-1 ">Cod Cliente</th>
-									<th class="col-2">Nome Cliente</th>
-									<th class="col-1">telefone</th>
-									<th class="col-2">Data Nac</th>
-									<th class="col-2">Endereço</th>
-																	
-								</tr>
-							</thead>
-							<tbody>
-
-								
-								<c:forEach var="cliente" items="${listCliente}">
-								
-							
-						<tr class="font-family: var;">			
-						
-						<form action="ServletCliente" method ="post">
-						
-							<td>
-								<c:out value="${cliente.cod_cliente}"/>
-								
-							</td>
-							
-							<td>
-								<c:out value="${cliente.nome_cliente}"/>
-								<c:out value="${cliente.razao_social}"/>
-							</td>
-							
-							<td>
-								<c:out value="${cliente.telefone_cliente}"/>
-							</td>
-							
-							
-							
-						<td>
-							
-						 	<c:out value="${cliente.data_nascimento}"/>    
-						</td>
-							
-						</td>
-						
-						<td class="detalhes">
-												<details>
-													<summary>  Detalhes </summary>
-														<ul>
-															<li> UF : [ ${cliente.uf} ]</li>
-															<li> ${cliente.cidade} </li>
-															<li>${cliente.bairro} </li>
-															<li>${cliente.cep_endeco} </li>
-																														
-															<li>
-																<c:out value="${cliente.rua_endereco}"/> nº
-																<c:out value="${cliente.numero_endereco}"/> 
-																<c:out value="${cliente.complemento}"/> 
-															</li>
-														 </ul>
-												</details>
-						</td>
-									
-					</form>
-				</tr>
-			</c:forEach>
-									
-									
-						</tbody>
-					</table>
-				</div>
-			</main>
- -->
 
 
 
@@ -388,11 +312,5 @@ ul{
 
 
 
-<!--  <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
- 
- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
- <script src="./dashboard.js"></script>
-  -->
- 
 </body>
 </html>
