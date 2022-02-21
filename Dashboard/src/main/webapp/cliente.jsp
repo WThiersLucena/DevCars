@@ -6,7 +6,7 @@ pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Lista de Clientes</title>
+<title>Cliente</title>
 
 
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@ ul{
 
 <header
 		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
 		<button class="navbar-toggler position-absolute d-md-none collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
@@ -147,19 +147,15 @@ ul{
 
 
     <!--      TESTE COM DETALHES DE ENDEREÇO --> 
- <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
+ <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-
-				<h1 class="h2 text-light">CLIENTES</h1>
-
-				<h1 class="h2">Lista de Clientes</h1>
-
+				<h1>Clientes	</h1>
 				</div>
 
 				<div class="table-responsive">
 				
 				
-					<table class="table table-striped table-sm table-light table-bordered shadow">
+					<table class="table align-middle">
 							<thead>
 							
 								<tr>
