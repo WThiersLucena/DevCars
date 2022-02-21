@@ -83,8 +83,6 @@ public class ClienteDAO {
 			
 			return lista;
 		}
-		
-
 
 	
 	public Integer contarUsuarios() {

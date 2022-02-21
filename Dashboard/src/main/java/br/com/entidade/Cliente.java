@@ -39,8 +39,7 @@ public class Cliente {
 		this.uf = uf;
 		this.numero_documento = numero_documento;
 	}
-	
-	
+		
 	
 	public Cliente(String nome_cliente, String razao_social, String email_cliente, Date data_nascimento,
 			String telefone_cliente, String cep_endeco, String rua_endereco, String complemento, String numero_endereco,

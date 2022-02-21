@@ -300,10 +300,6 @@ ul{
 			</main>
 	
 	
-	
-	
-	
-	
 				
 
 <!-- 				<div class="table-responsive">
