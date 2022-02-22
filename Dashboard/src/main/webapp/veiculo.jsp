@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="ISO-8859-1"%>
+pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -10,7 +10,7 @@ pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>VeÌculos</title>
+<title>Ve√≠culos</title>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -59,19 +59,20 @@ pageEncoding="ISO-8859-1"%>
 			    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.jsp">
-              <span data-feather="home"></span>
-              HOME
-            </a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.jsp">
+				<form action="ServletIndex" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="home"></span> HOME
+					</button>
+				</form>
+		</a></li>
           
           <li class="nav-item">
             <a class="nav-link" href="veiculo.jsp"> 
             	<form action="ServletVeiculo" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="file"></span>
-						VEÕCULO
+						VE√çCULO
 					</button>
 				</form>
             </a>
@@ -128,35 +129,35 @@ pageEncoding="ISO-8859-1"%>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2 text-white">LISTA DE VEÕCULOS</h1>
+        <h1 class="h2 text-white">LISTA DE VE√çCULOS</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <form action="ServletVeiculo" method="post">
             
-            		<!-- INÕCIO DE BOT√O DE ADICIONAR VEÕCULO -->
+            		<!-- IN√çCIO DE BOT√ÉO DE ADICIONAR VE√çCULO -->
                     <button class="btn btn-warning mb-3 pb-2" type="submit" name="optionVeiculo" value="insertFormVeiculo">
                     
-                    <!-- INÕCIO ÕCONE DE ADICIONAR VEÕCULO -->
+                    <!-- IN√çCIO √çCONE DE ADICIONAR VE√çCULO -->
                     	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
   							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
   							<path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-						</svg><span class="text-dark fw-bold"> Adicionar veÌculo</span>
-                    <!-- FIM ÕCONE DE ADICIONAR VEÕCULO -->
+						</svg><span class="text-dark fw-bold"> Adicionar ve√≠culo</span>
+                    <!-- FIM √çCONE DE ADICIONAR VE√çCULO -->
                     </button>
-                    <!--  FIM BOT√O DE ADICIONAR VEÕCULO -->
+                    <!--  FIM BOT√ÉO DE ADICIONAR VE√çCULO -->
                     
                 </form>
           </div>
         </div>
       </div>
 
-<!-- FunÁ„o que exibe a contagem da lista de veiculos -->
+<!-- Fun√ß√£o que exibe a contagem da lista de veiculos 
 	<div>
 		<c:set var="veiculos" value="${listVeiculo}"/> 
 		<h1 class="fs-1 text-light"> <c:out value="${fn:length(veiculos)}"></c:out></h1>
 	</div>
 	
-<!-- FunÁ„o que exibe a contagem da lista de veiculos -->
+<!-- Fun√ß√£o que exibe a contagem da lista de veiculos -->
 
 
 		<table class="table table-striped table-sm table-light table-bordered shadow" >
@@ -168,13 +169,13 @@ pageEncoding="ISO-8859-1"%>
 					<th class="col-1">COR</th>
 					<th class="col-1">ANO</th>
 					<th class="col-2">MOTOR</th>
-					<th class="col-1">POT NCIA</th>
-					<th class="col-2">PRE«O</th>
-					<th class="col-1">COMBUSTÕVEL</th>
-					<!-- <th class="col-2">C‚mbio</th> -->
+					<th class="col-1">POT√äNCIA</th>
+					<th class="col-2">PRE√áO</th>
+					<th class="col-1">COMBUST√çVEL</th>
+					<!-- <th class="col-2">C√¢mbio</th> -->
 					<!-- <th class="col-2">Chassi</th>  -->
 					<th class="col-1">ESTOQUE</th>
-					<th class="col-1">A«’ES</th>
+					<th class="col-1">A√á√ïES</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -235,10 +236,10 @@ pageEncoding="ISO-8859-1"%>
 							
 							<c:choose>
 								    <c:when test="${veiculo.estoque == true}">
-								        <p>DISPONÕVEL</p>
+								        <p>DISPON√çVEL</p>
 								    </c:when>    
 								    <c:otherwise>
-								        <p>INDISPONÕVEL</p>
+								        <p>INDISPON√çVEL</p>
 								    </c:otherwise>
 								</c:choose>
 							</td>
@@ -248,11 +249,11 @@ pageEncoding="ISO-8859-1"%>
 								<div class="d-grid gap-2 d-md-flex justify-content-md-center">
 									
 									
-									<!-- INICIO do Bot„o que chama o MODAL -->
+									<!-- INICIO do Bot√£o que chama o MODAL -->
 						
 									<button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete-${veiculo.cod_veiculo}" id="${veiculo.cod_veiculo}">
 									
-													<!-- INÕCIO DA IMAGEM DE DELETAR -->
+													<!-- IN√çCIO DA IMAGEM DE DELETAR -->
 													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
   														<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
  														<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
@@ -260,15 +261,15 @@ pageEncoding="ISO-8859-1"%>
 													<!-- FIM DA IMAGEM DE ATUALIZAR -->
 									</button>
 									
-									<!-- FIM do Bot„o que chama o MODAL -->
+									<!-- FIM do Bot√£o que chama o MODAL -->
 									
-									<!-- INÕCIO DO MODAL DE DELETAR -->
+									<!-- IN√çCIO DO MODAL DE DELETAR -->
 									<div class="modal fade" id="modal-delete-${veiculo.cod_veiculo}" tabindex="-1" aria-labelledby="inicioModal" aria-hidden="true">
 										<div class="modal-dialog modal-dialog-centered">
 											<div class="modal-content bg-dark bg-gradient">
 												<div class="text-center px-3 py-3">
-													<h6 class="fs-6 text-white pb-3">TEM CERTEZA QUE DESEJA DELETAR O C”DIGO <c:out value="${veiculo.cod_veiculo}"/>?</h6>
-													<p class=" text-danger fw-bold">ESSA A«√O N√O PODER¡ SER DESFEITA!</p>
+													<h6 class="fs-6 text-white pb-3">TEM CERTEZA QUE DESEJA DELETAR O C√ìDIGO <c:out value="${veiculo.cod_veiculo}"/>?</h6>
+													<p class=" text-danger fw-bold">ESSA A√á√ÉO N√ÉO PODER√Å SER DESFEITA!</p>
 												</div>
 												<div class="d-grid gap-2 d-md-flex justify-content-md-center px-3 py-3">
 													<button class="btn btn-outline-light px-3" type="submit" name="optionVeiculo" value="qualquerCoisa">Cancelar</button>
@@ -283,7 +284,7 @@ pageEncoding="ISO-8859-1"%>
 									
 									<button class="btn btn-warning" type="submit" name="optionVeiculo" value="updateFormVeiculo">
 									
-									<!-- INÕCIO DA IMAGEM DE ATUALIZAR -->
+									<!-- IN√çCIO DA IMAGEM DE ATUALIZAR -->
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
   										<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
  										<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>

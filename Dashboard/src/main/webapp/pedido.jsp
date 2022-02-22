@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 
@@ -106,9 +106,12 @@ p {
 
 				<div class="position-sticky pt-3">
 					<ul class="nav flex-column">
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="index.jsp"> <span
-								data-feather="home"></span> HOME
+						<li class="nav-item"><a class="nav-link" href="index.jsp">
+								<form action="ServletIndex" method="post">
+									<button type="submit" class="btn">
+										<span data-feather="home"></span> HOME
+									</button>
+								</form>
 						</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
@@ -233,7 +236,7 @@ p {
 									<div class="row">
 										<div class="col-md">
 											<div class="cliente">
-												
+
 												<p class="">
 													NOME :
 													<c:out value="${pedidos.nome_cliente}" />
