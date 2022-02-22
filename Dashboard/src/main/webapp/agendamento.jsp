@@ -177,23 +177,23 @@ p {
 										aria-controls="flush-collapse-${a.cod_agendamento}">
 
 										<div class="row col-12 col-md-12 col-lg-12">
-											<div class="col-3 text-start fw-bolder">
+											<div class="col-2 text-start fw-bolder">
 												<p>
 													#
 													<c:out value="${a.cod_agendamento}" />
 												</p>
 											</div>
 
-											<div class="col-6 text-center fw-bolder">
+											<div class="col-6 text-start fw-bolder">
 												<p>
-													<c:out
+													Veículo: <c:out
 														value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" />
 												</p>
 											</div>
 
-											<div class="col-3 text-center fw-bolder">
+											<div class="col-4 text-center fw-bolder">
 												<p>
-													<fmt:formatDate value="${a.data_reserva}"
+													Data de reserva: <fmt:formatDate value="${a.data_reserva}"
 														pattern="dd/MM/yyyy" />
 												</p>
 											</div>
