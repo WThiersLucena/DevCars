@@ -66,7 +66,7 @@ public class ClienteDAO {
 					
 					String uf = r.getString("uf"); 
 					
-					String numero_documento = r.getString("uf");
+					String numero_documento = r.getString("numero_documento");
 						
 				
 					Cliente c1 = new Cliente(cod_cliente, nome_cliente,razao_social,email_cliente, data_nascimento,telefone_cliente,cep_endereco,rua_endereco,complemento,numero_endereco,bairro,cidade,uf,numero_documento);

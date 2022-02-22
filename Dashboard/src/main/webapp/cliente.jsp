@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> <!-- TAG RESPONSAVEL PELA MAGICA DO CPF E CNPJ -->
+
 
 <!DOCTYPE html>
 <html>
@@ -274,20 +276,26 @@ ul{
 											<div class="col-md">
 												<div class="cliente">
 													<h3 class="">Cliente</h3>
-													<p class="">NOME: <c:out value="${cliente.nome_cliente}" /><c:out value="${cliente.razao_social}" /></p>
-													<!-- <p class="">CPF/CNPJ: <c:out value="${cliente.numero_documento}" /></p> -->
-													<p class="">EMAIL: <c:out value="${cliente.email_cliente}" /></p>
-													<p class="">TELEFONE: <c:out value="${cliente.telefone_cliente} " /></p>
+													<p class="">NOME : <c:out value="${cliente.nome_cliente}" /><c:out value="${cliente.razao_social}" /></p>
+													<p class="exampleInputCnpj"> <c:out
+															value="${cliente.numero_documento}" /> </p>
+													
+													
+													<p class="">EMAIL : <c:out value="${cliente.email_cliente}" /></p>
+													<p class="exampleInputTelefone"> <c:out
+															value="${cliente.telefone_cliente}" /> </p>												
 													</div>
 											</div>
 
 											<div class="col-md">
 											<h3 class="">Endereço</h3>
-												<p class="">UF: <c:out value="${cliente.uf}" /></p>
-												<p class="">Cidade: <c:out value="${cliente.cidade}" /></p>
-												<p class="">Bairro: <c:out value="${cliente.bairro}" /></p>
-												<p class="">Cep: <c:out value="${cliente.cep_endeco}" /></p></p>
-												<p class="">Logradouro: <c:out value="${cliente.rua_endereco}" /> <c:out value="${cliente.numero_endereco}" /> <c:out value="${cliente.complemento}" /></p>
+												<p class="">UF : <c:out value="${cliente.uf}" /></p>
+												<p class="">Cidade : <c:out value="${cliente.cidade}" /></p>
+												<p class="">Bairro : <c:out value="${cliente.bairro}" /></p>
+												<p class="exampleInputCep"> <c:out
+															value="${cliente.cep_endeco}" /> </p>
+											
+												<p class="">Logradouro : <c:out value="${cliente.rua_endereco}" /> <c:out value="${cliente.numero_endereco}" /> <c:out value="${cliente.complemento}" /></p>
 											</div>											
 										</div>
 									</div>
@@ -309,6 +317,41 @@ ul{
  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
  <script src="./dashboard.js"></script>
+
+
+<!-- jQuery Mask -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="jquery.mask.js">	</script>
+	
+	
+
+	<script type="text/javascript">
+	
+	
+	
+		$(document).ready(function() {
+			$('.exampleInputTelefone').mask('TELEFONE : (00) 0000-0000');
+			$('.exampleInputInscEstadual').mask('000.000.000.000');
+			$('.exampleInputCep').mask('CEP : 00000-000');
+			$('.exampleInputCnpjs').mask('00.000.000/0000-00', {
+				reverse : true
+			});
+			$('.placeholder').mask("00/00/0000", {
+				placeholder : "__/__/____"
+			});		
+			
+			
+		});
+		
+		
+		
+		
+		
+		
+	</script>
 
 
 

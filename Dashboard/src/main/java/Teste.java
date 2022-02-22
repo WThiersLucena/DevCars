@@ -8,21 +8,14 @@ public class Teste {
 
 // ---------> MOSTRAR CLIENTE <------------
 
-		
-//		ClienteDAO clienteD = new ClienteDAO();
-//		VeiculoDAO veiculoD = new VeiculoDAO();
-//		Conexao c = new Conexao();
-//		c.getConnection();		
-//		System.out.println(clienteD.mostrarCliente());
-//
 //		
 //		ClienteDAO clienteD = new ClienteDAO();
-//		VeiculoDAO veiculoD = new VeiculoDAO();
+//
 //		Conexao c = new Conexao();
 //		c.getConnection();		
 //		System.out.println(clienteD.mostrarCliente());
 
-
+//	 ---------> FIM MOSTRAR CLIENTE <------------
 		
 
 		
