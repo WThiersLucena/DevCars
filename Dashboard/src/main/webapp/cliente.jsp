@@ -283,9 +283,8 @@ p {
 													Bairro :
 													<c:out value="${cliente.bairro}" />
 												</p>
-												<p class="exampleInputCep">
-													<c:out value="${cliente.cep_endeco}" />
-												</p>
+												<p class="exampleInputCep"> <c:out
+															value="${cliente.cep_endeco}" /> </p>
 
 												<p class="">
 													Logradouro :
@@ -336,6 +335,8 @@ p {
 									"TELEFONE: (00) 0000-00009");
 							$('.exampleInputChassi').mask(
 									'A.AA.AAAAAAA.A.AAAAA');
+							
+							$('.exampleInputCep').mask('CEP : 00000-000');
 
 							$('.exampleInputCpf').mask('000.000.000-00', {
 								reverse : true
@@ -343,6 +344,8 @@ p {
 							$('.exampleInputCnpj').mask('00.000.000/0000-00', {
 								reverse : true
 							});
+							
+							
 						});
 			</script>
 </body>
