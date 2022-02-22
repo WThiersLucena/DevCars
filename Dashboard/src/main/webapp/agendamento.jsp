@@ -2,6 +2,7 @@
 pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,7 @@ pageEncoding="ISO-8859-1"%>
       
       .accordion-button{
       	-webkit-box-shadow: 11px 11px 28px 10px rgba(191,161,63,0.45); 
-		box-shadow: 5px 5px 28px 10px rgba(191,161,63,0.45);
+		box-shadow: 2px 2px 2px 2px rgba(191,161,63,0.45);
       }
       
        
@@ -210,9 +211,33 @@ pageEncoding="ISO-8859-1"%>
 												<div class="cliente">
 													<h3 class="">Cliente</h3>
 													<p class="">NOME: <c:out value="${a.nome_cliente}" /><c:out value="${a.razao_social}" /></p>
-													<p class="">CPF/CNPJ: <c:out value="${a.numero_documento}" /></p>
+													
+													
+													<!-- <p class="exampleInputDocumento">NÚMERO DO DOCUMENTO: <c:out value="${a.numero_documento}" /></p>-->
+													<c:set var="doc" value="${a.numero_documento}"/>  
+													 <c:choose>
+														 <c:when test = "${fn:length(doc)==11}" >
+														
+															<span>CPF: </span><span class="exampleInputCpf"><c:out value="${a.numero_documento}" /></span>
+														 </c:when>
+														 
+														 <c:otherwise>
+														 	<span>CNPJ: </span><span class="exampleInputCnpj"><c:out value="${a.numero_documento}" /></span>
+														 </c:otherwise>
+													 </c:choose>
+													
 													<p class="">EMAIL: <c:out value="${a.email_cliente}" /></p>
-													<p class="">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+													
+													 <!-- <c:choose>
+														 <c:when test = "${a.telefone_cliente}.size() = 11">
+															<p class="exampleInputTelefone1">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+														 </c:when>
+														 
+														 <c:otherwise>
+														 	<p class="exampleInputTelefone">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+														 </c:otherwise>
+													 </c:choose>-->
+													<p class="exampleInputTelefone">TELEFONE: <c:out value="${a.telefone_cliente}" /></p> 
 												</div>
 											</div>
 
@@ -222,7 +247,8 @@ pageEncoding="ISO-8859-1"%>
 												<p class="">Potência: <c:out value="${a.potencia_cv}" /></p>
 												<p class="">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
 												<p class="">Câmbio: <c:out value="${a.cambio}" /></p>
-												<p class="" id="">Chassi: <c:out value="${a.numero_chassi}" /></p>
+												
+												<span>CHASSI: </span><span class="exampleInputChassi"> <c:out value="${a.numero_chassi}" /></span>
 											</div>
 
 											<div class="col-md-3">
@@ -257,19 +283,17 @@ pageEncoding="ISO-8859-1"%>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('#exampleInputChassi').mask('A.AA.AAAAAAAA.A.AAAAA', {
-				translation : {
-					'Z' : {
-						pattern : /[A-Z0-9]/,
-						optional : true,
-						transform : function(d) {
-							return d.toUpperCase();
-						}
-					}
-				},
-			});
-			$('.exampleInputTelefone').mask('(00) 00000-0000');
+			//$(".exampleInputTelefone1").mask("TELEFONE: (00) 00000-0000");
+			 $(".exampleInputTelefone").mask("TELEFONE: (00) 0000-00009");
+			$('.exampleInputChassi').mask('A.AA.AAAAAAA.A.AAAAA');
+			
+			
+			$('.exampleInputCpf').mask('000.000.000-00', { reverse: true });
+            $('.exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
 		});
+		
+		
+		
 	</script>
  
  
