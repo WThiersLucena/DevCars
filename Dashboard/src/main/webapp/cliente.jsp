@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+	
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> <!-- TAG RESPONSAVEL PELA MAGICA DO CPF E CNPJ -->
 
@@ -7,7 +10,7 @@ pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <title>Cliente</title>
 
 
@@ -124,7 +127,7 @@ pageEncoding="UTF-8"%>
             <form action="ServletVeiculo" method="post">
 						<button type="submit" class="btn">
 						<span data-feather="file"></span>
-						VEÍCULO
+						VEICULO
 						</button>
 			</form>
             </a>
