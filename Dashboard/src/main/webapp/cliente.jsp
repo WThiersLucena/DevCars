@@ -1,11 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+	
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> <!-- TAG RESPONSAVEL PELA MAGICA DO CPF E CNPJ -->
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <title>Cliente</title>
 
 
@@ -82,38 +87,6 @@ pageEncoding="UTF-8"%>
 
 
 
-
-<!--  teste de padronização  -->
-
-<!--  versao antiga   -->
- <!-- <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
- }
-      
-      
-ul{
-    list-style-type: none;
-    list-style: none;
-}
-
-@media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-}
-
-    </style>
-
-<link href="./dashboard.css" rel="stylesheet"/>
-
-</head>
-
- -->
 <body>
 
 
@@ -154,7 +127,7 @@ ul{
             <form action="ServletVeiculo" method="post">
 						<button type="submit" class="btn">
 						<span data-feather="file"></span>
-						VEÍCULO
+						VEICULO
 						</button>
 			</form>
             </a>
@@ -219,15 +192,6 @@ ul{
     
     
     <!--  END SIDEBAR -->
-
-
-
-    <!--      TESTE COM DETALHES DE  
- <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-				<h1>Clientes	</h1>
-				</div>
-				ENDEREÇO -->
 				<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 					<h1 class="h2 text-light">LISTA DE CLIENTES</h1>
@@ -274,20 +238,40 @@ ul{
 											<div class="col-md">
 												<div class="cliente">
 													<h3 class="">Cliente</h3>
-													<p class="">NOME: <c:out value="${cliente.nome_cliente}" /><c:out value="${cliente.razao_social}" /></p>
-													<!-- <p class="">CPF/CNPJ: <c:out value="${cliente.numero_documento}" /></p> -->
-													<p class="">EMAIL: <c:out value="${cliente.email_cliente}" /></p>
-													<p class="">TELEFONE: <c:out value="${cliente.telefone_cliente}" /></p>
-												</div>
+													<p class="">NOME : <c:out value="${cliente.nome_cliente}" /><c:out value="${cliente.razao_social}" /></p>
+													
+													
+													
+													<c:set var="doc" value="${cliente.numero_documento}"/>  
+													 <c:choose>
+														 <c:when test = "${fn:length(doc)==11}" >
+														
+															<span>CPF: </span><span class="exampleInputCpf"><c:out value="${cliente.numero_documento}" /></span>
+														 </c:when>
+														 
+														 <c:otherwise>
+														 	<span>CNPJ: </span><span class="exampleInputCnpj"><c:out value="${cliente.numero_documento}" /></span>
+														 </c:otherwise>
+													 </c:choose>
+																										
+													<p class="">EMAIL : <c:out value="${cliente.email_cliente}" /></p>
+													<p class="exampleInputTelefone"> <c:out
+															value="${cliente.telefone_cliente}" /> </p>												
+													</div>
 											</div>
 
 											<div class="col-md">
 											<h3 class="">Endereço</h3>
-												<p class="">UF: <c:out value="${cliente.uf}" /></p>
-												<p class="">Cidade: <c:out value="${cliente.cidade}" /></p>
-												<p class="">Bairro: <c:out value="${cliente.bairro}" /></p>
-												<p class="">Cep: <c:out value="${cliente.cep_endeco}" /></p></p>
-												<p class="">Logradouro: <c:out value="${cliente.rua_endereco}" /> <c:out value="${cliente.numero_endereco}" /> <c:out value="${cliente.complemento}" /></p>
+												<p class="">UF : <c:out value="${cliente.uf}" /></p>
+												<p class="">Cidade : <c:out value="${cliente.cidade}" /></p>
+												<p class="">Bairro : <c:out value="${cliente.bairro}" /></p>
+												<p class="exampleInputCep"> <c:out
+															value="${cliente.cep_endeco}" /> </p>
+											
+												<p class="">Logradouro : <c:out value="${cliente.rua_endereco}" />
+													 <c:out value="${cliente.numero_endereco}" />
+													 	 <c:out value="${cliente.complemento}" />
+												</p>
 											</div>											
 										</div>
 									</div>
@@ -302,82 +286,6 @@ ul{
 	
 				
 
-<!-- 				<div class="table-responsive">
-				
-				
-					<table class="table align-middle">
-							<thead>
-							
-								<tr>
-									<th class="col-1 ">Cod Cliente</th>
-									<th class="col-2">Nome Cliente</th>
-									<th class="col-1">telefone</th>
-									<th class="col-2">Data Nac</th>
-									<th class="col-2">Endereço</th>
-																	
-								</tr>
-							</thead>
-							<tbody>
-
-								
-								<c:forEach var="cliente" items="${listCliente}">
-								
-							
-						<tr class="font-family: var;">			
-						
-						<form action="ServletCliente" method ="post">
-						
-							<td>
-								<c:out value="${cliente.cod_cliente}"/>
-								
-							</td>
-							
-							<td>
-								<c:out value="${cliente.nome_cliente}"/>
-								<c:out value="${cliente.razao_social}"/>
-							</td>
-							
-							<td>
-								<c:out value="${cliente.telefone_cliente}"/>
-							</td>
-							
-							
-							
-						<td>
-							
-						 	<c:out value="${cliente.data_nascimento}"/>    
-						</td>
-							
-						</td>
-						
-						<td class="detalhes">
-												<details>
-													<summary>  Detalhes </summary>
-														<ul>
-															<li> UF : [ ${cliente.uf} ]</li>
-															<li> ${cliente.cidade} </li>
-															<li>${cliente.bairro} </li>
-															<li>${cliente.cep_endeco} </li>
-																														
-															<li>
-																<c:out value="${cliente.rua_endereco}"/> nº
-																<c:out value="${cliente.numero_endereco}"/> 
-																<c:out value="${cliente.complemento}"/> 
-															</li>
-														 </ul>
-												</details>
-						</td>
-									
-					</form>
-				</tr>
-			</c:forEach>
-									
-									
-						</tbody>
-					</table>
-				</div>
-			</main>
- -->
 
 
 
@@ -388,11 +296,28 @@ ul{
 
 
 
-<!--  <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
- 
- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
- <script src="./dashboard.js"></script>
-  -->
- 
+
+ <!-- jQuery Mask -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="jquery.mask.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//$(".exampleInputTelefone1").mask("TELEFONE: (00) 00000-0000");
+			 $(".exampleInputTelefone").mask("TELEFONE: (00) 0000-00009");
+			$('.exampleInputChassi').mask('A.AA.AAAAAAA.A.AAAAA');
+			
+			
+			$('.exampleInputCpf').mask('000.000.000-00', { reverse: true });
+            $('.exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
+		});
+				
+		
+	</script>
+	
 </body>
 </html>
