@@ -277,10 +277,21 @@ ul{
 												<div class="cliente">
 													<h3 class="">Cliente</h3>
 													<p class="">NOME : <c:out value="${cliente.nome_cliente}" /><c:out value="${cliente.razao_social}" /></p>
-													<p class="exampleInputCnpj"> <c:out
-															value="${cliente.numero_documento}" /> </p>
 													
 													
+													
+													<c:set var="doc" value="${cliente.numero_documento}"/>  
+													 <c:choose>
+														 <c:when test = "${fn:length(doc)==11}" >
+														
+															<span>CPF: </span><span class="exampleInputCpf"><c:out value="${cliente.numero_documento}" /></span>
+														 </c:when>
+														 
+														 <c:otherwise>
+														 	<span>CNPJ: </span><span class="exampleInputCnpj"><c:out value="${cliente.numero_documento}" /></span>
+														 </c:otherwise>
+													 </c:choose>
+																										
 													<p class="">EMAIL : <c:out value="${cliente.email_cliente}" /></p>
 													<p class="exampleInputTelefone"> <c:out
 															value="${cliente.telefone_cliente}" /> </p>												
@@ -295,7 +306,10 @@ ul{
 												<p class="exampleInputCep"> <c:out
 															value="${cliente.cep_endeco}" /> </p>
 											
-												<p class="">Logradouro : <c:out value="${cliente.rua_endereco}" /> <c:out value="${cliente.numero_endereco}" /> <c:out value="${cliente.complemento}" /></p>
+												<p class="">Logradouro : <c:out value="${cliente.rua_endereco}" />
+													 <c:out value="${cliente.numero_endereco}" />
+													 	 <c:out value="${cliente.complemento}" />
+												</p>
 											</div>											
 										</div>
 									</div>
@@ -319,41 +333,29 @@ ul{
  <script src="./dashboard.js"></script>
 
 
-<!-- jQuery Mask -->
+
+
+ <!-- jQuery Mask -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
 		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		crossorigin="anonymous"></script>
 
-	<script type="text/javascript" src="jquery.mask.js">	</script>
-	
-	
+	<script type="text/javascript" src="jquery.mask.js"></script>
+
 
 	<script type="text/javascript">
-	
-	
-	
 		$(document).ready(function() {
-			$('.exampleInputTelefone').mask('TELEFONE : (00) 0000-0000');
-			$('.exampleInputInscEstadual').mask('000.000.000.000');
-			$('.exampleInputCep').mask('CEP : 00000-000');
-			$('.exampleInputCnpjs').mask('00.000.000/0000-00', {
-				reverse : true
-			});
-			$('.placeholder').mask("00/00/0000", {
-				placeholder : "__/__/____"
-			});		
+			//$(".exampleInputTelefone1").mask("TELEFONE: (00) 00000-0000");
+			 $(".exampleInputTelefone").mask("TELEFONE: (00) 0000-00009");
+			$('.exampleInputChassi').mask('A.AA.AAAAAAA.A.AAAAA');
 			
 			
+			$('.exampleInputCpf').mask('000.000.000-00', { reverse: true });
+            $('.exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
 		});
-		
-		
-		
-		
-		
+				
 		
 	</script>
-
-
-
+	
 </body>
 </html>
