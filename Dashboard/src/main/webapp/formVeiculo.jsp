@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>CADASTRO DE VEÍCULOS</title>
+<meta charset="UTF-8">
+<title>CADASTRO DE VEÃCULOS</title>
 
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -64,15 +64,18 @@
 				<div class="position-sticky pt-3">
 					<ul class="nav flex-column">
 
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="#"> <span data-feather="home"></span>
-								HOME
+						<li class="nav-item"><a class="nav-link" href="index.jsp">
+								<form action="ServletIndex" method="post">
+									<button type="submit" class="btn">
+										<span data-feather="home"></span> HOME
+									</button>
+								</form>
 						</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
 								<form action="ServletVeiculo" method="post">
 									<button type="submit" class="btn">
-										<span data-feather="file"></span> VEÍCULO
+										<span data-feather="file"></span> VEÃCULO
 									</button>
 								</form>
 						</a></li>
@@ -117,25 +120,25 @@
 			<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
 				<div
 					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-					<h1 class="h2 text-light">ADICIONAR VEÍCULOS</h1>
+					<h1 class="h2 text-light">ADICIONAR VEÃCULOS</h1>
 
 				</div>
 
 				<div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
-					<h3 class="card-title text-center mb-3">CADASTRAR VEÍCULO</h3>
+					<h3 class="card-title text-center mb-3">CADASTRAR VEÃCULO</h3>
 
 					<form action="ServletVeiculo" method="post">
 						<c:choose>
 							<c:when test="${ veiculo == null }">
 
 								<div class=mb-3>
-									<label class="form-label">MODELO VEÍCULO:</label> <input
+									<label class="form-label">MODELO VEÃCULO:</label> <input
 										type="text" class="form-control" name="modelo_veiculo"
 										required />
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">MARCA DO VEÍCULO:</label> <select
+									<label class="form-label">MARCA DO VEÃCULO:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="cod_marca"
 										required>
 										<option selected>SELECIONE A MARCA</option>
@@ -152,17 +155,17 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">ANO DO VEÍCULO:</label> <input
+									<label class="form-label">ANO DO VEÃCULO:</label> <input
 										type="number" class="form-control" name="ano_veiculo" required />
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">PREÇO DO VEÍCULO (R$):</label> <input
+									<label class="form-label">PREÃ‡O DO VEÃCULO (R$):</label> <input
 										type="text" id="exampleInputMoney" class="form-control" name="preco_veiculo" required />
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">COR DO VEÍCULO:</label> <select
+									<label class="form-label">COR DO VEÃCULO:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="cod_cor"
 										required>
 										<!-- <option selected>SELECIONE A COR</option>  -->
@@ -173,10 +176,10 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">MOTOR DO VEÍCULO:</label> <select
+									<label class="form-label">MOTOR DO VEÃCULO:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="cod_motor"
 										required>
-										<option selected>SELECIONE O TIPO DE MOTOR E POTÊNCIA</option>
+										<option selected>SELECIONE O TIPO DE MOTOR E POTÃŠNCIA</option>
 										<c:forEach var="motor" items="${listMotor}">
 											<option value="${motor.cod_motor}">${motor.motor_veiculo}
 												${motor.potencia_cv}</option>
@@ -185,10 +188,10 @@
 								</div>
 
 								<div class=mb-3>
-									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <select
+									<label class="form-label">TIPO DE COMBUSTÃVEL:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel"
 										required>
-										<option selected>SELECIONE O TIPODE COMBUSTÍVEL</option>
+										<option selected>SELECIONE O TIPODE COMBUSTÃVEL</option>
 										<c:forEach var="combustivel" items="${listCombustivel}">
 											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
 										</c:forEach>
@@ -223,8 +226,8 @@
 									<label class="form-label">ESTOQUE:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="estoque"
 										required>
-										<option selected>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
-										<option value="FALSE">NÃO</option>
+										<option selected>O VEÃCULO SE ENCONTRA EM ESTOQUE?</option>
+										<option value="FALSE">NÃƒO</option>
 										<option value="TRUE">SIM</option>
 									</select>
 								</div>
@@ -234,8 +237,8 @@
 									<label class="form-label">DESTAQUE:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="destaque"
 										required>
-										<option selected>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
-										<option value="FALSE">NÃO</option>
+										<option selected>O VEÃCULO SERÃ DESTAQUE NA HOME?</option>
+										<option value="FALSE">NÃƒO</option>
 										<option value="TRUE">SIM</option>
 									</select>
 								</div>
@@ -282,13 +285,13 @@
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">ANO DE FABRICAÇÃO:</label> <input value="${veiculo.ano_veiculo}" 
+									<label class="form-label">ANO DE FABRICAÃ‡ÃƒO:</label> <input value="${veiculo.ano_veiculo}" 
 										type="text" class="form-control" name="ano_veiculo"
 										/>
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">PREÇO:</label> <input type="text"
+									<label class="form-label">PREÃ‡O:</label> <input type="text"
 										class="form-control" name="preco_veiculo" id="exampleInputMoney"
 										value="${veiculo.preco_veiculo}" />
 								</div>
@@ -306,7 +309,7 @@
 
 								<div class="mb-3">
 									<label class="form-label">SELECIONE O TIPO DE MOTOR E
-										POTÊNCIA:</label> <select
+										POTÃŠNCIA:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="cod_motor"
 										required>
 										<c:forEach var="motor" items="${listMotor}">
@@ -315,10 +318,10 @@
 									</select>
 								</div>
 								<div class=mb-3>
-									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <select
+									<label class="form-label">TIPO DE COMBUSTÃVEL:</label> <select
 										class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel"
 										required>
-										<option selected>SELECIONE O TIPO DE COMBUSTÍVEL</option>
+										<option selected>SELECIONE O TIPO DE COMBUSTÃVEL</option>
 										<c:forEach var="combustivel" items="${listCombustivel}">
 											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
 										</c:forEach>
@@ -352,8 +355,8 @@
 												<label class="form-label">ESTOQUE:</label> <select
 													class="form-select form-select-lg mb-3 fs-6" name="estoque"
 													required>
-													<option>O VEÍCULO SE ENCONTRA EM ESTOQUE?</option>
-													<option value="FALSE">NÃO</option>
+													<option>O VEÃCULO SE ENCONTRA EM ESTOQUE?</option>
+													<option value="FALSE">NÃƒO</option>
 													<option value="TRUE">SIM</option>
 												</select>
 											</div>
@@ -363,8 +366,8 @@
 													<label class="form-label">DESTAQUE:</label> <select
 														class="form-select form-select-lg mb-3 fs-6"
 														name="destaque" required>
-														<option>O VEÍCULO SERÁ DESTAQUE NA HOME?</option>
-														<option value="FALSE">NÃO</option>
+														<option>O VEÃCULO SERÃ DESTAQUE NA HOME?</option>
+														<option value="FALSE">NÃƒO</option>
 														<option value="TRUE">SIM</option>
 													</select>
 												</div>

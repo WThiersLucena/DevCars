@@ -98,12 +98,13 @@ pageEncoding="ISO-8859-1"%>
 			    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.jsp">
-              <span data-feather="home"></span>
-              HOME
-            </a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.jsp">
+								<form action="ServletIndex" method="post">
+									<button type="submit" class="btn">
+										<span data-feather="home"></span> HOME
+									</button>
+								</form>
+						</a></li>
           
           <li class="nav-item">
             <a class="nav-link" href="veiculo.jsp"> 

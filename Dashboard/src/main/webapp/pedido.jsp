@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -23,7 +23,7 @@ pageEncoding="ISO-8859-1"%>
 
 .accordion-button {
 	-webkit-box-shadow: 11px 11px 28px 10px rgba(191, 161, 63, 0.45);
-	box-shadow: 5px 5px 28px 10px rgba(191, 161, 63, 0.45);
+	box-shadow: 2px 2px 2px 2px rgba(191, 161, 63, 0.45);
 }
 
 .accordion-button:not(.collapsed) {

@@ -32,7 +32,7 @@
 
 .accordion-button {
 	-webkit-box-shadow: 11px 11px 28px 10px rgba(191, 161, 63, 0.45);
-	box-shadow: 5px 5px 28px 10px rgba(191, 161, 63, 0.45);
+	box-shadow: 2px 2px 2px 2px rgba(191, 161, 63, 0.45);
 }
 
 .accordion-button:not(.collapsed) {
