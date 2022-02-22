@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>CADASTRAR FORNECEDOR</title>
 
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
@@ -49,22 +49,23 @@
  
 <div class="container-fluid">
   <div class="row">
-         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.jsp">
-              <span data-feather="home"></span>
-              HOME
-            </a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.jsp">
+				<form action="ServletIndex" method="post">
+					<button type="submit" class="btn">
+						<span data-feather="home"></span> HOME
+					</button>
+				</form>
+		</a></li>
           
           <li class="nav-item">
             <a class="nav-link" href="veiculo.jsp"> 
             	<form action="ServletVeiculo" method="post">
 					<button type="submit" class="btn">
 						<span data-feather="file"></span>
-						VEÍCULO
+						VEÃCULO
 					</button>
 				</form>
             </a>
@@ -138,12 +139,12 @@
 						</div>
 					
 						<div class=mb-3>
-							<label class="form-label">RAZÃO SOCIAL:</label>
+							<label class="form-label">RAZÃƒO SOCIAL:</label>
 							<input type="text" class="form-control" name="razao_social" required/>
 						</div>
 						
 						<div class=mb-3>
-							<label class="form-label">INSCRIÇÃO ESTADUAL:</label>
+							<label class="form-label">INSCRIÃ‡ÃƒO ESTADUAL:</label>
 							<input type="text" class="form-control" id="exampleInputInscEstadual" name="inscricao_estadual" required/>
 						</div>
 						
@@ -176,12 +177,12 @@
 						</div>
 						
 						<div class="mb-3">
-							<label class="form-label">RAZÃO SOCIAL:</label>
+							<label class="form-label">RAZÃƒO SOCIAL:</label>
 							<input type="text" class="form-control" name="razao_social" value="${supplier.razao_social}"/>
 						</div>
 						
 						<div class="mb-3">
-							<label class="form-label">INSCRIÇÃO ESTADUAL:</label>
+							<label class="form-label">INSCRIÃ‡ÃƒO ESTADUAL:</label>
 							<input type="text" class="form-control" id="exampleInputInscEstadual" name="inscricao_estadual" value="${supplier.inscricao_estadual}"/>
 						</div>
 						
@@ -196,7 +197,7 @@
 						</div>
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button type="submit" name="optionFornecedor" class="btn btn-primary flex-start" value="updateSupplier">Atualizar</button>
+							<button type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="updateSupplier">Atualizar</button>
 						</div>
 						
 					</c:otherwise>
