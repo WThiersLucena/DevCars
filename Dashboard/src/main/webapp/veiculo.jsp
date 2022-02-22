@@ -2,6 +2,8 @@
 pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
 
 
 <!DOCTYPE html>
@@ -147,6 +149,14 @@ pageEncoding="ISO-8859-1"%>
           </div>
         </div>
       </div>
+
+<!-- Função que exibe a contagem da lista de veiculos -->
+	<div>
+		<c:set var="veiculos" value="${listVeiculo}"/> 
+		<h1 class="fs-1 text-light"> <c:out value="${fn:length(veiculos)}"></c:out></h1>
+	</div>
+	
+<!-- Função que exibe a contagem da lista de veiculos -->
 
 
 		<table class="table table-striped table-sm table-light table-bordered shadow" >

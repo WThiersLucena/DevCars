@@ -218,11 +218,11 @@ pageEncoding="ISO-8859-1"%>
 													 <c:choose>
 														 <c:when test = "${fn:length(doc)==11}" >
 														
-															<p class="exampleInputCpf">NÚMERO DO DOCUMENTO: <c:out value="${a.numero_documento}" /></p>
+															<span>CPF: </span><span class="exampleInputCpf"><c:out value="${a.numero_documento}" /></span>
 														 </c:when>
 														 
 														 <c:otherwise>
-														 	<p class="exampleInputCnpj">NÚMERO DO DOCUMENTO: <c:out value="${a.numero_documento}" /></p>
+														 	<span>CNPJ: </span><span class="exampleInputCnpj"><c:out value="${a.numero_documento}" /></span>
 														 </c:otherwise>
 													 </c:choose>
 													
@@ -248,7 +248,7 @@ pageEncoding="ISO-8859-1"%>
 												<p class="">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
 												<p class="">Câmbio: <c:out value="${a.cambio}" /></p>
 												
-												<p class="exampleInputChassi"> <c:out value="${a.numero_chassi}" /></p>
+												<span>CHASSI: </span><span class="exampleInputChassi"> <c:out value="${a.numero_chassi}" /></span>
 											</div>
 
 											<div class="col-md-3">
