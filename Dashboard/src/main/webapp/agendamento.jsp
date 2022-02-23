@@ -286,6 +286,13 @@ p {
 													<fmt:formatNumber type="number" maxFractionDigits="2"
 														minFractionDigits="2" value="${a.taxa_agendamento}" />
 												</p>
+												
+												<h3 class="tex-end">Valor do veículo:</h3>
+												<p class="text-start">
+													R$
+													<fmt:formatNumber type="number" maxFractionDigits="2"
+														minFractionDigits="2" value="${a.preco_veiculo}" />
+												</p>
 											</div>
 										</div>
 									</div>
