@@ -30,6 +30,7 @@ public class Agendamento {
 //	Integer cod_cliente = r.getInt("cod_cliente");
 	private Date data_reserva;;
 	private Double taxa_agendamento;
+	private Double preco_veiculo;
 	
 	public Agendamento() {
 		
@@ -39,7 +40,7 @@ public class Agendamento {
 	public Agendamento(Integer cod_agendamento, String nome_cliente, String razao_social, String numero_documento,
 			String email_cliente, String telefone_cliente, String marca_veiculo, String modelo_veiculo, String nome_cor,
 			String ano_veiculo, String motor_veiculo, String potencia_cv, String tipo_combustivel, String cambio,
-			String numero_chassi, Date data_reserva, Double taxa_agendamento) {
+			String numero_chassi, Date data_reserva, Double taxa_agendamento, Double preco_veiculo) {
 		super();
 		this.cod_agendamento = cod_agendamento;
 		this.nome_cliente = nome_cliente;
@@ -58,6 +59,7 @@ public class Agendamento {
 		this.numero_chassi = numero_chassi;
 		this.data_reserva = data_reserva;
 		this.taxa_agendamento = taxa_agendamento;
+		this.preco_veiculo = preco_veiculo;
 	}
 
 
@@ -241,6 +243,16 @@ public class Agendamento {
 				+ motor_veiculo + ", potencia_cv=" + potencia_cv + ", tipo_combustivel=" + tipo_combustivel
 				+ ", cambio=" + cambio + ", numero_chassi=" + numero_chassi + ", data_reserva=" + data_reserva
 				+ ", taxa_agendamento=" + taxa_agendamento + "]";
+	}
+
+
+	public Double getPreco_veiculo() {
+		return preco_veiculo;
+	}
+
+
+	public void setPreco_veiculo(Double preco_veiculo) {
+		this.preco_veiculo = preco_veiculo;
 	}
 	
 	

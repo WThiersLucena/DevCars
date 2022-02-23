@@ -20,7 +20,7 @@ public class AgendamentoDAO {
 		List<Agendamento> agenda = new ArrayList<Agendamento>();
 		
 		try {
-			PreparedStatement p = con.prepareStatement("select cod_agendamento, nome_cliente, razao_social, numero_documento, email_cliente, telefone_cliente, marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, tipo_combustivel, cambio, numero_chassi, ta.data_reserva, ta.taxa_agendamento\r\n"
+			PreparedStatement p = con.prepareStatement("select cod_agendamento, nome_cliente, razao_social, numero_documento, email_cliente, telefone_cliente, marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, tipo_combustivel, cambio, numero_chassi, ta.data_reserva, ta.taxa_agendamento, preco_veiculo\r\n"
 					+ "from tb_cliente tc \r\n"
 					+ "inner join tb_agendamento ta on (tc.cod_cliente = ta.cod_cliente)\r\n"
 					+ "inner join tb_veiculo tv on (tv.cod_veiculo = ta.cod_veiculo)\r\n"
@@ -51,8 +51,9 @@ public class AgendamentoDAO {
 				String numero_chassi = r.getString("numero_chassi");				
 				Date data_reserva = r.getDate("data_reserva");
 				Double taxa_agendamento = r.getDouble("taxa_agendamento");
+				Double preco_veiculo = r.getDouble("preco_Veiculo");
 				
-				Agendamento a = new Agendamento(cod_agendamento, nome_cliente, razao_social, numero_documento, email_cliente, telefone_cliente, marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, tipo_combustivel, cambio, numero_chassi, data_reserva, taxa_agendamento);
+				Agendamento a = new Agendamento(cod_agendamento, nome_cliente, razao_social, numero_documento, email_cliente, telefone_cliente, marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, tipo_combustivel, cambio, numero_chassi, data_reserva, taxa_agendamento, preco_veiculo);
 				
 				a.setCod_agendamento(cod_agendamento);
 				agenda.add(a);
