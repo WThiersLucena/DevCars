@@ -31,6 +31,7 @@ public class Agendamento {
 	private Date data_reserva;;
 	private Double taxa_agendamento;
 	private Double preco_veiculo;
+	private String descricao_forma_pagamento;
 	
 	public Agendamento() {
 		
@@ -40,7 +41,7 @@ public class Agendamento {
 	public Agendamento(Integer cod_agendamento, String nome_cliente, String razao_social, String numero_documento,
 			String email_cliente, String telefone_cliente, String marca_veiculo, String modelo_veiculo, String nome_cor,
 			String ano_veiculo, String motor_veiculo, String potencia_cv, String tipo_combustivel, String cambio,
-			String numero_chassi, Date data_reserva, Double taxa_agendamento, Double preco_veiculo) {
+			String numero_chassi, Date data_reserva, Double taxa_agendamento, Double preco_veiculo, String descricao_forma_pagamento) {
 		super();
 		this.cod_agendamento = cod_agendamento;
 		this.nome_cliente = nome_cliente;
@@ -60,6 +61,7 @@ public class Agendamento {
 		this.data_reserva = data_reserva;
 		this.taxa_agendamento = taxa_agendamento;
 		this.preco_veiculo = preco_veiculo;
+		this.descricao_forma_pagamento = descricao_forma_pagamento;
 	}
 
 
@@ -253,6 +255,16 @@ public class Agendamento {
 
 	public void setPreco_veiculo(Double preco_veiculo) {
 		this.preco_veiculo = preco_veiculo;
+	}
+
+
+	public String getDescricao_forma_pagamento() {
+		return descricao_forma_pagamento;
+	}
+
+
+	public void setDescricao_forma_pagamento(String descricao_forma_pagamento) {
+		this.descricao_forma_pagamento = descricao_forma_pagamento;
 	}
 	
 	

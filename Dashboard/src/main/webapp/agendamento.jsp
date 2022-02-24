@@ -277,6 +277,11 @@ p {
 												<span>CHASSI: </span><span class="exampleInputChassi">
 													<c:out value="${a.numero_chassi}" />
 												</span>
+												<div>
+													<span class="tex-end"> Valor do veículo: </span>
+													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.preco_veiculo}" />
+													</span>
+												</div>
 											</div>
 
 											<div class="col-md-3">
@@ -287,12 +292,8 @@ p {
 														minFractionDigits="2" value="${a.taxa_agendamento}" />
 												</p>
 												
-												<h3 class="tex-end">Valor do veículo:</h3>
-												<p class="text-start">
-													R$
-													<fmt:formatNumber type="number" maxFractionDigits="2"
-														minFractionDigits="2" value="${a.preco_veiculo}" />
-												</p>
+												<h3 class="tex-end">Forma de pagamento:</h3>
+												<p class="text-start"><c:out value="${a.descricao_forma_pagamento}" /></p>
 											</div>
 										</div>
 									</div>
