@@ -13,6 +13,13 @@
 	rel="stylesheet">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body{
+	font-family: 'Questrial', sans-serif;
+}
+
+
 .bd-placeholder-img {
 	font-size: 1.125rem;
 	text-anchor: middle;
@@ -51,20 +58,52 @@
 	text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.68);
 }
 
+.container-style{
+	border-left: 2px solid #d9d9d9;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
+
 h3 {
 	font-family: Arial, Helvetica, Verdana, sans-serif;
 	margin-bottom: 8px;
 	font-size: 18px;
-	font-weight: bold
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 14px;
+	color: #545454;
 }
 
-p {
-	margin-bottom: 4px
+.container-style span{
+	color: #999999;
+	text-shadow: 0 1px 1px 0 #959595;
+}
+
+.container-style p{
+	margin: 0;
+	color: #999999;
+	text-shadow: 0 1px 1px 0 #959595;
 }
 
 @media ( min-width : 768px) {
 	.bd-placeholder-img-lg {
 		font-size: 3.5rem;
+	}
+}
+
+@media ( max-width : 450px) {
+	.accordion-button{
+		font-size: 13px;
+	}
+	
+	h3{
+		font-size: 14px;
+	}
+	
+	p, span{
+		padding-left: 7px;
+		font-size: 13px;
 	}
 }
 </style>
@@ -177,26 +216,30 @@ p {
 										aria-controls="flush-collapse-${a.cod_agendamento}">
 
 										<div class="row col-12 col-md-12 col-lg-12">
-											<div class="col-2 text-start fw-bolder">
+											<div class="d-none d-sm-block col-md-4 text-start fw-bolder">
 												<p>
 													#
 													<c:out value="${a.cod_agendamento}" />
 												</p>
 											</div>
+											
 
-											<div class="col-6 text-start fw-bolder">
-												<p>
-													Veículo: <c:out
-														value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" />
-												</p>
+											<div class="col-xs-12 col-md-5 text-start fw-bolder">
+												<span class="d-none d-sm-block">Veículo: </span>
+												<span><c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" />
+												</span>
 											</div>
+											
 
-											<div class="col-4 text-center fw-bolder">
-												<p>
-													Data de reserva: <fmt:formatDate value="${a.data_reserva}"
+											<div class="col-xs-12 col-md text-xs-center fw-bolder mt-2">
+												<span>
+													Data de reserva: 
+													</span>
+													<span><fmt:formatDate value="${a.data_reserva}"
 														pattern="dd/MM/yyyy" />
-												</p>
+												</span>
 											</div>
+											
 										</div>
 
 									</button>
@@ -207,7 +250,9 @@ p {
 									data-bs-parent="#accordionFlushExample">
 									<div class="accordion-body">
 										<div class="row">
-											<div class="col-md">
+										
+											<div class="col-md-4 container-style">
+											
 												<div class="cliente">
 													<h3 class="">Cliente</h3>
 													<p class="">
@@ -253,9 +298,11 @@ p {
 														<c:out value="${a.telefone_cliente}" />
 													</p>
 												</div>
+												
 											</div>
 
-											<div class="col-md">
+
+											<div class="col-xs-12 col-md-5 container-style">
 												<h3 class="">Detalhes do veículo</h3>
 												<p class="">
 													Motor:
@@ -282,9 +329,11 @@ p {
 													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.preco_veiculo}" />
 													</span>
 												</div>
+												
 											</div>
 
-											<div class="col-md-3">
+
+											<div class="col-md container-style">
 												<h3 class="tex-end">Taxa de agendamento:</h3>
 												<p class="text-start">
 													R$
