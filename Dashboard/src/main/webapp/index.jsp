@@ -18,6 +18,13 @@
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body{
+	font-family: 'Questrial', sans-serif;
+}
+
+
 .cliente {
 	box-shadow: 5px 5px 5px -1px rgba(94, 94, 94);
 }
