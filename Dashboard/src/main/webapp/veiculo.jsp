@@ -14,6 +14,12 @@ pageEncoding="UTF-8"%>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body{
+	font-family: 'Questrial', sans-serif;
+}
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -127,7 +133,7 @@ pageEncoding="UTF-8"%>
     </nav>
 		
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
+  <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2 text-white">LISTA DE VEÍCULOS</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -160,7 +166,7 @@ pageEncoding="UTF-8"%>
 <!-- Função que exibe a contagem da lista de veiculos -->
 
 
-		<table class="table table-striped table-sm table-light table-bordered shadow" >
+		<table class="table table-striped table-sm table-bordered shadow bg-light">
 			<thead>
 				<tr>
 					<th class="col-1">COD</th>
