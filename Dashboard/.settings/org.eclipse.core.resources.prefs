@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 encoding//src/main/java/Teste.java=UTF-8
 encoding//src/main/java/br/com/controller/ServletFornecedor.java=UTF-8
 encoding//src/main/java/br/com/dao/FornecedorDAO.java=UTF-8
+encoding//src/main/webapp/agendamento.jsp=UTF-8
 encoding//src/main/webapp/cliente.jsp=UTF-8
 encoding//src/main/webapp/index.jsp=UTF-8
 encoding//src/main/webapp/pedido.jsp=UTF-8

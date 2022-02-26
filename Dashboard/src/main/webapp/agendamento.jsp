@@ -150,7 +150,7 @@ h3 {
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
 								<form action="ServletVeiculo" method="post">
 									<button type="submit" class="btn">
-										<span data-feather="file"></span> VEÍCULO
+										<span data-feather="file"></span> VEï¿½CULO
 									</button>
 								</form>
 						</a></li>
@@ -225,7 +225,7 @@ h3 {
 											
 
 											<div class="col-xs-12 col-md-5 text-start fw-bolder">
-												<span class="d-none d-sm-block">Veículo: </span>
+												<span class="d-none d-sm-block">Veï¿½culo: </span>
 												<span><c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" />
 												</span>
 											</div>
@@ -262,7 +262,7 @@ h3 {
 													</p>
 
 
-													<!-- <p class="exampleInputDocumento">NÚMERO DO DOCUMENTO: <c:out value="${a.numero_documento}" /></p>-->
+													<!-- <p class="exampleInputDocumento">Nï¿½MERO DO DOCUMENTO: <c:out value="${a.numero_documento}" /></p>-->
 													<c:set var="doc" value="${a.numero_documento}" />
 													<c:choose>
 														<c:when test="${fn:length(doc)==11}">
@@ -303,21 +303,21 @@ h3 {
 
 
 											<div class="col-xs-12 col-md-5 container-style">
-												<h3 class="">Detalhes do veículo</h3>
+												<h3 class="">Detalhes do veï¿½culo</h3>
 												<p class="">
 													Motor:
 													<c:out value="${a.motor_veiculo}" />
 												</p>
 												<p class="">
-													Potência:
+													Potï¿½ncia:
 													<c:out value="${a.potencia_cv}" />
 												</p>
 												<p class="">
-													Combustível:
+													Combustï¿½vel:
 													<c:out value="${a.tipo_combustivel}" />
 												</p>
 												<p class="">
-													Câmbio:
+													Cï¿½mbio:
 													<c:out value="${a.cambio}" />
 												</p>
 
@@ -325,7 +325,7 @@ h3 {
 													<c:out value="${a.numero_chassi}" />
 												</span>
 												<div>
-													<span class="tex-end"> Valor do veículo: </span>
+													<span class="tex-end"> Valor do veï¿½culo: </span>
 													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.preco_veiculo}" />
 													</span>
 												</div>
