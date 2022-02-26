@@ -1,11 +1,18 @@
 import br.com.conexao.Conexao;
 import br.com.dao.ClienteDAO;
 import br.com.dao.VeiculoDAO;
+import br.com.dao.AgendamentoDAO;
 
 public class Teste {
 	public static void main(String[] args) {
 
-
+// ---------> MOSTRAR AGENDAMENTOS <------------
+		AgendamentoDAO agenda = new AgendamentoDAO();
+		System.out.println(agenda.mostrarAgenda());
+// ---------> FIM DOS AGENDAMENTOS <------------		
+		
+		
+		
 // ---------> MOSTRAR CLIENTE <------------
 
 //		
