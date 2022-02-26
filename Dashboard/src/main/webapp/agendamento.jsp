@@ -234,7 +234,7 @@ h3 {
 											<div class="col-xs-12 col-md text-xs-center fw-bolder mt-2">
 												<span>
 													Data de reserva: 
-													</span>
+													</span> 
 													<span><fmt:formatDate value="${a.data_reserva}"
 														pattern="dd/MM/yyyy" />
 												</span>
