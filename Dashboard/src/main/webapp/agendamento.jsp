@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Lista de Agendamentos</title>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -150,7 +150,7 @@ h3 {
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
 								<form action="ServletVeiculo" method="post">
 									<button type="submit" class="btn">
-										<span data-feather="file"></span> VE�CULO
+										<span data-feather="file"></span> VEÍCULO
 									</button>
 								</form>
 						</a></li>
