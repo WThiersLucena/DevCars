@@ -7,8 +7,8 @@ public class Teste {
 	public static void main(String[] args) {
 
 // ---------> MOSTRAR AGENDAMENTOS <------------
-		AgendamentoDAO agenda = new AgendamentoDAO();
-		System.out.println(agenda.mostrarAgenda());
+//		AgendamentoDAO agenda = new AgendamentoDAO();
+//		System.out.println(agenda.mostrarAgenda());
 // ---------> FIM DOS AGENDAMENTOS <------------		
 		
 		
@@ -16,11 +16,17 @@ public class Teste {
 // ---------> MOSTRAR CLIENTE <------------
 
 //		
-//		ClienteDAO clienteD = new ClienteDAO();
+		ClienteDAO clienteD = new ClienteDAO();
 //
-//		Conexao c = new Conexao();
-//		c.getConnection();		
-//		System.out.println(clienteD.mostrarCliente());
+		Conexao c = new Conexao();
+		c.getConnection();		
+//		System.out.println(clienteD.mostrarCliente());		
+//		System.out.println(clienteD.mostrarPedido());
+		System.out.println(clienteD.mostrarEndereco());
+		
+		
+		
+		
 
 //	 ---------> FIM MOSTRAR CLIENTE <------------
 		
