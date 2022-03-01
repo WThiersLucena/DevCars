@@ -10,7 +10,7 @@ public class Cliente {
 	private String email_cliente;
 	private Date data_nascimento;
 	private String telefone_cliente;
-	private String cep_endeco;
+	private String cep_endereco;
 	private String rua_endereco;
 	private String complemento;
 	private String numero_endereco;
@@ -18,7 +18,7 @@ public class Cliente {
 	private String cidade;
 	private String uf;
 	private String numero_documento;
-	private String cep_endereco;
+	
 	
 	
 	public Cliente(String cod_cliente, String nome_cliente, String razao_social, String email_cliente,
@@ -31,7 +31,7 @@ public class Cliente {
 		this.email_cliente = email_cliente;
 		this.data_nascimento = data_nascimento;
 		this.telefone_cliente = telefone_cliente;
-		this.cep_endeco = cep_endeco;
+		this.cep_endereco = cep_endeco;
 		this.rua_endereco = rua_endereco;
 		this.complemento = complemento;
 		this.numero_endereco = numero_endereco;
@@ -48,7 +48,7 @@ public class Cliente {
 		this.razao_social = razao_social;
 		this.email_cliente = email_cliente;
 		this.telefone_cliente = telefone_cliente;
-		this.cep_endeco = cep_endeco;
+		this.cep_endereco = cep_endeco;
 		this.rua_endereco = rua_endereco;
 		this.complemento = complemento;
 		this.numero_endereco = numero_endereco;
@@ -69,7 +69,7 @@ public class Cliente {
 
 
 	public Cliente(String cod_cliente, String cep_endereco, String rua_endereco, String complemento,
-			String numero_endereco, String bairro, String cidade2, String uf) {
+			String numero_endereco, String bairro, String cidade, String uf) {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -110,11 +110,11 @@ public class Cliente {
 	public void setTelefone_cliente(String telefone_cliente) {
 		this.telefone_cliente = telefone_cliente;
 	}
-	public String getCep_endeco() {
-		return cep_endeco;
+	public String getCep_endereco() {
+		return cep_endereco;
 	}
-	public void setCep_endeco(String cep_endeco) {
-		this.cep_endeco = cep_endeco;
+	public void setCep_endereco(String cep_endeco) {
+		this.cep_endereco = cep_endeco;
 	}
 	public String getRua_endereco() {
 		return rua_endereco;
@@ -165,20 +165,13 @@ public class Cliente {
 	public String toString() {
 		return "Cliente [cod_cliente=" + cod_cliente + ", nome_cliente=" + nome_cliente + ", razao_social="
 				+ razao_social + ", email_cliente=" + email_cliente + ", data_nascimento=" + data_nascimento
-				+ ", telefone_cliente=" + telefone_cliente + ", cep_endeco=" + cep_endeco + ", rua_endereco="
+				+ ", telefone_cliente=" + telefone_cliente + ", cep_endereco=" + cep_endereco + ", rua_endereco="
 				+ rua_endereco + ", complemento=" + complemento + ", numero_endereco=" + numero_endereco + ", bairro="
 				+ bairro + ", cidade=" + cidade + ", uf=" + uf + ", numero_documento=" + numero_documento+"]";
 	}
 
 
-	public String getCep_endereco() {
-		return cep_endereco;
-	}
 
 
-	public void setCep_endereco(String cep_endereco) {
-		this.cep_endereco = cep_endereco;
-	}
-	
 	
 }
