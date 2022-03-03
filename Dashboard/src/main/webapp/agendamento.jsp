@@ -303,21 +303,21 @@ h3 {
 
 
 											<div class="col-xs-12 col-md-5 container-style">
-												<h3 class="">Detalhes do ve�culo</h3>
+												<h3 class="">Detalhes do veículo</h3>
 												<p class="">
 													Motor:
 													<c:out value="${a.motor_veiculo}" />
 												</p>
 												<p class="">
-													Pot�ncia:
+													Potência:
 													<c:out value="${a.potencia_cv}" />
 												</p>
 												<p class="">
-													Combust�vel:
+													Combustível:
 													<c:out value="${a.tipo_combustivel}" />
 												</p>
 												<p class="">
-													C�mbio:
+													Câmbio:
 													<c:out value="${a.cambio}" />
 												</p>
 
@@ -325,7 +325,7 @@ h3 {
 													<c:out value="${a.numero_chassi}" />
 												</span>
 												<div>
-													<span class="tex-end"> Valor do ve�culo: </span>
+													<span class="tex-end"> Valor do veículo: </span>
 													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.preco_veiculo}" />
 													</span>
 												</div>

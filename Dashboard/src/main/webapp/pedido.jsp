@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <!DOCTYPE html>
 <html>
@@ -13,9 +13,10 @@ pageEncoding="UTF-8"%>
 	rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
-body{
+body {
 	font-family: 'Questrial', sans-serif;
 }
 
@@ -76,7 +77,13 @@ p {
 </style>
 
 <link href="./dashboard.css" rel="stylesheet" />
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1">Linha responsividade -->
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
@@ -249,34 +256,41 @@ p {
 												</p>
 
 
-<!-- 												<p class=""> -->
-<!-- 													Nº DOCUMENTO: -->
-<%-- 													<c:out value="${pedidos.numero_documento}" /> --%>
-<!-- 												</p> -->
+												<!-- 												<p class=""> -->
+												<!-- 													Nº DOCUMENTO: -->
+												<%-- 													<c:out value="${pedidos.numero_documento}" /> --%>
+												<!-- 												</p> -->
 
 
-	
 
 
-													<c:set var="doc" value="${pedidos.numero_documento}"/>  
-													 <c:choose>
-														 <c:when test = "${fn:length(doc) == 11}" >
-														
-															<span>CPF: </span><span class="exampleInputCpf"><c:out value="${pedidos.numero_documento}" /></span>
-														 </c:when>
-														 
-														 <c:otherwise>
-														 	<span>CNPJ: </span><span class="exampleInputCnpj"><c:out value="${pedidos.numero_documento}" /></span>
-														 </c:otherwise>
-													 </c:choose>
-													
 
-<!-- 												<p class=""> -->
-<!-- 													TELEFONE: -->
-<%-- 													<c:out value="${pedidos.telefone_cliente}" /> --%>
-<!-- 												</p> -->
+												<c:set var="doc" value="${pedidos.numero_documento}" />
+												<c:choose>
+													<c:when test="${fn:length(doc) == 11}">
 
-													<p class="exampleInputTelefone">TELEFONE: <c:out value="${pedidos.telefone_cliente}" /></p> 
+														<span>CPF: </span>
+														<span class="exampleInputCpf"><c:out
+																value="${pedidos.numero_documento}" /></span>
+													</c:when>
+
+													<c:otherwise>
+														<span>CNPJ: </span>
+														<span class="exampleInputCnpj"><c:out
+																value="${pedidos.numero_documento}" /></span>
+													</c:otherwise>
+												</c:choose>
+
+
+												<!-- 												<p class=""> -->
+												<!-- 													TELEFONE: -->
+												<%-- 													<c:out value="${pedidos.telefone_cliente}" /> --%>
+												<!-- 												</p> -->
+
+												<p class="exampleInputTelefone">
+													TELEFONE:
+													<c:out value="${pedidos.telefone_cliente}" />
+												</p>
 
 
 												<p class="">
@@ -301,10 +315,10 @@ p {
 													EMAIL :
 													<c:out value="${pedidos.email_cliente}" />
 												</p>
-												
-<!-- 												<p class="exampleInputTelefone"> -->
-<%-- 													<c:out value="${cliente.telefone_cliente}" /> --%>
-<!-- 												</p> -->
+
+												<!-- 												<p class="exampleInputTelefone"> -->
+												<%-- 													<c:out value="${cliente.telefone_cliente}" /> --%>
+												<!-- 												</p> -->
 											</div>
 										</div>
 
@@ -340,59 +354,18 @@ p {
 		</main>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	</div>
-	
+
 
 	<script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
- <script src="./dashboard.js"></script>
- 
- 
- <!-- jQuery Mask -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+	<script src="./dashboard.js"></script>
+
+
+	<!-- jQuery Mask -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
 		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		crossorigin="anonymous"></script>
@@ -400,23 +373,24 @@ p {
 	<script type="text/javascript" src="jquery.mask.js"></script>
 
 
+
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//$(".exampleInputTelefone1").mask("TELEFONE: (00) 00000-0000");
-			 $(".exampleInputTelefone").mask("TELEFONE: (00) 0000-00009");
+			$(".exampleInputTelefone").mask("TELEFONE: (00) 0000-00009");
 			//$('.exampleInputChassi').mask('A.AA.AAAAAAA.A.AAAAA');
-			
-			
-			$('.exampleInputCpf').mask('000.000.000-00', { reverse: true });
-            $('.exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
+
+			$('.exampleInputCpf').mask('000.000.000-00', {
+				reverse : true
+			});
+			$('.exampleInputCnpj').mask('00.000.000/0000-00', {
+				reverse : true
+			});
 		});
-		
-		
-		
 	</script>
-	
-		
-		
+
+
+
 
 	<script src="./dashboard.js"></script>
 </body>
