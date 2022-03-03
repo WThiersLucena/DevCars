@@ -1,19 +1,37 @@
 import br.com.conexao.Conexao;
 import br.com.dao.ClienteDAO;
+import br.com.dao.EnderecoDAO;
+import br.com.dao.PedidoClienteDAO;
 import br.com.dao.VeiculoDAO;
+import br.com.dao.AgendamentoDAO;
 
 public class Teste {
 	public static void main(String[] args) {
 
-
+// ---------> MOSTRAR AGENDAMENTOS <------------
+//		AgendamentoDAO agenda = new AgendamentoDAO();
+//		System.out.println(agenda.mostrarAgenda());
+// ---------> FIM DOS AGENDAMENTOS <------------		
+		
+		
+		
 // ---------> MOSTRAR CLIENTE <------------
 
 //		
 //		ClienteDAO clienteD = new ClienteDAO();
+		EnderecoDAO endereco = new EnderecoDAO();
+		PedidoClienteDAO pedidoCliente = new PedidoClienteDAO();
 //
-//		Conexao c = new Conexao();
-//		c.getConnection();		
-//		System.out.println(clienteD.mostrarCliente());
+		Conexao c = new Conexao();
+		c.getConnection();		
+//		System.out.println(clienteD.mostrarCliente());		
+//		System.out.println(clienteD.mostrarPedido());
+//		System.out.println(endereco.mostrarEndereco());
+		System.out.println(pedidoCliente.mostrarPedido());
+		
+		
+		
+		
 
 //	 ---------> FIM MOSTRAR CLIENTE <------------
 		

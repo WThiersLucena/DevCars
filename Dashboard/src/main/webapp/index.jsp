@@ -18,6 +18,13 @@
 
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body{
+	font-family: 'Questrial', sans-serif;
+}
+
+
 .cliente {
 	box-shadow: 5px 5px 5px -1px rgba(94, 94, 94);
 }
@@ -50,7 +57,7 @@
 </style>
 
 <link href="./dashboard.css" rel="stylesheet" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -153,16 +160,12 @@
 			<div class="row row-cols-1 row-cols-md-3 g-4"
 				style="justify-content: center; margin: 20px;">
 				<div class="card text-center col cliente"
-					style="width: 18rem; margin-bottom: 10px; border-radius: 80px; margin-right: 50px; background-color: black; color: white;">
+					style="width: 18rem; margin-bottom: 5px; border-radius: 80px; margin-right: 50px; background-color: black; color: white;">
 					<div class="card-body">
 						<h5 class="card-title">Clientes Cadastrados</h5>
 						<p class="card-text fs-1">
 							<c:out value="${contagem_clientes}"></c:out>
 						</p>
-						<button class="btn bg-light" style="border-radius: 80px;">
-							<a href="cliente.jsp" class="card-link"
-								style="color: black; text-decoration: none;">Ver Clientes</a>
-						</button>
 					</div>
 				</div>
 				<div class="card text-center col veiculo"
@@ -172,10 +175,7 @@
 						<p class="card-text fs-1">
 							<c:out value="${contagem_veiculos}"></c:out>
 						</p>
-						<button class="btn bg-light" style="border-radius: 80px;">
-							<a href="veiculo.jsp" class="card-link"
-								style="color: black; text-decoration: none;">Ver Veículos</a>
-						</button>
+					
 					</div>
 				</div>
 			</div>

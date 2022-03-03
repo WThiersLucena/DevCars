@@ -21,7 +21,7 @@ public class ClienteDAO {
 	}
 	
 
-	
+//	MOSTRANDO CLIENTE INICIO
 	public ArrayList<Cliente> mostrarCliente() {
 			
 			Conexao c = Conexao.getInstance();
@@ -31,8 +31,8 @@ public class ClienteDAO {
 			
 			try {
 				PreparedStatement p = con.prepareStatement("select tb_cliente.cod_cliente , tb_cliente.nome_cliente,tb_cliente.razao_social ,tb_cliente.email_cliente ,tb_cliente.telefone_cliente ,tb_cliente.data_nascimento ,tb_endereco.cep_endereco ,\r\n"
-						+ "	   tb_endereco.rua_endereco ,tb_endereco.complemento, tb_endereco.numero_endereco , tb_endereco.bairro ,tb_endereco.cidade,\r\n"
-						+ "	   tb_endereco.uf, tb_cliente.numero_documento \r\n"
+						+ "tb_endereco.rua_endereco ,tb_endereco.complemento, tb_endereco.numero_endereco , tb_endereco.bairro ,tb_endereco.cidade,\r\n"
+						+ "tb_endereco.uf, tb_cliente.numero_documento \r\n"
 						+ "from tb_endereco_cliente \r\n"
 						+ "inner join tb_cliente on tb_cliente.cod_cliente = tb_endereco_cliente.cod_cliente \r\n"
 						+ "inner join tb_endereco  on tb_endereco.cod_endereco = tb_endereco_cliente.cod_endereco\r\n"
@@ -83,7 +83,9 @@ public class ClienteDAO {
 			
 			return lista;
 		}
-
+//	MOSTRANDO CLIENTE FIM
+	
+	
 	
 	public Integer contarUsuarios() {
 		Conexao c = Conexao.getInstance();
