@@ -177,7 +177,8 @@ p {
 
 
 
-						</a></li>
+						</a>
+					 </li>
 					</ul>
 
 
@@ -277,187 +278,193 @@ p {
 												
 												<br>
 												<!-- ENDEREÇOS EM COLUM TRAZER TODOS OS ENDEREÇOS  -->
-												<div class="col-md">
-												<h3 class="">Endereço</h3>
-												<p class="">
-													UF :
-													<c:out value="${cliente.uf}" />
-												</p>
-												<p class="">
-													Cidade :
-													<c:out value="${cliente.cidade}" />
-												</p>
-												<p class="">
-													Bairro :
-													<c:out value="${cliente.bairro}" />
-												</p>
-												<p class="exampleInputCep"> <c:out
-															value="${cliente.cep_endeco}" /> </p>
-
-												<p class="">
-													Logradouro :
-													<c:out value="${cliente.rua_endereco}" />
-													<c:out value="${cliente.numero_endereco}" />
-													<c:out value="${cliente.complemento}" />
-												</p>
-											</div>
-											
-											<br>
-											
-											
-											<div class="col-md">
-												<h3 class="">Endereço</h3>
-												<p class="">
-													UF :
-													<c:out value="${cliente.uf}" />
-												</p>
-												<p class="">
-													Cidade :
-													<c:out value="${cliente.cidade}" />
-												</p>
-												<p class="">
-													Bairro :
-													<c:out value="${cliente.bairro}" />
-												</p>
-												<p class="exampleInputCep"> <c:out
-															value="${cliente.cep_endeco}" /> </p>
-
-												<p class="">
-													Logradouro :
-													<c:out value="${cliente.rua_endereco}" />
-													<c:out value="${cliente.numero_endereco}" />
-													<c:out value="${cliente.complemento}" />
-												</p>
-											</div>
+												
+												<h3 class=""></h3>
+												<c:forEach var="end" items="${mostrarEndereco}">
+															<input type="hidden" name="id" value="${end.cod_cliente}" />
+													<br>
+													<h3 class="">Endereços Cadastrados :</h3>
+													<br>
+													
+													<p class="">
+														Cep :<strong>
+														<c:out value="${end.cep_endereco}" />	
+														</strong>													
+													</p>
+													
+													<p class="">
+														Estado :
+														<strong>
+														<c:out value="${end.uf}" />	
+														</strong>													
+													</p>
+													
+													
+													<p class="">
+														Rua :<strong>
+														<c:out value="${end.rua_endereco}    " />															
+														 nº 
+														<c:out value="  : ${end.numero_endereco} "  />
+														<c:out value="${end.complemento}" />
+														</strong>														
+													</p>
+													
+													
+													<p class="">
+														Bairro :   
+														<strong>
+															<c:out value="${end.bairro}" />
+														</strong>											
+													</p>
+													
+													<p class="">
+														Cidade : 
+														<strong>
+															<c:out value="${end.cidade}" />	
+														</strong>													
+													</p>
+													
+													</c:forEach>
 												
 											<!-- ENDEREÇOS EM COLUM TRAZER TODOS OS ENDEREÇOS  -->													
 												
 											</div>
 
 											<div class="col-md">
-												<h3 class="">Pedidos</h3>
-												<p class="">
-													cod pedido :
-													<c:out value="${cliente.uf}" />
-												</p>
-												<p class="">
-													Valor do Pedido :
-													<c:out value="${cliente.cidade}" />
-												</p>
-												<p class="">
-													Data Pedido :
-													<c:out value="${cliente.bairro}" />
-												</p>
-												<p class="exampleInputCep"> <c:out
-															value="${cliente.cep_endeco}" /> </p>
-
-												<p class="">
-													Satus :
-													<c:out value="${cliente.rua_endereco}" />
-													<c:out value="${cliente.numero_endereco}" />
-													<c:out value="${cliente.complemento}" />
-												</p>
-												
 												
 												<div class="row">
 													<div class="col-md">
 														<div class="pedidos">
+														
+														
+														
+														
+														<!-- TRAZENDO OS PEDIDOS DO CLIENTE  -->	
 											
-															<h3>Pedidos</h3>
+															<h3>Historico de Pedidos</h3>
 															<!-- inicio acordeon -->
-					<div
-						class="accordion accordion-flush border rounded m-3 shadow rounded-3 ac-style "
-						id="accordionFlushExample">
-						<div class="accordion-item">
-							<h2 class="accordion-header "
-								id="flush-heading-${pedidos.cod_pedido}">
-								<button class="accordion-button collapsed ac-header"
-									type="button" data-bs-toggle="collapse"
-									data-bs-target="#flush-collapse-${pedidos.cod_pedido}"
-									aria-expanded="false"
-									aria-controls="flush-collapse-${pedidos.cod_pedido}">
-
-									<div class="row col-12 col-md-12 col-lg-12">
-										<div class="col-3 text-start fw-bolder">
-											<p>
-												COD
-												<c:out value="${pedidos.cod_pedido}" />
-											</p>
-										</div>
-
-										<div class="col-3 text-start fw-bolder">
-											<p>
-												VALOR
-												<c:out value="${pedidos.valor_total_pedido}" />
-											</p>
-										</div>
-
-
-
-										<div class="col-3 text-start fw-bolder">
-											<p>
-												EMISSÃO
-												<fmt:formatDate value="${pedidos.data_pedido}"
-													pattern="dd/MM/yyyy" />
-
-											</p>
-										</div>
-
-
-										<div class="col-3 text-start fw-bolder">
-											<p>
-												STATUS
-												<c:out value="${pedidos.status}" />
-											</p>
-										</div>
-
-									</div>
-
-								</button>
-							</h2>
-							<div id="flush-collapse-${pedidos.cod_pedido}"
-								class="accordion-collapse collapse"
-								aria-labelledby="flush-heading-${pedidos.cod_pedido}"
-								data-bs-parent="#accordionFlushExample">
-								<div class="accordion-body">
-									<div class="row">
-										<div class="col-md">
-											<div class="cliente">
-
-												<p class="">
-													[ Pedido nº
-													<c:out value="${pedidos.nome_cliente}" />
-													1120 ]
-												</p>
-												
-												<p class="">
-													Valor
-													<c:out value="${pedidos.nome_cliente}" />
-
-												</p>
-												
-												<p class="">
-													Data do Pedido
-													<c:out value="${pedidos.nome_cliente}" />
-
-												</p>
-												
-												<p class="">
-													Status Pedido
-													<c:out value="${pedidos.nome_cliente}" />
-
-												</p>
-												
-																								</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- fim acordeon -->
-															
+					
+															<c:forEach var="ped" items="${mostrarPedido}">
+																<input type="hidden" name="id" value="${ped.cod_cliente}" />
 											
+																<!-- inicio acordeon -->
+																<div
+																	class="accordion accordion-flush border rounded m-3 shadow rounded-3 ac-style "
+																	id="accordionFlushExample">
+																	<div class="accordion-item">
+																		<h2 class="accordion-header "
+																			id="flush-heading-${pedidos.cod_pedido}">
+																			<button class="accordion-button collapsed ac-header"
+																				type="button" data-bs-toggle="collapse"
+																				data-bs-target="#flush-collapse-${pedidos.cod_pedido}"
+																				aria-expanded="false"
+																				aria-controls="flush-collapse-${pedidos.cod_pedido}">
+											
+																				<div class="row col-12 col-md-12 col-lg-12">
+																					<div class="col-3 text-start fw-bolder">
+																						<p>
+																							COD :
+																							<c:out value="${ped.cod_pedido}" />
+																						</p>
+																					</div>
+											
+																					<div class="col-3 text-start fw-bolder">
+																						<p>
+																							VALOR TOTAL :
+																							<c:out value="${pedidos.valor_total_pedido}" />
+																						</p>
+																					</div>
+											
+											
+											
+																					<div class="col-3 text-start fw-bolder">
+																						<p>
+																							DATA DE EMISSÃO :
+																							<fmt:formatDate value="${pedidos.data_pedido}"
+																								pattern="dd/MM/yyyy" />
+											
+																						</p>
+																					</div>
+											
+											
+																					<div class="col-3 text-start fw-bolder">
+																						<p>
+																							STATUS :
+																							<c:out value="${pedidos.status}" />
+																						</p>
+																					</div>
+											
+																				</div>
+											
+																			</button>
+																		</h2>
+																		<div id="flush-collapse-${pedidos.cod_pedido}"
+																			class="accordion-collapse collapse"
+																			aria-labelledby="flush-heading-${pedidos.cod_pedido}"
+																			data-bs-parent="#accordionFlushExample">
+																			<div class="accordion-body">
+																				<div class="row">
+																					<div class="col-md">
+																						<div class="cliente">
+											
+																							<p class="">
+																								NOME :
+																								<c:out value="${ped.nome_cliente}" />
+											
+																							</p>
+																							
+																								<c:set var="doc" value="${pedidos.numero_documento}"/>  
+																								 
+											
+																							<p class="">
+																								VALOR TOTAL :
+																								<c:out value="${ped.valor_total_pedido}" />
+																							</p>
+											
+											
+																							<p class="">
+																								FORMA PAGAMENTO:
+																								<c:out value="${ped.descricao_forma_pagamento}" />
+																							</p>
+											
+																							<p class="">
+																								STATUS:
+																								<c:out value="${ped.status}" />
+																							</p>
+											
+																							<p class="">
+																								VEICULO :
+																								<c:out value="${ped.modelo_veiculo}" />
+																							</p>
+																							
+																							<p class="">
+																								CUSTO FRETE :
+																								<c:out value="${ped.valor_frete}" />
+																							</p>
+																							
+																							<p class="">
+																								DATA ENVIO :
+																								<c:out value="${ped.data_envio}" />
+																							</p>
+																							<p class="">
+																								DESTINO :
+																								<c:out value="${ped.unidade_federativa}" />
+																							</p>
+																							<p class="">
+																								ITEM :
+																								<c:out value="${ped.modelo_veiculo}" />
+																							</p>
+																							
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<!-- fim acordeon -->
+															</c:forEach>
+																<!-- fim acordeon -->
 											
 														</div>
 													</div>

@@ -18,10 +18,10 @@ public class Teste {
 // ---------> MOSTRAR CLIENTE <------------
 
 //		
-//		ClienteDAO clienteD = new ClienteDAO();
+		ClienteDAO clienteD = new ClienteDAO();
 		EnderecoDAO endereco = new EnderecoDAO();
 		PedidoClienteDAO pedidoCliente = new PedidoClienteDAO();
-//
+
 		Conexao c = new Conexao();
 		c.getConnection();		
 //		System.out.println(clienteD.mostrarCliente());		
