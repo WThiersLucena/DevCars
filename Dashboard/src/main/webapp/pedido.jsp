@@ -248,20 +248,131 @@ p {
 									<div class="row">
 										<div class="col-md">
 											<div class="cliente">
-
+												
 												<p class="">
-													NOME :
-													<c:out value="${pedidos.nome_cliente}" />
-
+													VALOR TOTAL PEDIDO: 
+													<c:out value="${pedidos.valor_total_pedido}" />
 												</p>
+												
+												
+												<p class="">
+													DATA PEDIDO: 
+													<c:out value="${pedidos.data_pedido}" />
+												</p>
+												
+												<p class="">
+													CODIGO VEICULO: 
+													<c:out value="${pedidos.cod_veiculo}" />
+												</p>
+												
+												
+												<p class="">
+													MODELO VEICULO: 
+													<c:out value="${pedidos.modelo_veiculo}" />
+												</p>
+												
+												<p class="">
+													ANO VEICULO: 
+													<c:out value="${pedidos.ano_veiculo}" />
+												</p>
+												
+												
+												<p class="">
+													NUMERO CHASSI: 
+													<c:out value="${pedidos.numero_chassi}" />
+												</p>
+												
+												<p class="">
+													MARCA VEICULO: 
+													<c:out value="${pedidos.marca_veiculo}" />
+												</p>
+												
+												<p class="">
+													NOME CLIENTE: 
+													<c:out value="${pedidos.nome_cliente}" />
+												</p>
+												
+												<p class="">
+													NUMERO DOCUMENTO: 
+													<c:out value="${pedidos.numero_documento}" />
+												</p>
+												
+												<p class="">
+													TELEFONE CLIENTE: 
+													<c:out value="${pedidos.telefone_cliente}" />
+												</p>
+												
+												<p class="">
+													RAZÃO SOCIAL: 
+													<c:out value="${pedidos.razao_social}" />
+												</p>
+												
+												<p class="">
+													EMAIL CLIENTE: 
+													<c:out value="${pedidos.email_cliente}" />
+												</p>
+												
+												
+												<p class="">
+													CEP ENDERECO: 
+													<c:out value="${pedidos.cep_endereco}" />
+												</p>
+												
+												
+												<p class="">
+													RUA ENDERECO: 
+													<c:out value="${pedidos.rua_endereco}" />
+												</p>
+												
+												
+												<p class="">
+													NUMERO ENDERECO: 
+													<c:out value="${pedidos.numero_endereco}" />
+												</p>
+												
+												<p class="">
+													BAIRRO: 
+													<c:out value="${pedidos.bairro}" />
+												</p>
+												
+												<p class="">
+													CIDADE: 
+													<c:out value="${pedidos.cidade}" />
+												</p>
+												
+												
+												<p class="">
+													UF: 
+													<c:out value="${pedidos.uf}" />
+												</p>
+												
+												<p class="">
+													VALOR FRETE: 
+													<c:out value="${pedidos.valor_frete}" />
+												</p>
+												
+												<p class="">
+													UNIDADE FEDERATIVA: 
+													<c:out value="${pedidos.unidade_federativa}" />
+												</p>
+												
+												<p class="">
+													DESCRICAO FORMA DE PAGAMENTO: 
+													<c:out value="${pedidos.descricao_forma_pagamento}" />
+												</p>
+												
+												<p class="">
+													STATUS: 
+													<c:out value="${pedidos.status}" />
+												</p>
+												
+												
+												
+<!-- 												<p class=""> -->
+<!-- 													NOME : -->
+<%-- 													<c:out value="${pedidos.nome_cliente}" /> --%>
 
-
-												<!-- 												<p class=""> -->
-												<!-- 													Nº DOCUMENTO: -->
-												<%-- 													<c:out value="${pedidos.numero_documento}" /> --%>
-												<!-- 												</p> -->
-
-
+<!-- 												</p> -->
 
 
 
@@ -282,63 +393,37 @@ p {
 												</c:choose>
 
 
-												<!-- 												<p class=""> -->
-												<!-- 													TELEFONE: -->
-												<%-- 													<c:out value="${pedidos.telefone_cliente}" /> --%>
-												<!-- 												</p> -->
-
-												<p class="exampleInputTelefone">
-													TELEFONE:
-													<c:out value="${pedidos.telefone_cliente}" />
-												</p>
+<!-- 												<p class="exampleInputTelefone"> -->
+<!-- 													TELEFONE: -->
+<%-- 													<c:out value="${pedidos.telefone_cliente}" /> --%>
+<!-- 												</p> -->
 
 
-												<p class="">
-													FORMA DE PAGAMENTO:
-													<c:out value="${pedidos.descricao_forma_pagamento}" />
-												</p>
+<!-- 												<p class=""> -->
+<!-- 													FORMA DE PAGAMENTO: -->
+<%-- 													<c:out value="${pedidos.descricao_forma_pagamento}" /> --%>
+<!-- 												</p> -->
 
 
-												<p class="">
-													VALOR FRETE:
-													<c:out value="${pedidos.valor_frete}" />
-												</p>
+<!-- 												<p class=""> -->
+<!-- 													VALOR FRETE: -->
+<%-- 													<c:out value="${pedidos.valor_frete}" /> --%>
+<!-- 												</p> -->
 
-												<p class="">
-													RAZÃO SOCIAL:
-													<c:out value="${pedidos.razao_social}" />
-												</p>
+<!-- 												<p class=""> -->
+<!-- 													RAZÃO SOCIAL: -->
+<%-- 													<c:out value="${pedidos.razao_social}" /> --%>
+<!-- 												</p> -->
 
 
 
-												<p class="">
-													EMAIL :
-													<c:out value="${pedidos.email_cliente}" />
-												</p>
+<!-- 												<p class=""> -->
+<!-- 													EMAIL : -->
+<%-- 													<c:out value="${pedidos.email_cliente}" /> --%>
+<!-- 												</p> -->
 
-												<!-- 												<p class="exampleInputTelefone"> -->
-												<%-- 													<c:out value="${cliente.telefone_cliente}" /> --%>
-												<!-- 												</p> -->
 											</div>
 										</div>
-
-										<!-- 											<div class="col-md"> -->
-										<!-- 											<h3 class="">Endereço</h3> -->
-										<%-- 												<p class="">UF : <c:out value="${cliente.uf}" /></p> --%>
-										<%-- 												<p class="">Cidade : <c:out value="${cliente.cidade}" /></p> --%>
-										<%-- 												<p class="">Bairro : <c:out value="${cliente.bairro}" /></p> --%>
-										<%-- 												<p class="exampleInputCep"> <c:out --%>
-										<%-- 															value="${cliente.cep_endeco}" /> </p> --%>
-
-										<%-- 												<p class="">Logradouro : <c:out value="${cliente.rua_endereco}" /> --%>
-										<%-- 													 <c:out value="${cliente.numero_endereco}" /> --%>
-										<%-- 													 	 <c:out value="${cliente.complemento}" /> --%>
-										<!-- 												</p> -->
-										<!-- 											</div>	 -->
-
-
-
-
 
 
 
