@@ -10,6 +10,10 @@
 
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
+
+<!-- Link for Toast Message -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>
+
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
@@ -165,7 +169,7 @@
 						
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="insertSupplier">Salvar</button>
+							<button id="updateDetails" type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="insertSupplier">Salvar</button>
 						</div>
 						
 					</c:when>
@@ -202,7 +206,7 @@
 						</div>
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="updateSupplier">Atualizar</button>
+							<button id="updateDetails" type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="updateSupplier">Atualizar</button>
 						</div>
 						
 					</c:otherwise>
@@ -215,15 +219,22 @@
   </div>
 </div>
 
- <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+ 	<script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
  
- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
- <script src="./dashboard.js"></script>
+ 	<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+ 	<script src="./dashboard.js"></script>
  
- <!-- jQuery Mask -->
- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+ 
+ 	<!-- Begin: jQuery for Toast Message -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+ 	<!-- End: jQuery for Toast Message -->
+ 
+ 	<!-- jQuery Mask -->
+ 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="jquery.mask.js"></script>
+ 	<script type="text/javascript" src="jquery.mask.js"></script>
+    
 
 
     <script type="text/javascript">
@@ -233,6 +244,11 @@
             $('#exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
             $('.placeholder').mask("00/00/0000", { placeholder: "__/__/____" });
         });
+        
+        //jQuery for Toast Message on bellow:
+        document.getElementById('updateDetails').addEventListener('click', function(){
+            toastr.success('Fornecedor salvo com sucesso!');
+        })
     </script>
 
 </body>
