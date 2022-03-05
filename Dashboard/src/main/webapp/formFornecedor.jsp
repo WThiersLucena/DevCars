@@ -138,7 +138,7 @@
 	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
 		<h3 class="card-title text-center mb-3">ADICIONAR FORNECEDOR</h3>
 	
-		<form action="ServletFornecedor" method="post" id="formToast">
+		<form action="ServletFornecedor" method="post" id="supplierToast">
 				<c:choose>
 					<c:when test="${ supplier == null }">
 					
@@ -169,7 +169,7 @@
 						
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button id="updateDetails" type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="insertSupplier">Salvar</button>
+							<button type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="insertSupplier">Salvar</button>
 						</div>
 						
 					</c:when>
@@ -206,7 +206,7 @@
 						</div>
 						
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button id="updateDetails" type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="updateSupplier">Atualizar</button>
+							<button type="submit" name="optionFornecedor" class="btn btn-warning flex-start" value="updateSupplier">Atualizar</button>
 						</div>
 						
 					</c:otherwise>
@@ -246,7 +246,7 @@
         });
         
         //jQuery for Toast Message on bellow:
-        document.getElementById('formToast').addEventListener('submit', function(){
+        document.getElementById('supplierToast').addEventListener('submit', function(){
             toastr.success('Fornecedor salvo com sucesso!');
         })
     </script>
