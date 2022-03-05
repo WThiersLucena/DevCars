@@ -82,8 +82,6 @@ public class FornecedorDAO {
 			System.out.println("RemoÃ§Ã£o fornecedor: executado");
 			p.close();
 			
-		}catch (SQLIntegrityConstraintViolationException s) {
-			System.out.println("Chave estrangeira!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

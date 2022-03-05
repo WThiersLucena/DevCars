@@ -146,7 +146,7 @@ insert into tb_combustivel
 values
 (	
 	3,
-	'EL√âTRICO'		
+	'EL…TRICO'		
 )
 ;
 
@@ -160,7 +160,7 @@ insert into tb_combustivel
 values
 (	
 	4,
-	'H√çBRIDO'		
+	'HÕBRIDO'		
 )
 ;
 
@@ -175,7 +175,7 @@ insert into tb_cambio
 values
 (	
 	1,
-	'AUTOM√ÅTICO 6 MARCHAS'		
+	'AUTOM¡TICO 6 MARCHAS'		
 )
 ;
 
@@ -189,7 +189,7 @@ insert into tb_cambio
 values
 (	
 	2,
-	'AUTOM√ÅTICO 7 MARCHAS'		
+	'AUTOM¡TICO 7 MARCHAS'		
 )
 ;
 
@@ -203,7 +203,7 @@ insert into tb_cambio
 values
 (	
 	3,
-	'AUTOM√ÅTICO 8 MARCHAS'		
+	'AUTOM¡TICO 8 MARCHAS'		
 )
 ;
 
@@ -217,7 +217,7 @@ insert into tb_cambio
 values
 (	
 	4,
-	'AUTOM√ÅTICO 9 MARCHAS'		
+	'AUTOM¡TICO 9 MARCHAS'		
 )
 ;
 
@@ -245,7 +245,7 @@ insert into tb_cambio
 values
 (	
 	6,
-	'AUTOM√ÅTICO DE 1 VELOCIDADE'		
+	'AUTOM¡TICO DE 1 VELOCIDADE'		
 )
 ;
 

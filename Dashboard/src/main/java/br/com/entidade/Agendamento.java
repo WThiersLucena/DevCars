@@ -32,6 +32,10 @@ public class Agendamento {
 	private Double taxa_agendamento;
 	private Double preco_veiculo;
 	private String descricao_forma_pagamento;
+	private String pagamento;
+//	private String numero_cod_barra;
+//	private String numero_cartao;
+//	
 	
 	public Agendamento() {
 		
@@ -41,7 +45,7 @@ public class Agendamento {
 	public Agendamento(Integer cod_agendamento, String nome_cliente, String razao_social, String numero_documento,
 			String email_cliente, String telefone_cliente, String marca_veiculo, String modelo_veiculo, String nome_cor,
 			String ano_veiculo, String motor_veiculo, String potencia_cv, String tipo_combustivel, String cambio,
-			String numero_chassi, Date data_reserva, Double taxa_agendamento, Double preco_veiculo, String descricao_forma_pagamento) {
+			String numero_chassi, Date data_reserva, Double taxa_agendamento, Double preco_veiculo, String descricao_forma_pagamento, String pagamento) {
 		super();
 		this.cod_agendamento = cod_agendamento;
 		this.nome_cliente = nome_cliente;
@@ -62,6 +66,9 @@ public class Agendamento {
 		this.taxa_agendamento = taxa_agendamento;
 		this.preco_veiculo = preco_veiculo;
 		this.descricao_forma_pagamento = descricao_forma_pagamento;
+		this.setPagamento(pagamento);
+//		this.numero_cartao = numero_cartao;
+//		this.numero_cod_barra = numero_cod_barra;
 	}
 
 
@@ -235,19 +242,6 @@ public class Agendamento {
 	}
 
 
-	
-	@Override
-	public String toString() {
-		return "Agendamento [cod_agendamento=" + cod_agendamento + ", nome_cliente=" + nome_cliente + ", razao_social="
-				+ razao_social + ", numero_documento=" + numero_documento + ", email_cliente=" + email_cliente
-				+ ", telefone_cliente=" + telefone_cliente + ", marca_veiculo=" + marca_veiculo + ", modelo_veiculo="
-				+ modelo_veiculo + ", nome_cor=" + nome_cor + ", ano_veiculo=" + ano_veiculo + ", motor_veiculo="
-				+ motor_veiculo + ", potencia_cv=" + potencia_cv + ", tipo_combustivel=" + tipo_combustivel
-				+ ", cambio=" + cambio + ", numero_chassi=" + numero_chassi + ", data_reserva=" + data_reserva
-				+ ", taxa_agendamento=" + taxa_agendamento + "]";
-	}
-
-
 	public Double getPreco_veiculo() {
 		return preco_veiculo;
 	}
@@ -266,6 +260,52 @@ public class Agendamento {
 	public void setDescricao_forma_pagamento(String descricao_forma_pagamento) {
 		this.descricao_forma_pagamento = descricao_forma_pagamento;
 	}
+
+
+//	public String getNumero_cod_barra() {
+//		return numero_cod_barra;
+//	}
+//
+//
+//	public void setNumero_cod_barra(String numero_cod_barra) {
+//		this.numero_cod_barra = numero_cod_barra;
+//	}
+//
+//
+//	public String getNumero_cartao() {
+//		return numero_cartao;
+//	}
+//
+//
+//	public void setNumero_cartao(String numero_cartao) {
+//		this.numero_cartao = numero_cartao;
+//	}
+
+
+	public String getPagamento() {
+		return pagamento;
+	}
+
+
+	public void setPagamento(String pagamento) {
+		this.pagamento = pagamento;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Agendamento [cod_agendamento=" + cod_agendamento + ", nome_cliente=" + nome_cliente + ", razao_social="
+				+ razao_social + ", numero_documento=" + numero_documento + ", email_cliente=" + email_cliente
+				+ ", telefone_cliente=" + telefone_cliente + ", marca_veiculo=" + marca_veiculo + ", modelo_veiculo="
+				+ modelo_veiculo + ", nome_cor=" + nome_cor + ", ano_veiculo=" + ano_veiculo + ", motor_veiculo="
+				+ motor_veiculo + ", potencia_cv=" + potencia_cv + ", tipo_combustivel=" + tipo_combustivel
+				+ ", cambio=" + cambio + ", numero_chassi=" + numero_chassi + ", data_reserva=" + data_reserva
+				+ ", taxa_agendamento=" + taxa_agendamento + ", preco_veiculo=" + preco_veiculo
+				+ ", descricao_forma_pagamento=" + descricao_forma_pagamento + ", pagamento=" + pagamento + "]";
+	}
+
 	
+	
+
 	
 }
