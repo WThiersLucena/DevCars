@@ -4451,7 +4451,7 @@ values(
 -- select * from tb_frete tf ;
 -- select * from tb_cabecalho_nf tcn ;
 -- select * from tb_item_nf tin  ;
- select * from tb_pedido tp ;
+-- select * from tb_pedido tp ;
 -- select * from tb_forma_pagamento tfp ;
 -- select  * from tb_tipo_pagamento ttp ;
 -- select * from tb_status ts 
@@ -4477,4 +4477,52 @@ values(
 -- inner join tb_item_pedido tip on (tp.cod_veiculo = tip.cod_veiculo);
 -- inner join tb_veiculo tv on (tv.cod_veiculo = tp.cod_veiculo)
 -- inner join tb_marca tm on (tv.cod_marca = tm.cod_marca);
+
+
+
+
+
+
+
+
+
+
+
+select 	tb_pedido.cod_pedido, 
+		tb_pedido.valor_total_pedido,
+		tb_pedido.data_pedido,
+		tb_veiculo.cod_veiculo,
+		tb_veiculo.modelo_veiculo,
+		tb_veiculo.ano_veiculo,
+		tb_veiculo.numero_chassi,
+		tb_marca.marca_veiculo, 
+		tb_cliente.nome_cliente,
+		tb_cliente.numero_documento,
+		tb_cliente.telefone_cliente,
+		tb_cliente.razao_social,
+		tb_cliente.email_cliente,
+		tb_endereco.cep_endereco,
+		tb_endereco.rua_endereco,
+		tb_endereco.numero_endereco,
+		tb_endereco.bairro,
+		tb_endereco.cidade,
+		tb_endereco.uf,
+		tb_frete.valor_frete,
+		tb_frete.unidade_federativa,
+		tb_forma_pagamento.descricao_forma_pagamento,
+		tb_status.status 
+		
+	
+		
+		
+		
+from tb_veiculo 
+inner join tb_pedido on tb_pedido.cod_veiculo = tb_veiculo.cod_veiculo
+inner join tb_marca on tb_marca.cod_marca = tb_marca.cod_marca
+inner join tb_cliente on tb_cliente.nome_cliente = tb_cliente.nome_cliente
+inner join tb_endereco on tb_endereco.cep_endereco = tb_endereco.cep_endereco 
+inner join tb_frete on tb_frete.valor_frete = tb_frete.valor_frete
+inner join tb_forma_pagamento on tb_forma_pagamento.descricao_forma_pagamento = tb_forma_pagamento.descricao_forma_pagamento 
+inner join tb_status on tb_status.status = tb_status.status ;
+
 
