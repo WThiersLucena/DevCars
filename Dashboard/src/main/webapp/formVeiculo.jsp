@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +12,16 @@
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
 	rel="stylesheet">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+<!-- Link for Toast Message -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
 
-body{
+
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body {
 	font-family: 'Questrial', sans-serif;
 }
 
@@ -130,10 +138,11 @@ body{
 
 				</div>
 
-				<div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
+				<div
+					class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
 					<h3 class="card-title text-center mb-3">CADASTRAR VEÍCULO</h3>
 
-					<form action="ServletVeiculo" method="post">
+					<form action="ServletVeiculo" method="post" id="veiculoToast">
 						<c:choose>
 							<c:when test="${ veiculo == null }">
 
@@ -167,7 +176,8 @@ body{
 
 								<div class=mb-3>
 									<label class="form-label">PREÇO DO VEÍCULO (R$):</label> <input
-										type="text" id="exampleInputMoney" class="form-control" name="preco_veiculo" required />
+										type="text" id="exampleInputMoney" class="form-control"
+										name="preco_veiculo" required />
 								</div>
 
 								<div class=mb-3>
@@ -195,8 +205,8 @@ body{
 
 								<div class=mb-3>
 									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <select
-										class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel"
-										required>
+										class="form-select form-select-lg mb-3 fs-6"
+										name="cod_combustivel" required>
 										<option selected>SELECIONE O TIPODE COMBUSTÍVEL</option>
 										<c:forEach var="combustivel" items="${listCombustivel}">
 											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
@@ -248,16 +258,12 @@ body{
 										<option value="TRUE">SIM</option>
 									</select>
 								</div>
-								
+
 								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 									<button type="submit" name="optionVeiculo"
 										class="btn btn-warning flex-start" value="insertVeiculo">Salvar</button>
 								</div>
 							</c:when>
-							
-							
-							
-							
 
 							<c:otherwise>
 
@@ -287,19 +293,19 @@ body{
 								<div class="mb-3">
 									<label class="form-label">CHASSI:</label> <input type="text"
 										class="form-control" name="numero_chassi"
-										value="${veiculo.numero_chassi}"/>
+										value="${veiculo.numero_chassi}" />
 								</div>
 
 								<div class="mb-3">
-									<label class="form-label">ANO DE FABRICAÇÃO:</label> <input value="${veiculo.ano_veiculo}" 
-										type="text" class="form-control" name="ano_veiculo"
-										/>
+									<label class="form-label">ANO DE FABRICAÇÃO:</label> <input
+										value="${veiculo.ano_veiculo}" type="text"
+										class="form-control" name="ano_veiculo" />
 								</div>
 
 								<div class="mb-3">
 									<label class="form-label">PREÇO:</label> <input type="text"
-										class="form-control" name="preco_veiculo" id="exampleInputMoney"
-										value="${veiculo.preco_veiculo}" />
+										class="form-control" name="preco_veiculo"
+										id="exampleInputMoney" value="${veiculo.preco_veiculo}" />
 								</div>
 
 								<div class="mb-3">
@@ -315,18 +321,18 @@ body{
 
 								<div class="mb-3">
 									<label class="form-label">SELECIONE O TIPO DE MOTOR E
-										POTÊNCIA:</label> <select
-										class="form-select form-select-lg mb-3 fs-6" name="cod_motor"
-										required>
+										POTÊNCIA:</label> <select class="form-select form-select-lg mb-3 fs-6"
+										name="cod_motor" required>
 										<c:forEach var="motor" items="${listMotor}">
-											<option value="${motor.cod_motor}">${motor.motor_veiculo} ${motor.potencia_cv}</option>
+											<option value="${motor.cod_motor}">${motor.motor_veiculo}
+												${motor.potencia_cv}</option>
 										</c:forEach>
 									</select>
 								</div>
 								<div class=mb-3>
 									<label class="form-label">TIPO DE COMBUSTÍVEL:</label> <select
-										class="form-select form-select-lg mb-3 fs-6" name="cod_combustivel"
-										required>
+										class="form-select form-select-lg mb-3 fs-6"
+										name="cod_combustivel" required>
 										<option selected>SELECIONE O TIPO DE COMBUSTÍVEL</option>
 										<c:forEach var="combustivel" items="${listCombustivel}">
 											<option value="${combustivel.cod_combustivel}">${combustivel.tipo_combustivel}</option>
@@ -378,19 +384,6 @@ body{
 													</select>
 												</div>
 
-
-												<!-- 	<div class="mb-3">
-									<label class="form-label">EM ESTOQUE:</label> <input
-										type="text" class="form-control" name="estoque"
-										value="${veiculo.estoque}" />
-								</div>
-
-								<div class="mb-3">
-									<label class="form-label">EM DESTAQUE:</label> <input
-										type="text" class="form-control" name="destaque"
-										value="${veiculo.destaque}" />
-								</div> -->
-
 												<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 													<button type="submit" name="optionVeiculo"
 														class="btn btn-warning flex-start" value="updateVeiculo">Atualizar</button>
@@ -417,6 +410,13 @@ body{
 		crossorigin="anonymous"></script>
 	<script src="./dashboard.js"></script>
 
+	<!-- Begin: jQuery for Toast Message -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<!-- End: jQuery for Toast Message -->
+
 	<!-- jQuery Mask -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
 		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -438,7 +438,14 @@ body{
 					}
 				},
 			});
-			$('#exampleInputMoney').mask("R$#.###.###,00", {reverse: true});
+			$('#exampleInputMoney').mask("R$#.###.###,00", {
+				reverse : true
+			});
+		});
+
+		//jQuery for Toast Message on bellow:
+		document.getElementById('veiculoToast').addEventListener('submit', function() {
+					toastr.success('Veículo salvo com sucesso!');
 		});
 	</script>
 
