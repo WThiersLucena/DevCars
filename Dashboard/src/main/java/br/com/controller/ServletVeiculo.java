@@ -17,6 +17,9 @@ import br.com.dao.MotorDAO;
 import br.com.dao.VeiculoDAO;
 import br.com.entidade.Veiculo;
 
+import java.io.*;
+import java.lang.Thread;
+
 
 @WebServlet("/ServletVeiculo")
 public class ServletVeiculo extends HttpServlet {
@@ -146,6 +149,17 @@ public class ServletVeiculo extends HttpServlet {
 			
 		} 
 		
+		//Begin: Logic for a sleep function. Remember to import the function as it was imported at line 21.
+        try
+        {
+            Thread.sleep(1500);
+        } 
+        catch (InterruptedException ex)
+        {
+            ex.printStackTrace();
+        }
+        //End: Logic for a sleep function.
+		
 		response.sendRedirect("ServletVeiculo");
 	}
 	
@@ -207,6 +221,17 @@ public class ServletVeiculo extends HttpServlet {
 				this.veic.atualizarVeiculo(veiculo1);
 			}
 		}
+		
+		//Begin: Logic for a sleep function. Remember to import the function as it was imported at line 21.
+        try
+        {
+            Thread.sleep(1500);
+        } 
+        catch (InterruptedException ex)
+        {
+            ex.printStackTrace();
+        }
+        //End: Logic for a sleep function.
 		
 		response.sendRedirect("ServletVeiculo");
 	}

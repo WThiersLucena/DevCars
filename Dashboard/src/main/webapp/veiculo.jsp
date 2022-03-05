@@ -169,19 +169,19 @@ body{
 		<table class="table table-striped table-sm table-bordered shadow bg-light">
 			<thead>
 				<tr>
-					<th class="col-1">COD</th>
-					<th class="col-1">MARCA</th>
-					<th class="col-1">MODELO</th>
-					<th class="col-1">COR</th>
-					<th class="col-1">ANO</th>
-					<th class="col-2">MOTOR</th>
-					<th class="col-1">POTÊNCIA</th>
-					<th class="col-2">PREÇO</th>
-					<th class="col-1">COMBUSTÍVEL</th>
-					<!-- <th class="col-2">Câmbio</th> -->
-					<!-- <th class="col-2">Chassi</th>  -->
-					<th class="col-1">ESTOQUE</th>
-					<th class="col-1">AÇÕES</th>
+					<th class="col-1 text-center">COD</th>
+					<th class="col-1 text-center">MARCA</th>
+					<th class="col-1 text-center">MODELO</th>
+					<th class="col-1 text-center">COR</th>
+					<th class="col-1 text-center">ANO</th>
+					<th class="col-2 text-center">MOTOR</th>
+					<th class="col-1 text-center">POTÊNCIA</th>
+					<th class="col-2 text-center">PREÇO</th>
+					<th class="col-1 text-center">COMBUSTÍVEL</th>
+					<!-- <th class="col-2 text-center">Câmbio</th> -->
+					<!-- <th class="col-2 text-center">Chassi</th>  -->
+					<th class="col-1 text-center">ESTOQUE</th>
+					<th class="col-1 text-center">AÇÕES</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -189,7 +189,7 @@ body{
 					<tr>
 						<form action="ServletVeiculo" method="post">
 						
-							<td>
+							<td class="text-center">
 								<c:out value="${veiculo.cod_veiculo}"/>
 								<input type="hidden" name="cod_veiculo" value="${veiculo.cod_veiculo}"/>
 							</td>
