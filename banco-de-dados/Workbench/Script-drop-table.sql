@@ -8,7 +8,7 @@ drop table tb_loja;
 drop table tb_favorito_veiculo;
 drop table tb_favorito;
 drop table tb_agendamento;
--- drop table tb_tipo_pagamento;
+drop table tb_tipo_pagamento;
 drop table tb_forma_pagamento;
 drop table tb_boleto;
 drop table tb_pix;

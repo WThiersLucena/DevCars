@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1
+"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -7,7 +8,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+
 <title>Pedido</title>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -129,7 +131,7 @@ p {
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
 								<form action="ServletVeiculo" method="post">
 									<button type="submit" class="btn">
-										<span data-feather="file"></span> VEÍCULO
+										<span data-feather="file"></span> VEICULO
 									</button>
 								</form>
 						</a></li>
@@ -221,7 +223,7 @@ p {
 
 										<div class="col-3 text-start fw-bolder">
 											<p>
-												DATA DE EMISSÃO :
+												DATA DE EMISSAO :
 												<fmt:formatDate value="${pedidos.data_pedido}"
 													pattern="dd/MM/yyyy" />
 
@@ -261,36 +263,10 @@ p {
 												</p>
 												
 												<p class="">
-													CODIGO VEICULO: 
-													<c:out value="${pedidos.cod_veiculo}" />
-												</p>
-												
-												
-												<p class="">
-													MODELO VEICULO: 
-													<c:out value="${pedidos.modelo_veiculo}" />
-												</p>
-												
-												<p class="">
-													ANO VEICULO: 
-													<c:out value="${pedidos.ano_veiculo}" />
-												</p>
-												
-												
-												<p class="">
-													NUMERO CHASSI: 
-													<c:out value="${pedidos.numero_chassi}" />
-												</p>
-												
-												<p class="">
-													MARCA VEICULO: 
-													<c:out value="${pedidos.marca_veiculo}" />
-												</p>
-												
-												<p class="">
 													NOME CLIENTE: 
 													<c:out value="${pedidos.nome_cliente}" />
 												</p>
+												
 												
 												<p class="">
 													NUMERO DOCUMENTO: 
@@ -302,28 +278,26 @@ p {
 													<c:out value="${pedidos.telefone_cliente}" />
 												</p>
 												
-												<p class="">
-													RAZÃO SOCIAL: 
-													<c:out value="${pedidos.razao_social}" />
-												</p>
 												
 												<p class="">
 													EMAIL CLIENTE: 
 													<c:out value="${pedidos.email_cliente}" />
 												</p>
 												
+												<p class="">
+													RAZAO SOCIAL: 
+													<c:out value="${pedidos.razao_social}" />
+												</p>
 												
 												<p class="">
 													CEP ENDERECO: 
 													<c:out value="${pedidos.cep_endereco}" />
 												</p>
 												
-												
 												<p class="">
 													RUA ENDERECO: 
 													<c:out value="${pedidos.rua_endereco}" />
 												</p>
-												
 												
 												<p class="">
 													NUMERO ENDERECO: 
@@ -346,6 +320,13 @@ p {
 													<c:out value="${pedidos.uf}" />
 												</p>
 												
+												
+												<p class="">
+													DESCRICAO FORMA PAGAMENTO: 
+													<c:out value="${pedidos.descricao_forma_pagamento}" />
+												</p>
+												
+												
 												<p class="">
 													VALOR FRETE: 
 													<c:out value="${pedidos.valor_frete}" />
@@ -357,14 +338,61 @@ p {
 												</p>
 												
 												<p class="">
-													DESCRICAO FORMA DE PAGAMENTO: 
-													<c:out value="${pedidos.descricao_forma_pagamento}" />
-												</p>
-												
-												<p class="">
 													STATUS: 
 													<c:out value="${pedidos.status}" />
 												</p>
+												
+												
+												<p class="">
+													MARCA VEICULO: 
+													<c:out value="${pedidos.marca_veiculo}" />
+												</p>
+												
+												<p class="">
+													MODELO_VEICULO: 
+													<c:out value="${pedidos.modelo_veiculo}" />
+												</p>
+												
+												<p class="">
+													ANO VEICULO: 
+													<c:out value="${pedidos.ano_veiculo}" />
+												</p>
+												
+												<p class="">
+													NUMERO CHASSI:
+													<c:out value="${pedidos.numero_chassi}" />
+												</p>
+												
+												<p class="">
+													PRECO VEICULO: 
+													<c:out value="${pedidos.preco_veiculo}" />
+												</p>
+												
+												<p class="">
+													NOME COR: 
+													<c:out value="${pedidos.nome_cor}" />
+												</p>
+												
+												<p class="">
+													MOTOR_VEICULO: 
+													<c:out value="${pedidos.motor_veiculo}" />
+												</p>
+												
+												<p class="">
+													POTENCIA: 
+													<c:out value="${pedidos.potencia_cv}" />
+												</p>
+												
+												<p class="">
+													TIPO COMBUSTIVEL: 
+													<c:out value="${pedidos.tipo_combustivel}" />
+												</p>
+												
+												<p class="">
+													CAMBIO: 
+													<c:out value="${pedidos.cambio}" />
+												</p>
+												
 												
 												
 												
