@@ -20,16 +20,60 @@ public class AgendamentoDAO {
 		List<Agendamento> agenda = new ArrayList<Agendamento>();
 		
 		try {
-			PreparedStatement p = con.prepareStatement("select cod_agendamento, nome_cliente, razao_social, numero_documento, email_cliente, telefone_cliente, marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, tipo_combustivel, cambio, numero_chassi, ta.data_reserva, ta.taxa_agendamento, preco_veiculo\r\n"
-					+ "from tb_cliente tc \r\n"
-					+ "inner join tb_agendamento ta on (tc.cod_cliente = ta.cod_cliente)\r\n"
-					+ "inner join tb_veiculo tv on (tv.cod_veiculo = ta.cod_veiculo)\r\n"
-					+ "inner join tb_marca tm on (tm.cod_marca = tv.cod_marca)\r\n"
-					+ "inner join tb_cor tc2 on (tc2.cod_cor = tv.cod_cor)\r\n"
-					+ "inner join tb_motor tm2 on (tm2.cod_motor = tv.cod_motor)\r\n"
-					+ "inner join tb_combustivel tc3 on (tv.cod_combustivel = tc3.cod_combustivel)\r\n"
-					+ "inner join tb_cambio tc4 on (tv.cod_cambio = tc4.cod_cambio)\r\n"
-					+ "order by cod_agendamento desc;");
+			PreparedStatement p = con.prepareStatement("select ta.cod_agendamento, tc.nome_cliente, tc.razao_social, tc.numero_documento, tc.email_cliente, tc.telefone_cliente, \r\n"
+					+ "tm.marca_veiculo, tv.modelo_veiculo, tc2.nome_cor, tv.ano_veiculo, tm2.motor_veiculo, tm2.potencia_cv, tc3.tipo_combustivel, tc4.cambio, \r\n"
+					+ "tv.numero_chassi, tv.preco_veiculo, ta.data_reserva, ta.taxa_agendamento, tfp.descricao_forma_pagamento, tb.numero_cod_barra as 'pagamento'\r\n"
+					+ "	from tb_cliente tc\r\n"
+					+ "	inner join tb_agendamento ta on (tc.cod_cliente = ta.cod_cliente)\r\n"
+					+ "	inner join tb_veiculo tv on (tv.cod_veiculo = ta.cod_veiculo)\r\n"
+					+ "	inner join tb_marca tm on (tm.cod_marca = tv.cod_marca)\r\n"
+					+ "	inner join tb_cor tc2 on (tc2.cod_cor = tv.cod_cor)\r\n"
+					+ "	inner join tb_motor tm2 on (tm2.cod_motor = tv.cod_motor)\r\n"
+					+ "	inner join tb_combustivel tc3 on (tv.cod_combustivel = tc3.cod_combustivel)\r\n"
+					+ "	inner join tb_cambio tc4 on (tv.cod_cambio = tc4.cod_cambio)\r\n"
+					+ "	inner join tb_forma_pagamento tfp on (tfp.cod_forma_pagamento = ta.cod_forma_pagamento)\r\n"
+					+ " 	inner join tb_boleto tb on (tb.cod_boleto = ta.cod_boleto)\r\n"
+					+ "	where tb.numero_cod_barra is not null\r\n"
+					+ "	\r\n"
+					+ "	union\r\n"
+					+ "\r\n"
+					+ "select ta.cod_agendamento, tc.nome_cliente, tc.razao_social, tc.numero_documento, tc.email_cliente, tc.telefone_cliente, \r\n"
+					+ "tm.marca_veiculo, tv.modelo_veiculo, tc2.nome_cor, tv.ano_veiculo, tm2.motor_veiculo, tm2.potencia_cv, tc3.tipo_combustivel, tc4.cambio, \r\n"
+					+ "tv.numero_chassi, tv.preco_veiculo, ta.data_reserva, ta.taxa_agendamento, tfp.descricao_forma_pagamento, tc5.numero_cartao\r\n"
+					+ "	from tb_cliente tc\r\n"
+					+ "	inner join tb_agendamento ta on (tc.cod_cliente = ta.cod_cliente)\r\n"
+					+ "	inner join tb_veiculo tv on (tv.cod_veiculo = ta.cod_veiculo)\r\n"
+					+ "	inner join tb_marca tm on (tm.cod_marca = tv.cod_marca)\r\n"
+					+ "	inner join tb_cor tc2 on (tc2.cod_cor = tv.cod_cor)\r\n"
+					+ "	inner join tb_motor tm2 on (tm2.cod_motor = tv.cod_motor)\r\n"
+					+ "	inner join tb_combustivel tc3 on (tv.cod_combustivel = tc3.cod_combustivel)\r\n"
+					+ "	inner join tb_cambio tc4 on (tv.cod_cambio = tc4.cod_cambio)\r\n"
+					+ "	inner join tb_forma_pagamento tfp on (tfp.cod_forma_pagamento = ta.cod_forma_pagamento)\r\n"
+					+ " 	inner join tb_cartao tc5 on (tc5.cod_cartao = ta.cod_cartao)\r\n"
+					+ " 	where tc5.numero_cartao is not null\r\n"
+					+ " \r\n"
+					+ " 	\r\n"
+					+ " 		union\r\n"
+					+ "\r\n"
+					+ "select ta.cod_agendamento, tc.nome_cliente, tc.razao_social, tc.numero_documento, tc.email_cliente, tc.telefone_cliente, \r\n"
+					+ "tm.marca_veiculo, tv.modelo_veiculo, tc2.nome_cor, tv.ano_veiculo, tm2.motor_veiculo, tm2.potencia_cv, tc3.tipo_combustivel, tc4.cambio, \r\n"
+					+ "tv.numero_chassi, tv.preco_veiculo, ta.data_reserva, ta.taxa_agendamento, tfp.descricao_forma_pagamento, tp.id_transacao\r\n"
+					+ "	from tb_cliente tc\r\n"
+					+ "	inner join tb_agendamento ta on (tc.cod_cliente = ta.cod_cliente)\r\n"
+					+ "	inner join tb_veiculo tv on (tv.cod_veiculo = ta.cod_veiculo)\r\n"
+					+ "	inner join tb_marca tm on (tm.cod_marca = tv.cod_marca)\r\n"
+					+ "	inner join tb_cor tc2 on (tc2.cod_cor = tv.cod_cor)\r\n"
+					+ "	inner join tb_motor tm2 on (tm2.cod_motor = tv.cod_motor)\r\n"
+					+ "	inner join tb_combustivel tc3 on (tv.cod_combustivel = tc3.cod_combustivel)\r\n"
+					+ "	inner join tb_cambio tc4 on (tv.cod_cambio = tc4.cod_cambio)\r\n"
+					+ "	inner join tb_forma_pagamento tfp on (tfp.cod_forma_pagamento = ta.cod_forma_pagamento)\r\n"
+					+ " 	inner join tb_pix tp on (tp.cod_pix = ta.cod_pix)\r\n"
+					+ " 	where tp.cod_pix is not null\r\n"
+					+ " \r\n"
+					+ " 	\r\n"
+					+ " 	\r\n"
+					+ " 	\r\n"
+					+ " 	order by cod_agendamento desc;");
 			ResultSet r = p.executeQuery();
 			
 
@@ -52,8 +96,12 @@ public class AgendamentoDAO {
 				Date data_reserva = r.getDate("data_reserva");
 				Double taxa_agendamento = r.getDouble("taxa_agendamento");
 				Double preco_veiculo = r.getDouble("preco_Veiculo");
+				String descricao_forma_pagamento = r.getString("descricao_forma_pagamento");
+//				String numero_cod_barra = r.getString("numero_cod_barra"); 
+				String pagamento = r.getString("pagamento");
 				
-				Agendamento a = new Agendamento(cod_agendamento, nome_cliente, razao_social, numero_documento, email_cliente, telefone_cliente, marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, tipo_combustivel, cambio, numero_chassi, data_reserva, taxa_agendamento, preco_veiculo);
+				
+				Agendamento a = new Agendamento(cod_agendamento, nome_cliente, razao_social, numero_documento, email_cliente, telefone_cliente, marca_veiculo, modelo_veiculo, nome_cor, ano_veiculo, motor_veiculo, potencia_cv, tipo_combustivel, cambio, numero_chassi, data_reserva, taxa_agendamento, preco_veiculo, descricao_forma_pagamento, pagamento);
 				
 				a.setCod_agendamento(cod_agendamento);
 				agenda.add(a);

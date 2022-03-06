@@ -14,6 +14,12 @@ pageEncoding="UTF-8"%>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body{
+	font-family: 'Questrial', sans-serif;
+}
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -30,7 +36,7 @@ pageEncoding="UTF-8"%>
     </style>
 
 <link href="./dashboard.css" rel="stylesheet"/>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -127,9 +133,9 @@ pageEncoding="UTF-8"%>
     </nav>
 		
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
+  <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2 text-white">LISTA DE VEÍCULOS</h1>
+        <h1 class="h2 text-light">LISTA DE VEÍCULOS</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <form action="ServletVeiculo" method="post">
@@ -159,23 +165,23 @@ pageEncoding="UTF-8"%>
 	
 <!-- Função que exibe a contagem da lista de veiculos -->
 
-
-		<table class="table table-striped table-sm table-light table-bordered shadow" >
+	<div class="table-responsive">
+		<table class="table table-striped table-sm table-bordered shadow bg-light">
 			<thead>
 				<tr>
-					<th class="col-1">COD</th>
-					<th class="col-1">MARCA</th>
-					<th class="col-1">MODELO</th>
-					<th class="col-1">COR</th>
-					<th class="col-1">ANO</th>
-					<th class="col-2">MOTOR</th>
-					<th class="col-1">POTÊNCIA</th>
-					<th class="col-2">PREÇO</th>
-					<th class="col-1">COMBUSTÍVEL</th>
-					<!-- <th class="col-2">Câmbio</th> -->
-					<!-- <th class="col-2">Chassi</th>  -->
-					<th class="col-1">ESTOQUE</th>
-					<th class="col-1">AÇÕES</th>
+					<th class="col-1 text-center">COD</th>
+					<th class="col-1 text-center">MARCA</th>
+					<th class="col-1 text-center">MODELO</th>
+					<th class="col-1 text-center">COR</th>
+					<th class="col-1 text-center">ANO</th>
+					<th class="col-2 text-center">MOTOR</th>
+					<th class="col-1 text-center">POTÊNCIA</th>
+					<th class="col-2 text-center">PREÇO</th>
+					<th class="col-1 text-center">COMBUSTÍVEL</th>
+					<!-- <th class="col-2 text-center">Câmbio</th> -->
+					<!-- <th class="col-2 text-center">Chassi</th>  -->
+					<th class="col-1 text-center">ESTOQUE</th>
+					<th class="col-1 text-center">AÇÕES</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -183,7 +189,7 @@ pageEncoding="UTF-8"%>
 					<tr>
 						<form action="ServletVeiculo" method="post">
 						
-							<td>
+							<td class="text-center">
 								<c:out value="${veiculo.cod_veiculo}"/>
 								<input type="hidden" name="cod_veiculo" value="${veiculo.cod_veiculo}"/>
 							</td>
@@ -301,13 +307,13 @@ pageEncoding="UTF-8"%>
 		</table>
 
       </div>
-    </main>
   </div>
-
+  </main>
 
  <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
  
- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
  <script src="./dashboard.js"></script>
  
  

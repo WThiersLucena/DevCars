@@ -27,8 +27,6 @@ values
 	'contact@porsche.com',
 	'1627779995');
 
--- select * from tb_fornecedor tf ;
-
 insert into tb_fornecedor 
 values
 (
@@ -148,7 +146,7 @@ insert into tb_combustivel
 values
 (	
 	3,
-	'EL√âTRICO'		
+	'EL…TRICO'		
 )
 ;
 
@@ -162,7 +160,7 @@ insert into tb_combustivel
 values
 (	
 	4,
-	'H√çBRIDO'		
+	'HÕBRIDO'		
 )
 ;
 
@@ -177,7 +175,7 @@ insert into tb_cambio
 values
 (	
 	1,
-	'AUTOM√ÅTICO 6 MARCHAS'		
+	'AUTOM¡TICO 6 MARCHAS'		
 )
 ;
 
@@ -191,7 +189,7 @@ insert into tb_cambio
 values
 (	
 	2,
-	'AUTOM√ÅTICO 7 MARCHAS'		
+	'AUTOM¡TICO 7 MARCHAS'		
 )
 ;
 
@@ -205,7 +203,7 @@ insert into tb_cambio
 values
 (	
 	3,
-	'AUTOM√ÅTICO 8 MARCHAS'		
+	'AUTOM¡TICO 8 MARCHAS'		
 )
 ;
 
@@ -219,7 +217,7 @@ insert into tb_cambio
 values
 (	
 	4,
-	'AUTOM√ÅTICO 9 MARCHAS'		
+	'AUTOM¡TICO 9 MARCHAS'		
 )
 ;
 
@@ -247,7 +245,7 @@ insert into tb_cambio
 values
 (	
 	6,
-	'AUTOM√ÅTICO DE 1 VELOCIDADE'		
+	'AUTOM¡TICO DE 1 VELOCIDADE'		
 )
 ;
 
@@ -1918,13 +1916,13 @@ values (
 	'1990-07-02',
 	'RUDOLPH_BOLTON@GMAIL.COM',
 	'1621641550',
-    md5('o24dHNrn'),
+	md5('qBLZN9Qb'),
 	null,
 	null
 )
 ;
 
--- SELECT *FROM TB_CLIENTE;
+
 
 insert into tb_cliente
 (	cod_cliente,
@@ -1945,7 +1943,7 @@ insert into tb_cliente
 	'1983-02-05',
 	'CAR_BLAKE@GMAIL.COM',
 	'11995847267',
-	md5('qBLZN9Qb'),
+	md5('sMAGQpJJ'),
 	null,
 	null
 )
@@ -1971,7 +1969,7 @@ insert into tb_cliente
 	'1969-12-09',
 	'CARMEND_DS@OUTLOOK.COM',
 	'12985375316',
-	md5('sMAGQpJJ'),
+	md5('wzE1YJB8'),
 	null,
 	null
 )
@@ -1997,7 +1995,7 @@ insert into tb_cliente
 	'1989-09-01',
 	'DANIELPSALOIO@YAHOO.COM',
 	'11963348271',
-	md5('wzE1YJB8'),
+	md5('DS3L2J5y'),
 	null,
 	null
 )
@@ -2024,7 +2022,7 @@ insert into tb_cliente
 	'1997-07-04',
 	'RAPHMENA@GMAIL.COM',
 	'11938120144',
-	md5('DS3L2J5y'),
+	md5('9pJpWWDk'),
 	null,
 	null
 )
@@ -2052,7 +2050,7 @@ insert into tb_cliente
 	null,
 	'FABRICACAO@MARCELOCORRETORES.COM.BR',
 	'1123355721',
-	md5('9pJpWWDk'),
+	md5('3fJpiWDw'),
 	'038538569199',
 	'MARCELO CORRETORES ASSOCIADOS ME'
 )
@@ -2651,15 +2649,19 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente
+	
 )
 
 values
-	(1, 
+	( 
+	1, 
 	'ALBERTO D SANTOS',
 	'5594582092720802', 
 	'09/22', 
 	'800', 
+	1,
 	1
 );
 
@@ -2671,15 +2673,18 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(2, 
+	(
+	2, 
 	'CAROLINA F CAMARGO',
 	'5355138939412928', 
 	'07/23', 
 	'719', 
+	1,
 	1
 );
 
@@ -2692,15 +2697,18 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(3, 
+	(
+	3, 
 	'JOSE SILVA',
 	'5355138939094994', 
 	'07/27', 
 	'188', 
+	2,
 	2
 );
 
@@ -2712,15 +2720,18 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(4, 
+	(
+	4, 
 	'BARBARA V T',
 	'5472510834167914',  
 	'11/24', 
 	'583', 
+	2,
 	2
 );
 
@@ -2732,15 +2743,18 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(5, 
+	(
+	5, 
 	'JONAS RAMALHO',
 	'5472510834134200',  
 	'12/26', 
 	'301', 
+	2,
 	2
 );
 
@@ -2752,16 +2766,19 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(6, 
+	(
+	6, 
 	'RODRIGO ARAUJO',
 	'5472510834149876',  
 	'11/28', 
 	'555', 
-	2
+	2,
+	3
 );
 
 
@@ -2772,15 +2789,18 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(7, 
+	(
+	7, 
 	'LUIZ CLAUDIO',
 	'5472510834167000',  
 	'09/29', 
 	'101', 
+	1,
 	1
 );
 
@@ -2792,15 +2812,18 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(8, 
+	(
+	8, 
 	'JORGE MENDES',
 	'5472510834167547',  
 	'11/30', 
 	'589', 
+	1,
 	1
 );
 
@@ -2812,16 +2835,19 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(9, 
+	(
+	9, 
 	'CRISTIANO RONALDO',
 	'5472510834161222',  
 	'03/25', 
 	'150', 
-	2
+	2,
+	5
 );
 
 
@@ -2832,18 +2858,279 @@ insert into tb_cartao
 	numero_cartao,
 	validade_cartao,
 	cvv,
-	cod_modalidade
+	cod_modalidade,
+	cod_cliente 
 )
 
 values
-	(10, 
+	(
+	10, 
 	'LIONEL MESSI',
 	'5472108341679999',  
 	'11/29', 
 	'788', 
-	2
+	2,
+	9
 );
 
+-- INSERT BOLETO
+
+insert into tb_boleto
+(
+	cod_boleto,
+	numero_cod_barra
+)
+values
+(
+	1,
+	'000011112220302020202020102029876'
+);
+
+
+
+insert into tb_boleto
+(
+	cod_boleto,
+	numero_cod_barra
+)
+values
+(
+	2,
+	'000000000154553333020202029898777'
+);
+
+
+insert into tb_boleto
+(
+	cod_boleto,
+	numero_cod_barra
+)
+values
+(
+	3,
+	'000000000111122203333020202076233'
+);
+
+
+insert into tb_boleto
+(
+	cod_boleto,
+	numero_cod_barra
+)
+values
+(
+	4,
+	'000001675039484847323134444444354'
+);
+
+
+
+-- INSERT PIX
+insert into tb_pix
+(
+	cod_pix,
+	id_transacao
+)
+values
+(
+	1,
+	'E2345678712345678903456789044654'
+);
+
+insert into tb_pix
+(
+	cod_pix,
+	id_transacao
+)
+values
+(
+	2,
+	'E0765432334554323456654345676543'
+);
+
+insert into tb_pix
+(
+	cod_pix,
+	id_transacao
+)
+values
+(
+	3,
+	'E3045845565539223456344320348743'
+);
+
+insert into tb_pix
+(
+	cod_pix,
+	id_transacao
+)
+values
+(
+	4,
+	'E0965008768343457876325344432568'
+);
+
+insert into tb_pix
+(
+	cod_pix,
+	id_transacao
+)
+values
+(
+	5,
+	'E1822345672234567876543234565436'
+);
+
+insert into tb_pix
+(
+	cod_pix,
+	id_transacao
+)
+values
+(
+	6,
+	'E1823034890000987654323333210426'
+);
+
+
+-- INSERT FORMA DE PAGAMENTO
+
+
+insert into tb_forma_pagamento
+(
+	cod_forma_pagamento,
+	descricao_forma_pagamento
+	
+)
+values
+(
+	1,
+	'CREDITO'
+
+	
+	
+);
+
+insert into tb_forma_pagamento
+(
+	cod_forma_pagamento,
+	descricao_forma_pagamento
+	
+)
+values
+(
+	2,
+	'DEBITO'
+
+);
+
+insert into tb_forma_pagamento
+(
+	cod_forma_pagamento,
+	descricao_forma_pagamento
+	
+)
+values
+(
+	3,
+	'BOLETO'
+	
+	
+	
+);
+
+insert into tb_forma_pagamento
+(
+	cod_forma_pagamento,
+	descricao_forma_pagamento
+	
+)
+values
+(
+	4,
+	'PIX'
+	
+);
+
+-- INSERT TIPO_FORMA_PAGAMENTO
+-- 
+-- insert into tb_tipo_pagamento 
+-- (
+-- 	cod_tipo_pagamento,
+-- 	cod_cartao,
+-- 	cod_forma_pagamento,
+-- 	cod_boleto , 
+--  cod_pix
+-- 	
+-- 
+-- )
+-- values
+-- (	1
+-- 	9,
+-- 	1,
+-- 	NULL
+-- 
+-- 
+-- );
+-- 
+-- insert into tb_tipo_pagamento 
+-- (
+-- 	cod_tipo_pagamento,
+-- 	cod_cartao,
+-- 	cod_forma_pagamento,
+-- 	cod_boleto 
+-- 	
+-- 
+-- )
+-- values
+-- (
+--     2,
+-- 	2,
+-- 	2,
+-- 	NULL
+-- 
+-- 
+-- );
+-- 
+-- 
+-- insert into tb_tipo_pagamento 
+-- (
+-- 	cod_cartao,
+-- 	cod_forma_pagamento,
+-- 	cod_boleto 
+-- 	
+-- 
+-- )
+-- values
+-- (
+-- 	3,
+-- 	NULL,
+-- 	3,
+-- 	1
+-- 
+-- 
+-- );
+-- 
+-- 
+-- insert into tb_tipo_pagamento 
+-- (
+-- 	cod_cartao,
+-- 	cod_forma_pagamento,
+-- 	cod_boleto 
+-- 	
+-- 
+-- )
+-- values
+-- (
+-- 	4,
+-- 	NULL,
+-- 	4,
+-- 	NULL
+-- 
+-- 
+-- );
+-- 
+-- 
 
 -- INSERT AGENDAMENTO
 
@@ -2853,7 +3140,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -2861,10 +3152,12 @@ values
 	1,
 	1,
 	'2021-05-02',	
-	'5000.00'
+	'5000.00',
+	1,
+	9,
+	NULL,
+	NULL
 );
-
-
 
 
 insert into tb_agendamento
@@ -2873,7 +3166,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -2881,7 +3178,11 @@ values
 	1,
 	2,
 	'2021-06-09',	
-	'5000.00'
+	'5000.00',
+	2,
+	4,
+	NULL,
+	NULL
 );
 
 
@@ -2893,7 +3194,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -2901,7 +3206,11 @@ values
 	2,
 	3,
 	'2021-07-01',	
-	'6000.00'
+	'6000.00',
+	3,
+	null,
+	1,
+	NULL
 );
 
 
@@ -2914,7 +3223,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -2922,7 +3235,11 @@ values
 	2,
 	4,
 	'2021-09-03',	
-	'6000.00'
+	'6000.00',
+	4,
+	null,
+	NULL,
+	1
 );
 
 
@@ -2934,7 +3251,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -2942,7 +3263,11 @@ values
 	5,
 	5,
 	'2021-10-12',	
-	'7000.00'
+	'7000.00',
+	1,
+	9,
+	NULL,
+	NULL
 );
 
 
@@ -2952,7 +3277,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -2960,7 +3289,11 @@ values
 	26,
 	6,
 	'2021-12-12',	
-	'7000.00'
+	'7000.00',
+	3,
+	null,
+	4,
+	NULL
 );
 
 
@@ -2970,15 +3303,23 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
 	7,
 	25,
 	7,
-	'2022-01-12',	
-	'7000.00'
+	'2022-01-12',
+	'7000.00',
+	4,
+	null,
+	NULL,
+	2
 );
 
 
@@ -2988,7 +3329,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -2996,7 +3341,11 @@ values
 	15,
 	8,
 	'2022-01-12',	
-	'7000.00'
+	'7000.00',
+	3, 
+	NULL,
+	3,
+	NULL
 );
 
 
@@ -3006,7 +3355,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3014,7 +3367,11 @@ values
 	14,
 	9,
 	'2022-01-22',	
-	'7000.00'
+	'7000.00',
+	2,
+	10, 
+	NULL,
+	NULL
 );
 
 
@@ -3024,7 +3381,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3032,7 +3393,11 @@ values
 	11,
 	10,
 	'2022-01-24',	
-	'7000.00'
+	'7000.00',
+	4,
+	null, 
+	NULL,
+	3
 );
 
 
@@ -3042,7 +3407,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3050,7 +3419,11 @@ values
 	23,
 	5,
 	'2022-01-26',	
-	'7000.00'
+	'7000.00',
+	2,
+	9,
+	NULL,
+	NULL
 );
 
 
@@ -3061,7 +3434,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3069,7 +3446,11 @@ values
 	24,
 	2,
 	'2022-01-27',	
-	'7000.00'
+	'7000.00',
+	1,
+	5,
+	NULL,
+	NULL
 );
 
 
@@ -3080,7 +3461,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3088,7 +3473,11 @@ values
 	1,
 	1,
 	'2022-01-30',	
-	'5000.00'
+	'5000.00',
+	1,
+	7, 
+	NULL,
+	NULL
 );
 
 
@@ -3099,7 +3488,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3107,7 +3500,11 @@ values
 	17,
 	3,
 	'2022-02-01',	
-	'7000.00'
+	'7000.00',
+	2,
+	6,
+	NULL,
+	NULL
 );
 
 
@@ -3117,7 +3514,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3125,7 +3526,11 @@ values
 	5,
 	4,
 	'2022-02-7',	
-	'7000.00'
+	'7000.00',
+	3,
+	null,
+	3,
+	NULL
 );
 
 insert into tb_agendamento
@@ -3134,7 +3539,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3142,7 +3551,11 @@ values
 	6,
 	8,
 	'2022-02-12',	
-	'7000.00'
+	'7000.00',
+	4, 
+	null, 
+	NULL,
+	4
 );
 
 
@@ -3152,7 +3565,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3160,7 +3577,11 @@ values
 	7,
 	10,
 	'2022-02-14',	
-	'7000.00'
+	'7000.00',
+	4,
+	null,
+	NULL,
+	5
 );
 
 
@@ -3171,7 +3592,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3179,7 +3604,11 @@ values
 	13,
 	5,
 	'2022-02-14',	
-	'7000.00'
+	'7000.00',
+	2,
+	9,
+	NULL,
+	NULL
 );
 
 
@@ -3189,7 +3618,11 @@ insert into tb_agendamento
 	cod_veiculo,
 	cod_cliente,
 	data_reserva,
-	taxa_agendamento
+	taxa_agendamento,
+	cod_forma_pagamento,
+	cod_cartao,
+	cod_boleto,
+	cod_pix
 )
 values
 (
@@ -3197,8 +3630,13 @@ values
 	20,
 	5,
 	'2022-02-17',	
-	'7000.00'
+	'7000.00',
+	1,
+	9,
+	NULL,
+	NULL
 );
+
 
 -- INSERTS FAVORITO
 
@@ -3970,125 +4408,6 @@ values
 
 
 
--- INSERT BOLETO
-
-insert into tb_boleto
-(
-	cod_boleto,
-	numero_cod_barra
-)
-values
-(
-	1,
-	'000011112220302020202020102029876'
-);
-
-
-
-insert into tb_boleto
-(
-	cod_boleto,
-	numero_cod_barra
-)
-values
-(
-	2,
-	'000000000154553333020202029898777'
-);
-
-
-insert into tb_boleto
-(
-	cod_boleto,
-	numero_cod_barra
-)
-values
-(
-	3,
-	'000000000111122203333020202076233'
-);
-
-
-insert into tb_boleto
-(
-	cod_boleto,
-	numero_cod_barra
-)
-values
-(
-	4,
-	'000001675039484847323134444444354'
-);
-
-
-
-
--- INSERT FORMA DE PAGAMENTO
-
-
-insert into tb_forma_pagamento
-(
-	cod_forma_pagamento,
-	descricao_forma_pagamento,
-	cod_cartao,
-	cod_boleto
-)
-values
-(
-	1,
-	'CREDITO',
-	1,
-	null
-	
-	
-);
-
-insert into tb_forma_pagamento
-(
-	cod_forma_pagamento,
-	descricao_forma_pagamento,
-	cod_cartao,
-	cod_boleto
-)
-values
-(
-	2,
-	'DEBITO',
-	2,
-	null
-);
-
-insert into tb_forma_pagamento
-(
-	cod_forma_pagamento,
-	descricao_forma_pagamento,
-	cod_cartao,
-	cod_boleto
-)
-values
-(
-	3,
-	'BOLETO',
-	null,
-	1
-	
-	
-);
-
-insert into tb_forma_pagamento
-(
-	cod_forma_pagamento,
-	descricao_forma_pagamento,
-	cod_cartao,
-	cod_boleto
-)
-values
-(
-	4,
-	'PIX',
-	null,
-	null
-);
 
 
 insert into tb_pedido
@@ -4096,19 +4415,21 @@ insert into tb_pedido
 	
 	cod_pedido, 
 	cod_cliente,
+	cod_veiculo,
 	cod_forma_pagamento,
 	cod_frete, 
 	valor_total_pedido, 
 	data_pedido, 
 	previsao_entrega,
 	data_envio, 
-	cod_endereco_cliente, 
-	cod_status 
+	cod_status,
+	cod_endereco
 )
 values
 (
-	1,
-	1,
+	3,
+	3,
+	13,
 	1, 
 	25,
 	263000.00,
@@ -4116,98 +4437,75 @@ values
 	15,
 	'2021-10-25',
 	1,
-	1
-	
-);
-
-
-
-insert into tb_pedido
-(
-	
-	cod_pedido, 
-	cod_cliente,
-	cod_forma_pagamento,
-	cod_frete, 
-	valor_total_pedido, 
-	data_pedido, 
-	previsao_entrega,
-	data_envio, 
-	cod_endereco_cliente, 
-	cod_status 
-)
-values
-(
-	2,
-	3,
-	2, 
-	25,
-	753000.00,
-	'2022-01-10',
-	15,
-	'2022-01-26',
-	1,
-	2
-	
-);
-
-insert into tb_pedido
-(
-	
-	cod_pedido, 
-	cod_cliente,
-	cod_forma_pagamento,
-	cod_frete, 
-	valor_total_pedido, 
-	data_pedido, 
-	previsao_entrega,
-	data_envio, 
-	cod_endereco_cliente, 
-	cod_status 
-)
-values
-(
-	3,
-	2,
-	2, 
-	19,
-	326000.00,
-	'2022-03-10',
-	15,
-	'2022-03-26',
-	1,
 	3
 	
 );
 
 
 
-insert into tb_item_pedido
+insert into tb_pedido
 (
+	
+	cod_pedido, 
+	cod_cliente,
 	cod_veiculo,
-	cod_pedido
-
+	cod_forma_pagamento,
+	cod_frete, 
+	valor_total_pedido, 
+	data_pedido, 
+	previsao_entrega,
+	data_envio, 
+	cod_status,
+	cod_endereco
 )
-
-values(
-	18,
-	1
-);
-
-
-insert into tb_item_pedido
+values
 (
-	cod_veiculo,
-	cod_pedido
-
-)
-
-values(
-	13,
+	2,
+	2,
+	17,
+	2, 
+	25,
+	753000.00,
+	'2022-01-10',
+	15,
+	'2022-01-26',
+	2,
 	2
+	
 );
 
-
+insert into tb_pedido
+(
+	
+	cod_pedido, 
+	cod_cliente,
+	cod_veiculo,
+	cod_forma_pagamento,
+	cod_frete, 
+	valor_total_pedido, 
+	data_pedido, 
+	previsao_entrega,
+	data_envio, 
+	cod_status,
+	cod_endereco
+)
+values
+(
+	1,
+	1,
+	20,
+	2, 
+	25,
+	813000.00,
+	'2022-01-10',
+	15,
+	'2022-01-26',
+	2,
+	1
+	
+	
+	
+);
 
 
 insert into tb_cabecalho_nf 
@@ -4223,7 +4521,6 @@ insert into tb_cabecalho_nf
 		data_emissao_nf,
 		cod_pedido,
 		cod_frete
-
 )
 
 values (
@@ -4318,7 +4615,7 @@ values(
 
 );
 
-	
+-- select * from tb_fornecedor tf ;
 
 
 -- update tb_pedido set data_envio = '2021-10-25', previsao_entrega = 15 where cod_pedido = 1; 
@@ -4328,20 +4625,46 @@ values(
 -- select * from tb_combustivel tc ;
 -- select * from tb_cambio tc ;
 -- select * from tb_cor tc ;
- -- select * from tb_marca tm ;
+-- select * from tb_marca tm ;
 -- select * from tb_motor tm ;
- -- select * from tb_veiculo tv ;
- -- select * from tb_cliente tc ;
+-- select * from tb_veiculo tv ;
+-- select * from tb_cliente tc ;
 -- select * from tb_endereco te ;
 -- select * from tb_endereco_cliente tec ;
 -- select * from tb_modalidade_cartao tmc ;
 -- select * from tb_cartao tc ;
- select * from tb_agendamento ta ;
+-- select * from tb_agendamento ta ;
 -- select * from tb_favorito tf ;
 -- select * from tb_favorito_veiculo tfv ;
 -- select * from tb_loja tl ;
 -- select * from tb_natureza_operacao tno ;
 -- select * from tb_frete tf ;
-
+-- select * from tb_cabecalho_nf tcn ;
 -- select * from tb_item_nf tin  ;
+ select * from tb_pedido tp ;
+-- select * from tb_forma_pagamento tfp ;
+-- select  * from tb_tipo_pagamento ttp ;
+-- select * from tb_status ts 
+-- 
+-- 
+-- select * from tb_frete tf ;
+-- select * from tb_status ts;
+-- select * from tb_pedido tp;
+
+
+-- trazer o que eu quero mostrar na lista
+-- select cod_pedido, nome_cliente, razao_social, numero_documento, email_cliente,telefone_cliente, descricao_forma_pagamento, valor_frete,valor_total_pedido, data_pedido,status
+-- 
+-- -- endereco da tabela que quero trazer informa√ßoes
+-- from tb_pedido tp
+-- 
+-- inner join tb_cliente tc on (tp.cod_cliente = tc.cod_cliente )
+-- inner join tb_forma_pagamento tfp on (tp.cod_forma_pagamento = tfp.cod_forma_pagamento)
+-- inner join tb_frete tf on (tp.cod_frete = tf.cod_frete)
+-- inner join tb_status ts on (tp.cod_status = ts.cod_status);
+
+
+-- inner join tb_item_pedido tip on (tp.cod_veiculo = tip.cod_veiculo);
+-- inner join tb_veiculo tv on (tv.cod_veiculo = tp.cod_veiculo)
+-- inner join tb_marca tm on (tv.cod_marca = tm.cod_marca);
 

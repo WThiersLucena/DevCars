@@ -1,18 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1
+"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+
 <title>Pedido</title>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
 	rel="stylesheet">
 
 <style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body {
+	font-family: 'Questrial', sans-serif;
+}
+
 .bd-placeholder-img {
 	font-size: 1.125rem;
 	text-anchor: middle;
@@ -71,6 +80,12 @@ p {
 
 <link href="./dashboard.css" rel="stylesheet" />
 
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1">Linha responsividade -->
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
@@ -116,7 +131,7 @@ p {
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
 								<form action="ServletVeiculo" method="post">
 									<button type="submit" class="btn">
-										<span data-feather="file"></span> VEÍCULO
+										<span data-feather="file"></span> VEICULO
 									</button>
 								</form>
 						</a></li>
@@ -208,7 +223,7 @@ p {
 
 										<div class="col-3 text-start fw-bolder">
 											<p>
-												DATA DE EMISSÃO :
+												DATA DE EMISSAO :
 												<fmt:formatDate value="${pedidos.data_pedido}"
 													pattern="dd/MM/yyyy" />
 
@@ -235,90 +250,208 @@ p {
 									<div class="row">
 										<div class="col-md">
 											<div class="cliente">
-
+												
 												<p class="">
-													NOME :
-													<c:out value="${pedidos.nome_cliente}" />
-
+													VALOR TOTAL PEDIDO: 
+													<c:out value="${pedidos.valor_total_pedido}" />
 												</p>
-
-
+												
+												
+												<p class="">
+													DATA PEDIDO: 
+													<c:out value="${pedidos.data_pedido}" />
+												</p>
+												
+												<p class="">
+													NOME CLIENTE: 
+													<c:out value="${pedidos.nome_cliente}" />
+												</p>
+												
+												
+												<p class="">
+													NUMERO DOCUMENTO: 
+													<c:out value="${pedidos.numero_documento}" />
+												</p>
+												
+												<p class="">
+													TELEFONE CLIENTE: 
+													<c:out value="${pedidos.telefone_cliente}" />
+												</p>
+												
+												
+												<p class="">
+													EMAIL CLIENTE: 
+													<c:out value="${pedidos.email_cliente}" />
+												</p>
+												
+												<p class="">
+													RAZAO SOCIAL: 
+													<c:out value="${pedidos.razao_social}" />
+												</p>
+												
+												<p class="">
+													CEP ENDERECO: 
+													<c:out value="${pedidos.cep_endereco}" />
+												</p>
+												
+												<p class="">
+													RUA ENDERECO: 
+													<c:out value="${pedidos.rua_endereco}" />
+												</p>
+												
+												<p class="">
+													NUMERO ENDERECO: 
+													<c:out value="${pedidos.numero_endereco}" />
+												</p>
+												
+												<p class="">
+													BAIRRO: 
+													<c:out value="${pedidos.bairro}" />
+												</p>
+												
+												<p class="">
+													CIDADE: 
+													<c:out value="${pedidos.cidade}" />
+												</p>
+												
+												
+												<p class="">
+													UF: 
+													<c:out value="${pedidos.uf}" />
+												</p>
+												
+												
+												<p class="">
+													DESCRICAO FORMA PAGAMENTO: 
+													<c:out value="${pedidos.descricao_forma_pagamento}" />
+												</p>
+												
+												
+												<p class="">
+													VALOR FRETE: 
+													<c:out value="${pedidos.valor_frete}" />
+												</p>
+												
+												<p class="">
+													UNIDADE FEDERATIVA: 
+													<c:out value="${pedidos.unidade_federativa}" />
+												</p>
+												
+												<p class="">
+													STATUS: 
+													<c:out value="${pedidos.status}" />
+												</p>
+												
+												
+												<p class="">
+													MARCA VEICULO: 
+													<c:out value="${pedidos.marca_veiculo}" />
+												</p>
+												
+												<p class="">
+													MODELO_VEICULO: 
+													<c:out value="${pedidos.modelo_veiculo}" />
+												</p>
+												
+												<p class="">
+													ANO VEICULO: 
+													<c:out value="${pedidos.ano_veiculo}" />
+												</p>
+												
+												<p class="">
+													NUMERO CHASSI:
+													<c:out value="${pedidos.numero_chassi}" />
+												</p>
+												
+												<p class="">
+													PRECO VEICULO: 
+													<c:out value="${pedidos.preco_veiculo}" />
+												</p>
+												
+												<p class="">
+													NOME COR: 
+													<c:out value="${pedidos.nome_cor}" />
+												</p>
+												
+												<p class="">
+													MOTOR_VEICULO: 
+													<c:out value="${pedidos.motor_veiculo}" />
+												</p>
+												
+												<p class="">
+													POTENCIA: 
+													<c:out value="${pedidos.potencia_cv}" />
+												</p>
+												
+												<p class="">
+													TIPO COMBUSTIVEL: 
+													<c:out value="${pedidos.tipo_combustivel}" />
+												</p>
+												
+												<p class="">
+													CAMBIO: 
+													<c:out value="${pedidos.cambio}" />
+												</p>
+												
+												
+												
+												
 <!-- 												<p class=""> -->
-<!-- 													Nº DOCUMENTO: -->
-<%-- 													<c:out value="${pedidos.numero_documento}" /> --%>
+<!-- 													NOME : -->
+<%-- 													<c:out value="${pedidos.nome_cliente}" /> --%>
+
 <!-- 												</p> -->
 
 
-	
+
+												<c:set var="doc" value="${pedidos.numero_documento}" />
+												<c:choose>
+													<c:when test="${fn:length(doc) == 11}">
+
+														<span>CPF: </span>
+														<span class="exampleInputCpf"><c:out
+																value="${pedidos.numero_documento}" /></span>
+													</c:when>
+
+													<c:otherwise>
+														<span>CNPJ: </span>
+														<span class="exampleInputCnpj"><c:out
+																value="${pedidos.numero_documento}" /></span>
+													</c:otherwise>
+												</c:choose>
 
 
-													<c:set var="doc" value="${pedidos.numero_documento}"/>  
-													 <c:choose>
-														 <c:when test = "${fn:length(doc) == 11}" >
-														
-															<span>CPF: </span><span class="exampleInputCpf"><c:out value="${pedidos.numero_documento}" /></span>
-														 </c:when>
-														 
-														 <c:otherwise>
-														 	<span>CNPJ: </span><span class="exampleInputCnpj"><c:out value="${pedidos.numero_documento}" /></span>
-														 </c:otherwise>
-													 </c:choose>
-													
-
-<!-- 												<p class=""> -->
+<!-- 												<p class="exampleInputTelefone"> -->
 <!-- 													TELEFONE: -->
 <%-- 													<c:out value="${pedidos.telefone_cliente}" /> --%>
 <!-- 												</p> -->
 
-													<p class="exampleInputTelefone">TELEFONE: <c:out value="${pedidos.telefone_cliente}" /></p> 
 
-
-												<p class="">
-													FORMA DE PAGAMENTO:
-													<c:out value="${pedidos.descricao_forma_pagamento}" />
-												</p>
-
-
-												<p class="">
-													VALOR FRETE:
-													<c:out value="${pedidos.valor_frete}" />
-												</p>
-
-												<p class="">
-													RAZÃO SOCIAL:
-													<c:out value="${pedidos.razao_social}" />
-												</p>
-
-
-
-												<p class="">
-													EMAIL :
-													<c:out value="${pedidos.email_cliente}" />
-												</p>
-												
-<!-- 												<p class="exampleInputTelefone"> -->
-<%-- 													<c:out value="${cliente.telefone_cliente}" /> --%>
+<!-- 												<p class=""> -->
+<!-- 													FORMA DE PAGAMENTO: -->
+<%-- 													<c:out value="${pedidos.descricao_forma_pagamento}" /> --%>
 <!-- 												</p> -->
+
+
+<!-- 												<p class=""> -->
+<!-- 													VALOR FRETE: -->
+<%-- 													<c:out value="${pedidos.valor_frete}" /> --%>
+<!-- 												</p> -->
+
+<!-- 												<p class=""> -->
+<!-- 													RAZÃO SOCIAL: -->
+<%-- 													<c:out value="${pedidos.razao_social}" /> --%>
+<!-- 												</p> -->
+
+
+
+<!-- 												<p class=""> -->
+<!-- 													EMAIL : -->
+<%-- 													<c:out value="${pedidos.email_cliente}" /> --%>
+<!-- 												</p> -->
+
 											</div>
 										</div>
-
-										<!-- 											<div class="col-md"> -->
-										<!-- 											<h3 class="">Endereço</h3> -->
-										<%-- 												<p class="">UF : <c:out value="${cliente.uf}" /></p> --%>
-										<%-- 												<p class="">Cidade : <c:out value="${cliente.cidade}" /></p> --%>
-										<%-- 												<p class="">Bairro : <c:out value="${cliente.bairro}" /></p> --%>
-										<%-- 												<p class="exampleInputCep"> <c:out --%>
-										<%-- 															value="${cliente.cep_endeco}" /> </p> --%>
-
-										<%-- 												<p class="">Logradouro : <c:out value="${cliente.rua_endereco}" /> --%>
-										<%-- 													 <c:out value="${cliente.numero_endereco}" /> --%>
-										<%-- 													 	 <c:out value="${cliente.complemento}" /> --%>
-										<!-- 												</p> -->
-										<!-- 											</div>	 -->
-
-
-
-
 
 
 
@@ -334,59 +467,18 @@ p {
 		</main>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	</div>
-	
+
 
 	<script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" ></script>
- <script src="./dashboard.js"></script>
- 
- 
- <!-- jQuery Mask -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+	<script src="./dashboard.js"></script>
+
+
+	<!-- jQuery Mask -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
 		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		crossorigin="anonymous"></script>
@@ -394,23 +486,24 @@ p {
 	<script type="text/javascript" src="jquery.mask.js"></script>
 
 
+
 	<script type="text/javascript">
 		$(document).ready(function() {
 			//$(".exampleInputTelefone1").mask("TELEFONE: (00) 00000-0000");
-			 $(".exampleInputTelefone").mask("TELEFONE: (00) 0000-00009");
+			$(".exampleInputTelefone").mask("TELEFONE: (00) 0000-00009");
 			//$('.exampleInputChassi').mask('A.AA.AAAAAAA.A.AAAAA');
-			
-			
-			$('.exampleInputCpf').mask('000.000.000-00', { reverse: true });
-            $('.exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
+
+			$('.exampleInputCpf').mask('000.000.000-00', {
+				reverse : true
+			});
+			$('.exampleInputCnpj').mask('00.000.000/0000-00', {
+				reverse : true
+			});
 		});
-		
-		
-		
 	</script>
-	
-		
-		
+
+
+
 
 	<script src="./dashboard.js"></script>
 </body>

@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.dao.FornecedorDAO;
 import br.com.entidade.Fornecedor;
 
+import java.io.*;
+import java.lang.Thread;
+
 
 @WebServlet("/ServletFornecedor")
 public class ServletFornecedor extends HttpServlet {
@@ -93,6 +96,18 @@ public class ServletFornecedor extends HttpServlet {
 				fornec.addSupplier(supplier1);
 			}
 		}
+		
+		//Begin: Logic for a sleep function. Remember to import the function as it was imported at line 15.
+        try
+        {
+            Thread.sleep(1500);
+        } 
+        catch (InterruptedException ex)
+        {
+            ex.printStackTrace();
+        }
+        //End: Logic for a sleep function.
+        
 		response.sendRedirect("ServletFornecedor");
 	}
 	
@@ -135,6 +150,18 @@ public class ServletFornecedor extends HttpServlet {
 				this.fornec.updateSupplier(supplier1);
 			}
 		}
+		
+		//Begin: Logic for a sleep function. Remember to import the function as it was imported at line 15.
+        try
+        {
+            Thread.sleep(1500);
+        } 
+        catch (InterruptedException ex)
+        {
+            ex.printStackTrace();
+        }
+        //End: Logic for a sleep function.
+        
 		response.sendRedirect("ServletFornecedor");
 	}
 	

@@ -1,5 +1,5 @@
 create table tb_fornecedor
-(
+(	
 	cod_fornecedor smallint not null auto_increment,
 	cnpj varchar(18) not null,
 	razao_social varchar(50) not null,
@@ -66,7 +66,7 @@ create table tb_veiculo
 	modelo_veiculo varchar (50) not null,
 	cod_marca smallint  not null,
 	numero_chassi varchar (17) not null,
-	ano_veiculo varchar(4) not null,
+	ano_veiculo smallint not null,
 	preco_veiculo decimal (12,2) not null,
 	cod_cor smallint not null,
 	cod_motor smallint not null,
@@ -160,11 +160,50 @@ create table tb_cartao
 	validade_cartao varchar(5) not null,
 	cvv varchar(3) not null,
 	cod_modalidade smallint not null,
-
+	cod_cliente int not null,
+	
+	
 	primary key (cod_cartao),
-
-	foreign key (cod_modalidade) references tb_modalidade_cartao (cod_modalidade)
+	foreign key (cod_modalidade) references tb_modalidade_cartao (cod_modalidade),
+	foreign key (cod_cliente) references tb_cliente (cod_cliente)
 );
+
+
+create table tb_boleto
+(
+	cod_boleto int not null,
+	numero_cod_barra varchar (48) not null,
+
+	primary key (cod_boleto)
+
+);
+
+
+create table tb_pix
+(
+	cod_pix int not null,
+	id_transacao varchar (32) not null,
+
+	primary key (cod_pix)
+
+);
+
+
+
+create table tb_forma_pagamento
+(
+	cod_forma_pagamento smallint not null,
+	descricao_forma_pagamento varchar (50) not null,
+	
+	
+
+	primary key (cod_forma_pagamento)
+
+	
+
+)
+;
+
 
 
 create table tb_agendamento
@@ -174,10 +213,20 @@ create table tb_agendamento
 	cod_cliente int not null,
 	data_reserva date not null,
 	taxa_agendamento decimal(6,2) not null,
+	cod_forma_pagamento smallint not null,
+	cod_cartao smallint null,
+	cod_boleto int null,
+	cod_pix int null,
+	
 
 	primary key (cod_agendamento, cod_veiculo, data_reserva),
+	
+	foreign key (cod_forma_pagamento) references tb_forma_pagamento (cod_forma_pagamento),
 	foreign key (cod_veiculo) references tb_veiculo (cod_veiculo),
-	foreign key (cod_cliente) references tb_cliente (cod_cliente)
+	foreign key (cod_cliente) references tb_cliente (cod_cliente),
+	foreign key (cod_cartao) references tb_cartao (cod_cartao),
+	foreign key (cod_boleto) references tb_boleto (cod_boleto),
+	foreign key (cod_pix) references tb_pix (cod_pix)
 )
 ;
 
@@ -255,50 +304,24 @@ create table tb_status
 )
 ;
 
-
-
-create table tb_boleto
-(
-	cod_boleto int not null,
-	numero_cod_barra varchar (48) not null,
-
-	primary key (cod_boleto)
-
-);
-
-
-
-create table tb_forma_pagamento
-(
-	cod_forma_pagamento smallint not null,
-	descricao_forma_pagamento varchar (50) not null,
-	cod_cartao smallint null,
-	cod_boleto int null,
-
-	primary key (cod_forma_pagamento),
-
-	foreign key (cod_cartao) references tb_cartao (cod_cartao),
-	foreign key (cod_boleto) references tb_boleto (cod_boleto)
-)
-;
-
-
-
 create table tb_pedido
 (
 	cod_pedido int not null,
 	cod_cliente int not null,
+	cod_veiculo int not null,
+	cod_endereco int not null,
 	cod_forma_pagamento smallint not null,
 	cod_frete smallint not null,
 	valor_total_pedido decimal (12,2) not null,
 	data_pedido date not null,
 	previsao_entrega smallint not null,
 	data_envio date not null,
-	cod_endereco_cliente int not null,
 	cod_status smallint not null,
 
 	primary key (cod_pedido),
-
+	
+	foreign key (cod_endereco) references tb_endereco (cod_endereco),
+	foreign key (cod_veiculo) references tb_veiculo (cod_veiculo),
 	foreign key (cod_cliente) references tb_cliente (cod_cliente),
 	foreign key (cod_forma_pagamento) references tb_forma_pagamento (cod_forma_pagamento),
 	foreign key (cod_frete) references tb_frete (cod_frete),
@@ -306,20 +329,6 @@ create table tb_pedido
 
 )
 ;
-
-
-create table tb_item_pedido
-(
-	cod_veiculo int not null,
-	cod_pedido int not null,
-
-	primary key (cod_veiculo, cod_pedido),
-	
-	foreign key (cod_veiculo) references tb_veiculo (cod_veiculo),
-	foreign key (cod_pedido) references tb_pedido (cod_pedido)
-)
-;
-
 
 
 create table tb_cabecalho_nf ( 

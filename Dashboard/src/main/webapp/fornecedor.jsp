@@ -11,6 +11,12 @@
 	rel="stylesheet">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body{
+	font-family: 'Questrial', sans-serif;
+}
+
 .bd-placeholder-img {
 	font-size: 1.125rem;
 	text-anchor: middle;
@@ -27,7 +33,7 @@
 </style>
 
 <link href="./dashboard.css" rel="stylesheet" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -144,12 +150,12 @@
 						class="table table-striped table-sm table-bordered shadow bg-light">
 						<thead>
 							<tr>
-								<th class="col-1">COD</th>
-								<th class="col-4">RAZÃO SOCIAL</th>
-								<th class="col-2">EMAIL</th>
-								<th class="col-2">TELEFONE</th>
-								<th class="col-2">CNPJ</th>
-								<th class="col-1">AÇÕES</th>
+								<th class="col-1 text-center">COD</th>
+								<th class="col-4 text-center">RAZÃO SOCIAL</th>
+								<th class="col-2 text-center">EMAIL</th>
+								<th class="col-2 text-center">TELEFONE</th>
+								<th class="col-2 text-center">CNPJ</th>
+								<th class="col-1 text-center">AÇÕES</th>
 							</tr>
 						</thead>
 
@@ -161,7 +167,7 @@
 
 									<form action="ServletFornecedor" method="post">
 
-										<td><c:out value="${supplier.cod_fornecedor}" /> <input
+										<td class="text-center"><c:out value="${supplier.cod_fornecedor}" /> <input
 											type="hidden" name="cod_fornecedor"
 											value="${supplier.cod_fornecedor}" /></td>
 
@@ -290,6 +296,8 @@
 			});
 		});
 	</script>
+	
+	
 
 </body>
 </html>

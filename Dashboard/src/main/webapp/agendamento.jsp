@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -7,12 +7,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Lista de Agendamentos</title>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"
 	rel="stylesheet">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+body{
+	font-family: 'Questrial', sans-serif;
+}
+
+
 .bd-placeholder-img {
 	font-size: 1.125rem;
 	text-anchor: middle;
@@ -51,15 +58,32 @@
 	text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.68);
 }
 
+.container-style{
+	border-left: 2px solid #d9d9d9;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
+
 h3 {
 	font-family: Arial, Helvetica, Verdana, sans-serif;
 	margin-bottom: 8px;
 	font-size: 18px;
-	font-weight: bold
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 14px;
+	color: #545454;
 }
 
-p {
-	margin-bottom: 4px
+.container-style span{
+	color: #7a7a7a;
+	text-shadow: 0 1px 1px 0 #959595;
+}
+
+.container-style p{
+	margin: 0;
+	color: #7a7a7a;
+	text-shadow: 0 1px 1px 0 #959595;
 }
 
 @media ( min-width : 768px) {
@@ -67,10 +91,25 @@ p {
 		font-size: 3.5rem;
 	}
 }
+
+@media ( max-width : 450px) {
+	.accordion-button{
+		font-size: 13px;
+	}
+	
+	h3{
+		font-size: 14px;
+	}
+	
+	p, span{
+		padding-left: 7px;
+		font-size: 13px;
+	}
+}
 </style>
 
 <link href="./dashboard.css" rel="stylesheet" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
@@ -111,7 +150,7 @@ p {
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
 								<form action="ServletVeiculo" method="post">
 									<button type="submit" class="btn">
-										<span data-feather="file"></span> VEÍCULO
+										<span data-feather="file"></span> VEÃCULO
 									</button>
 								</form>
 						</a></li>
@@ -177,26 +216,30 @@ p {
 										aria-controls="flush-collapse-${a.cod_agendamento}">
 
 										<div class="row col-12 col-md-12 col-lg-12">
-											<div class="col-2 text-start fw-bolder">
+											<div class="d-none d-sm-block col-md-4 text-start fw-bolder">
 												<p>
 													#
 													<c:out value="${a.cod_agendamento}" />
 												</p>
 											</div>
+											
 
-											<div class="col-6 text-start fw-bolder">
-												<p>
-													Veículo: <c:out
-														value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" />
-												</p>
+											<div class="col-xs-12 col-md-5 text-start fw-bolder">
+												<span class="d-none d-sm-block">VeÃ­culo: </span>
+												<span><c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" />
+												</span>
 											</div>
+											
 
-											<div class="col-4 text-center fw-bolder">
-												<p>
-													Data de reserva: <fmt:formatDate value="${a.data_reserva}"
+											<div class="col-xs-12 col-md-3 text-xs-center fw-bolder mt-2">
+												<span>
+													Data de reserva: 
+													</span>
+													<span><fmt:formatDate value="${a.data_reserva}"
 														pattern="dd/MM/yyyy" />
-												</p>
+												</span>
 											</div>
+											
 										</div>
 
 									</button>
@@ -205,9 +248,11 @@ p {
 									class="accordion-collapse collapse"
 									aria-labelledby="flush-heading-${a.cod_agendamento}"
 									data-bs-parent="#accordionFlushExample">
-									<div class="accordion-body">
+									<div class="accordion-body ps-4 pe-5">
 										<div class="row">
-											<div class="col-md">
+										
+											<div class="col-md-4 container-style">
+											
 												<div class="cliente">
 													<h3 class="">Cliente</h3>
 													<p class="">
@@ -217,7 +262,7 @@ p {
 													</p>
 
 
-													<!-- <p class="exampleInputDocumento">NÚMERO DO DOCUMENTO: <c:out value="${a.numero_documento}" /></p>-->
+													<!-- <p class="exampleInputDocumento">NÃšMERO DO DOCUMENTO: <c:out value="${a.numero_documento}" /></p>-->
 													<c:set var="doc" value="${a.numero_documento}" />
 													<c:choose>
 														<c:when test="${fn:length(doc)==11}">
@@ -253,33 +298,42 @@ p {
 														<c:out value="${a.telefone_cliente}" />
 													</p>
 												</div>
+												
 											</div>
 
-											<div class="col-md">
-												<h3 class="">Detalhes do veículo</h3>
+
+											<div class="col-xs-12 col-md-5 container-style">
+												<h3 class="">Detalhes do veÃ­culo</h3>
 												<p class="">
 													Motor:
 													<c:out value="${a.motor_veiculo}" />
 												</p>
 												<p class="">
-													Potência:
+													PotÃªncia:
 													<c:out value="${a.potencia_cv}" />
 												</p>
 												<p class="">
-													Combustível:
+													CombustÃ­vel:
 													<c:out value="${a.tipo_combustivel}" />
 												</p>
 												<p class="">
-													Câmbio:
+													CÃ¢mbio:
 													<c:out value="${a.cambio}" />
 												</p>
 
 												<span>CHASSI: </span><span class="exampleInputChassi">
 													<c:out value="${a.numero_chassi}" />
 												</span>
+												<div>
+													<span class="tex-end"> Valor do veÃ­culo: </span>
+													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.preco_veiculo}" />
+													</span>
+												</div>
+												
 											</div>
 
-											<div class="col-md-3">
+
+											<div class="col-md-3 container-style">
 												<h3 class="tex-end">Taxa de agendamento:</h3>
 												<p class="text-start">
 													R$
@@ -287,12 +341,25 @@ p {
 														minFractionDigits="2" value="${a.taxa_agendamento}" />
 												</p>
 												
-												<h3 class="tex-end">Valor do veículo:</h3>
-												<p class="text-start">
-													R$
-													<fmt:formatNumber type="number" maxFractionDigits="2"
-														minFractionDigits="2" value="${a.preco_veiculo}" />
-												</p>
+												<h3 class="tex-end">Forma de pagamento:</h3>
+												<p class="text-start"><c:out value="${a.descricao_forma_pagamento}" /></p>
+												
+													<c:choose>
+														<c:when test="${fn:length(a.pagamento)==16}">
+															<h3 class="tex-end">NÃºmero do cartÃ£o: </h3>
+															<p class="text-start"><c:out value="${a.pagamento}" /></p>
+														</c:when>
+
+														<c:when test="${fn:length(a.pagamento)==32}">
+															<h3 class="tex-end">Id transaÃ§Ã£o: </h3>
+															<p class="text-start"><c:out value="${a.pagamento}" /></p>
+														</c:when>
+
+														<c:otherwise>
+															<h3 class="tex-end">CÃ³digo de barras: </h3>
+															<p class="text-start"><c:out value="${a.pagamento}" /></p>
+														</c:otherwise>
+													</c:choose>
 											</div>
 										</div>
 									</div>
@@ -315,9 +382,7 @@ p {
 
 
 	<!-- jQuery Mask -->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
 	<script type="text/javascript" src="jquery.mask.js"></script>
 
