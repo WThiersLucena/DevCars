@@ -19,6 +19,7 @@ import br.com.entidade.Veiculo;
 
 import java.io.*;
 import java.lang.Thread;
+import java.sql.SQLException;
 
 
 @WebServlet("/ServletVeiculo")
@@ -144,7 +145,7 @@ public class ServletVeiculo extends HttpServlet {
 				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack);
 				
 				veic.adicionarVeiculo(veiculo1);
-				System.out.println("nulo");
+				System.out.println("adicionado");
 			}
 			
 		} 
@@ -176,17 +177,29 @@ public class ServletVeiculo extends HttpServlet {
 		
 		if (cod_veiculoBack != null) {
 			Integer cod_veiculo = Integer.parseInt(cod_veiculoBack);
-			this.veic.removerVeiculo(cod_veiculo);
-		}
-		
-		try
-        {
-            Thread.sleep(1500);
-        } 
-        catch (InterruptedException ex)
-        {
-            ex.printStackTrace();
-        }
+			
+			try {
+				this.veic.removerVeiculo(cod_veiculo);
+				Thread.sleep(1500);
+				System.out.println("TEMPO DE 1 SEGUNDO E MEIO COM SUCESSO AO DELETAR");
+			}
+			catch (SQLException sql){
+				System.out.println(sql.getLocalizedMessage());
+				
+				try {
+					Thread.sleep(1500);
+			        System.out.println("TEMPO DE 1 SEGUNDO E MEIO AO DESATIVAR");
+			        this.veic.desativaVeiculo(cod_veiculo);
+			        }
+			        catch (InterruptedException ex) {
+						ex.printStackTrace();
+					}
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+			}
 		
 		response.sendRedirect("ServletVeiculo");
 	}

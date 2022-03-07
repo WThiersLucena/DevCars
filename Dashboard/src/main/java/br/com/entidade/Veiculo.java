@@ -14,6 +14,7 @@ public class Veiculo {
 	private String numero_chassi;
 	private Boolean estoque;
 	private Boolean destaque;
+	private Boolean seAtivo;
 	
 	private Integer cod_marca;
 	private Integer cod_cor;
@@ -21,6 +22,7 @@ public class Veiculo {
 	private Integer cod_combustivel;
 	private Integer cod_cambio;
 	private Integer cod_fornecedor;
+	
 	
 	
 	
@@ -363,6 +365,14 @@ public class Veiculo {
 	}
 
 
+
+	public Boolean getSeAtivo() {
+		return seAtivo;
+	}
+
+	public void setSeAtivo(Boolean seAtivo) {
+		this.seAtivo = seAtivo;
+	}
 
 	@Override
 	public String toString() {
