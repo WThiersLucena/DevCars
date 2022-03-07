@@ -226,7 +226,7 @@ h3 {
 
 											<div class="col-xs-12 col-md-5 text-start fw-bolder">
 												<span class="d-none d-sm-block">Veículo: </span>
-												<span><c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" />
+												<span><c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor} " />
 												</span>
 											</div>
 											
