@@ -299,7 +299,7 @@ h3 {
 												</div>
 												
 												<br>
-												<!-- ENDEREÇOS EM COLUM TRAZER TODOS OS ENDEREÇOS  -->
+												<!-- ENDEREÇOS EM COLUM TRAZER TODOS OS ENDEREÇOS 
 												
 												<h3 class=""></h3>
 												<h3 class="">Endereços Cadastrados :</h3>
@@ -348,7 +348,7 @@ h3 {
 													</p>
 													
 													</c:forEach>
-												
+												 -->
 											<!-- ENDEREÇOS EM COLUM TRAZER TODOS OS ENDEREÇOS  -->													
 												
 											
@@ -362,16 +362,19 @@ h3 {
 														
 														
 														
-														<!-- TRAZENDO OS PEDIDOS DO CLIENTE  -->	
+														<!-- TRAZENDO OS PEDIDOS DO CLIENTE  
 											
+
 															<!--<h3>Historico de Pedidos</h3>-->
+	
+
 															<!-- inicio acordeon -->
 					
-															<c:forEach var="ped" items="${mostrarPedido}">
-																<input type="hidden" name="id" value="${ped.cod_cliente}" />
+															<!-- <c:forEach var="ped" items="${mostrarPedido}">
+																<input type="hidden" name="id" value="${ped.cod_cliente}" />-->
 											
 																<!-- inicio acordeon -->
-																<div
+															<!--	<div
 																	class="accordion accordion-flush border rounded m-3 shadow rounded-3 ac-style "
 																	id="accordionFlushExample">
 																	<div class="accordion-item">
@@ -484,9 +487,10 @@ h3 {
 																			</div>
 																		</div>
 																	</div>
-																</div>
+																</div> -->
 																<!-- fim acordeon -->
-															</c:forEach>
+															<!--	</c:forEach> -->
+															  
 																<!-- fim acordeon -->
 											
 														</div>
