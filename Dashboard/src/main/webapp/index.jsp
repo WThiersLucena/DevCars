@@ -141,7 +141,6 @@ body{
 									</button>
 								</form>
 						</a></li>
-
 					</ul>
 				</div>
 			</nav>
@@ -178,6 +177,25 @@ body{
 					
 					</div>
 				</div>
+				<div class="card text-center col pedido"
+					style="width: 18rem; margin-bottom: 10px; border-radius: 80px; background-color: black; color: white;">
+					<div class="card-body">
+						<h5 class="card-title">Pedidos Realizados</h5>
+						<p class="card-text fs-1">
+							<c:out value="${contagem_pedidos}"></c:out>
+						</p>
+					</div>
+				</div>
+				<div class="card text-center col rendimento"
+					style="width: 18rem; margin-bottom: 10px; border-radius: 80px; background-color: black; color: white;">
+					<div class="card-body">
+						<h5 class="card-title">Rendimento Total</h5>
+						<p class="card-text fs-1">
+							<c:out value="${contagem_rendimentos}"></c:out>
+						</p>
+					
+					</div>
+				</div>
 			</div>
 			<div class="row row-cols-1 row-cols-md-3 g-4">
 				<div class="col">
@@ -191,7 +209,8 @@ body{
 								fornecedor. E acima de tudo, proporcionar ao maior número de
 								pessoas uma experiência memorável e excelência em produtos e
 								serviços, sendo referência em gestão do negócio de automotivos
-								de luxo.</p>
+								de luxo.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -214,7 +233,8 @@ body{
 							<h5 class="card-title">Motivação</h5>
 							<p class="card-text">Procure pensar sempre no que te inspira
 								e use-o como combustível para alcançar seus objetivos. E
-								lembre-se: até o maior dos prédios começa no chão.</p>
+								lembre-se: até o maior dos prédios começa no chão.
+							</p>
 						</div>
 					</div>
 				</div>
