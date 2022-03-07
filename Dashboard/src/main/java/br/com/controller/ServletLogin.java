@@ -55,10 +55,10 @@ public class ServletLogin extends HttpServlet {
 		if(DAO.conferencia(email, senha) != null) {
 			Login login = DAO.conferencia(email, senha); 
 			request.getServletContext().setAttribute("usuario", login.getUsuario());
-			request.getRequestDispatcher("lista.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 			
 		} else {
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 		
 	}

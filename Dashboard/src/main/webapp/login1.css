@@ -30,7 +30,7 @@ body {
   color: white;
 }
 
-.form-signin input[type="senha"] {
+.form-signin input[type="password"] {
   margin-bottom: 10px;
   border-radius: 5px;
   background: transparent;
@@ -61,3 +61,4 @@ label{
   border-color: rgb(255, 255, 68);
   box-shadow: 0 0 0 0.25rem rgba(217, 252, 22, 0.25);
 }
+

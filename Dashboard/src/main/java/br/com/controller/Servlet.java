@@ -50,7 +50,7 @@ public class Servlet extends HttpServlet {
 		}				
 		
 		request.setAttribute("lista", dao.listaCadastro());
-		request.getRequestDispatcher("lista.jsp").forward(request, response);		
+		request.getRequestDispatcher("index.jsp").forward(request, response);		
 			
 	}
 	
