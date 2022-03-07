@@ -79,7 +79,7 @@ public class PedidoDAO {
 
 				
 				 Integer cod_pedido = r.getInt("cod_pedido");
-				 Double valor_total_pedido = r.getDouble("cod_pedido");
+				 Double valor_total_pedido = r.getDouble("valor_total_pedido");
 				 Date data_pedido = r.getDate("data_pedido");
 				 String nome_cliente = r.getString("nome_cliente");
 				 String numero_documento = r.getString("numero_documento");

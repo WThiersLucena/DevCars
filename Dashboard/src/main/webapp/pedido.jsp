@@ -22,6 +22,7 @@ body {
 	font-family: 'Questrial', sans-serif;
 }
 
+
 .bd-placeholder-img {
 	font-size: 1.125rem;
 	text-anchor: middle;
@@ -60,15 +61,32 @@ body {
 	text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.68);
 }
 
+.container-style{
+	border-left: 2px solid #d9d9d9;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
+
 h3 {
 	font-family: Arial, Helvetica, Verdana, sans-serif;
 	margin-bottom: 8px;
 	font-size: 18px;
-	font-weight: bold
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 14px;
+	color: #545454;
 }
 
-p {
-	margin-bottom: 4px
+.container-style span{
+	color: #999999;
+	text-shadow: 0 1px 1px 0 #959595;
+}
+
+.container-style p{
+	margin: 0;
+	color: #999999;
+	text-shadow: 0 1px 1px 0 #959595;
 }
 
 @media ( min-width : 768px) {
@@ -76,6 +94,24 @@ p {
 		font-size: 3.5rem;
 	}
 }
+
+@media ( max-width : 450px) {
+	.accordion-button{
+		font-size: 13px;
+	}
+	
+	h3{
+		font-size: 14px;
+	}
+	
+	p, span{
+		padding-left: 7px;
+		font-size: 13px;
+	}
+	}
+
+
+
 </style>
 
 <link href="./dashboard.css" rel="stylesheet" />
@@ -248,23 +284,17 @@ p {
 								data-bs-parent="#accordionFlushExample">
 								<div class="accordion-body">
 									<div class="row">
-										<div class="col-md">
-											<div class="cliente">
-												
-												<p class="">
-													VALOR TOTAL PEDIDO: 
-													<c:out value="${pedidos.valor_total_pedido}" />
-												</p>
+									<!-- <div class="col-md">  -->	
+									<!-- <div class="cliente">  -->		
 												
 												
-												<p class="">
-													DATA PEDIDO: 
-													<c:out value="${pedidos.data_pedido}" />
-												</p>
-												
-												<p class="">
+												<div class="col-md-4 container-style">
+													<div class="Cliente">
+														<h3>Cliente</h3>
+														<p class="">
 													NOME CLIENTE: 
 													<c:out value="${pedidos.nome_cliente}" />
+
 													<c:out value="${pedidos.razao_social}" />
 												</p>
 												
@@ -275,9 +305,37 @@ p {
 												</p>
 												
 												<p class="">
+
+														</p>
+														
+																										
+														
+												<c:set var="doc" value="${pedidos.numero_documento}" />
+												<c:choose>
+													<c:when test="${fn:length(doc) == 11}">
+
+														<span>CPF: </span>
+														<span class="exampleInputCpf"><c:out
+																value="${pedidos.numero_documento}" /></span>
+													</c:when>
+
+													<c:otherwise>
+														<span>CNPJ: </span>
+														<span class="exampleInputCnpj"><c:out
+																value="${pedidos.numero_documento}" /></span>
+													</c:otherwise>
+													
+																									
+													
+												</c:choose>
+														
+																											
+														
+														<p input type="Text"class="Telefone">
+
 													TELEFONE CLIENTE: 
 													<c:out value="${pedidos.telefone_cliente}" />
-												</p>
+												   		 </p>
 												
 												
 												<p class="">
@@ -286,7 +344,7 @@ p {
 												</p>
 												
 												
-												<p class="">
+												<p input type="text"class="cep">
 													CEP ENDERECO: 
 													<c:out value="${pedidos.cep_endereco}" />
 												</p>
@@ -300,6 +358,7 @@ p {
 													NUMERO ENDERECO: 
 													<c:out value="${pedidos.numero_endereco}" />
 												</p>
+												
 												
 												<p class="">
 													BAIRRO: 
@@ -317,13 +376,17 @@ p {
 													<c:out value="${pedidos.uf}" />
 												</p>
 												
+														
+														
+													</div>
 												
-												<p class="">
-													DESCRICAO FORMA PAGAMENTO: 
-													<c:out value="${pedidos.descricao_forma_pagamento}" />
-												</p>
+												</div>
 												
 												
+												<div class="col-xs-12 col-md-5 container-style">
+												<h3 class="">Detalhes do Veiculo</h3>
+													
+													
 												<p class="">
 													VALOR FRETE: 
 													<c:out value="${pedidos.valor_frete}" />
@@ -355,7 +418,7 @@ p {
 													<c:out value="${pedidos.ano_veiculo}" />
 												</p>
 												
-												<p class="">
+												<p input type="Text" class="numerochassi">
 													NUMERO CHASSI:
 													<c:out value="${pedidos.numero_chassi}" />
 												</p>
@@ -390,65 +453,44 @@ p {
 													<c:out value="${pedidos.cambio}" />
 												</p>
 												
+																																				
+												</div>
+												
+												
+												<div class="col-md container-style">
+													<h3 class="tex-end">Detalhes Pagamento </h3>
+													
+													<p class="">
+													VALOR TOTAL PEDIDO: 
+													<c:out value="${pedidos.valor_total_pedido}" />
+												</p>
+												
+												
+												<p input type="Text" class="data">
+													DATA PEDIDO: 
+													<c:out value="${pedidos.data_pedido}" />
+												</p>
+												
+																																															
+												
+												<p class="">
+													DESCRICAO FORMA PAGAMENTO: 
+													<c:out value="${pedidos.descricao_forma_pagamento}" />
+												</p>
+												
+													
+												</div>
 												
 												
 												
-<!-- 												<p class=""> -->
-<!-- 													NOME : -->
-<%-- 													<c:out value="${pedidos.nome_cliente}" /> --%>
-
-<!-- 												</p> -->
+												
+									
 
 
 
-												<c:set var="doc" value="${pedidos.numero_documento}" />
-												<c:choose>
-													<c:when test="${fn:length(doc) == 11}">
 
-														<span>CPF: </span>
-														<span class="exampleInputCpf"><c:out
-																value="${pedidos.numero_documento}" /></span>
-													</c:when>
-
-													<c:otherwise>
-														<span>CNPJ: </span>
-														<span class="exampleInputCnpj"><c:out
-																value="${pedidos.numero_documento}" /></span>
-													</c:otherwise>
-												</c:choose>
-
-
-<!-- 												<p class="exampleInputTelefone"> -->
-<!-- 													TELEFONE: -->
-<%-- 													<c:out value="${pedidos.telefone_cliente}" /> --%>
-<!-- 												</p> -->
-
-
-<!-- 												<p class=""> -->
-<!-- 													FORMA DE PAGAMENTO: -->
-<%-- 													<c:out value="${pedidos.descricao_forma_pagamento}" /> --%>
-<!-- 												</p> -->
-
-
-<!-- 												<p class=""> -->
-<!-- 													VALOR FRETE: -->
-<%-- 													<c:out value="${pedidos.valor_frete}" /> --%>
-<!-- 												</p> -->
-
-<!-- 												<p class=""> -->
-<!-- 													RAZÃO SOCIAL: -->
-<%-- 													<c:out value="${pedidos.razao_social}" /> --%>
-<!-- 												</p> -->
-
-
-
-<!-- 												<p class=""> -->
-<!-- 													EMAIL : -->
-<%-- 													<c:out value="${pedidos.email_cliente}" /> --%>
-<!-- 												</p> -->
-
-											</div>
-										</div>
+										<!--</div> -->	
+										<!--</div> -->
 
 
 
@@ -496,6 +538,24 @@ p {
 			$('.exampleInputCnpj').mask('00.000.000/0000-00', {
 				reverse : true
 			});
+			
+			$('.Telefone').mask("(00) 0000.00009"{
+				reverse : true
+			});
+			
+			$('.cep').mask("00.000-000"{
+				reverse : true
+			});
+			
+			$('.numerochassi').mask("0000.0000.0000.00000."{
+				reverse : true
+			})
+			
+			$('.data').mask("00/00/0000."{
+				reverse : true
+			})
+			
+			
 		});
 	</script>
 
