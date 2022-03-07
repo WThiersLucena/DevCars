@@ -1,3 +1,9 @@
+INSERT INTO login VALUES(1, "augusto.meireles@devcars.com", "augusto", "Augusto");
+INSERT INTO login VALUES(2,"guilherme.viana@devcars.com", "guilherme", "Guilherme");
+INSERT INTO login VALUES(3, "larissa.bandeira@devcars.com", "larissa", "Larissa");
+INSERT INTO login VALUES(4,"lidia.maciel@devcars.com", "lidia", "Lidia");
+INSERT INTO login VALUES(5, "wanderson.thiers@devcars.com", "wanderson", "Wanderson");
+
 insert into tb_fornecedor 
 (
 	cod_fornecedor, 
@@ -147,7 +153,7 @@ values
 )
 ;
 
--- COMBUSTIVEL 3: Eletrico
+-- COMBUSTIVEL 3: Elétrico
 
 insert into tb_combustivel
 (
@@ -161,7 +167,7 @@ values
 )
 ;
 
--- COMBUSTIVEL 4: Hibrido
+-- COMBUSTIVEL 4: HÃ­brido
 
 insert into tb_combustivel
 (
@@ -176,7 +182,7 @@ values
 ;
 
 
--- CAMBIO 1: Automatico 6 marchas
+-- CAMBIO 1: AutomÃ¡tico 6 marchas
 
 insert into tb_cambio
 (
@@ -190,7 +196,7 @@ values
 )
 ;
 
--- CAMBIO 2: Automatico 7 marchas
+-- CAMBIO 2: AutomÃ¡tico 7 marchas
 
 insert into tb_cambio
 (
@@ -204,7 +210,7 @@ values
 )
 ;
 
--- CAMBIO 3: Automatico 8 marchas
+-- CAMBIO 3: AutomÃ¡tico 8 marchas
 
 insert into tb_cambio
 (
@@ -218,7 +224,7 @@ values
 )
 ;
 
--- CAMBIO 4: Automatico 9 marchas
+-- CAMBIO 4: AutomÃ¡tico 9 marchas
 
 insert into tb_cambio
 (
@@ -246,7 +252,7 @@ values
 )
 ;
 
--- CAMBIO 6: Automatico de 1 Velocidade
+-- CAMBIO 6: AutomÃ¡tico de 1 Velocidade
 
 insert into tb_cambio
 (
@@ -680,7 +686,7 @@ insert into tb_motor
 values
 (	
 	10,
-	'4.0L V8 BI TURBO + ELETRICO',
+	'4.0L V8 BI TURBO + ELÉTRICO',
 	'680 CV'		
 )
 ;
@@ -1482,7 +1488,7 @@ insert into tb_veiculo
 values
 (	
 	14,
-	'R8 COUPÉ PERFORMANCE',
+	'R8 COUPÃ PERFORMANCE',
 	6,
 	'3GERO19F02G000230',
 	2022,
@@ -2696,12 +2702,12 @@ insert into tb_endereco_cliente
 insert into tb_modalidade_cartao 
 values
 	(1,
-	'CRÉDITO'
+	'Credito'
 );
 
 insert into tb_modalidade_cartao
 values
-	(2, 'DÉBITO'
+	(2, 'Debito'
 );
 
 
@@ -4690,7 +4696,7 @@ values(
 -- select * from tb_cor tc ;
 -- select * from tb_marca tm ;
 -- select * from tb_motor tm ;
- select * from tb_veiculo tv ;
+-- select * from tb_veiculo tv ;
 -- select * from tb_cliente tc ;
 -- select * from tb_endereco te ;
 -- select * from tb_endereco_cliente tec ;
@@ -4704,7 +4710,7 @@ values(
 -- select * from tb_frete tf ;
 -- select * from tb_cabecalho_nf tcn ;
 -- select * from tb_item_nf tin  ;
- -- select * from tb_pedido tp ;
+ select * from tb_pedido tp ;
 -- select * from tb_forma_pagamento tfp ;
 -- select  * from tb_tipo_pagamento ttp ;
 -- select * from tb_status ts 
