@@ -982,7 +982,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -998,7 +999,8 @@ values
 	3,
 	1,
 	TRUE,
-	FALSE			
+	false, 
+	true		
 )
 ;
 
@@ -1018,7 +1020,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1034,7 +1037,8 @@ values
 	2,
 	1,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1054,7 +1058,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1070,7 +1075,8 @@ values
 	1,
 	1, 
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1090,7 +1096,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1106,7 +1113,8 @@ values
 	2,
 	2,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1126,7 +1134,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1142,7 +1151,8 @@ values
 	3,
 	2,
 	TRUE,
-	TRUE			
+	true,
+	TRUE
 )
 ;
 
@@ -1162,7 +1172,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1178,7 +1189,8 @@ values
 	2,
 	2,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1198,7 +1210,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1214,7 +1227,8 @@ values
 	2,
 	3, 
 	TRUE,
-	TRUE			
+	true,
+	TRUE
 )
 ;
 
@@ -1234,7 +1248,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1250,7 +1265,8 @@ values
 	5,
 	4,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1270,7 +1286,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1286,7 +1303,8 @@ values
 	5, -- cambio
 	4,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1306,7 +1324,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1322,7 +1341,8 @@ values
 	3, -- cambio
 	4,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1342,7 +1362,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1358,7 +1379,8 @@ values
 	5,
 	4,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1378,7 +1400,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1394,7 +1417,8 @@ values
 	5, 
 	4,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1414,7 +1438,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1430,7 +1455,8 @@ values
 	6,
 	5,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1450,7 +1476,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1466,7 +1493,8 @@ values
 	2,
 	6,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1486,7 +1514,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1502,7 +1531,8 @@ values
 	3,
 	6,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1522,7 +1552,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1538,7 +1569,8 @@ values
 	3,
 	6,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1558,7 +1590,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1574,7 +1607,8 @@ values
 	2,
 	6,
 	TRUE,
-	FALSE			
+	FALSE,
+	TRUE
 )
 ;
 
@@ -1594,7 +1628,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1610,7 +1645,8 @@ values
 	3,
 	7,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1630,7 +1666,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1646,7 +1683,8 @@ values
 	7,
 	7,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1666,7 +1704,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1682,7 +1721,8 @@ values
 	3, -- cambio
 	7,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1702,7 +1742,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1718,7 +1759,8 @@ values
 	3,
 	7,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1738,7 +1780,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1754,7 +1797,8 @@ values
 	3, -- cambio
 	7,
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1774,7 +1818,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1790,7 +1835,8 @@ values
 	3, -- cambio
 	7, -- fornecedor
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1810,7 +1856,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1826,7 +1873,8 @@ values
 	3, -- cambio
 	7, -- fornecedor
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1846,7 +1894,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1862,7 +1911,8 @@ values
 	4, -- cambio
 	8, -- fornecedor
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 
@@ -1882,7 +1932,8 @@ insert into tb_veiculo
 	cod_cambio,
 	cod_fornecedor,
 	estoque,
-	destaque
+	destaque,
+	seAtivo
 )
 values
 (	
@@ -1898,7 +1949,8 @@ values
 	4, -- cambio
 	9, -- fornecedor
 	TRUE,
-	FALSE			
+	false,
+	TRUE
 )
 ;
 

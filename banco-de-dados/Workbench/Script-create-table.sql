@@ -76,6 +76,7 @@ create table tb_veiculo
 	cod_fornecedor smallint not null,
 	estoque boolean not null,
 	destaque boolean not null,
+	seAtivo boolean null,
 	
 	primary key (cod_veiculo),
 	foreign key (cod_marca) references tb_marca (cod_marca),
@@ -85,8 +86,6 @@ create table tb_veiculo
 	foreign key (cod_motor) references tb_motor (cod_motor),
 	foreign key (cod_fornecedor) references tb_fornecedor (cod_fornecedor),
 	unique key (numero_chassi)
-
-
 );
 
 create table tb_cliente
