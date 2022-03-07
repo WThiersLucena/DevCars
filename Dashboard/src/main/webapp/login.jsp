@@ -34,19 +34,19 @@
 <body class="text-center" style="background: black;">
 
 	<main class="form-signin">
-		<form action="ServletLogin" method="post">
+		<form action="ServletLogin" method="post" id="login">
 			<img class="mb-4" src="logo-rev01.jpeg" alt="logo-devcars"
 				width="210" height="210">
 
 			<div class="form-floating">
 				<input type="email" class="form-control" id="floatingInput"
-					placeholder="name@example.com" name="email"> <label for="floatingInput">Email
+					name="email"> <label for="floatingInput">Email
 					Coorporativo</label>
 			</div>
 
 			<div class="form-floating">
 				<input type="password" class="form-control" id="floatingPassword"
-					placeholder="Senha" name="senha"> <label for="floatingPassword">Senha</label>
+					name="senha"> <label for="floatingPassword">Senha</label>
 			</div>
 
 			<button class="w-100 btn btn-lg btn" type="submit" value="Entrar" name="opcao">
@@ -66,6 +66,5 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
-
 </body>
 </html>
