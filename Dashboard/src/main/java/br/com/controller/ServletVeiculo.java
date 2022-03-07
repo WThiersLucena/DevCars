@@ -179,6 +179,15 @@ public class ServletVeiculo extends HttpServlet {
 			this.veic.removerVeiculo(cod_veiculo);
 		}
 		
+		try
+        {
+            Thread.sleep(1500);
+        } 
+        catch (InterruptedException ex)
+        {
+            ex.printStackTrace();
+        }
+		
 		response.sendRedirect("ServletVeiculo");
 	}
 	
