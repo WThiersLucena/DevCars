@@ -294,7 +294,7 @@ h3 {
 														<p class="">
 													NOME CLIENTE: 
 													<c:out value="${pedidos.nome_cliente}" />
-<<<<<<< HEAD
+
 													<c:out value="${pedidos.razao_social}" />
 												</p>
 												
@@ -305,7 +305,7 @@ h3 {
 												</p>
 												
 												<p class="">
-=======
+
 														</p>
 														
 																										
@@ -330,12 +330,10 @@ h3 {
 												</c:choose>
 														
 																											
-														
-														<p input type="Text"class="Telefone">
->>>>>>> cbe6bb9cf139a1e68c086b1465bcb98373decfe9
-													TELEFONE CLIENTE: 
+													<p input type="text" class="Telefone">	
+														TELEFONE CLIENTE: 
 													<c:out value="${pedidos.telefone_cliente}" />
-												   		 </p>
+												    </p>
 												
 												
 												<p class="">
