@@ -170,7 +170,7 @@ public class ClienteDAO {
 
 	
 	
-	//MOSTRAR CARTÕES
+	//MOSTRAR CARTï¿½ES
 	public ArrayList<CartaoCliente> mostrarCartoes() {
 		
 		Conexao c = Conexao.getInstance();
@@ -198,7 +198,7 @@ public class ClienteDAO {
 				 
 				CartaoCliente cart = new CartaoCliente(cod_cliente, cod_cartao, nome_cliente, razao_social, numero_cartao, descricao_modalidade);
 				cart.setCod_cliente(cod_cliente);
-				cartoes.add(c1);
+				cartoes.add(cart);
 				
 				
 			}
