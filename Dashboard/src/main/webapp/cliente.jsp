@@ -280,10 +280,11 @@ p {
 												<!-- ENDEREÇOS EM COLUM TRAZER TODOS OS ENDEREÇOS  -->
 												
 												<h3 class=""></h3>
+												<h3 class="">Endereços Cadastrados :</h3>
 												<c:forEach var="end" items="${mostrarEndereco}">
 															<input type="hidden" name="id" value="${end.cod_cliente}" />
 													<br>
-													<h3 class="">Endereços Cadastrados :</h3>
+													
 													<br>
 													
 													<p class="">
