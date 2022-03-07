@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import br.com.conexao.ConexaoLogin;
+import br.com.conexao.Conexao;
 import br.com.entidade.Login;
 
 public class LoginDAO {
@@ -18,7 +18,7 @@ public class LoginDAO {
 
 	public void loginCadastro(Login usuario) {
 
-		ConexaoLogin conexao = ConexaoLogin.getInstance();
+		Conexao conexao = Conexao.getInstance();
 		Connection connection = conexao.getConnection();
 
 		try {
@@ -41,7 +41,7 @@ public class LoginDAO {
 
 	public ArrayList<Login> listaCadastro() {
 
-		ConexaoLogin conexao = ConexaoLogin.getInstance();
+		Conexao conexao = Conexao.getInstance();
 		Connection connection = conexao.getConnection();
 
 		ArrayList<Login> listaLogin = new ArrayList<Login>();
@@ -75,7 +75,7 @@ public class LoginDAO {
 
 	public void updateLogin(Login atualizarLogin) {
 
-		ConexaoLogin conexao = ConexaoLogin.getInstance();
+		Conexao conexao = Conexao.getInstance();
 		Connection connection = conexao.getConnection();
 
 		try {
@@ -99,7 +99,7 @@ public class LoginDAO {
 
 	public Login buscarLogin(int id) {
 
-		ConexaoLogin conexao = ConexaoLogin.getInstance();
+		Conexao conexao = Conexao.getInstance();
 		Connection connection = conexao.getConnection();
 		Login login = null;
 
@@ -130,7 +130,7 @@ public class LoginDAO {
 	
 	public void removerLogin(Integer id) {
 		
-		ConexaoLogin conexao = ConexaoLogin.getInstance();
+		Conexao conexao = Conexao.getInstance();
 		Connection connection = conexao.getConnection();
 		
 		try {
@@ -149,7 +149,7 @@ public class LoginDAO {
 	
 	public Login conferencia(String email, String senha) {
 		
-		ConexaoLogin conexao = ConexaoLogin.getInstance();
+		Conexao conexao = Conexao.getInstance();
 		Connection connection = conexao.getConnection();
 		
 		Login login = null;
