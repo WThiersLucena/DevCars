@@ -5,7 +5,8 @@ insert into tb_fornecedor
 	razao_social,
 	inscricao_estadual,
 	email_fornecedor,
-	telefone_fornecedor
+	telefone_fornecedor,
+	seAtivo
 )
 values
 (
@@ -14,7 +15,8 @@ values
 	'Ferrari Corporation',
 	'573366418821', 
 	'contact@ferrari.com',
-	'1238853887');
+	'1238853887',
+	true);
 
 
 insert into tb_fornecedor
@@ -25,7 +27,8 @@ values
 	'Porsche S/A', 
 	'409098034501',
 	'contact@porsche.com',
-	'1627779995');
+	'1627779995',
+	true);
 
 insert into tb_fornecedor 
 values
@@ -35,7 +38,8 @@ values
 	'Bugatti Corporation',
 	'129622047629', 
 	'suport@bugatti.com', 
-	'1137420701');
+	'1137420701',
+	true);
 
 insert into tb_fornecedor 
 values
@@ -45,7 +49,8 @@ values
 	'Lamborghini S/A', 
 	'735189620663', 
 	'contact@lamborghini.com', 
-	'1127200490');
+	'1127200490',
+	true);
 
 insert into tb_fornecedor
 values
@@ -55,17 +60,19 @@ values
 	'Tesla S/A',
 	'114140200278', 
 	'tesla.contact@tesla.com', 
-	'1937305738'); 
+	'1937305738',
+	true); 
 
 insert into tb_fornecedor
 values
 (
 	6,
 	'70850075000147', 
-	'BMW AssociaÃ§Ã£o', 
+	'BMW Associação', 
 	'992561270210',
 	'bmw@bmw.com', 
-	'1627966899'); 
+	'1627966899',
+	true); 
 
 insert into tb_fornecedor
 values
@@ -75,7 +82,8 @@ values
 	'Audi Corporation',
 	'919010418657',
 	'audi@contact.com', 
-	'1127164661');
+	'1127164661',
+	true);
 
 insert into tb_fornecedor 
 values
@@ -85,7 +93,8 @@ values
 	'Aston Martin S/A',
 	'397050906330',
 	'aston.martin@vendas.com',
-	'1835143625'); 
+	'1835143625',
+	true); 
 
 insert into tb_fornecedor
 values
@@ -95,7 +104,8 @@ values
 	'Bentley S/A', 
 	'643892335660', 
 	'bentleyBrasil@contact.com', 
-	'1139023507'); 
+	'1139023507',
+	true); 
 
 insert into tb_fornecedor 
 values
@@ -105,7 +115,8 @@ values
 	'Mercedes Corporation',
 	'381346058602',
 	'contact@mercedes.com',
-	'1137125953'); 
+	'1137125953',
+	true); 
 
 
 -- COMBUSTIVEL 1: Gasolina
@@ -136,7 +147,7 @@ values
 )
 ;
 
--- COMBUSTIVEL 3: ElÃ©trico
+-- COMBUSTIVEL 3: Elétrico
 
 insert into tb_combustivel
 (
@@ -703,7 +714,7 @@ insert into tb_motor
 values
 (	
 	12,
-	'2.9L V6 BI TURBO + ELÃ‰TRICO',
+	'2.9L V6 BI TURBO + ELÉTRICO',
 	'560 CV'		
 )
 ;
@@ -720,7 +731,7 @@ insert into tb_motor
 values
 (	
 	13,
-	'2 MOTORES ELÃ‰TRICOS',
+	'2 MOTORES ELÉTRICOS',
 	'468 CV'		
 )
 ;
@@ -913,7 +924,7 @@ insert into tb_motor
 values
 (	
 	24,
-	'6 Cilindros em Linha, 3.0L Twin Turbo + ElÃ©trico',
+	'6 Cilindros em Linha, 3.0L Twin Turbo + Elétrico',
 	'394 CV'		
 )
 ;
@@ -1444,7 +1455,7 @@ insert into tb_veiculo
 values
 (	
 	14,
-	'R8 COUPÃ‰ PERFORMANCE',
+	'R8 COUPÃ PERFORMANCE',
 	6,
 	'3GERO19F02G000230',
 	2022,
@@ -1696,7 +1707,7 @@ insert into tb_veiculo
 values
 (	
 	21,
-	'M8 GRAN COUPÃ‰',
+	'M8 GRAN COUPÃ',
 	7,
 	'1GERO19F01G000940',
 	2019,
@@ -2633,12 +2644,12 @@ insert into tb_endereco_cliente
 insert into tb_modalidade_cartao 
 values
 	(1,
-	'CrÃ©dito'
+	'Credito'
 );
 
 insert into tb_modalidade_cartao
 values
-	(2, 'DÃ©bito'
+	(2, 'Debito'
 );
 
 

@@ -6,6 +6,7 @@ create table tb_fornecedor
 	inscricao_estadual varchar(15) not null,
 	email_fornecedor varchar(100) not null,
 	telefone_fornecedor varchar(20) not null,
+	seAtivo boolean null,
 	
 	primary key (cod_fornecedor),
 	unique key (cnpj)
