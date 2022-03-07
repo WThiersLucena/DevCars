@@ -294,7 +294,11 @@ h3 {
 														<p class="">
 													NOME CLIENTE: 
 													<c:out value="${pedidos.nome_cliente}" />
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> bf4fda0e47eda694d3faa9c8b652ac8f1b3dc1fd
 													<c:out value="${pedidos.razao_social}" />
 												</p>
 												
@@ -305,7 +309,11 @@ h3 {
 												</p>
 												
 												<p class="">
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> bf4fda0e47eda694d3faa9c8b652ac8f1b3dc1fd
 														</p>
 														
 																										
@@ -332,7 +340,11 @@ h3 {
 																											
 														
 														<p input type="Text"class="Telefone">
+<<<<<<< HEAD
 
+=======
+>>>>>>> cbe6bb9cf139a1e68c086b1465bcb98373decfe9
+>>>>>>> bf4fda0e47eda694d3faa9c8b652ac8f1b3dc1fd
 													TELEFONE CLIENTE: 
 													<c:out value="${pedidos.telefone_cliente}" />
 												   		 </p>
