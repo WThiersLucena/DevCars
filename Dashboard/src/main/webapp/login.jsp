@@ -34,26 +34,29 @@
 <body class="text-center" style="background: black;">
 
 	<main class="form-signin">
-		<form>
+		<form action="ServletLogin" method="post">
 			<img class="mb-4" src="logo-rev01.jpeg" alt="logo-devcars"
 				width="210" height="210">
 
 			<div class="form-floating">
 				<input type="email" class="form-control" id="floatingInput"
-					placeholder="name@example.com"> <label for="floatingInput">Email
+					placeholder="name@example.com" name="email"> <label for="floatingInput">Email
 					Coorporativo</label>
 			</div>
 
 			<div class="form-floating">
-				<input type="senha" class="form-control" id="floatingPassword"
-					placeholder="Senha"> <label for="floatingPassword">Senha</label>
+				<input type="password" class="form-control" id="floatingPassword"
+					placeholder="Senha" name="senha"> <label for="floatingPassword">Senha</label>
 			</div>
 
-			<button class="w-100 btn btn-lg btn" type="submit">
-				<a href="#">Entrar</a>
+			<button class="w-100 btn btn-lg btn" type="submit" value="Entrar" name="opcao">
+				<!-- <a href="#"> -->
+				Entrar
+				<!-- </a> -->
 			</button>
+			
 			<br>
-			<p class="mt-5 mb-3 text-muted copyright">&copy; DevCars,
+			<p class="mt-5 mb-3 text-muted copyright thiers">&copy; DevCars,
 				2021-2022</p>
 		</form>
 	</main>
