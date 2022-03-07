@@ -58,6 +58,12 @@ body{
 	background-color: #F0CA4F;
 }
 
+.container-style{
+	border-left: 2px solid #d9d9d9;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
+
 .ac-header {
 	color: #fff;
 	background-color: #F0CA4F;
@@ -78,6 +84,28 @@ p {
 	margin-bottom: 4px
 }
 
+h3 {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 14px;
+	color: #545454;
+}
+
+.container-style span{
+	color: #7a7a7a;
+	text-shadow: 0 1px 1px 0 #959595;
+}
+
+.container-style p{
+	margin: 0;
+	color: #7a7a7a;
+	text-shadow: 0 1px 1px 0 #959595;
+}
+
+
 @media ( min-width : 768px) {
 	.bd-placeholder-img-lg {
 		font-size: 3.5rem;
@@ -86,7 +114,7 @@ p {
 </style>
 
 <link href="./dashboard.css" rel="stylesheet" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
@@ -211,23 +239,16 @@ p {
 										aria-controls="flush-collapse-${cliente.cod_cliente}">
 
 										<div class="row col-12 col-md-12 col-lg-12">
-											<div class="col-2 text-start fw-bolder">
+											<div class="d-none d-sm-block col-md-4 text-start fw-bolder">
 												<p>
-													Cod :
+													#
 													<c:out value="${cliente.cod_cliente}" />
 												</p>
 											</div>
 
-											<div class="col-5 text-center fw-bolder">
+											<div class="col text-start fw-bolder">
 												<p>
-													<c:out
-														value=" ${cliente.nome_cliente}  ${cliente.razao_social}  " />
-												</p>
-											</div>
-
-											<div class="col-5 text-center fw-bolder">
-												<p>
-													<c:out value="${cliente.email_cliente}" />
+													<c:out value=" ${cliente.nome_cliente}  ${cliente.razao_social}  " />
 												</p>
 											</div>
 										</div>
@@ -240,7 +261,7 @@ p {
 									data-bs-parent="#accordionFlushExample">
 									<div class="accordion-body">
 										<div class="row">
-											<div class="col-md">
+											<div class="col-md container-style">
 												<div class="cliente">
 													<h3 class="">Cliente</h3>
 													<p class="">
@@ -275,15 +296,17 @@ p {
 														<c:out value="${cliente.telefone_cliente}" />
 													</p>
 												</div>
+												</div>
 												
 												<br>
 												<!-- ENDEREÇOS EM COLUM TRAZER TODOS OS ENDEREÇOS  -->
 												
 												<h3 class=""></h3>
+												<h3 class="">Endereços Cadastrados :</h3>
 												<c:forEach var="end" items="${mostrarEndereco}">
 															<input type="hidden" name="id" value="${end.cod_cliente}" />
 													<br>
-													<h3 class="">Endereços Cadastrados :</h3>
+													
 													<br>
 													
 													<p class="">
@@ -328,7 +351,7 @@ p {
 												
 											<!-- ENDEREÇOS EM COLUM TRAZER TODOS OS ENDEREÇOS  -->													
 												
-											</div>
+											
 
 											<div class="col-md">
 												

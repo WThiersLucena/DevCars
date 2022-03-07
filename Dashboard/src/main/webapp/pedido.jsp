@@ -207,7 +207,7 @@ p {
 									<div class="row col-12 col-md-12 col-lg-12">
 										<div class="col-3 text-start fw-bolder">
 											<p>
-												COD :
+												#
 												<c:out value="${pedidos.cod_pedido}" />
 											</p>
 										</div>
@@ -265,6 +265,7 @@ p {
 												<p class="">
 													NOME CLIENTE: 
 													<c:out value="${pedidos.nome_cliente}" />
+													<c:out value="${pedidos.razao_social}" />
 												</p>
 												
 												
@@ -284,10 +285,6 @@ p {
 													<c:out value="${pedidos.email_cliente}" />
 												</p>
 												
-												<p class="">
-													RAZAO SOCIAL: 
-													<c:out value="${pedidos.razao_social}" />
-												</p>
 												
 												<p class="">
 													CEP ENDERECO: 

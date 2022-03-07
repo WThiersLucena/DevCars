@@ -5,7 +5,8 @@ insert into tb_fornecedor
 	razao_social,
 	inscricao_estadual,
 	email_fornecedor,
-	telefone_fornecedor
+	telefone_fornecedor,
+	seAtivo
 )
 values
 (
@@ -14,7 +15,8 @@ values
 	'Ferrari Corporation',
 	'573366418821', 
 	'contact@ferrari.com',
-	'1238853887');
+	'1238853887',
+	true);
 
 
 insert into tb_fornecedor
@@ -25,7 +27,8 @@ values
 	'Porsche S/A', 
 	'409098034501',
 	'contact@porsche.com',
-	'1627779995');
+	'1627779995',
+	true);
 
 insert into tb_fornecedor 
 values
@@ -35,7 +38,8 @@ values
 	'Bugatti Corporation',
 	'129622047629', 
 	'suport@bugatti.com', 
-	'1137420701');
+	'1137420701',
+	true);
 
 insert into tb_fornecedor 
 values
@@ -45,7 +49,8 @@ values
 	'Lamborghini S/A', 
 	'735189620663', 
 	'contact@lamborghini.com', 
-	'1127200490');
+	'1127200490',
+	true);
 
 insert into tb_fornecedor
 values
@@ -55,7 +60,8 @@ values
 	'Tesla S/A',
 	'114140200278', 
 	'tesla.contact@tesla.com', 
-	'1937305738'); 
+	'1937305738',
+	true); 
 
 insert into tb_fornecedor
 values
@@ -65,7 +71,8 @@ values
 	'BMW Associação', 
 	'992561270210',
 	'bmw@bmw.com', 
-	'1627966899'); 
+	'1627966899',
+	true); 
 
 insert into tb_fornecedor
 values
@@ -75,7 +82,8 @@ values
 	'Audi Corporation',
 	'919010418657',
 	'audi@contact.com', 
-	'1127164661');
+	'1127164661',
+	true);
 
 insert into tb_fornecedor 
 values
@@ -85,7 +93,8 @@ values
 	'Aston Martin S/A',
 	'397050906330',
 	'aston.martin@vendas.com',
-	'1835143625'); 
+	'1835143625',
+	true); 
 
 insert into tb_fornecedor
 values
@@ -95,7 +104,8 @@ values
 	'Bentley S/A', 
 	'643892335660', 
 	'bentleyBrasil@contact.com', 
-	'1139023507'); 
+	'1139023507',
+	true); 
 
 insert into tb_fornecedor 
 values
@@ -105,7 +115,8 @@ values
 	'Mercedes Corporation',
 	'381346058602',
 	'contact@mercedes.com',
-	'1137125953'); 
+	'1137125953',
+	true); 
 
 
 -- COMBUSTIVEL 1: Gasolina
@@ -136,7 +147,7 @@ values
 )
 ;
 
--- COMBUSTIVEL 3: Elétrico
+-- COMBUSTIVEL 3: Eletrico
 
 insert into tb_combustivel
 (
@@ -146,11 +157,11 @@ insert into tb_combustivel
 values
 (	
 	3,
-	'EL�TRICO'		
+	'ELÉTRICO'		
 )
 ;
 
--- COMBUSTIVEL 4: Híbrido
+-- COMBUSTIVEL 4: Hibrido
 
 insert into tb_combustivel
 (
@@ -160,12 +171,12 @@ insert into tb_combustivel
 values
 (	
 	4,
-	'H�BRIDO'		
+	'HÍBRIDO'		
 )
 ;
 
 
--- CAMBIO 1: Automático 6 marchas
+-- CAMBIO 1: Automatico 6 marchas
 
 insert into tb_cambio
 (
@@ -175,11 +186,11 @@ insert into tb_cambio
 values
 (	
 	1,
-	'AUTOM�TICO 6 MARCHAS'		
+	'AUTOMÁTICO 6 MARCHAS'		
 )
 ;
 
--- CAMBIO 2: Automático 7 marchas
+-- CAMBIO 2: Automatico 7 marchas
 
 insert into tb_cambio
 (
@@ -189,11 +200,11 @@ insert into tb_cambio
 values
 (	
 	2,
-	'AUTOM�TICO 7 MARCHAS'		
+	'AUTOMÁTICO 7 MARCHAS'		
 )
 ;
 
--- CAMBIO 3: Automático 8 marchas
+-- CAMBIO 3: Automatico 8 marchas
 
 insert into tb_cambio
 (
@@ -203,11 +214,11 @@ insert into tb_cambio
 values
 (	
 	3,
-	'AUTOM�TICO 8 MARCHAS'		
+	'AUTOMÁTICO 8 MARCHAS'		
 )
 ;
 
--- CAMBIO 4: Automático 9 marchas
+-- CAMBIO 4: Automatico 9 marchas
 
 insert into tb_cambio
 (
@@ -217,7 +228,7 @@ insert into tb_cambio
 values
 (	
 	4,
-	'AUTOM�TICO 9 MARCHAS'		
+	'AUTOMÁTICO 9 MARCHAS'		
 )
 ;
 
@@ -235,7 +246,7 @@ values
 )
 ;
 
--- CAMBIO 6: Automático de 1 Velocidade
+-- CAMBIO 6: Automatico de 1 Velocidade
 
 insert into tb_cambio
 (
@@ -245,7 +256,7 @@ insert into tb_cambio
 values
 (	
 	6,
-	'AUTOM�TICO DE 1 VELOCIDADE'		
+	'AUTOMÁTICO DE 1 VELOCIDADE'		
 )
 ;
 
@@ -1279,7 +1290,7 @@ values
 )
 ;
 
--- CARRO 10: Porsche Cayenne Coupé
+-- CARRO 10: Porsche Cayenne CoupÃ©
 
 insert into tb_veiculo
 (
@@ -1423,7 +1434,7 @@ values
 )
 ;
 
--- CARRO 14: Audi R8 Coupé Performance
+-- CARRO 14: Audi R8 CoupÃ© Performance
 
 insert into tb_veiculo
 (
@@ -1675,7 +1686,7 @@ values
 )
 ;
 
--- CARRO 21: BMW M8 Gran Coupé First Edition
+-- CARRO 21: BMW M8 Gran CoupÃ© First Edition
 
 insert into tb_veiculo
 (
@@ -2633,12 +2644,12 @@ insert into tb_endereco_cliente
 insert into tb_modalidade_cartao 
 values
 	(1,
-	'Crédito'
+	'CRÉDITO'
 );
 
 insert into tb_modalidade_cartao
 values
-	(2, 'Débito'
+	(2, 'DÉBITO'
 );
 
 
@@ -3005,7 +3016,7 @@ insert into tb_forma_pagamento
 values
 (
 	1,
-	'CREDITO'
+	'CRÉDITO'
 
 	
 	
@@ -3020,7 +3031,7 @@ insert into tb_forma_pagamento
 values
 (
 	2,
-	'DEBITO'
+	'DÉBITO'
 
 );
 
@@ -4377,7 +4388,7 @@ insert into tb_status
 values
 (
 	1,
-	'cancelado'
+	'CANCELADO'
 );
 
 
@@ -4390,7 +4401,7 @@ insert into tb_status
 values
 (
 	2,
-	'entregue'
+	'ENTREGUE'
 );
 
 
@@ -4403,7 +4414,7 @@ insert into tb_status
 values
 (
 	3,
-	'em rota'
+	'EM ROTA'
 );
 
 
@@ -4627,7 +4638,7 @@ values(
 -- select * from tb_cor tc ;
 -- select * from tb_marca tm ;
 -- select * from tb_motor tm ;
--- select * from tb_veiculo tv ;
+ select * from tb_veiculo tv ;
 -- select * from tb_cliente tc ;
 -- select * from tb_endereco te ;
 -- select * from tb_endereco_cliente tec ;
@@ -4641,7 +4652,7 @@ values(
 -- select * from tb_frete tf ;
 -- select * from tb_cabecalho_nf tcn ;
 -- select * from tb_item_nf tin  ;
- select * from tb_pedido tp ;
+ -- select * from tb_pedido tp ;
 -- select * from tb_forma_pagamento tfp ;
 -- select  * from tb_tipo_pagamento ttp ;
 -- select * from tb_status ts 
@@ -4655,7 +4666,7 @@ values(
 -- trazer o que eu quero mostrar na lista
 -- select cod_pedido, nome_cliente, razao_social, numero_documento, email_cliente,telefone_cliente, descricao_forma_pagamento, valor_frete,valor_total_pedido, data_pedido,status
 -- 
--- -- endereco da tabela que quero trazer informaçoes
+-- -- endereco da tabela que quero trazer informaÃ§oes
 -- from tb_pedido tp
 -- 
 -- inner join tb_cliente tc on (tp.cod_cliente = tc.cod_cliente )
