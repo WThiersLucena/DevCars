@@ -364,7 +364,7 @@ h3 {
 														
 														<!-- TRAZENDO OS PEDIDOS DO CLIENTE  -->	
 											
-															<h3>Historico de Pedidos</h3>
+															<!--<h3>Historico de Pedidos</h3>-->
 															<!-- inicio acordeon -->
 					
 															<c:forEach var="ped" items="${mostrarPedido}">
