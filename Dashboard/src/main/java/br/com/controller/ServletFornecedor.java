@@ -1,6 +1,7 @@
 package br.com.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,9 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.dao.FornecedorDAO;
 import br.com.entidade.Fornecedor;
-
-import java.io.*;
-import java.lang.Thread;
 
 
 @WebServlet("/ServletFornecedor")
@@ -126,12 +124,34 @@ public class ServletFornecedor extends HttpServlet {
 		
 		if (cod_fornecedorBack != null) {
 			Integer cod_fornecedor = Integer.parseInt(cod_fornecedorBack);
-			this.fornec.removeSupplier(cod_fornecedor);
+			
+			try {
+				this.fornec.removeSupplier(cod_fornecedor);
+				Thread.sleep(1500);
+				System.out.println("TEMPO DE 1 SEGUNDO E MEIO COM SUCESSO AO DELETAR");
+			} 
+			
+			catch (SQLException sql){
+				System.out.println(sql.getLocalizedMessage());
+				
+				try {
+					Thread.sleep(1500);
+			        System.out.println("TEMPO DE 1 SEGUNDO E MEIO AO DESATIVAR");
+			        this.fornec.desativaSupplier(cod_fornecedor);
+				}
+				
+				catch (InterruptedException ex) {
+					ex.printStackTrace();
+				}
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
 		}
 		response.sendRedirect("ServletFornecedor");
-		
-		
 	}
+	
 	
 	private void updateSupplier(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
