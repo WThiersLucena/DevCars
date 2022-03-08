@@ -177,7 +177,7 @@ body{
 					
 					</div>
 				</div>
-				<div class="card text-center col pedido bg-dark"
+				<!-- <div class="card text-center col pedido bg-dark"
 					style="width: 18rem; margin-bottom: 5px; border-radius: 80px; margin-right: 50px; color: white;">
 					<div class="card-body">
 						<h5 class="card-title">Pedidos Realizados</h5>
@@ -195,7 +195,7 @@ body{
 						</p>
 					
 					</div>
-				</div>
+				</div>  -->
 			</div>
 			<div class="row row-cols-1 row-cols-md-3 g-4">
 				<div class="col">

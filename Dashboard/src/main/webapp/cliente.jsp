@@ -362,7 +362,7 @@ h3 {
 														
 														
 														
-														<!-- TRAZENDO OS PEDIDOS DO CLIENTE  
+														<!-- TRAZENDO OS PEDIDOS DO CLIENTE  -->
 											
 
 															<!--<h3>Historico de Pedidos</h3>-->
