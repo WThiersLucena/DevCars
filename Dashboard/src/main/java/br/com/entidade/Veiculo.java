@@ -15,6 +15,8 @@ public class Veiculo {
 	private Boolean estoque;
 	private Boolean destaque;
 	private Boolean seAtivo;
+	private String link_imagem;
+	private String descricao_veiculo;
 	
 	private Integer cod_marca;
 	private Integer cod_cor;
@@ -44,6 +46,48 @@ public class Veiculo {
 //	p.setInt(10, veiculo.getCod_fornecedor());
 //	p.setBoolean(11, veiculo.getEstoque());
 //	p.setBoolean(12, veiculo.getDestaque());
+	
+	public Veiculo(Integer cod_marca, String modelo_veiculo, String numero_chassi, Integer ano_veiculo, Double preco_veiculo,Integer cod_cor, Integer cod_motor,
+			   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, Boolean estoque, Boolean destaque, String link_imagem, String descricao_veiculo) {
+	super();
+	this.modelo_veiculo = modelo_veiculo;
+	this.cod_marca = cod_marca;
+	this.cod_cor = cod_cor;
+	this.ano_veiculo = ano_veiculo;
+	this.cod_motor = cod_motor;
+	this.preco_veiculo = preco_veiculo;
+	this.cod_combustivel = cod_combustivel;
+	this.cod_cambio = cod_cambio;
+	this.cod_fornecedor = cod_fornecedor;
+	this.numero_chassi = numero_chassi;
+	this.estoque = estoque;
+	this.destaque = destaque;
+	this.link_imagem = link_imagem;
+	this.descricao_veiculo = descricao_veiculo;
+}
+	
+
+	public Veiculo( String modelo_veiculo, String marca_veiculo,String nome_cor, Integer ano_veiculo,
+		       String motor_veiculo, String potencia_cv, Double preco_veiculo, String tipo_combustivel, String cambio,
+		       String numero_chassi, Boolean estoque, Boolean destaque, String link_imagem, String descricao_veiculo) {
+	super();
+	this.modelo_veiculo = modelo_veiculo;
+	this.marca_veiculo = marca_veiculo;
+	this.nome_cor = nome_cor;
+	this.ano_veiculo = ano_veiculo;
+	this.motor_veiculo = motor_veiculo;
+	this.potencia_cv = potencia_cv;
+	this.preco_veiculo = preco_veiculo;
+	this.tipo_combustivel = tipo_combustivel;
+	this.cambio = cambio;
+	this.numero_chassi = numero_chassi;
+	this.estoque = estoque;
+	this.destaque = destaque;
+	this.link_imagem = link_imagem;
+	this.descricao_veiculo = descricao_veiculo;
+}
+
+	
 	
 	public Veiculo(Integer cod_marca, String modelo_veiculo, String numero_chassi, Integer ano_veiculo, Double preco_veiculo,Integer cod_cor, Integer cod_motor,
 			   Integer cod_combustivel, Integer cod_cambio, Integer cod_fornecedor, Boolean estoque, Boolean destaque) {
@@ -80,7 +124,6 @@ public class Veiculo {
 	this.estoque = estoque;
 	this.destaque = destaque;
 }
-
 //	public Veiculo(String marca_veiculo, String modelo_veiculo, String nome_cor, Integer ano_veiculo,
 //			       String motor_veiculo, String potencia_cv, Double preco_veiculo, String tipo_combustivel, String cambio,
 //			       String numero_chassi, Boolean estoque, Boolean destaque) {
@@ -374,14 +417,36 @@ public class Veiculo {
 		this.seAtivo = seAtivo;
 	}
 
+	public String getLink_imagem() {
+		return link_imagem;
+	}
+
+	public void setLink_imagem(String link_imagem) {
+		this.link_imagem = link_imagem;
+	}
+
+	public String getDescricao_veiculo() {
+		return descricao_veiculo;
+	}
+
+	public void setDescricao_veiculo(String descricao_veiculo) {
+		this.descricao_veiculo = descricao_veiculo;
+	}
+	
+	
+
 	@Override
 	public String toString() {
-		return "Veiculo [cod_veiculo=" + cod_veiculo + ", modelo_veiculo=" + modelo_veiculo + ", ano_veiculo="
-				+ ano_veiculo + ", preco_veiculo=" + preco_veiculo + ", numero_chassi=" + numero_chassi + ", estoque="
-				+ estoque + ", destaque=" + destaque + ", cod_marca=" + cod_marca + ", cod_cor=" + cod_cor
-				+ ", cod_motor=" + cod_motor + ", cod_combustivel=" + cod_combustivel + ", cod_cambio=" + cod_cambio
-				+ ", cod_fornecedor=" + cod_fornecedor + "]";
+		return "Veiculo [cod_veiculo=" + cod_veiculo + ", modelo_veiculo=" + modelo_veiculo + ", marca_veiculo="
+				+ marca_veiculo + ", nome_cor=" + nome_cor + ", ano_veiculo=" + ano_veiculo + ", motor_veiculo="
+				+ motor_veiculo + ", potencia_cv=" + potencia_cv + ", preco_veiculo=" + preco_veiculo
+				+ ", tipo_combustivel=" + tipo_combustivel + ", cambio=" + cambio + ", numero_chassi=" + numero_chassi
+				+ ", estoque=" + estoque + ", destaque=" + destaque + ", seAtivo=" + seAtivo + ", link_imagem="
+				+ link_imagem + ", descricao_veiculo=" + descricao_veiculo + ", cod_marca=" + cod_marca + ", cod_cor="
+				+ cod_cor + ", cod_motor=" + cod_motor + ", cod_combustivel=" + cod_combustivel + ", cod_cambio="
+				+ cod_cambio + ", cod_fornecedor=" + cod_fornecedor + "]";
 	}
+
 
 
 
