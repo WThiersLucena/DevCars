@@ -62,16 +62,16 @@ body{
 <body>
 
 	<header
-		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
-		<button class="navbar-toggler position-absolute d-md-none collapsed"
+		class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
+		<a class="navbar-brand col-3 col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<button class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		
-		<div class="navbar-nav">
+		<div class="navbar-nav col-12 col-md-1 col-lg-1">
 
 			<div class="nav-item text-nowrap">
 				<a class="nav-link px-3" href="./login.jsp">Sair</a>
@@ -151,8 +151,8 @@ body{
 			<div
 				class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 				<h1 class="h2">DASHBOARD</h1>
-				<img alt="logo-dev-cars" src="logo-rev01.jpeg" width="120"
-					height="120" style="border-radius: 60px;" />
+				<img alt="logo-dev-cars" src="logo-devcars.jpg" width="190"
+					height="190" style="border-radius: 60px;" />
 			</div>
 
 			<div class="row row-cols-1 row-cols-md-3 g-4"
