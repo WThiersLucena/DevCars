@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,23 +53,22 @@ body {
 <body>
 
 	<header
-		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
-		<button class="navbar-toggler position-absolute d-md-none collapsed"
+		class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
+		<a class="navbar-brand col-3 col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<button class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<input class="form-control form-control-dark w-100" type="text"
-			placeholder="Pesquisar" aria-label="Search">
-		<div class="navbar-nav">
+		
+		<div class="navbar-nav col-12 col-md-1 col-lg-1">
+
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="#">Sair</a>
+				<a class="nav-link px-3" href="./login.jsp">Sair</a>
 			</div>
 		</div>
 	</header>
-
 	<!--  BEGIN SIDEBAR -->
 
 	<div class="container-fluid">
@@ -257,6 +257,16 @@ body {
 										<option value="FALSE">NÃO</option>
 										<option value="TRUE">SIM</option>
 									</select>
+								</div>
+								
+								<div class=mb-3>
+									<label class="form-label">LINK DA IMAGEM:</label> <input type="text"
+										class="form-control" name="link_imagem" required />
+								</div>
+								
+								<div class=mb-3>
+									<label class="form-label">DESCRIÇÃO DO VEÍCULO:</label> <textarea
+										class="form-control" name="descricao_veiculo" rows="4" cols="33" required /></textarea>
 								</div>
 
 								<div class="d-grid gap-2 d-md-flex justify-content-md-end">

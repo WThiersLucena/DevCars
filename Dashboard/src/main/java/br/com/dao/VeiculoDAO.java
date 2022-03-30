@@ -24,7 +24,7 @@ public class VeiculoDAO {
 			PreparedStatement p = con
 					.prepareStatement("insert into tb_veiculo (cod_marca, modelo_veiculo, numero_chassi, ano_veiculo, "
 							+ "preco_veiculo, cod_cor, cod_motor, cod_combustivel, cod_cambio, cod_fornecedor,"
-							+ " estoque, destaque, seAtivo) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, true)");
+							+ " estoque, destaque, seAtivo, link_imagem, descricao_veiculo) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, true, ?, ?)");
 
 			p.setInt(1, veiculo.getCod_marca());
 			p.setString(2, veiculo.getModelo_veiculo());
@@ -38,6 +38,8 @@ public class VeiculoDAO {
 			p.setInt(10, veiculo.getCod_fornecedor());
 			p.setBoolean(11, veiculo.getEstoque());
 			p.setBoolean(12, veiculo.getDestaque());
+			p.setString(13, veiculo.getLink_imagem());
+			p.setString(14, veiculo.getDescricao_veiculo());
 
 			System.out.println(p);
 			p.executeUpdate();
@@ -151,7 +153,7 @@ public class VeiculoDAO {
 			PreparedStatement p = con.prepareStatement(
 					"update tb_veiculo set cod_marca = ?, modelo_veiculo = ?,  numero_chassi = ?, ano_veiculo = ?, "
 							+ "preco_veiculo = ?, cod_cor = ?, cod_motor = ?, cod_combustivel = ?, cod_cambio = ?, "
-							+ "cod_fornecedor = ?, estoque = ?, destaque = ? where cod_veiculo = ?");
+							+ "cod_fornecedor = ?, estoque = ?, destaque = ?, link_imagem = ?, descricao_veiculo = ? where cod_veiculo = ?");
 
 			p.setInt(1, veiculo.getCod_marca());
 			p.setString(2, veiculo.getModelo_veiculo());
@@ -165,8 +167,10 @@ public class VeiculoDAO {
 			p.setInt(10, veiculo.getCod_fornecedor());
 			p.setBoolean(11, veiculo.getEstoque());
 			p.setBoolean(12, veiculo.getDestaque());
-			p.setInt(13, veiculo.getCod_veiculo());
-
+			p.setString(13, veiculo.getLink_imagem());
+			p.setString(14, veiculo.getDescricao_veiculo());
+			p.setInt(15, veiculo.getCod_veiculo());
+			
 			System.out.println(p);
 
 			p.executeUpdate();
@@ -288,7 +292,7 @@ public class VeiculoDAO {
 		Connection con = c.getConnection();
 		try {
 			Integer cont = null;
-			PreparedStatement p = con.prepareStatement("select count(*) as NumeroDeVeiculos from tb_veiculo");
+			PreparedStatement p = con.prepareStatement("select count(*) as NumeroDeVeiculos from tb_veiculo tv where tv.seAtivo = 1");
 			ResultSet r = p.executeQuery();
 			r.next();
 

@@ -243,7 +243,7 @@ h3 {
 									<div class="row col-12 col-md-12 col-lg-12">
 										<div class="col-3 text-start fw-bolder">
 											<p>
-												#
+												
 												<c:out value="${pedidos.cod_pedido}" />
 											</p>
 										</div>
@@ -251,7 +251,9 @@ h3 {
 										<div class="col-3 text-start fw-bolder">
 											<p>
 												VALOR TOTAL :
-												<c:out value="${pedidos.valor_total_pedido}" />
+												<!--<c:out value="${pedidos.valor_total_pedido}" />-->
+												<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${pedidos.valor_total_pedido}" />
+													</span>
 											</p>
 										</div>
 
@@ -294,19 +296,8 @@ h3 {
 														<p class="">
 													NOME CLIENTE: 
 													<c:out value="${pedidos.nome_cliente}" />
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> bf4fda0e47eda694d3faa9c8b652ac8f1b3dc1fd
->>>>>>> 3401521ca0fc20e426a42e00b26a2cf589e8ad07
->>>>>>> a97c535be28d2203ca72031f08ae5e812d84fc53
 													<c:out value="${pedidos.razao_social}" />
 												</p>
 												
@@ -317,6 +308,7 @@ h3 {
 												</p>
 												
 												<p class="">
+
 
 														</p>
 														
@@ -342,15 +334,23 @@ h3 {
 												</c:choose>
 														
 
-													<p input type="text" class="Telefone">	
-														TELEFONE CLIENTE: 
 
 														
 														<p input type="Text"class="Telefone">
 
+
+
 													TELEFONE CLIENTE: 
 
-													<c:out value="${pedidos.telefone_cliente}" />
+
+												
+
+													<!--<c:out value="${pedidos.telefone_cliente}" />-->
+													
+													<p class="exampleInputTelefone">
+														
+														<c:out value="${pedidos.telefone_cliente}" />
+													</p>
 												    </p>
 												
 												
@@ -362,8 +362,16 @@ h3 {
 												
 												<p input type="text"class="cep">
 													CEP ENDERECO: 
-													<c:out value="${pedidos.cep_endereco}" />
+													 <p class="exampleInputCep">
+														
+														<c:out value="${pedidos.cep_endereco}" />
+													</p>
+												
+													
 												</p>
+												
+												
+												
 												
 												<p class="">
 													RUA ENDERECO: 
@@ -405,7 +413,9 @@ h3 {
 													
 												<p class="">
 													VALOR FRETE: 
-													<c:out value="${pedidos.valor_frete}" />
+													<!--<c:out value="${pedidos.valor_frete}" />-->
+													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${pedidos.valor_frete}" />
+													</span>
 												</p>
 												
 												<p class="">
@@ -441,7 +451,9 @@ h3 {
 												
 												<p class="">
 													PRECO VEICULO: 
-													<c:out value="${pedidos.preco_veiculo}" />
+													<!--<c:out value="${pedidos.preco_veiculo}" />-->
+													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${pedidos.preco_veiculo}" />
+													</span>
 												</p>
 												
 												<p class="">
@@ -478,15 +490,20 @@ h3 {
 													
 													<p class="">
 													VALOR TOTAL PEDIDO: 
-													<c:out value="${pedidos.valor_total_pedido}" />
+													<!--<c:out value="${pedidos.valor_total_pedido}" />-->
+													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${pedidos.valor_total_pedido}" />
+													</span>
 												</p>
 												
 												
 												<p input type="Text" class="data">
 													DATA PEDIDO: 
-													<c:out value="${pedidos.data_pedido}" />
+													
 												</p>
 												
+													<span><fmt:formatDate value="${pedidos.data_pedido}"
+														pattern="dd/MM/yyyy" />
+												</span>
 																																															
 												
 												<p class="">
@@ -525,16 +542,16 @@ h3 {
 	</div>
 
 
-	<script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+	<!--  <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-	<script src="./dashboard.js"></script>
+	<script src="./dashboard.js"></script>-->
 
 
 	<!-- jQuery Mask -->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+	<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"
 		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 		crossorigin="anonymous"></script>
 
@@ -578,6 +595,49 @@ h3 {
 
 
 
+	<script src="./dashboard.js"></script> -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 	<script src="./dashboard.js"></script>
+
+
+	<!-- jQuery Mask -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+	<script type="text/javascript" src="jquery.mask.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			//$(".exampleInputTelefone1").mask("TELEFONE: (00) 00000-0000");
+			$(".exampleInputTelefone").mask("TELEFONE: (00) 0000-00009");
+			$('.exampleInputChassi').mask('A.AA.AAAAAAA.A.AAAAA');
+
+			$('.exampleInputCpf').mask('000.000.000-00', {
+				reverse : true
+			});
+			$('.exampleInputCnpj').mask('00.000.000/0000-00', {
+				reverse : true
+			});
+			
+			$('.exampleInputCep').mask('00000-000', {
+				reverse : true
+			});
+			
+		});
+	</script>
+	
 </body>
 </html>
