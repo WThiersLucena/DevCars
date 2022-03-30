@@ -74,7 +74,7 @@ body{
 		<div class="navbar-nav">
 
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="./login.jsp">SAIR</a>
+				<a class="nav-link px-3" href="./login.jsp">Sair</a>
 			</div>
 		</div>
 	</header>

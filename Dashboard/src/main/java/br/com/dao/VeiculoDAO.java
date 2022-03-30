@@ -292,7 +292,7 @@ public class VeiculoDAO {
 		Connection con = c.getConnection();
 		try {
 			Integer cont = null;
-			PreparedStatement p = con.prepareStatement("select count(*) as NumeroDeVeiculos from tb_veiculo");
+			PreparedStatement p = con.prepareStatement("select count(*) as NumeroDeVeiculos from tb_veiculo tv where tv.seAtivo = 1");
 			ResultSet r = p.executeQuery();
 			r.next();
 
