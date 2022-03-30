@@ -1,3 +1,11 @@
+CREATE TABLE login (
+  id int NOT NULL AUTO_INCREMENT,
+  email varchar(100)NOT NULL,
+  senha varchar(80) NOT NULL,
+  usuario varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`id`) 
+  );
+
 create table tb_fornecedor
 (	
 	cod_fornecedor smallint not null auto_increment,
@@ -77,6 +85,8 @@ create table tb_veiculo
 	estoque boolean not null,
 	destaque boolean not null,
 	seAtivo boolean null,
+    imagem varchar (500) not null,
+    descricao varchar (1200) not null,
 	
 	primary key (cod_veiculo),
 	foreign key (cod_marca) references tb_marca (cod_marca),
@@ -369,7 +379,6 @@ create table tb_item_nf (
 		
 
 );
-
 
 
 show tables;
