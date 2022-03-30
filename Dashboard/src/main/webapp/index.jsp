@@ -70,12 +70,11 @@ body{
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<input class="form-control form-control-dark w-100" type="text"
-			placeholder="Pesquisar" aria-label="Search">
+		
 		<div class="navbar-nav">
 
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="./login.jsp">LOGIN</a>
+				<a class="nav-link px-3" href="./login.jsp">SAIR</a>
 			</div>
 		</div>
 	</header>
@@ -159,7 +158,7 @@ body{
 			<div class="row row-cols-1 row-cols-md-3 g-4"
 				style="justify-content: center; margin: 20px;">
 				<div class="card text-center col cliente bg-dark"
-					style="width: 18rem; margin-bottom: 5px; border-radius: 80px; margin-right: 50px; color: white;">
+					style="width: 18rem; margin-bottom: 5px; margin-right: 50px; color: white;">
 					<div class="card-body">
 						<h5 class="card-title">Clientes Cadastrados</h5>
 						<p class="card-text fs-1">
@@ -168,7 +167,7 @@ body{
 					</div>
 				</div>
 				<div class="card text-center col veiculo bg-dark"
-					style="width: 18rem; margin-bottom: 5px; border-radius: 80px; margin-right: 50px; color: white;">
+					style="width: 18rem; margin-bottom: 5px; margin-right: 50px; color: white;">
 					<div class="card-body">
 						<h5 class="card-title">Veículos Cadastrados</h5>
 						<p class="card-text fs-1">
