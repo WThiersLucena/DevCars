@@ -297,6 +297,7 @@ h3 {
 													NOME CLIENTE: 
 													<c:out value="${pedidos.nome_cliente}" />
 
+
 													<c:out value="${pedidos.razao_social}" />
 												</p>
 												
@@ -336,6 +337,11 @@ h3 {
 
 														
 														<p input type="Text"class="Telefone">
+
+
+
+													TELEFONE CLIENTE: 
+
 
 												
 

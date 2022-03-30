@@ -4,8 +4,6 @@ pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,8 +51,6 @@ body{
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<input class="form-control form-control-dark w-100" type="text"
-			placeholder="Pesquisar" aria-label="Search">
 		<div class="navbar-nav">
 			<div class="nav-item text-nowrap">
 				<a class="nav-link px-3" href="#">Sair</a>
