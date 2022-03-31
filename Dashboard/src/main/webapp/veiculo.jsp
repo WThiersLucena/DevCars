@@ -4,14 +4,16 @@ pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Veículos</title>
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Link for Toast Message -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
 
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
@@ -41,19 +43,19 @@ body{
 <body>
 
 	<header
-		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
-		<button class="navbar-toggler position-absolute d-md-none collapsed"
+		class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
+		<a class="navbar-brand col-3 col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<button class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<input class="form-control form-control-dark w-100" type="text"
-			placeholder="Pesquisar" aria-label="Search">
-		<div class="navbar-nav">
+		
+		<div class="navbar-nav col-12 col-md-1 col-lg-1">
+
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="#">Sair</a>
+				<a class="nav-link px-3" href="./login.jsp">Sair</a>
 			</div>
 		</div>
 	</header>
@@ -169,27 +171,27 @@ body{
 		<table class="table table-striped table-sm table-bordered shadow bg-light">
 			<thead>
 				<tr>
-					<th class="col-1">COD</th>
-					<th class="col-1">MARCA</th>
-					<th class="col-1">MODELO</th>
-					<th class="col-1">COR</th>
-					<th class="col-1">ANO</th>
-					<th class="col-2">MOTOR</th>
-					<th class="col-1">POTÊNCIA</th>
-					<th class="col-2">PREÇO</th>
-					<th class="col-1">COMBUSTÍVEL</th>
-					<!-- <th class="col-2">Câmbio</th> -->
-					<!-- <th class="col-2">Chassi</th>  -->
-					<th class="col-1">ESTOQUE</th>
-					<th class="col-1">AÇÕES</th>
+					<th class="col-1 text-center">COD</th>
+					<th class="col-1 text-center">MARCA</th>
+					<th class="col-1 text-center">MODELO</th>
+					<th class="col-1 text-center">COR</th>
+					<th class="col-1 text-center">ANO</th>
+					<th class="col-2 text-center">MOTOR</th>
+					<th class="col-1 text-center">POTÊNCIA</th>
+					<th class="col-2 text-center">PREÇO</th>
+					<th class="col-1 text-center">COMBUSTÍVEL</th>
+					<!-- <th class="col-2 text-center">Câmbio</th> -->
+					<!-- <th class="col-2 text-center">Chassi</th>  -->
+					<th class="col-1 text-center">ESTOQUE</th>
+					<th class="col-1 text-center">AÇÕES</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="veiculo" items="${listVeiculo}">
-					<tr>
+					<tr class="veiculos">
 						<form action="ServletVeiculo" method="post">
 						
-							<td>
+							<td class="text-center">
 								<c:out value="${veiculo.cod_veiculo}"/>
 								<input type="hidden" name="cod_veiculo" value="${veiculo.cod_veiculo}"/>
 							</td>
@@ -312,22 +314,36 @@ body{
 
  <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
  
- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
- <script src="./dashboard.js"></script>
+ 	<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+ 	<script src="./dashboard.js"></script>
  
  
- <!-- jQuery Mask -->
- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+ 	<!-- Begin: jQuery for Toast Message -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+ 	<!-- End: jQuery for Toast Message -->
+ 
+ 	<!-- jQuery Mask -->
+ 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="jquery.mask.js"></script>
-
+ 	<script type="text/javascript" src="jquery.mask.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
-        	$('.exampleInputChassi').mask('Z',{translation:  {'Z': {pattern: /[a-zA-Z0-9 ]/, recursive: true}}});
         	$('.exampleInputMoney').mask("R$#.000.000.000,00");
         });
+        
+        
+        //jQuery for Toast Message on bellow:
+	    let listVeiculo = document.querySelectorAll('.veiculos')
+	   	let elements = Array.from(listVeiculo)
+	    console.log(elements)
+	    
+	     for (var i = 0; i < elements.length; i++) {
+		    elements[i].addEventListener('submit', function(){
+		        toastr.success('Veículo excluído com sucesso!');
+		    })
+	     }
     </script>
  
  

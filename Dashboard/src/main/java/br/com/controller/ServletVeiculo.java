@@ -17,6 +17,9 @@ import br.com.dao.MotorDAO;
 import br.com.dao.VeiculoDAO;
 import br.com.entidade.Veiculo;
 
+import java.lang.Thread;
+import java.sql.SQLException;
+
 
 @WebServlet("/ServletVeiculo")
 public class ServletVeiculo extends HttpServlet {
@@ -121,8 +124,15 @@ public class ServletVeiculo extends HttpServlet {
 		String numero_chassi = request.getParameter("numero_chassi").replace(".", "").toUpperCase();
 		String estoque = request.getParameter("estoque");
 		String destaque = request.getParameter("destaque");
+		String link_imagem = request.getParameter("link_imagem");
+		String descricao_veiculo = request.getParameter("descricao_veiculo");
 		
-		if(  (cod_marca != null)  &&  (modelo_veiculo != null )  && (cod_cor != null )  && (ano_veiculo != null )  && (cod_motor != null ) && (cod_fornecedor != null )  && (preco_veiculo != null )  && (cod_combustivel != null )  && (cod_cambio != null)  && (numero_chassi != null)  && (estoque != null ) && (destaque != null) ) {
+		
+		if(  (cod_marca != null)  &&  (modelo_veiculo != null )  && (cod_cor != null )  && (ano_veiculo != null )  
+		&& (cod_motor != null ) && (cod_fornecedor != null )  && (preco_veiculo != null )  && (cod_combustivel != null )  
+		&& (cod_cambio != null)  && (numero_chassi != null)  && (estoque != null ) && (destaque != null) && (descricao_veiculo != null) 
+		&& (link_imagem != null) ) {
+			
 			if(!modelo_veiculo.equals("")) {
 				
 
@@ -138,13 +148,24 @@ public class ServletVeiculo extends HttpServlet {
 				Boolean destaqueBack = Boolean.parseBoolean(destaque);
 				
 			
-				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack);
+				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack, link_imagem, descricao_veiculo);
 				
 				veic.adicionarVeiculo(veiculo1);
-				System.out.println("nulo");
+				System.out.println("adicionado");
 			}
 			
 		} 
+		
+		//Begin: Logic for a sleep function. Remember to import the function as it was imported at line 21.
+        try
+        {
+            Thread.sleep(1500);
+        } 
+        catch (InterruptedException ex)
+        {
+            ex.printStackTrace();
+        }
+        //End: Logic for a sleep function.
 		
 		response.sendRedirect("ServletVeiculo");
 	}
@@ -162,8 +183,29 @@ public class ServletVeiculo extends HttpServlet {
 		
 		if (cod_veiculoBack != null) {
 			Integer cod_veiculo = Integer.parseInt(cod_veiculoBack);
-			this.veic.removerVeiculo(cod_veiculo);
-		}
+			
+			try {
+				this.veic.removerVeiculo(cod_veiculo);
+				Thread.sleep(1500);
+				System.out.println("TEMPO DE 1 SEGUNDO E MEIO COM SUCESSO AO DELETAR");
+			}
+			catch (SQLException sql){
+				System.out.println(sql.getLocalizedMessage());
+				
+				try {
+					Thread.sleep(1500);
+			        System.out.println("TEMPO DE 1 SEGUNDO E MEIO AO DESATIVAR");
+			        this.veic.desativaVeiculo(cod_veiculo);
+			        }
+			        catch (InterruptedException ex) {
+						ex.printStackTrace();
+					}
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
+			}
 		
 		response.sendRedirect("ServletVeiculo");
 	}
@@ -184,6 +226,8 @@ public class ServletVeiculo extends HttpServlet {
 		String numero_chassi = request.getParameter("numero_chassi").replace(".", "").toUpperCase();
 		String estoque = request.getParameter("estoque");
 		String destaque = request.getParameter("destaque");
+		String link_imagem = request.getParameter("link_imagem");
+		String descricao_veiculo = request.getParameter("descricao_veiculo");
 		
 		
 		if(  (cod_marca != null)  &&  (modelo_veiculo != null )  && (cod_cor != null )  && (ano_veiculo != null )  && (cod_motor != null )  && (preco_veiculo != null )  && (cod_combustivel != null )  && (cod_cambio != null)  && (numero_chassi != null)  && (estoque != null ) && (destaque != null ) && (cod_fornecedor != null) && (cod_veiculo != null )) {
@@ -202,11 +246,22 @@ public class ServletVeiculo extends HttpServlet {
 				Integer cod_fornecedorBack = Integer.parseInt(cod_fornecedor);
 				
 				
-				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack);
+				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack, link_imagem, descricao_veiculo);
 				veiculo1.setCod_veiculo(cod_veiculoBack);
 				this.veic.atualizarVeiculo(veiculo1);
 			}
 		}
+		
+		//Begin: Logic for a sleep function. Remember to import the function as it was imported at line 21.
+        try
+        {
+            Thread.sleep(1500);
+        } 
+        catch (InterruptedException ex)
+        {
+            ex.printStackTrace();
+        }
+        //End: Logic for a sleep function.
 		
 		response.sendRedirect("ServletVeiculo");
 	}

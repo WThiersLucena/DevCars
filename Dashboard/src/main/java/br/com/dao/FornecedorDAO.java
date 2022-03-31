@@ -23,7 +23,7 @@ public class FornecedorDAO {
 		Connection con = c.getConnection();
 		
 		try {
-			PreparedStatement p = con.prepareStatement("insert into tb_fornecedor (cnpj, razao_social, inscricao_estadual, email_fornecedor, telefone_fornecedor) values (?, ?, ?, ?, ?)");
+			PreparedStatement p = con.prepareStatement("insert into tb_fornecedor (cnpj, razao_social, inscricao_estadual, email_fornecedor, telefone_fornecedor, seAtivo) values (?, ?, ?, ?, ?, true)");
 			p.setString(1, addFornecedor.getCnpj()); 
 			p.setString(2, addFornecedor.getRazao_social());
 			p.setString(3, addFornecedor.getInscricao_estadual());
@@ -39,6 +39,9 @@ public class FornecedorDAO {
 		
 	}
 	
+	
+	
+	
 	//MÃ©todo que OBTEM LISTA de Fornecedores
 	
 	public ArrayList<Fornecedor> getListSupplier(){
@@ -46,7 +49,7 @@ public class FornecedorDAO {
 		Connection con = c.getConnection();
 		ArrayList<Fornecedor> listaFornecedor = new ArrayList<Fornecedor>();
 		try {
-			PreparedStatement p = con.prepareStatement("select * from tb_fornecedor");
+			PreparedStatement p = con.prepareStatement("select * from tb_fornecedor tf where seAtivo != 0;");
 			ResultSet r = p.executeQuery();			
 			
 			while (r.next()) {
@@ -70,7 +73,7 @@ public class FornecedorDAO {
 	
 	//MÃ©todo que REMOVE fornecedor
 	
-	public void removeSupplier(Integer cod_fornecedor) {
+	public void removeSupplier(Integer cod_fornecedor) throws SQLException{
 		Conexao c = Conexao.getInstance();
 		Connection con = c.getConnection();
 		
@@ -79,15 +82,42 @@ public class FornecedorDAO {
 			p.setInt(1, cod_fornecedor);
 			System.out.println(p);
 			p.executeUpdate();
-			System.out.println("RemoÃ§Ã£o fornecedor: executado");
+			System.out.println("Remo��o do fornecedor: executado");
+			p.close();
+		} finally {
+			
+		}
+		
+
+	}
+
+	
+	
+	
+	//m�todo que desativa chave estrangeira
+	public void desativaSupplier(Integer cod_fornecedor) {
+		
+		Conexao c = Conexao.getInstance();
+		Connection con = c.getConnection();
+		
+		try {
+			PreparedStatement p = con.prepareStatement("update tb_fornecedor set seAtivo = 0 where cod_fornecedor = ?");
+			p.setInt(1, cod_fornecedor);
+			
+			System.out.println(p);
+			p.executeUpdate();
+			System.out.println("Fornecedor desativado");
+			
 			p.close();
 			
-		}catch (SQLIntegrityConstraintViolationException s) {
-			System.out.println("Chave estrangeira!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	
+	
 	
 	//MÃ©todo que ATUALIZA dados do fornecedor
 	
@@ -105,7 +135,7 @@ public class FornecedorDAO {
 			p.setInt(6, updateSupplier.getCod_fornecedor());
 			System.out.println(p);
 			p.executeUpdate();
-			System.out.println("AtualizaÃ§Ã£o Fornecedor: executado");
+			System.out.println("Atualiza��o Fornecedor: executado");
 			p.close();
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import br.com.conexao.Conexao;
-
+import br.com.entidade.CartaoCliente;
 import br.com.entidade.Cliente;
 
 
@@ -168,6 +168,48 @@ public class ClienteDAO {
 		}
 //	MOSTRANDO CLIENTE FIM
 
+	
+	
+	//MOSTRAR CART�ES
+	public ArrayList<CartaoCliente> mostrarCartoes() {
+		
+		Conexao c = Conexao.getInstance();
+		Connection con = c.getConnection();
+		
+		ArrayList<CartaoCliente> cartoes = new ArrayList<CartaoCliente>();
+		
+		try {
+			PreparedStatement p = con.prepareStatement("select tcc.cod_cliente, tc.cod_cartao , tcc.nome_cliente, tcc.razao_social , tc.numero_cartao, descricao_modalidade\r\n"
+					+ "from tb_cartao tc\r\n"
+					+ "inner join  tb_modalidade_cartao tmc on (tmc.cod_modalidade = tc.cod_modalidade)\r\n"
+					+ "inner join tb_cliente tcc on (tcc.cod_cliente = tc.cod_cliente)");
+			ResultSet r = p.executeQuery();
+			
+			while (r.next()) {
+				
+				Integer cod_cliente = r.getInt("cod_cliente");
+				Integer cod_cartao = r.getInt("cod_cliente");
+				String nome_cliente = r.getString("cod_cliente");
+				String razao_social = r.getString("cod_cliente");
+				String numero_cartao = r.getString("cod_cliente"); 
+				String descricao_modalidade = r.getString("cod_cliente");
+				
+			
+				 
+				CartaoCliente cart = new CartaoCliente(cod_cliente, cod_cartao, nome_cliente, razao_social, numero_cartao, descricao_modalidade);
+				cart.setCod_cliente(cod_cliente);
+				cartoes.add(cart);
+				
+				
+			}
+
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return cartoes;
+	}
 }
 
 

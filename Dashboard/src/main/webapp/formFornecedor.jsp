@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,10 @@
 <title>CADASTRAR FORNECEDOR</title>
 
 <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Link for Toast Message -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>
 
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
@@ -37,18 +42,23 @@
 </head>
 <body>
 
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Pesquisar" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sair</a>
-    </div>
-  </div>
-</header>
+<header
+		class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
+		<a class="navbar-brand col-3 col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<button class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed"
+			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+			aria-controls="sidebarMenu" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="navbar-nav col-12 col-md-1 col-lg-1">
+
+			<div class="nav-item text-nowrap">
+				<a class="nav-link px-3" href="./login.jsp">Sair</a>
+			</div>
+		</div>
+	</header>
 
  <!--  BEGIN SIDEBAR -->
  
@@ -80,7 +90,7 @@
             <a class="nav-link" href="cliente.jsp">
             	<form action="ServletCliente" method="post">
 					<button type="submit" class="btn">
-						<span data-feather="shopping-cart"></span>
+						<span data-feather="users"></span>
              			 CLIENTE
 					</button>
 				</form>  
@@ -91,7 +101,7 @@
           	<a class="nav-link" href="fornecedor.jsp" >
             	<form action="ServletFornecedor" method="post">
 					<button type="submit" class="btn">
-						<span data-feather="users"></span>
+						<span data-feather="bar-chart-2"></span>
 						FORNECEDOR
 					</button>
 				</form>
@@ -102,7 +112,7 @@
             <a class="nav-link" href="pedido.jsp">
             	<form action="ServletPedido" method="post">
 					<button type="submit" class="btn">
-						<span data-feather="bar-chart-2"></span>
+						<span data-feather="shopping-cart"></span>
              				 PEDIDO
 					</button>
 				</form> 
@@ -131,10 +141,10 @@
         
       </div>
 
-	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
+	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3 mb-3">
 		<h3 class="card-title text-center mb-3">ADICIONAR FORNECEDOR</h3>
 	
-		<form action="ServletFornecedor" method="post">
+		<form action="ServletFornecedor" method="post" id="supplierToast">
 				<c:choose>
 					<c:when test="${ supplier == null }">
 					
@@ -215,15 +225,22 @@
   </div>
 </div>
 
- <script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+ 	<script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
  
- <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
- <script src="./dashboard.js"></script>
+ 	<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+ 	<script src="./dashboard.js"></script>
  
- <!-- jQuery Mask -->
- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+ 
+ 	<!-- Begin: jQuery for Toast Message -->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+ 	<!-- End: jQuery for Toast Message -->
+ 
+ 	<!-- jQuery Mask -->
+ 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="jquery.mask.js"></script>
+ 	<script type="text/javascript" src="jquery.mask.js"></script>
+    
 
 
     <script type="text/javascript">
@@ -233,6 +250,11 @@
             $('#exampleInputCnpj').mask('00.000.000/0000-00', { reverse: true });
             $('.placeholder').mask("00/00/0000", { placeholder: "__/__/____" });
         });
+        
+        //jQuery for Toast Message on bellow:
+        document.getElementById('supplierToast').addEventListener('submit', function(){
+            toastr.success('Fornecedor salvo com sucesso!');
+        })
     </script>
 
 </body>

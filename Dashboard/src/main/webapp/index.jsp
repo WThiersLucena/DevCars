@@ -62,20 +62,19 @@ body{
 <body>
 
 	<header
-		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
-		<button class="navbar-toggler position-absolute d-md-none collapsed"
+		class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
+		<a class="navbar-brand col-3 col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<button class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<input class="form-control form-control-dark w-100" type="text"
-			placeholder="Pesquisar" aria-label="Search">
-		<div class="navbar-nav">
+		
+		<div class="navbar-nav col-12 col-md-1 col-lg-1">
 
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="./login.jsp">LOGIN</a>
+				<a class="nav-link px-3" href="./login.jsp">Sair</a>
 			</div>
 		</div>
 	</header>
@@ -141,7 +140,6 @@ body{
 									</button>
 								</form>
 						</a></li>
-
 					</ul>
 				</div>
 			</nav>
@@ -153,14 +151,14 @@ body{
 			<div
 				class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 				<h1 class="h2">DASHBOARD</h1>
-				<img alt="logo-dev-cars" src="logo-rev01.jpeg" width="120"
-					height="120" style="border-radius: 60px;" />
+				<img alt="logo-dev-cars" src="logo-devcars.jpg" width="190"
+					height="190" style="border-radius: 60px;" />
 			</div>
 
 			<div class="row row-cols-1 row-cols-md-3 g-4"
 				style="justify-content: center; margin: 20px;">
-				<div class="card text-center col cliente"
-					style="width: 18rem; margin-bottom: 5px; border-radius: 80px; margin-right: 50px; background-color: black; color: white;">
+				<div class="card text-center col cliente bg-dark"
+					style="width: 18rem; margin-bottom: 5px; margin-right: 50px; color: white;">
 					<div class="card-body">
 						<h5 class="card-title">Clientes Cadastrados</h5>
 						<p class="card-text fs-1">
@@ -168,8 +166,8 @@ body{
 						</p>
 					</div>
 				</div>
-				<div class="card text-center col veiculo"
-					style="width: 18rem; margin-bottom: 10px; border-radius: 80px; background-color: black; color: white;">
+				<div class="card text-center col veiculo bg-dark"
+					style="width: 18rem; margin-bottom: 5px; margin-right: 50px; color: white;">
 					<div class="card-body">
 						<h5 class="card-title">Veículos Cadastrados</h5>
 						<p class="card-text fs-1">
@@ -178,6 +176,25 @@ body{
 					
 					</div>
 				</div>
+				<!-- <div class="card text-center col pedido bg-dark"
+					style="width: 18rem; margin-bottom: 5px; border-radius: 80px; margin-right: 50px; color: white;">
+					<div class="card-body">
+						<h5 class="card-title">Pedidos Realizados</h5>
+						<p class="card-text fs-1">
+							<c:out value="${contagem_pedidos}"></c:out>
+						</p>
+					</div>
+				</div>
+				<div class="card text-center col rendimento bg-dark"
+					style="width: 18rem; margin-bottom: 5px; border-radius: 80px; margin-right: 50px; color: white;">
+					<div class="card-body">
+						<h5 class="card-title">Rendimento Total</h5>
+						<p class="card-text fs-1">
+							<c:out value="${contagem_rendimentos}"></c:out>
+						</p>
+					
+					</div>
+				</div>  -->
 			</div>
 			<div class="row row-cols-1 row-cols-md-3 g-4">
 				<div class="col">
@@ -191,7 +208,8 @@ body{
 								fornecedor. E acima de tudo, proporcionar ao maior número de
 								pessoas uma experiência memorável e excelência em produtos e
 								serviços, sendo referência em gestão do negócio de automotivos
-								de luxo.</p>
+								de luxo.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -214,7 +232,8 @@ body{
 							<h5 class="card-title">Motivação</h5>
 							<p class="card-text">Procure pensar sempre no que te inspira
 								e use-o como combustível para alcançar seus objetivos. E
-								lembre-se: até o maior dos prédios começa no chão.</p>
+								lembre-se: até o maior dos prédios começa no chão.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -240,7 +259,7 @@ body{
 								style="border-radius: 50px;"></td>
 							<td>Augusto Meireles</td>
 							<td>Developer</td>
-							<td>augustomeireles@devcars.com</td>
+							<td>augusto.meireles@devcars.com</td>
 							<td>AuguMeireles</td>
 						</tr>
 						<tr>
@@ -249,7 +268,7 @@ body{
 								style="border-radius: 50px;"></td>
 							<td>Guilherme Viana</td>
 							<td>Developer</td>
-							<td>guilhermeviana@devcars.com</td>
+							<td>guilherme.viana@devcars.com</td>
 							<td>GuilViana</td>
 						</tr>
 						<tr>
@@ -258,7 +277,7 @@ body{
 								style="border-radius: 50px;"></td>
 							<td>Larissa Bandeira</td>
 							<td>Developer</td>
-							<td>larissabandeira@devcars.com</td>
+							<td>larissa.bandeira@devcars.com</td>
 							<td>LariBandeira</td>
 						</tr>
 						<tr>
@@ -267,7 +286,7 @@ body{
 								style="border-radius: 50px;"></td>
 							<td>Lidia Maciel</td>
 							<td>Developer</td>
-							<td>lidiamaciel@devcars.com</td>
+							<td>lidia.maciel@devcars.com</td>
 							<td>LidiMaciel</td>
 						</tr>
 						<tr>
@@ -276,7 +295,7 @@ body{
 								style="border-radius: 50px;"></td>
 							<td>Wanderson Thiers</td>
 							<td>Developer</td>
-							<td>wandersonthiers@devcars.com</td>
+							<td>wanderson.thiers@devcars.com</td>
 							<td>WandThiers</td>
 						</tr>
 					</tbody>
