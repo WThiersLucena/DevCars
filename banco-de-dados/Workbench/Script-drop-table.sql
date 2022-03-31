@@ -8,10 +8,9 @@ drop table tb_loja;
 drop table tb_favorito_veiculo;
 drop table tb_favorito;
 drop table tb_agendamento;
-drop table tb_tipo_pagamento;
 drop table tb_forma_pagamento;
-drop table tb_boleto;
 drop table tb_pix;
+drop table tb_boleto;
 drop table tb_cartao;
 drop table tb_modalidade_cartao;
 drop table tb_endereco_cliente;
@@ -24,6 +23,7 @@ drop table tb_cor;
 drop table tb_cambio;
 drop table tb_combustivel;
 drop table tb_fornecedor;
+drop table login;
 
 
  show tables;

@@ -42,18 +42,23 @@
 </head>
 <body>
 
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.jsp">DevCars</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Pesquisar" aria-label="Search">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sair</a>
-    </div>
-  </div>
-</header>
+<header
+		class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
+		<a class="navbar-brand col-3 col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<button class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed"
+			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+			aria-controls="sidebarMenu" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="navbar-nav col-12 col-md-1 col-lg-1">
+
+			<div class="nav-item text-nowrap">
+				<a class="nav-link px-3" href="./login.jsp">Sair</a>
+			</div>
+		</div>
+	</header>
 
  <!--  BEGIN SIDEBAR -->
  
@@ -85,7 +90,7 @@
             <a class="nav-link" href="cliente.jsp">
             	<form action="ServletCliente" method="post">
 					<button type="submit" class="btn">
-						<span data-feather="shopping-cart"></span>
+						<span data-feather="users"></span>
              			 CLIENTE
 					</button>
 				</form>  
@@ -96,7 +101,7 @@
           	<a class="nav-link" href="fornecedor.jsp" >
             	<form action="ServletFornecedor" method="post">
 					<button type="submit" class="btn">
-						<span data-feather="users"></span>
+						<span data-feather="bar-chart-2"></span>
 						FORNECEDOR
 					</button>
 				</form>
@@ -107,7 +112,7 @@
             <a class="nav-link" href="pedido.jsp">
             	<form action="ServletPedido" method="post">
 					<button type="submit" class="btn">
-						<span data-feather="bar-chart-2"></span>
+						<span data-feather="shopping-cart"></span>
              				 PEDIDO
 					</button>
 				</form> 
@@ -136,7 +141,7 @@
         
       </div>
 
-	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
+	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3 mb-3">
 		<h3 class="card-title text-center mb-3">ADICIONAR FORNECEDOR</h3>
 	
 		<form action="ServletFornecedor" method="post" id="supplierToast">
