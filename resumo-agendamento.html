@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo do Agendamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./css/sidebar-menulateral.css" />
+    <link rel="stylesheet" href="css/resumo-agendamento.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+     <!-- BEGIN HEADER -->
+     <header class="style-header">
+
+        <!-- INÍCIO DO ICONE MENU HAMBURGUER-->
+        <div class="icons-header">
+            <div class="icon-menu">
+                <a class="btn btn-black" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample">
+                    <img src="./img/img-header/menu.png" width="30" /> <!-- INSERÇÃO DA IMAGEM DO MENU HAMBURGUER -->
+                </a>
+
+                <div class="offcanvas offcanvas-start background-menu d-flex flex-column flex-shrink-0 p-3 text-black bg-dark"
+                    tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
+
+                    <hr>
+
+                    <ul class="nav nav-pills flex-column mb-auto">
+
+                        <li>
+                            <a href="./home.html" class="text-black" aria-current="page">
+
+                                <!-- Início do Chevron (icone >) ao lado da opção do menu -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <!-- Fim do Chevron (icone >) ao lado da opção do menu -->
+
+                                <span class="font-menu">HOME</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./sobre_nos.html" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">SOBRE NÓS</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./estoque.html" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">ESTOQUE</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="./contato.html" class="text-black">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
+                                </svg>
+                                <span class="font-menu">CONTATO</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <hr>
+
+                    <!-- Início da div USUÁRIO -->
+                    <div class="background-user">
+
+                        <div class="dropdown">
+                            
+                            <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2">
+                                <strong><span class="font-menu">USUÁRIO</span></strong>
+                                
+
+                            </a>
+                            
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                                <li><a class="dropdown-item" href="./carrinho.html"><span
+                                            class="font-menu">Carrinho</span></a></li>
+                                <li><a class="dropdown-item" href="./listadesejos.html"><span class="font-menu">Favoritos</span></a></li>
+                                <li><a class="dropdown-item" href="./meusdados.html"><span class="font-menu">Meus dados</span></a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="./home.html"><span class="font-menu">Sair</span></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- Fim da div USUÁRIO -->
+
+
+                </div>
+
+                <!-- <div class="b-example-divider"></div> -->
+
+            </div>
+        </div>
+        <!-- FIM DO ICONE MENU HAMBURGUER-->
+
+
+        <!-- INÍCIO DO ICONE DA LOGO -->
+        <div class="icons-header">
+            <div class="icon-logo">
+                <a href="./home.html"><img src="./img/img-header/logo-rev01.jpeg" width="120" /></a>
+            </div>
+        </div>
+        <!-- FIM DO ICONE DA LOGO -->
+
+        <!-- INÍCIO DOS ÍCONES DO LADO DIREITO -->
+        <div class="icons-header right-icons-header">
+
+            <!-- INÍCIO DO ÍCONE DE PESQUISA -->
+            <div class="icons-position-header search-icon">
+                <img src="./img/img-header/search.png" class="icons-header" data-bs-toggle="modal" width="30"
+                    data-bs-target="#modalPesquisa" role="button">
+            </div>
+            <!-- FIM DO ÍCONE DE PESQUISA -->
+
+            <!-- INÍCIO DO ÍCONE DE FAVORITOS -->
+            <div class="icons-position-header favorite-icon">
+                <a href="./listadesejos.html"><img src="./img/img-header/favorite.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE FAVORITOS -->
+
+            <!-- INÍCIO DO ÍCONE DE LOGIN -->
+            <div class="icons-position-header user-icon">
+                <a href="./login.html"><img src="./img/img-header/user.png" width="30" /></a>
+            </div>
+            <!-- FIM DO ÍCONE DE LOGIN -->
+
+            <!-- INÍCIO DO ÍCONE DE CARRINHO -->
+            <div class="icons-position-header garage-icon">
+                <a href="./carrinho.html"><img src="./img/img-header/garage-car.png" width="30"></a>
+            </div>
+            <!-- FIM DO ÍCONE DE CARRINHO -->
+
+        </div>
+        <!-- FIM DOS ÍCONES DO LADO DIREITO -->
+
+    </header>
+
+    <!-- INICIO DO MODAL PESQUISAR -->
+
+    <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content p-5">
+                <img src="./img/img-header/close.png" type="button" class="icon-close btn-close align-self-end"
+                    data-bs-dismiss="modal" aria-label="Close">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="caixa-busca" class="col-form-label"></label>
+                            <input type="search" class="form-control" id="caixa-busca">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIM DO MODAL DE PESQUISAR -->
+
+    <!-- END HEADER -->
+
+    <!-- INICIO DO MODAL PESQUISAR -->
+
+    <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content p-5">
+                <img src=".img/imagens/close.png" type="button" class="icon-close btn-close align-self-end"
+                    data-bs-dismiss="modal" aria-label="Close">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto text-light" id="exampleModalLabel">BUSQUE POR UM VEÍCULO</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="caixa-busca" class="col-form-label"></label>
+                            <input type="search" class="form-control" id="caixa-busca">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIM DO MODAL DE PESQUISAR -->
+
+    <!-- END HEADER -->
+
+
+    <div class="container">
+
+        <div class="row-col-md-12 resumo-agendamento mt-5 mb-5">
+            <h1 class="resumo ps-5 pb-2 pt-2">RESUMO DO AGENDAMENTO</h1>
+        </div>
+
+        <div class="row g-5 px-3">
+            <!-- inicio do menu lateral -->
+            <div class="col-md-4 flex-row justify-content-center text-center">
+
+
+                <!--Navbar-->
+                <nav class="navbar navbar-light border-bottom-menu titulo-menu mb-3 mt-0 pt-0 pb-2">
+                    <div class="container-fluid d-block text-center">
+                        <span>MENU</span>
+                    </div>
+                </nav>
+
+                <div class="btn-group-vertical background-container-subject me-3 shadow" role="group"
+                        aria-label="Vertical button group">
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="./meusdados.html">MEUS DADOS</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="./pedidos.html">MEUS PEDIDOS</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="./carrinho.html">CARRINHO DE COMPRA</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="./listadesejos.html">MEUS FAVORITOS</a></button>
+                        <button type="button" class="btn button-menu-lateral sidebar-font border-button-sidebar-menu"><a
+                                class="link-solution" href="./home.html">SAIR</a></button>
+                    </div>
+
+
+            </div>
+            <!-- fim do menu lateral -->
+
+
+            <!-- inicio da confirmação do pedido -->
+            <div class="col-md-8">
+                <div class="d-flex pedido-concluido justify-content-center flex-column mb-4">
+
+                    <span class="titulo-pricipal text-center pb-2 mb-3">AGENDAMENTO</span>
+
+
+                    <img src="img/img-resumo-compra/certificado-de-garantia.png" class="img-certificado"
+                        alt="agendamento concluido">
+
+                    <div class="sucesso d-flex justify-content-center align-items-center m-3">
+                        <h2 class="text-center titulo-sucesso-agendamento mb-0 me-1">AGENDAMENTO REALIZADO COM SUCESSO!
+                        </h2>
+                        <img src="img/img-resumo-compra/checked.png" alt="sucesso" class="img-sucess">
+                    </div>
+
+                    <p class="text-center numero-pedido">PROTOCOLO DE AGENDAMENTO: XXXXXXXXXX </p>
+                </div>
+
+                <div class="detalhes-pedido">
+                    <div class="detalhes-pedido d-flex justify-content-center align-items-center mb-3">
+                        <h2 class="titulo-detalhes-agendamento me-2 mb-0">DETALHES DO AGENDAMENTO</h2>
+                        <a href="#"><img src="img/img-resumo-compra/printer.png" alt="imprimir resumo do pedido"
+                                class="print"></a>
+                    </div>
+
+                    <div class="row resumo-produto mb-3">
+                        <h3 class="col-12 mb-2 pt-2 subtitulo">PRODUTO</h3>
+                        <div class="produtos d-flex justify-content-around">
+                            <div class="produto col-7">
+                                <p class="nome-produto1">AUDI RS Q8 2021 AZUL</p>
+                            </div>
+
+                            <div class="qtd col-5">
+                                <p class="qtd-produto1 text-end">QTD: 01</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row data-agendamento mb-3">
+                        <h3 class="subtitulo col-6 pt-2">DATA DO AGENDAMENTO</h3>
+                        <p class="col-6 text-end pt-2">DD/mm/yyyy</p>
+                    </div>
+
+                    <div class="row valor-total mb-5">
+                        <h3 class="subtitulo col-6 pt-2">VALOR DO BEM</h3>
+                        <p class="col-6 text-end pt-2">R$400.150,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fim da confirmação do pedido -->
+
+    </div>
+
+
+
+   <!-- BEGIN FOOTER -->
+
+   <footer class="bg-black">
+    <!--Começo Footer-->
+    <div class="container mt-5 mb-5 pt-3 ">
+        <!--Começo Redes Sociais-->
+
+        <div class="row justify-content-center responsive-social-media pt-3">
+            <div class="col-2 col-md-1">
+                <!--Icon Facebook-->
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="img/img-footer/facebook.png" width="30" height="30">
+                </a>
+            </div>
+            <div class="col-2 col-md-1">
+                <!--Icon Twitter-->
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="img/img-footer/twitter.png" width="30" height="30">
+                </a>
+            </div>
+            <div class="col-2 col-md-1">
+                <!--Icon Instagram-->
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="img/img-footer/instagram.png" width="30" height="30">
+                </a>
+            </div>
+            <div class="col-2 col-md-1">
+                <!--Icon Linkedin-->
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="img/img-footer/linkedin.png" width="30" height="30">
+                </a>
+            </div>
+            <div class="col-2 col-md-1">
+                <!--Icon YouTube-->
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="img/img-footer/youtube.png" width="30" height="30">
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!--Fim Redes Sociais-->
+
+    <div class="container">
+        <!--Começo Container Texto-->
+        <div class="row gy-5 text-start d-flex justify-content-center ms-3 responsive-footer">
+            <!-- row-cols-4 py-4 my-5 -->
+            <div class="col-md-3">
+                <!--Começo Institucional-->
+                <h5>INSTITUCIONAL</h5>
+                <br>
+                <ul class="nav flex-column text-start">
+                    <li class="nav-item mb-2">
+                        <a href="./sobre_nos.html" class="nav-link p-0 text-muted" target="_blank">SOBRE NÓS</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">TRABALHE CONOSCO</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">INVESTIDORES</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./TERMOS E CONDIÇÕES DE USO DEV CARS™.pdf" class="nav-link p-0 text-muted" target="_blank">POLÍTICA DE PRIVACIDADE</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Fim Institucional-->
+
+            <div class="col-md-3">
+                <!--Começo Contato-->
+                <h5>CONTATO</h5>
+                <br>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">TELEFONE: (11) 5555-5555</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">WHATSAPP: (11) 9 5555-5555</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">OUVIDORIA: 0800 555 5555</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Fim Contato-->
+
+            <div class="col-md-3">
+                <!--Começo Atendimento-->
+                <h5>ATENDIMENTO</h5>
+                <br>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="./agendamento.html" class="nav-link p-0 text-muted" target="_blank">AGENDAMENTO DE VISITAS</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">CENTRAL DE ATENDIMENTO</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">COMO COMPRAR NO SITE</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted" target="_blank">PRAZOS DE ENTREGA</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Fim Atendimento-->
+
+            <div class="col-md-3">
+                <!--Começo Minha Conta-->
+                <h5>MINHA CONTA</h5>
+                <br>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="./meusdados.html" class="nav-link p-0 text-muted" target="_blank">ALTERAR DADOS PESSOAIS</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./meusdados.html" class="nav-link p-0 text-muted" target="_blank">EDITAR ENDEREÇOS</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./pedidos.html" class="nav-link p-0 text-muted" target="_blank">ACOMPANHAR UM PEDIDO</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="./cadastro.html" class="nav-link p-0 text-muted" target="_blank">CRIAR UM CADASTRO</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Fim Minha Conta-->
+        </div>
+    </div>
+    <div class="formas-pagamento text-center">
+        <!--Começo Gaveta Formas de Pagamento-->
+        <details>
+            <summary>
+                formas de pagamento
+            </summary>
+            <ul>
+                <li>
+                    <img src="img/img-footer/logotipo-visa.png" alt="Visa" width="60" height="50">
+                    <!--Icon Visa-->
+                </li>
+                <li>
+                    <img src="img/img-footer/mastercard.png" alt="MasterCard">
+                    <!--Icon Mastercard-->
+                </li>
+                <li>
+                    <img src="img/img-footer/hipercard.png" alt="HiperCard">
+                    <!--Icon Hipercard-->
+                </li>
+                <li>
+                    <img src="img/img-footer/elo.png" alt="Elo">
+                    <!--Icon Elo-->
+                </li>
+                <li>
+                    <img src="img/img-footer/apple-pay (1).png" alt="Maestro" width="60" height="50">
+                    <!--Icon Maestro-->
+                </li>
+                <li>
+                    <img src="img/img-footer/codigo-de-barras.png" alt="boleto" width="50">
+                    <!--Icon Boleto-->
+                </li>
+            </ul>
+        </details>
+    </div>
+    <!--Fim Gaveta Formas de Pagamento-->
+    <div class="text-center p-2">
+        <!--Começo Copyright-->
+        © 2021 DEV CARS AUTOMOBILES.
+    </div>
+    <!--Fim Copyright-->
+</footer>
+<!-- END FOOTER -->
+
+
+    <!-- import javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+</body>
+
+</html>

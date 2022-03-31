@@ -27,7 +27,11 @@
 }
 
 .botao-salvar {
+<<<<<<< HEAD
     background: linear-gradient(8deg, rgb(219, 186, 0) 30%, hsl(51, 99%, 46%) 70%);
+=======
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     font-family: font-family: 'Questrial', sans-serif;
     border-radius: 4px;
     border: none;
@@ -35,5 +39,9 @@
 }
 
 .botao-salvar:hover {
+<<<<<<< HEAD
     background: linear-gradient(191deg, hsl(51, 100%, 43%) 30%, hsl(51, 99%, 46%) 70%);
+=======
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 }

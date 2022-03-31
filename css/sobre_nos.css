@@ -15,6 +15,10 @@ body{
 .linha_sobre_nos1{
     justify-content: center;
     margin-top: 10px;
+<<<<<<< HEAD
+=======
+   
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 }
 
 .sobre_nos .sobre_nos1{
@@ -29,10 +33,26 @@ body{
 
 .social{
     margin-bottom: 45px;
+<<<<<<< HEAD
+=======
+    margin-top: 45px;
+    
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 }
 
 
 
+<<<<<<< HEAD
+=======
+.alinhamento_paragrafo{
+    text-align:justify;   
+    
+}
+
+.texto-sobre-nos{
+    margin: px;
+}
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 
 
 
@@ -396,7 +416,10 @@ body{
 
 /* -- RESPONSIVE - BEGIN HEADER -- */
 
+<<<<<<< HEAD
 
 .alinhamento_paragrafo{
     text-align:justify;
 }
+=======
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05

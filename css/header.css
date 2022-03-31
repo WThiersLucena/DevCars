@@ -55,6 +55,7 @@
         margin: 20px;
     }
 
+<<<<<<< HEAD
     /*
     button {
         background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
@@ -73,6 +74,10 @@
 
    .background-menu {
         background-image: url('../imagens/bg-menu.png');
+=======
+   .background-menu {
+        background-image: url('/img/img-header/bg-menu.png');
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
         background-repeat: no-repeat;
         background-position: center;
    }
@@ -85,7 +90,10 @@
    .icons-header li {
        padding-top: 3%;
        padding-bottom:3%;
+<<<<<<< HEAD
        /*border: 2px solid red;*/
+=======
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
        margin: 2%; 
    }
 
@@ -98,6 +106,32 @@
    }
 
 
+<<<<<<< HEAD
+=======
+
+   /* -- MODAL PESQUISAR -- */
+
+    .icon-close{
+        width: 25px;
+        height: 25px;
+    }
+
+    .modal-content{
+        background-color: #000000;
+    }
+
+    .modal-header{
+        border-bottom: none;
+    }
+
+    .background-modal-search {
+        background-color: #000000;
+    }
+
+  /* -- FIM MODAL PESQUISAR -- */
+
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 /* -- END HEADER -- */
 
 
@@ -207,6 +241,9 @@
         
 
     }
+<<<<<<< HEAD
 
 
 /* -- RESPONSIVE - BEGIN HEADER -- */
+=======
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05

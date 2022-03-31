@@ -14,6 +14,7 @@ body {
     background-color: #e0e0e0;
 }
 
+<<<<<<< HEAD
 /*
 
 .borda {
@@ -30,6 +31,8 @@ body {
 
 */
 
+=======
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 .sidebar-font {
     font-family: 'Questrial', sans-serif;
 }
@@ -47,12 +50,20 @@ body {
 }
 
 .border-button-sidebar-menu {
+<<<<<<< HEAD
     border: 3px solid black;
+=======
+    border-top: 1px solid rgb(187, 187, 187);
+    border-bottom: .5px solid rgb(187, 187, 187);
+    border-left: 1px solid rgb(187, 187, 187);
+    border-right: 1px solid rgb(187, 187, 187);
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     border-radius: 3px;
 }
 
 
 .button-menu-lateral:hover {
+<<<<<<< HEAD
     background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
 }
 
@@ -62,6 +73,17 @@ body {
 
 .button-continuar:hover {
     background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
+=======
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.button-continuar {
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.button-continuar:hover {
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 }
 
 .text-shopping-cart {
@@ -84,11 +106,29 @@ body {
     color:#000;
 }
 
+<<<<<<< HEAD
 
 
 
 
 /* -- RESPONSIVE -- */
+=======
+.btn-continue {
+    width: 100%;
+}
+
+
+/* -- RESPONSIVE -- */
+
+@media (min-width: 766px) {
+            
+    .btn-continue {
+        width: 100%;
+    }
+    
+}
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 
 @media (max-width: 766px) {
             
@@ -97,3 +137,7 @@ body {
     }
     
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05

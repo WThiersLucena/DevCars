@@ -17,8 +17,12 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+<<<<<<< HEAD
     width: 370px;
     border: 2px solid  rgb(0, 119, 255);
+=======
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
    
 }
 
@@ -121,6 +125,7 @@ body{
 
 
 hr {
+<<<<<<< HEAD
     display: block;
     margin-top: 0.5em;
     margin-bottom: auto;
@@ -130,6 +135,14 @@ hr {
     border-width: 1px;
     width: 370px;
     border: 2px solid  rgb(0, 119, 255);
+=======
+   margin: 1rem 0;
+   color: inherit;
+   background-color: currentColor;
+   border: 0;
+   opacity: 0.25;
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
    
 }
 
@@ -401,6 +414,16 @@ li a {
    }
 
 
+<<<<<<< HEAD
+=======
+   .background-user {
+    background-color: #E0E0E0;
+    border-radius: 3px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 
    /* -- MODAL PESQUISAR -- */
 
@@ -535,4 +558,25 @@ li a {
     }
 
 
+<<<<<<< HEAD
 /* -- RESPONSIVE - BEGIN HEADER -- */
+=======
+/* -- RESPONSIVE - BEGIN HEADER -- */
+
+/*-- Responsividade Mobile --*/
+
+@media (max-width:500px){
+    .responsive-mobile{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+}
+
+@media(max-width:1024px){
+    .responsive-ipadPro{
+        margin: 2%;
+        padding: 0;
+    }
+}
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05

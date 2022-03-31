@@ -23,11 +23,35 @@ body {
 }
 
 .button {
+<<<<<<< HEAD
     background: linear-gradient(8deg, rgba(218,184,0,1) 30%, rgba(234,199,1,1) 70%);
 }
 
 .button:hover {
     background: linear-gradient(191deg, #dab800 30%, rgba(234,199,1,1) 70%);
+=======
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.button:hover {
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.button-out-flow {
+    background: linear-gradient(8deg, rgba(88, 87, 82, 0.411) 30%, rgb(193, 193, 189) 70%);
+}
+
+.button-out-flow:hover {
+    background: linear-gradient(191deg, rgba(88, 87, 82, 0.411) 30%, rgb(211, 211, 209) 70%);
+}
+
+.button-checkout {
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.button-checkout:hover {
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 }
 
 .space-input {
@@ -36,4 +60,13 @@ body {
 
 a button {
     width: 100%;
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto:wght@100;300&display=swap');
+
+
+body{
+    background-color: #E0E0E0;
+    font-family: 'Questrial', sans-serif;
+}
+
+.img-pedidos{
+    width: 10%;
+}
+
+.titulo-pagina{
+    background-color: #000000;
+    color: #FFF;
+    font-size: 24px;;
+}
+
+
+/* estilização do menu lateral */
+    .list-group-item:hover{
+        background-color: #E0E0E0;
+    }
+
+    .border-bottom-menu{
+        border-bottom: #9B9B9B 1px solid;
+    }
+/* fim da estilização do menu lateral */
+
+
+
+
+.titulo-menu{
+    border-bottom: #9B9B9B 1px solid;
+}
+
+.figura-status{
+    width: 14px;
+    height: 14px;
+}
+
+.img-pedido{
+    width: 150px;
+    box-shadow: 2px 2px 5px #777777;
+}
+
+.titulo-descricao{
+    font-size: 11px;
+    border-bottom: #9B9B9B 1px solid;
+    margin-bottom: 10px;
+}
+
+.titulo-data-pgmt{
+    font-size: 11px;
+}
+
+
+.descricao, .descricao-data, .descricao-endereco, .data-pgmt, .descricao-pgmt{
+    font-size: 13px;
+}
+
+.titulo-descricao-endereco, .titulo-descricao-data, .titulo-data-pgmt, .titulo-descricao-pgmt{
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.imprimir-nf a{
+    border: #9B9B9B 1px solid;
+    
+}

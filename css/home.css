@@ -42,8 +42,11 @@ body{
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 .carosel_01{
     display: block;
     width: 100%;
@@ -110,6 +113,7 @@ body{
 }
 
 
+<<<<<<< HEAD
 /* -- BEGIN HEADER -- */
 
     header {
@@ -155,11 +159,14 @@ body{
 
     }
 
+=======
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     .linhaDestaque{
         font-weight: bold;
         margin-top: 50px;
         text-align: center;
         margin-bottom: 2px;
+<<<<<<< HEAD
     }
 
 
@@ -194,6 +201,11 @@ body{
 .icons-header{
     width: 30px;
 }
+=======
+        
+    }
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 
 .icon-close{
     width: 25px;
@@ -226,6 +238,7 @@ body{
     text-align:justify;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -234,11 +247,27 @@ body{
 
 
 
+=======
+.botao-buscar {
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+.botao-buscar:hover{
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+
+.imagens-midia{
+    justify-items: center;
+    margin-top: 50px;
+}
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 
 /* -- RESPONSIVE - BEGIN HEADER -- */
 
 @media (max-width: 1000px) {
             
+<<<<<<< HEAD
     header {
 
         display: flex;
@@ -326,10 +355,74 @@ body{
 
     }  
 
+=======
+             
+    .logo_marcas{
+        display: none;         
+    }
+  
+    .pesquisar{
+        margin-left: 5%;
+    }
+      
+  
+    .texto_midia {
+      display: inline-block;
+      flex-direction: row;
+      justify-content: space-between;
+      justify-items: center; 
+      padding-top: 1%;
+      padding-left: 5%;
+      padding-bottom: 1%;
+      padding-right: 2%;
+      height: 100%;
+      width: 100%;            
+  }
+  
+  .imagens-midia{
+      display: inline-block;
+      flex-direction: row;
+      justify-content: space-between;
+      justify-items: center;    
+      background-color: #E0E0E0;            
+      padding-top: 1%;
+      padding-left: 5%;
+      padding-bottom: 10%;
+      padding-right: 2%;
+      height: 100%;
+      width: 100%; 
+      }
+  
+  
+      .modal-mobily{
+          width: 100%;
+      }
+      .modal-mobily2{
+          width: 100%;
+          margin-top: 40px;
+      }
+  
+      .modal-mobily3{
+          width: 75%;
+          margin-left: 10%;
+      }
+  
+      
+  }
+
+  
+@media (max-width: 800px) {
+        
+   
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     .filtro-de-busca{
         margin-left: 1%;
         justify-content: center;
         
+<<<<<<< HEAD
+=======
+        
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     }
 
     .botao-buscar{           
@@ -337,9 +430,18 @@ body{
         justify-items: center;
         margin-left: 5%;
         margin-top: 3%;
+<<<<<<< HEAD
         
                
     }
+=======
+    }
+
+ .btn-detalhes{
+    margin-top: 100px;
+
+ }
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     
     .logo_marcas{
         display: none;
@@ -396,7 +498,11 @@ body{
 
     .linhaDestaque{
         justify-content: center;
+<<<<<<< HEAD
         margin-left: 12%;
+=======
+        display: none;
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     }
 
 
@@ -404,6 +510,7 @@ body{
 
 @media (max-width: 640px) {
         
+<<<<<<< HEAD
     header {
 
         display: flex;
@@ -419,6 +526,9 @@ body{
         padding-right: 2%;  
 
     }  
+=======
+    
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 
     .modal-mobily{
         width: 100%;
@@ -438,6 +548,7 @@ body{
 /* -- FOR IPHONE 6/7/8 -- */
 @media (max-width: 500px) {
     
+<<<<<<< HEAD
     header  {
 
         display: flex;
@@ -453,6 +564,9 @@ body{
         padding-right: 2%;  
 
     } 
+=======
+    
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     .logo_marcas{
         display: nome;
         flex-direction: row;
@@ -496,6 +610,55 @@ body{
 
     }
 
+<<<<<<< HEAD
+=======
+    @media (max-width: 450px) {
+    
+    
+        .logo_marcas{
+            display: nome;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;    
+            background-color: #E0E0E0;            
+            padding-top: 1%;
+            padding-left: 5%;
+            padding-bottom: 0%;
+            padding-right: 2%;
+            height: 25%;
+            
+        }      
+      
+    
+        .texto_midia {
+            display: inline-block;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;           
+            padding-top: 1%;
+            padding-left: 5%;
+            padding-bottom: 10%;
+            padding-right: 2%;
+            height: 100%;
+            width: 100%;            
+        }
+    
+        .imagens-midia{
+            display: inline-block;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;    
+            background-color: #E0E0E0;            
+            padding-top: 1%;
+            padding-left: 5%;
+            padding-bottom: 10%;
+            padding-right: 2%;
+            height: 100%;
+            width: 100%; 
+    
+        }
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     .pesquisar{
         justify-content: center;
         margin-left: 1%;
@@ -545,4 +708,8 @@ body{
 }
 
 
+<<<<<<< HEAD
 /* -- RESPONSIVE - BEGIN HEADER -- */
+=======
+/* -- RESPONSIVE - BEGIN HEADER -- */
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05

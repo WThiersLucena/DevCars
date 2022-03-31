@@ -13,7 +13,11 @@ h2 {
 
 }
 
+<<<<<<< HEAD
 .container {
+=======
+.dados-pessoais,.endereco,.senha,.titulo-pagina,.fim-cadastro {
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
     padding: 10px;
     width: 50%;
     height: 50%;
@@ -29,11 +33,37 @@ h2 {
     border-radius: 2px;
 
 }
+<<<<<<< HEAD
+=======
+
+.form-select:hover{
+    border: 2px solid yellow;
+    background: white;
+}
+
+.form-select:focus{
+    box-shadow: 0 0 0 0.25rem rgba(19, 20, 20, 0.322);
+    background: white;
+    outline: 0;
+    border-color: white;
+}
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 .form-control:hover {
     border: 2px solid yellow;
     background: white;
 }
 
+<<<<<<< HEAD
+=======
+.form-control:focus{
+    box-shadow: 0 0 0 0.25rem rgba(19, 20, 20, 0.322);
+    background: white;
+    outline: 0;
+    border-color: white;
+}
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 .dados-pessoais{
     background: #F0F0F0;
     border: 1px solid #C0C0C0;
@@ -41,6 +71,16 @@ h2 {
     border-radius: 3px;
 }
 
+<<<<<<< HEAD
+=======
+.dados-pessoais:focus{
+    box-shadow: 0 0 0 0.25rem rgba(19, 20, 20, 0.322);
+    background: white;
+    outline: 0;
+    border-color: white;
+}
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 .endereco{
     background: #F0F0F0;
     border: 1px solid #C0C0C0;
@@ -49,6 +89,16 @@ h2 {
     margin-top: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.endereco:focus{
+    box-shadow: 0 0 0 0.25rem rgba(19, 20, 20, 0.322);
+    background: white;
+    outline: 0;
+    border-color: white;
+}
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 .senha{
     background: #F0F0F0;
     border: 1px solid #C0C0C0;
@@ -57,12 +107,27 @@ h2 {
     margin-top: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.senha:focus{
+    box-shadow: 0 0 0 0.25rem rgba(19, 20, 20, 0.322);
+    background: white;
+    outline: 0;
+    border-color: white;
+}
+
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 .titulo-pagina{
     background: black;
     color:white;
     font-family: 'Questrial', sans-serif;
     height: 60px;
+<<<<<<< HEAD
     margin-bottom: 20px;
+=======
+    margin-bottom: 2%;
+    margin-top: 2%;
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 
 }
 
@@ -76,6 +141,30 @@ h2 {
     width: 20%;
 }
 
+<<<<<<< HEAD
+=======
+.btn_cadastrar{
+    background: linear-gradient(8deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+..btn_cadastrar:hover{
+    background: linear-gradient(191deg, rgb(179, 152, 4) 30%, rgb(223, 208, 126) 70%);
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .dados-pessoais,.endereco,.senha,.titulo-pagina,.fim-cadastro {
+        padding: 10px;
+        width: 80%;
+        height: 50%;
+    }
+
+    .redes-sociais {
+        margin-left: 2.5em !important;
+    }
+}
+>>>>>>> ad1dd6222d5f2d17c46e3b8d2ddcf76926edcf05
 
 
 
