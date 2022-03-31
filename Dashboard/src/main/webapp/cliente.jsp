@@ -486,6 +486,194 @@ p {
 
 
 
+<!--  NOVO TESTE -->
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
+				<div
+					class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+					<h1 class="h2 text-light">NOVA LISTA DE CLIENTE</h1>
+				</div>
+				<div>
+					<c:forEach var="c" items="${listCliente}">
+						<input type="hidden" name="id" value="${c.cod_cliente}" />
+
+						<!-- inicio acordeon -->
+						<div
+							class="accordion accordion-flush border rounded m-3 shadow rounded-3 ac-style"
+							id="accordionFlushExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header "
+									id="flush-heading-${a.cod_agendamento}">
+									<button class="accordion-button collapsed ac-header"
+										type="button" data-bs-toggle="collapse"
+										data-bs-target="#flush-collapse-${a.cod_agendamento}"
+										aria-expanded="false"
+										aria-controls="flush-collapse-${a.cod_agendamento}">
+
+										<div class="row col-12 col-md-12 col-lg-12">
+											<div class="d-none d-sm-block col-md-4 text-start fw-bolder">
+												<p>
+													#
+													<c:out value="${a.cod_agendamento}" />
+												</p>
+											</div>
+											
+
+											<div class="col-xs-12 col-md-5 text-start fw-bolder">
+												<span class="d-none d-sm-block">Ve�culo: </span>
+												<span><c:out value="${a.marca_veiculo} ${a.modelo_veiculo}  ${a.nome_cor}  ${a.ano_veiculo}" />
+												</span>
+											</div>
+											
+
+											<div class="col-xs-12 col-md text-xs-center fw-bolder mt-2">
+												<span>
+													Data de reserva: 
+													</span> 
+													<span><fmt:formatDate value="${a.data_reserva}"
+														pattern="dd/MM/yyyy" />
+												</span>
+											</div>
+											
+										</div>
+
+									</button>
+								</h2>
+								<div id="flush-collapse-${a.cod_agendamento}"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-heading-${a.cod_agendamento}"
+									data-bs-parent="#accordionFlushExample">
+									<div class="accordion-body">
+										<div class="row">
+										
+											<div class="col-md-4 container-style">
+											
+												<div class="cliente">
+													<h3 class="">Cliente</h3>
+													<p class="">
+														NOME:
+														<c:out value="${a.nome_cliente}" />
+														<c:out value="${a.razao_social}" />
+													</p>
+
+
+													<!-- <p class="exampleInputDocumento">N�MERO DO DOCUMENTO: <c:out value="${a.numero_documento}" /></p>-->
+													<c:set var="doc" value="${a.numero_documento}" />
+													<c:choose>
+														<c:when test="${fn:length(doc)==11}">
+
+															<span>CPF: </span>
+															<span class="exampleInputCpf"><c:out
+																	value="${a.numero_documento}" /></span>
+														</c:when>
+
+														<c:otherwise>
+															<span>CNPJ: </span>
+															<span class="exampleInputCnpj"><c:out
+																	value="${a.numero_documento}" /></span>
+														</c:otherwise>
+													</c:choose>
+
+													<p class="">
+														EMAIL:
+														<c:out value="${a.email_cliente}" />
+													</p>
+
+													<!-- <c:choose>
+														 <c:when test = "${a.telefone_cliente}.size() = 11">
+															<p class="exampleInputTelefone1">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+														 </c:when>
+														 
+														 <c:otherwise>
+														 	<p class="exampleInputTelefone">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+														 </c:otherwise>
+													 </c:choose>-->
+													<p class="exampleInputTelefone">
+														TELEFONE:
+														<c:out value="${a.telefone_cliente}" />
+													</p>
+												</div>
+												
+											</div>
+
+
+											<div class="col-xs-12 col-md-5 container-style">
+												<h3 class="">Detalhes do veículo</h3>
+												<p class="">
+													Motor:
+													<c:out value="${a.motor_veiculo}" />
+												</p>
+												<p class="">
+													Potência:
+													<c:out value="${a.potencia_cv}" />
+												</p>
+												<p class="">
+													Combustível:
+													<c:out value="${a.tipo_combustivel}" />
+												</p>
+												<p class="">
+													Câmbio:
+													<c:out value="${a.cambio}" />
+												</p>
+
+												<span>CHASSI: </span><span class="exampleInputChassi">
+													<c:out value="${a.numero_chassi}" />
+												</span>
+												<div>
+													<span class="tex-end"> Valor do veículo: </span>
+													<span class="text-start fw-bold"> R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.preco_veiculo}" />
+													</span>
+												</div>
+												
+											</div>
+
+
+											<div class="col-md container-style">
+												<h3 class="tex-end">Taxa de agendamento:</h3>
+												<p class="text-start">
+													R$
+													<fmt:formatNumber type="number" maxFractionDigits="2"
+														minFractionDigits="2" value="${a.taxa_agendamento}" />
+												</p>
+												
+												<h3 class="tex-end">Forma de pagamento:</h3>
+												<p class="text-start"><c:out value="${a.descricao_forma_pagamento}" /></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- fim acordeon -->
+					</c:forEach>
+				</div>
+			</main>
+
+
+
+<!-- FIM NOVO TESTE  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 			<script src="webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
