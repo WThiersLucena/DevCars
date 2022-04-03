@@ -30,7 +30,7 @@ try {
 			+ "from tb_endereco_cliente \r\n"
 			+ "inner join tb_endereco on tb_endereco.cod_endereco = tb_endereco_cliente.cod_endereco \r\n"
 			+ "inner join tb_cliente on tb_cliente.cod_cliente = tb_endereco_cliente.cod_cliente\r\n"
-			+ "where tb_cliente.cod_cliente = 2");
+			+ "order by cod_cliente ");
 	ResultSet r = p.executeQuery();
 	
 	while (r.next()) {

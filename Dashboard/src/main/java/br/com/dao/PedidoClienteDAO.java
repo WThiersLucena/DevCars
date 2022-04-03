@@ -31,18 +31,13 @@ public class PedidoClienteDAO {
 		+ "	   tb_cliente.telefone_cliente ,tb_pedido.cod_pedido ,\r\n"
 		+ "	   tb_pedido.valor_total_pedido,\r\n"
 		+ "	   tb_forma_pagamento.descricao_forma_pagamento, tb_pedido.data_envio, tb_status.status,	\r\n"
-		+ "	    tb_frete.unidade_federativa, tb_frete.valor_frete,\r\n"
-		+ "	   tb_cartao.nome_titular, tb_cartao.numero_cartao,\r\n"
-		+ "	   tb_item_pedido.cod_veiculo, tb_veiculo.modelo_veiculo \r\n"
+		+ "	    tb_frete.unidade_federativa, tb_frete.valor_frete\r\n"
 		+ "from tb_pedido \r\n"
 		+ "inner join tb_cliente on tb_cliente.cod_cliente = tb_pedido.cod_pedido \r\n"
 		+ "inner join tb_forma_pagamento on tb_forma_pagamento.cod_forma_pagamento = tb_pedido.cod_forma_pagamento \r\n"
 		+ "inner join tb_status on tb_status.cod_status = tb_pedido.cod_status\r\n"
-		+ "inner join tb_frete on tb_frete.cod_frete = tb_pedido.cod_frete \r\n"
-		+ "inner join tb_cartao on tb_cartao.cod_cartao = tb_pedido.cod_forma_pagamento \r\n"
-		+ "inner join tb_item_pedido on tb_item_pedido.cod_pedido = tb_pedido.cod_pedido \r\n"
-		+ "inner join tb_veiculo on tb_veiculo.cod_veiculo = tb_item_pedido.cod_veiculo \r\n"
-		+ "order by cod_cliente");
+		+ "inner join tb_frete on tb_frete.cod_frete = tb_pedido.cod_frete\r\n"
+		+ "order by cod_pedido");
 	ResultSet r = p.executeQuery();
 	
 	while (r.next()) {
@@ -68,22 +63,11 @@ public class PedidoClienteDAO {
 	
 		String unidade_federativa = r.getString("unidade_federativa");
 	
-		String valor_frete = r.getString("valor_frete");
-	
-		String nome_titular = r.getString("nome_titular");
-	
-		String numero_cartao = r.getString("numero_cartao");
-	
-		String cod_veiculo = r.getString("cod_veiculo");
-		
-		String modelo_veiculo = r.getString("modelo_veiculo");
-		
-			
+		String valor_frete = r.getString("valor_frete");		
 	
 		PedidoCliente c3 = new PedidoCliente(	
 				cod_cliente,nome_cliente,razao_social,email_cliente,telefone_cliente,cod_pedido,valor_total_pedido,
-				descricao_forma_pagamento,data_envio,status,unidade_federativa,valor_frete,nome_titular,
-				numero_cartao,cod_veiculo,modelo_veiculo);
+				descricao_forma_pagamento,data_envio,status,unidade_federativa,valor_frete);
 		c3.setCod_cliente(cod_cliente);
 		lista.add(c3);
 		
