@@ -260,7 +260,7 @@ h3 {
                                     <div class="accordion-body">
                                         <div class="row">
 
-                                            <div class="col-md-5 container-style">
+                                            <div class="col-lg-7 col-md-12 container-style">
 
                                                 <div class="cliente">
                                                     <h3 class="">Cliente</h3>
@@ -303,7 +303,7 @@ h3 {
                                             </div>
 
 
-                                            <div class="col-xs-12 col-md-12 container-style">
+                                            <div class="col-lg-5 col-xs-12 col-md-12 container-style">
                                                 <h3 class="">Historico de Pedidos</h3>
 
 
