@@ -13,103 +13,113 @@
 <head>
     <meta charset="UTF-8">
     <title>Cliente</title>
-
-
     <link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-
-
     <!--  teste de padronização  -->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+        
+        html {
+	background-color: #212529 !important;
+		}
 
         body {
-            font-family: 'Questrial', sans-serif;
-        }
+	font-family: 'Questrial', sans-serif;
+}
 
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
 
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+.accordion-button {
+	-webkit-box-shadow: 11px 11px 28px 10px rgba(191, 161, 63, 0.45);
+	box-shadow: 2px 2px 2px 2px rgba(191, 161, 63, 0.45);
+}
 
-        .accordion-button {
-            -webkit-box-shadow: 11px 11px 28px 10px rgba(191, 161, 63, 0.45);
-            box-shadow: 2px 2px 2px 2px rgba(191, 161, 63, 0.45);
-        }
+.accordion-button:not(.collapsed) {
+	color: #000;
+	background-color: #fff;
+	border-color: #fff
+}
 
-        .accordion-button:not(.collapsed) {
-            color: #000;
-            background-color: #fff;
-            border-color: #fff
-        }
+.accordion-button:focus {
+	border-color: #F0CA4F;
+	box-shadow: none
+}
 
-        .accordion-button:focus {
-            border-color: #F0CA4F;
-            box-shadow: none
-        }
+.ac-header:not(.collapsed) {
+	color: #fff;
+	background-color: #F0CA4F;
+}
 
-        .ac-header:not(.collapsed) {
-            color: #fff;
-            background-color: #F0CA4F;
-        }
+.ac-header {
+	color: #fff;
+	background-color: #F0CA4F;
+}
 
-        .container-style {
-            border-left: 2px solid #d9d9d9;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
+.fw-bolder {
+	text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.68);
+}
 
-        .ac-header {
-            color: #fff;
-            background-color: #F0CA4F;
-        }
+.container-style {
+	border-left: 2px solid #d9d9d9;
+	border-radius: 4px;
+	margin-bottom: 15px;
+}
 
-        .fw-bolder {
-            text-shadow: 3px 2px 3px rgba(150, 150, 150, 0.68);
-        }
+h3 {
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 14px;
+	color: #545454;
+}
 
-        h3 {
-            font-family: Arial, Helvetica, Verdana, sans-serif;
-            margin-bottom: 8px;
-            font-size: 18px;
-            font-weight: bold
-        }
+.container-style span {
+	color: #7a7a7a;
+	text-shadow: 0 1px 1px 0 #959595;
+}
 
-        p {
-            margin-bottom: 4px
-        }
+.container-style p {
+	margin: 0;
+	color: #7a7a7a;
+	text-shadow: 0 1px 1px 0 #959595;
+}
 
-        h3 {
-            font-family: Arial, Helvetica, Verdana, sans-serif;
-            margin-bottom: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 5px;
-            margin-top: 14px;
-            color: #545454;
-        }
+.font-size-09 {
+		font-size: 1rem !important;
+	}
 
-        .container-style span {
-            color: #7a7a7a;
-            text-shadow: 0 1px 1px 0 #959595;
-        }
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+	.font-size-09 {
+		font-size: 0.9rem !important;
+	}
+}
 
-        .container-style p {
-            margin: 0;
-            color: #7a7a7a;
-            text-shadow: 0 1px 1px 0 #959595;
-        }
-
-
-        @media (min-width : 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
+@media ( max-width : 450px) {
+	.accordion-button {
+		font-size: 13px;
+	}
+	h3 {
+		font-size: 14px;
+	}
+	p, span {
+		padding-left: 7px;
+		font-size: 13px;
+	}
+	.font-size-09 {
+		font-size: 1rem !important;
+	}
+}
     </style>
 
     <link href="./dashboard.css" rel="stylesheet" />
@@ -138,75 +148,71 @@
         </div>
     </header>
 
-    <!--  BEGIN SIDEBAR -->
-
-    <div class="container-fluid">
-        <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="position-sticky pt-3">
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a class="nav-link" href="index.jsp">
-                                <form action="ServletIndex" method="post">
-                                    <button type="submit" class="btn">
-                                        <span data-feather="home"></span> HOME
-                                    </button>
-                                </form>
-                            </a></li>
-
-                        <li class="nav-item"><a class="nav-link" href="veiculo.jsp">
-
-                                <form action="ServletVeiculo" method="post">
-                                    <button type="submit" class="btn">
-                                        <span data-feather="file"></span> VEICULO
-                                    </button>
-                                </form>
-                            </a></li>
-
-                        <li class="nav-item"><a class="nav-link" href="cliente.jsp">
-
-                                <form action="ServletCliente" method="post">
-                                    <button type="submit" class="btn">
-                                        <span data-feather="shopping-cart"></span> CLIENTE
-                                    </button>
-                                </form>
+   <!--  BEGIN SIDEBAR -->
 
 
-                            </a></li>
-                        <li class="nav-item"><a class="nav-link" href="fornecedor.jsp">
-                                <form action="ServletFornecedor" method="post">
-                                    <button type="submit" class="btn">
-                                        <span data-feather="users"></span> FORNECEDOR
-                                    </button>
-                                </form>
+	<div class="container-fluid">
+		<div class="row">
 
+			<nav id="sidebarMenu"
+				class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
 
-                            </a></li>
-                        <li class="nav-item"><a class="nav-link" href="pedido.jsp">
+				<div class="position-sticky pt-3">
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="index.jsp">
+								<form action="ServletIndex" method="post">
+									<button type="submit" class="btn font-size-09">
+										<span data-feather="home"></span> HOME
+									</button>
+								</form>
+						</a></li>
 
+						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
+								<form action="ServletVeiculo" method="post">
+									<button type="submit" class="btn font-size-09">
+										<span data-feather="file"></span> VEICULO
+									</button>
+								</form>
+						</a></li>
 
-                                <form action="ServletPedido" method="post">
-                                    <button type="submit" class="btn">
-                                        <span data-feather="bar-chart-2"></span> PEDIDO
-                                    </button>
-                                </form>
-                            </a></li>
-                        <li class="nav-item"><a class="nav-link" href="agendamento.jsp">
+						<li class="nav-item"><a class="nav-link" href="cliente.jsp">
+								<form action="ServletCliente" method="post">
+									<button type="submit" class="btn font-size-09">
+										<span data-feather="shopping-cart"></span> CLIENTE
+									</button>
+								</form>
+						</a></li>
 
-                                <form action="ServletAgendamento" method="post">
-                                    <button type="submit" class="btn">
-                                        <span data-feather="layers"></span> AGENDAMENTO
-                                    </button>
-                                </form>
+						<li class="nav-item"><a class="nav-link"
+							href="fornecedor.jsp">
+								<form action="ServletFornecedor" method="post">
+									<button type="submit" class="btn font-size-09">
+										<span data-feather="users"></span> FORNECEDOR
+									</button>
+								</form>
+						</a></li>
 
+						<li class="nav-item"><a class="nav-link" href="pedido.jsp">
+								<form action="ServletPedido" method="post">
+									<button type="submit" class="btn font-size-09">
+										<span data-feather="bar-chart-2"></span> PEDIDO
+									</button>
+								</form>
+						</a></li>
 
+						<li class="nav-item"><a class="nav-link"
+							href="agendamento.jsp">
+								<form action="ServletAgendamento" method="post">
+									<button type="submit" class="btn font-size-09">
+										<span data-feather="layers"></span> AGENDAMENTO
+									</button>
+								</form>
+						</a></li>
 
-                            </a>
-                        </li>
-                    </ul>
-
-
-                </div>
-            </nav>
+					</ul>
+				</div>
+			</nav>
+			<!--  END SIDEBAR -->
 
 
             <!--  NOVO TESTE -->
@@ -304,14 +310,18 @@
                                                 <c:forEach var="ped" items="${Pedido}">
                                                     <c:choose>
                                                         <c:when test="${c.cod_cliente == ped.cod_cliente}">
-                                                            <p>[ Nº Pedido : ${ped.cod_pedido} ]</p>
-                                                            <p>Valor Pedido : ${ped.valor_total_pedido}
+                                                            <p><strong> Nº Pedido :  ${ped.cod_pedido}</strong> </p>
+                                                            <p >Valor Pedido : <strong>R$ <fmt:formatNumber
+															type="number" maxFractionDigits="2" minFractionDigits="2"
+															value="${ped.valor_total_pedido}" /></strong>
                                                             </p>
                                                             <p>Forma de Pagamento :
                                                                 ${ped.descricao_forma_pagamento}</p>
                                                             <p>Status do Pedido : ${ped.status}</p>
                                                             <p>Destino : ${ped.unidade_federativa}</p>
-                                                            <p>Valor Frete : ${ped.valor_frete}</p>
+                                                            <p><strong> Valor Frete :<fmt:formatNumber
+															type="number" maxFractionDigits="2" minFractionDigits="2"
+															value="${ped.valor_frete}" /> </strong></p>
                                                             <br>
                                                         </c:when>
                                                     </c:choose>
@@ -324,7 +334,7 @@
                                                 <c:forEach var="end" items="${mostrarEndereco}">
                                                     <c:choose>
                                                         <c:when test="${c.cod_cliente == end.cod_cliente}">
-                                                            <p>Cep : ${end.cep_endereco}</p>
+                                                            <p class="exampleInputCep"><strong>Cep : ${end.cep_endereco}</strong></p>
                                                             <p>Cidade : ${end.cidade} UF - [ ${end.uf} ]
                                                             </p>
                                                             <p>Logradouro : ${end.rua_endereco}
