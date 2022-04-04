@@ -303,7 +303,7 @@ h3 {
                                             </div>
 
 
-                                            <div class="col-xs-12 col-md-5 container-style">
+                                            <div class="col-xs-12 col-md-12 container-style">
                                                 <h3 class="">Historico de Pedidos</h3>
 
 
@@ -328,7 +328,7 @@ h3 {
                                                 </c:forEach>
  	                                         </div>
 
-                                            <div class="col-xs-12 col-md-5 container-style">
+                                            <div class="col-xs-12 col-md-12 container-style">
                                                 <h3 class="">ENDEREÇOS CADASTRADOS </h3>
 
                                                 <c:forEach var="end" items="${mostrarEndereco}">
@@ -392,7 +392,7 @@ h3 {
 
                     });
             </script>
-</body>
+ </body>
 
 </html>
 
