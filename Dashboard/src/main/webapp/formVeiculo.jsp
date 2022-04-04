@@ -139,7 +139,7 @@ body {
 				</div>
 
 				<div
-					class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
+					class="container col-12 col-md-10 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3 mb-4">
 					<h3 class="card-title text-center mb-3">CADASTRAR VEÍCULO</h3>
 
 					<form action="ServletVeiculo" method="post" id="veiculoToast">
@@ -261,12 +261,12 @@ body {
 								
 								<div class=mb-3>
 									<label class="form-label">LINK DA IMAGEM:</label> <input type="text"
-										class="form-control" name="link_imagem" required />
+										class="form-control" name="imagem" required />
 								</div>
 								
 								<div class=mb-3>
 									<label class="form-label">DESCRIÇÃO DO VEÍCULO:</label> <textarea
-										class="form-control" name="descricao_veiculo" rows="4" cols="33" required /></textarea>
+										class="form-control" name="descricao" rows="4" cols="33" required /></textarea>
 								</div>
 
 								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -393,6 +393,23 @@ body {
 														<option value="TRUE">SIM</option>
 													</select>
 												</div>
+												
+												
+												
+												<div class=mb-3>
+													<label class="form-label">LINK DA IMAGEM:</label> <input type="text"
+													class="form-control" name="imagem" required />
+												</div>
+								
+								
+	
+												<div class=mb-3>
+													<label class="form-label">DESCRIÇÃO DO VEÍCULO:</label> <textarea
+													class="form-control" name="descricao" rows="4" cols="33"  required /></textarea>
+												</div>
+												
+												
+												
 
 												<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 													<button type="submit" name="optionVeiculo"

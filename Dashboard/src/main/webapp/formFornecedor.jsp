@@ -141,7 +141,7 @@
         
       </div>
 
-	 <div class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3 mb-3">
+	 <div class="container col-12 col-md-10 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3 mb-3">
 		<h3 class="card-title text-center mb-3">ADICIONAR FORNECEDOR</h3>
 	
 		<form action="ServletFornecedor" method="post" id="supplierToast">

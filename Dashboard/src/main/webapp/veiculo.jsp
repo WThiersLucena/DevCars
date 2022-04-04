@@ -281,7 +281,7 @@ body{
 												</div>
 												<div class="d-grid gap-2 d-md-flex justify-content-md-center px-3 py-3">
 													<button class="btn btn-outline-light px-3" type="submit" name="optionVeiculo" value="qualquerCoisa">Cancelar</button>
-  													<button class="btn btn-outline-danger" type="submit" name="optionVeiculo" value="deleteVeiculo">Deletar</button>
+  													<button class="btn btn-outline-danger veiculos" type="submit" name="optionVeiculo" value="deleteVeiculo">Deletar</button>
 												</div>
 											</div>
 										</div>
@@ -344,6 +344,12 @@ body{
 		        toastr.success('Veículo excluído com sucesso!');
 		    })
 	     }
+        
+        //jQuery for Toast Message on bellow:
+//        document.getElementById('veiculos').addEventListener('submit', function(){
+//            toastr.success('Veiculo excluído com sucesso!');
+        
+        
     </script>
  
  
