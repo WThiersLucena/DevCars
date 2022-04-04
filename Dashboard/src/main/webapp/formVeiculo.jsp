@@ -158,7 +158,7 @@ body {
 										required>
 										<option selected>SELECIONE A MARCA</option>
 										<c:forEach var="marca" items="${listMarca}">
-											<option value="${marca.cod_marca}">${marca.marca_veiculo}</option>
+											
 										</c:forEach>
 									</select>
 								</div>

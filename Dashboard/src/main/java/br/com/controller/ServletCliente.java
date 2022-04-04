@@ -57,7 +57,7 @@ private EnderecoDAO end;
 
 		request.setAttribute("listCliente", this.clie.mostrarCliente());
 		request.setAttribute("contagemUsuarios", this.clie.contarUsuarios());
-		request.setAttribute("mostrarPedido", this.ped.mostrarPedido());
+		request.setAttribute("Pedido", this.ped.mostrarPedido());
 		request.setAttribute("mostrarEndereco", this.end.mostrarEndereco());
 		
 		
