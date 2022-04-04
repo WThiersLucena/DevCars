@@ -124,14 +124,14 @@ public class ServletVeiculo extends HttpServlet {
 		String numero_chassi = request.getParameter("numero_chassi").replace(".", "").toUpperCase();
 		String estoque = request.getParameter("estoque");
 		String destaque = request.getParameter("destaque");
-		String link_imagem = request.getParameter("link_imagem");
-		String descricao_veiculo = request.getParameter("descricao_veiculo");
+		String imagem = request.getParameter("imagem");
+		String descricao = request.getParameter("descricao");
 		
 		
 		if(  (cod_marca != null)  &&  (modelo_veiculo != null )  && (cod_cor != null )  && (ano_veiculo != null )  
 		&& (cod_motor != null ) && (cod_fornecedor != null )  && (preco_veiculo != null )  && (cod_combustivel != null )  
-		&& (cod_cambio != null)  && (numero_chassi != null)  && (estoque != null ) && (destaque != null) && (descricao_veiculo != null) 
-		&& (link_imagem != null) ) {
+		&& (cod_cambio != null)  && (numero_chassi != null)  && (estoque != null ) && (destaque != null) && (descricao != null) 
+		&& (imagem != null) ) {
 			
 			if(!modelo_veiculo.equals("")) {
 				
@@ -148,7 +148,7 @@ public class ServletVeiculo extends HttpServlet {
 				Boolean destaqueBack = Boolean.parseBoolean(destaque);
 				
 			
-				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack, link_imagem, descricao_veiculo);
+				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack, imagem, descricao);
 				
 				veic.adicionarVeiculo(veiculo1);
 				System.out.println("adicionado");
@@ -226,8 +226,8 @@ public class ServletVeiculo extends HttpServlet {
 		String numero_chassi = request.getParameter("numero_chassi").replace(".", "").toUpperCase();
 		String estoque = request.getParameter("estoque");
 		String destaque = request.getParameter("destaque");
-		String link_imagem = request.getParameter("link_imagem");
-		String descricao_veiculo = request.getParameter("descricao_veiculo");
+		String imagem = request.getParameter("imagem");
+		String descricao = request.getParameter("descricao");
 		
 		
 		if(  (cod_marca != null)  &&  (modelo_veiculo != null )  && (cod_cor != null )  && (ano_veiculo != null )  && (cod_motor != null )  && (preco_veiculo != null )  && (cod_combustivel != null )  && (cod_cambio != null)  && (numero_chassi != null)  && (estoque != null ) && (destaque != null ) && (cod_fornecedor != null) && (cod_veiculo != null )) {
@@ -246,7 +246,9 @@ public class ServletVeiculo extends HttpServlet {
 				Integer cod_fornecedorBack = Integer.parseInt(cod_fornecedor);
 				
 				
-				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack, cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, estoqueBack, destaqueBack, link_imagem, descricao_veiculo);
+				Veiculo veiculo1 = new Veiculo(cod_marcaBack, modelo_veiculo, numero_chassi, ano_veiculoBack, preco_veiculoBack,
+												cod_corBack, cod_motorBack, cod_combustivelBack, cod_cambioBack, cod_fornecedorBack, 
+												estoqueBack, destaqueBack, imagem, descricao);
 				veiculo1.setCod_veiculo(cod_veiculoBack);
 				this.veic.atualizarVeiculo(veiculo1);
 			}

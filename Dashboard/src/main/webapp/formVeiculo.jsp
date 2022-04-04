@@ -34,6 +34,10 @@ body {
 	user-select: none;
 }
 
+.font-size-09 {
+		font-size: 0.98em !important;
+}
+
 #exampleInputChassi {
 	text-transform: uppercase;
 }
@@ -73,14 +77,14 @@ body {
 
 	<div class="container-fluid">
 		<div class="row">
-			<nav id="sidebarMenu"
+			 <nav id="sidebarMenu"
 				class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+
 				<div class="position-sticky pt-3">
 					<ul class="nav flex-column">
-
 						<li class="nav-item"><a class="nav-link" href="index.jsp">
 								<form action="ServletIndex" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="home"></span> HOME
 									</button>
 								</form>
@@ -88,15 +92,15 @@ body {
 
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
 								<form action="ServletVeiculo" method="post">
-									<button type="submit" class="btn">
-										<span data-feather="file"></span> VEÍCULO
+									<button type="submit" class="btn font-size-09">
+										<span data-feather="file"></span> VEICULO
 									</button>
 								</form>
 						</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="cliente.jsp">
 								<form action="ServletCliente" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="shopping-cart"></span> CLIENTE
 									</button>
 								</form>
@@ -105,7 +109,7 @@ body {
 						<li class="nav-item"><a class="nav-link"
 							href="fornecedor.jsp">
 								<form action="ServletFornecedor" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="users"></span> FORNECEDOR
 									</button>
 								</form>
@@ -113,7 +117,7 @@ body {
 
 						<li class="nav-item"><a class="nav-link" href="pedido.jsp">
 								<form action="ServletPedido" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="bar-chart-2"></span> PEDIDO
 									</button>
 								</form>
@@ -122,11 +126,13 @@ body {
 						<li class="nav-item"><a class="nav-link"
 							href="agendamento.jsp">
 								<form action="ServletAgendamento" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="layers"></span> AGENDAMENTO
 									</button>
 								</form>
 						</a></li>
+
+					</ul>
 				</div>
 			</nav>
 			<!--  END SIDEBAR -->
@@ -139,7 +145,7 @@ body {
 				</div>
 
 				<div
-					class="container col-12 col-md-6 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3">
+					class="container col-12 col-md-10 col-lg-6 col-xl-6 shadow p-3 bg-light rounded-3 mb-4">
 					<h3 class="card-title text-center mb-3">CADASTRAR VEÍCULO</h3>
 
 					<form action="ServletVeiculo" method="post" id="veiculoToast">
@@ -261,12 +267,12 @@ body {
 								
 								<div class=mb-3>
 									<label class="form-label">LINK DA IMAGEM:</label> <input type="text"
-										class="form-control" name="link_imagem" required />
+										class="form-control" name="imagem" required />
 								</div>
 								
 								<div class=mb-3>
 									<label class="form-label">DESCRIÇÃO DO VEÍCULO:</label> <textarea
-										class="form-control" name="descricao_veiculo" rows="4" cols="33" required /></textarea>
+										class="form-control" name="descricao" rows="4" cols="33" required /></textarea>
 								</div>
 
 								<div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -393,6 +399,23 @@ body {
 														<option value="TRUE">SIM</option>
 													</select>
 												</div>
+												
+												
+												
+												<div class=mb-3>
+													<label class="form-label">LINK DA IMAGEM:</label> <input type="text"
+													class="form-control" name="imagem" required />
+												</div>
+								
+								
+	
+												<div class=mb-3>
+													<label class="form-label">DESCRIÇÃO DO VEÍCULO:</label> <textarea
+													class="form-control" name="descricao" rows="4" cols="33"  required /></textarea>
+												</div>
+												
+												
+												
 
 												<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 													<button type="submit" name="optionVeiculo"

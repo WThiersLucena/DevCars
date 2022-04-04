@@ -86,9 +86,17 @@ h3 {
 	text-shadow: 0 1px 1px 0 #959595;
 }
 
+.font-size-09 {
+		font-size: 1rem !important;
+	}
+
 @media ( min-width : 768px) {
 	.bd-placeholder-img-lg {
 		font-size: 3.5rem;
+	}
+	
+	.font-size-09 {
+		font-size: 0.9rem !important;
 	}
 }
 
@@ -104,6 +112,10 @@ h3 {
 	p, span{
 		padding-left: 7px;
 		font-size: 13px;
+	}
+	
+	.font-size-09 {
+		font-size: 1rem !important;
 	}
 }
 </style>
@@ -137,11 +149,12 @@ h3 {
 		<div class="row">
 			<nav id="sidebarMenu"
 				class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+
 				<div class="position-sticky pt-3">
 					<ul class="nav flex-column">
 						<li class="nav-item"><a class="nav-link" href="index.jsp">
 								<form action="ServletIndex" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="home"></span> HOME
 									</button>
 								</form>
@@ -149,15 +162,15 @@ h3 {
 
 						<li class="nav-item"><a class="nav-link" href="veiculo.jsp">
 								<form action="ServletVeiculo" method="post">
-									<button type="submit" class="btn">
-										<span data-feather="file"></span> VEÍCULO
+									<button type="submit" class="btn font-size-09">
+										<span data-feather="file"></span> VEICULO
 									</button>
 								</form>
 						</a></li>
 
 						<li class="nav-item"><a class="nav-link" href="cliente.jsp">
 								<form action="ServletCliente" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="shopping-cart"></span> CLIENTE
 									</button>
 								</form>
@@ -166,7 +179,7 @@ h3 {
 						<li class="nav-item"><a class="nav-link"
 							href="fornecedor.jsp">
 								<form action="ServletFornecedor" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="users"></span> FORNECEDOR
 									</button>
 								</form>
@@ -174,7 +187,7 @@ h3 {
 
 						<li class="nav-item"><a class="nav-link" href="pedido.jsp">
 								<form action="ServletPedido" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="bar-chart-2"></span> PEDIDO
 									</button>
 								</form>
@@ -183,7 +196,7 @@ h3 {
 						<li class="nav-item"><a class="nav-link"
 							href="agendamento.jsp">
 								<form action="ServletAgendamento" method="post">
-									<button type="submit" class="btn">
+									<button type="submit" class="btn font-size-09">
 										<span data-feather="layers"></span> AGENDAMENTO
 									</button>
 								</form>
@@ -251,7 +264,7 @@ h3 {
 									<div class="accordion-body ps-4 pe-5">
 										<div class="row">
 										
-											<div class="col-md-4 container-style">
+											<div class="col-12 col-lg-4 container-style">
 											
 												<div class="cliente">
 													<h3 class="">Cliente</h3>
@@ -302,7 +315,7 @@ h3 {
 											</div>
 
 
-											<div class="col-xs-12 col-md-5 container-style">
+											<div class="col-12 col-lg-5 container-style">
 												<h3 class="">Detalhes do veículo</h3>
 												<p class="">
 													Motor:
@@ -333,7 +346,7 @@ h3 {
 											</div>
 
 
-											<div class="col-md-3 container-style">
+											<div class="col-12 col-lg-3 container-style">
 												<h3 class="tex-end">Taxa de agendamento:</h3>
 												<p class="text-start">
 													R$
