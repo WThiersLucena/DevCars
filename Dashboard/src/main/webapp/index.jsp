@@ -74,7 +74,17 @@ body{
 		<div class="navbar-nav col-12 col-md-1 col-lg-1">
 
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="./login.jsp">Sair</a>
+				<form action="ServletAgendamento" method="post">
+					<button name="option" value="sair" type="submit">Sair</button>
+				<% String usuario = (String) session.getAttribute("email");
+				
+					if(usuario == null) {
+						response.sendRedirect("login.jsp");
+					} else {
+						response.sendRedirect("/");
+					}
+				%>
+				</form>
 			</div>
 		</div>
 	</header>

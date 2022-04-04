@@ -42,9 +42,25 @@ public class ServletIndex extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		this.contagem(request, response);
+		String option = request.getParameter("option");
+		if (option == null) {
+			option = "";
+		}
+		 
+		switch(option) {
+			case ("sair"):
+				this.sair(request, response);
+				break;
+			default:
+				this.contagem(request, response);
+		}
 	}
 	
+	private void sair(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("deslogar.jsp").forward(request, response);
+		
+	}
+
 	private void contagem(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{	
 		request.setAttribute("contagem_clientes", this.cD.contarUsuarios());
 		request.setAttribute("contagem_veiculos", this.vD.contarVeiculos());
