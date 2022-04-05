@@ -54,7 +54,9 @@ body{
 		<div class="navbar-nav col-12 col-md-1 col-lg-1">
 
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="./login.jsp">Sair</a>
+				<form action="ServletFornecedor" method="post">
+					<button type="submit" name="optionFornecedor" value="sair">Sair</>
+				</form>
 			</div>
 		</div>
 	</header>

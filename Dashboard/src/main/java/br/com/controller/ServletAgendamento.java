@@ -36,12 +36,31 @@ public class ServletAgendamento extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
+	
+	protected void Sair(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("Deslogar.jsp").forward(request, response);
+		
+	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		this.mostrarAgenda(request, response);
+		String option = request.getParameter("option");
+		if (option == null) {
+			option = "";
+		}
+//		 System.out.println("doPost =" + optionFornecedor);
+		 
+		switch(option) {
+			case ("sair"):
+				this.Sair(request, response);
+				break;
+			default:
+				this.mostrarAgenda(request, response);
+				break;
+		}
 	}
 	
 	

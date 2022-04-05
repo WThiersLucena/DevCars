@@ -18,12 +18,12 @@
 
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
-body{
+body {
 	font-family: 'Questrial', sans-serif;
 }
-
 
 .cliente {
 	box-shadow: 5px 5px 5px -1px rgba(94, 94, 94);
@@ -61,30 +61,37 @@ body{
 </head>
 <body>
 
-	<header
-		class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
+	<header class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
 		<a class="navbar-brand col-3 col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
-		<button class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed"
+		<button
+			class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed"
 			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
 			aria-controls="sidebarMenu" aria-expanded="false"
 			aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		
+
 		<div class="navbar-nav col-12 col-md-1 col-lg-1">
 
 			<div class="nav-item text-nowrap">
-				<form action="ServletAgendamento" method="post">
-					<button name="option" value="sair" type="submit">Sair</button>
-				<% String usuario = (String) session.getAttribute("email");
-				
-					if(usuario == null) {
-						response.sendRedirect("login.jsp");
-					} else {
-						response.sendRedirect("/");
-					}
-				%>
+				<form action="ServletIndex" method="post">
+					<button name="option" value="sair">
+						Sair
+						<button />
 				</form>
+				<c:out value="${email}" />
+				<c:choose>
+
+					<c:when test="${email != null}">
+						<c:out value="${email}" />
+					</c:when>
+					<c:otherwise>
+						<%
+						session.invalidate();
+						response.sendRedirect("login.jsp");
+						%>
+					</c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 	</header>
@@ -183,7 +190,7 @@ body{
 						<p class="card-text fs-1">
 							<c:out value="${contagem_veiculos}"></c:out>
 						</p>
-					
+
 					</div>
 				</div>
 				<!-- <div class="card text-center col pedido bg-dark"
@@ -218,8 +225,7 @@ body{
 								fornecedor. E acima de tudo, proporcionar ao maior número de
 								pessoas uma experiência memorável e excelência em produtos e
 								serviços, sendo referência em gestão do negócio de automotivos
-								de luxo.
-							</p>
+								de luxo.</p>
 						</div>
 					</div>
 				</div>
@@ -242,8 +248,7 @@ body{
 							<h5 class="card-title">Motivação</h5>
 							<p class="card-text">Procure pensar sempre no que te inspira
 								e use-o como combustível para alcançar seus objetivos. E
-								lembre-se: até o maior dos prédios começa no chão.
-							</p>
+								lembre-se: até o maior dos prédios começa no chão.</p>
 						</div>
 					</div>
 				</div>

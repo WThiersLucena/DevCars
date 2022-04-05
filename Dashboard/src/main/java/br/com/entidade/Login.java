@@ -54,6 +54,12 @@ public class Login {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Login [id=" + id + ", usuario=" + usuario + ", email=" + email + ", senha=" + senha + "]";
+	}
 	
 	
 	

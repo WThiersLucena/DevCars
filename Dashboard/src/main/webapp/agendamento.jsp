@@ -126,7 +126,9 @@ h3 {
 		<div class="navbar-nav col-12 col-md-1 col-lg-1">
 
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="./login.jsp">Sair</a>
+				<form action="ServletAgendamento" method="post">
+					<button type="submit" name="option" value="sair">Sair</>
+				</form>
 			</div>
 		</div>
 	</header>

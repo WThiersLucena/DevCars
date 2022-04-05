@@ -65,7 +65,24 @@ body {
 		<div class="navbar-nav col-12 col-md-1 col-lg-1">
 
 			<div class="nav-item text-nowrap">
-				<a class="nav-link px-3" href="./login.jsp">Sair</a>
+				<form action="ServletIndex" method="post">
+					<button name="option" value="sair">
+						Sair
+						<button />
+				</form>
+				<c:out value="${email}" />
+				<c:choose>
+
+					<c:when test="${email != null}">
+						<c:out value="${email}" />
+					</c:when>
+					<c:otherwise>
+						<%
+						session.invalidate();
+						response.sendRedirect("login.jsp");
+						%>
+					</c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 	</header>

@@ -23,8 +23,12 @@ public class ServletLogin extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
-		
 	}
+	
+//	protected void Sair(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		request.getRequestDispatcher("Deslogar.jsp").forward(request, response);
+//		
+//	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	String opcao = request.getParameter("opcao");
@@ -53,9 +57,11 @@ public class ServletLogin extends HttpServlet {
 		String senha = request.getParameter("senha");
 		
 		if(DAO.conferencia(email, senha) != null) {
-			Login login = DAO.conferencia(email, senha); 
-			request.getServletContext().setAttribute("usuario", login.getUsuario());
-			request.getRequestDispatcher("index.jsp").forward(request, response);
+			System.out.println("Qualquer coisa");
+			Login login = DAO.conferencia(email, senha);
+			request.getServletContext().setAttribute("email", login.getUsuario());
+			request.getRequestDispatcher("ServletIndex").forward(request, response);
+//			response.sendRedirect("index.jsp"); 
 			
 		} else {
 			request.getRequestDispatcher("login.jsp").forward(request, response);
