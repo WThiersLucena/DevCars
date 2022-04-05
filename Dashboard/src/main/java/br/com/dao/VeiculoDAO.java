@@ -24,7 +24,7 @@ public class VeiculoDAO {
 			PreparedStatement p = con
 					.prepareStatement("insert into tb_veiculo (cod_marca, modelo_veiculo, numero_chassi, ano_veiculo, "
 							+ "preco_veiculo, cod_cor, cod_motor, cod_combustivel, cod_cambio, cod_fornecedor,"
-							+ " estoque, destaque, seAtivo, link_imagem, descricao_veiculo) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, true, ?, ?)");
+							+ " estoque, destaque, seAtivo, imagem, descricao) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, true, ?, ?)");
 
 			p.setInt(1, veiculo.getCod_marca());
 			p.setString(2, veiculo.getModelo_veiculo());
@@ -111,7 +111,7 @@ public class VeiculoDAO {
 
 			System.out.println(p);
 			p.executeUpdate();
-			System.out.println("Veículo Excluído");
+			System.out.println("VeÃ­culo ExcluÃ­do");
 
 			p.close();
 
@@ -121,7 +121,7 @@ public class VeiculoDAO {
 
 	}
 
-	// m�todo que desativa chave estrangeira
+	// mï¿½todo que desativa chave estrangeira
 	public void desativaVeiculo(Integer cod_veiculo) {
 
 		Conexao c = Conexao.getInstance();
@@ -140,8 +140,10 @@ public class VeiculoDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
+	
 	public void atualizarVeiculo(Veiculo veiculo) {
 
 		Conexao c = Conexao.getInstance();
@@ -153,7 +155,7 @@ public class VeiculoDAO {
 			PreparedStatement p = con.prepareStatement(
 					"update tb_veiculo set cod_marca = ?, modelo_veiculo = ?,  numero_chassi = ?, ano_veiculo = ?, "
 							+ "preco_veiculo = ?, cod_cor = ?, cod_motor = ?, cod_combustivel = ?, cod_cambio = ?, "
-							+ "cod_fornecedor = ?, estoque = ?, destaque = ?, link_imagem = ?, descricao_veiculo = ? where cod_veiculo = ?");
+							+ "cod_fornecedor = ?, estoque = ?, destaque = ?, imagem = ?, descricao = ? where cod_veiculo = ?");
 
 			p.setInt(1, veiculo.getCod_marca());
 			p.setString(2, veiculo.getModelo_veiculo());
@@ -182,6 +184,7 @@ public class VeiculoDAO {
 		}
 	}
 
+	
 //	public Veiculo buscarVeiculo(Integer cod_veiculo) {
 //		
 //		Conexao c = Conexao.getInstance();
