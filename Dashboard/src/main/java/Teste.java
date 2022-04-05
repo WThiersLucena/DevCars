@@ -21,18 +21,18 @@ public class Teste {
 
 //		
 		//ClienteDAO clienteD = new ClienteDAO();
-		//EnderecoDAO endereco = new EnderecoDAO();
-		//PedidoClienteDAO pedidoCliente = new PedidoClienteDAO();
+//		EnderecoDAO endereco = new EnderecoDAO();
+		PedidoClienteDAO pedidoCliente = new PedidoClienteDAO();
 
 		Conexao c = new Conexao();
 		c.getConnection();		
 //		System.out.println(clienteD.mostrarCliente());		
 //		System.out.println(clienteD.mostrarPedido());
 //		System.out.println(endereco.mostrarEndereco());
-		//System.out.println(pedidoCliente.mostrarPedido());
+		System.out.println(pedidoCliente.mostrarPedido());
 		
-	PedidoDAO ped = new PedidoDAO();
-	ped.mostrarPedido();
+//	PedidoDAO ped = new PedidoDAO();
+//	ped.mostrarPedido();
 		
 		
 

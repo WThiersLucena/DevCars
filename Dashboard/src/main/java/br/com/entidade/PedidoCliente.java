@@ -14,19 +14,12 @@ public class PedidoCliente {
 	 private 	String status;
 	 private	String unidade_federativa;
 	 private	String valor_frete;
-	 private	String nome_titular;
-	 private	String numero_cartao;
-	 private	String cod_veiculo;
-	 private	String modelo_veiculo;
-	public PedidoCliente() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	public PedidoCliente(String cod_cliente, String nome_cliente, String razao_social, String email_cliente,
+	 
+	 public PedidoCliente(String cod_cliente, String nome_cliente, String razao_social, String email_cliente,
 			String telefone_cliente, String cod_pedido, String valor_total_pedido, String descricao_forma_pagamento,
-			String data_envio, String status, String unidade_federativa, String valor_frete, String nome_titular,
-			String numero_cartao, String cod_veiculo, String modelo_veiculo) {
+			String data_envio, String status, String unidade_federativa, String valor_frete) {
 		super();
+		
 		this.cod_cliente = cod_cliente;
 		this.nome_cliente = nome_cliente;
 		this.razao_social = razao_social;
@@ -39,14 +32,9 @@ public class PedidoCliente {
 		this.status = status;
 		this.unidade_federativa = unidade_federativa;
 		this.valor_frete = valor_frete;
-		this.nome_titular = nome_titular;
-		this.numero_cartao = numero_cartao;
-		this.cod_veiculo = cod_veiculo;
-		this.modelo_veiculo = modelo_veiculo;
 	}
 	
-	
-	
+		
 	
 	public String getCod_cliente() {
 		return cod_cliente;
@@ -120,39 +108,13 @@ public class PedidoCliente {
 	public void setValor_frete(String valor_frete) {
 		this.valor_frete = valor_frete;
 	}
-	public String getNome_titular() {
-		return nome_titular;
-	}
-	public void setNome_titular(String nome_titular) {
-		this.nome_titular = nome_titular;
-	}
-	public String getNumero_cartao() {
-		return numero_cartao;
-	}
-	public void setNumero_cartao(String numero_cartao) {
-		this.numero_cartao = numero_cartao;
-	}
-	public String getCod_veiculo() {
-		return cod_veiculo;
-	}
-	public void setCod_veiculo(String cod_veiculo) {
-		this.cod_veiculo = cod_veiculo;
-	}
-	public String getModelo_veiculo() {
-		return modelo_veiculo;
-	}
-	public void setModelo_veiculo(String modelo_veiculo) {
-		this.modelo_veiculo = modelo_veiculo;
-	}
 	@Override
 	public String toString() {
 		return "PedidoCliente [cod_cliente=" + cod_cliente + ", nome_cliente=" + nome_cliente + ", razao_social="
 				+ razao_social + ", email_cliente=" + email_cliente + ", telefone_cliente=" + telefone_cliente
 				+ ", cod_pedido=" + cod_pedido + ", valor_total_pedido=" + valor_total_pedido
 				+ ", descricao_forma_pagamento=" + descricao_forma_pagamento + ", data_envio=" + data_envio
-				+ ", status=" + status + ", unidade_federativa=" + unidade_federativa + ", valor_frete=" + valor_frete
-				+ ", nome_titular=" + nome_titular + ", numero_cartao=" + numero_cartao + ", cod_veiculo=" + cod_veiculo
-				+ ", modelo_veiculo=" + modelo_veiculo + "]";
+				+ ", status=" + status + ", unidade_federativa=" + unidade_federativa + ", valor_frete=" + valor_frete + "]";
 	}
 	 
 			
