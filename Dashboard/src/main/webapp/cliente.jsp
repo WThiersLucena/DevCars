@@ -131,25 +131,43 @@ h3 {
 <body>
 
 
+<<<<<<< HEAD
+	<header
+		class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
+		<button class="navbar-toggler position-absolute d-md-none collapsed"
+			type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+			aria-controls="sidebarMenu" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<input class="form-control form-control-dark w-100" type="text"
+			placeholder="Pesquisar" aria-label="Search">
+		<div class="navbar-nav">
+			<div class="nav-item text-nowrap">
+				<form action="ServletIndex" method="post">
+					<button name="option" value="sair">
+						Sair
+						<button />
+				</form>
+				<c:out value="${email}" />
+				<c:choose>
 
-    <header class="navbar navbar-dark sticky-top bg-dark p-0 shadow">
-        <a class="navbar-brand col-3 col-md-3 col-lg-2 me-0 px-3" href="#">DevCars</a>
-        <button class="navbar-toggler position-absolute d-md-none col-2 col-md-1 col-lg-2 collapsed" type="button"
-            data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+					<c:when test="${email != null}">
+						<c:out value="${email}" />
+					</c:when>
+					<c:otherwise>
+						<%
+						session.invalidate();
+						response.sendRedirect("login.jsp");
+						%>
+					</c:otherwise>
+				</c:choose>
+			</div>
+		</div>
+	</header>
 
-        <div class="navbar-nav col-12 col-md-1 col-lg-1">
-
-            <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="./login.jsp">Sair</a>
-            </div>
-        </div>
-    </header>
-
-   <!--  BEGIN SIDEBAR -->
-
+	<!--  BEGIN SIDEBAR -->
 
 	<div class="container-fluid">
 		<div class="row">

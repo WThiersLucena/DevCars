@@ -49,16 +49,15 @@ public class ServletIndex extends HttpServlet {
 		 
 		switch(option) {
 			case ("sair"):
-				this.sair(request, response);
+				this.Sair(request, response);
 				break;
 			default:
 				this.contagem(request, response);
 		}
 	}
 	
-	private void sair(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("deslogar.jsp").forward(request, response);
-		
+	private void Sair(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("Deslogar.jsp").forward(request, response);
 	}
 
 	private void contagem(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{	

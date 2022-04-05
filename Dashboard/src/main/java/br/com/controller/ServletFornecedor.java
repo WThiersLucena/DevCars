@@ -28,7 +28,11 @@ public class ServletFornecedor extends HttpServlet {
 		doPost(request, response);
 	}
 
-
+	protected void Sair(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("Deslogar.jsp").forward(request, response);
+		
+	}
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String optionFornecedor = request.getParameter("optionFornecedor");
@@ -53,6 +57,8 @@ public class ServletFornecedor extends HttpServlet {
 			case ("insertSupplier"):
 				insertSupplier(request, response);
 				break;
+			case ("sair"):
+				this.Sair(request, response);
 			default:
 				selectAllSuppliers(request, response);
 		}
