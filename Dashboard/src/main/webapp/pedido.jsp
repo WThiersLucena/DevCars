@@ -92,8 +92,8 @@ h3 {
 }
 
 .font-size-09 {
-		font-size: 1rem !important;
-	}
+	font-size: 1rem !important;
+}
 
 @media ( min-width : 768px) {
 	.bd-placeholder-img-lg {
